@@ -15,7 +15,7 @@ a {
   transition: background-color, border-radius, transform 75ms ease-in-out;
 }
 .icon img {
-  margin: 0 0.375rem;
+  margin: 0.25rem;
   display: inline-block;
 }
 .icon:hover {

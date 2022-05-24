@@ -10,6 +10,7 @@
     </a>
 
     <div
+      @click="isOpen = false"
       class="menu__dropdown nav__links"
       :class="{ 'menu__dropdown--shown': isOpen }"
     >
@@ -26,6 +27,7 @@
 }
 .menu__button {
   border: 1px solid var(--bg-700);
+  background-color: rgba(var(--bg-rgb), 0.75);
   border-radius: 0.5rem;
   padding: 0.5rem;
 }

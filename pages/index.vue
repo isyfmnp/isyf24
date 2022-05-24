@@ -1,37 +1,51 @@
 <template>
   <div class="title">
     <div class="title__image"></div>
-    <h1 class="title__text">Tang Xuyuan</h1>
   </div>
 
-  <h2>From Hwa Chong Institution</h2>
+  <hr />
+
+  <div class="content">
+    <h1 class="name-title">Tang Xuyuan</h1>
+    <span class="name-subtitle">Hwa Chong Institution</span>
+    <br />
+    <span class="name-subtitle">4A2 - 22</span>
+
+    <hr />
+
+    <p class="intro">
+      I'm a Hwa Chong student, a choir member, a hobbyist programmer and a
+      sleeper.
+      I enjoy learning about sciences and history during lessons and spending time with my friends and cca-mates.
+      I also like doing various programming projects in my spare time, such as this website!
+    </p>
+
+    <div class="content-page">
+      
+    </div>
+ 
+ </div>
 </template>
 
 <style scoped>
+@import "~/assets/css/document.css";
+
 .title {
   position: relative;
-  min-height: 50vw;
-  perspective: 20px;
+  /* perspective: 20px; */
+  min-height: min(50vw, 700px); /* Prevent height expanding far beyond max content-width (1100px * 0.5) */
 }
 .title__image {
   position: absolute;
   width: 100%;
   height: 100%;
 
-  /* Perspective
-  transform-style: preserve-3d;
-  z-index: -5;
-  transform: translateZ(-10px) scale(1.5);
-  */
-
-  background-image: url("~/assets/images/titleImage.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: blur(3.75px) saturate(0.5);
+  background: url("~/assets/images/titleImage.jpg") center/cover no-repeat;
+  filter: saturate(0.625) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.375));
+  transform: scale(0.975); /* Don't wanna mess with the measurements */
   border-radius: 0.5rem;
-  border: 2px solid var(--bg);
 }
+/* ATM unused */
 .title__text {
   position: absolute;
   top: 40%;
@@ -39,6 +53,24 @@
 
   font-size: 2.2rem;
   color: var(--bg);
+}
+
+.name-title {
+  text-align: left;
+  font-family: "Libre Baskerville";
+}
+.name-subtitle {
+  font-style: italic;
+  font-weight: light;
+}
+
+.content {
+  display: block;
+  margin: 1rem 2.5rem;
+}
+
+.intro {
+  line-height: 1.75;
 }
 </style>
 
