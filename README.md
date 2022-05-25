@@ -1,6 +1,12 @@
-# Nuxt 3 Minimal Starter
+# My Portfolio Website
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+
+[portfolio.xuyuan.me](https://portfolio.xuyuan.me/)
+
+This is my simple portfolio website. It's a little rough around the edges (created in 2 days) but it's nice :)
+
+Utilising: VueJS, NuxtJS v3
+
 
 ## Setup
 
