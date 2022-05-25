@@ -94,6 +94,9 @@ h1 {
 a {
   -webkit-tap-highlight-color: transparent;
 }
+a:active {
+  opacity: 0.625;
+}
 ul {
   padding: 0px;
   list-style-position: inside;

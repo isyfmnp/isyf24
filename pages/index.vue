@@ -21,7 +21,9 @@
         programming projects in my spare time, such as this website!
       </p>
 
-      <div class="content-page"></div>
+      <hr />
+
+      <NavPanel />
     </div>
   </main>
 </template>

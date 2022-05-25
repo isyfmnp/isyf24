@@ -44,9 +44,7 @@
             src="~/assets/images/macarthurHead.jpg"
             alt="Some code behind our project"
           />
-          <center>
             <span class="caption">General Douglas MacArthur</span>
-          </center>
         </div>
         <div class="hybrid-para__text">
           <p>
