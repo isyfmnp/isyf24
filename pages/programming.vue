@@ -26,12 +26,36 @@
 
       <hr />
 
+      <h2>TraceTogether Alternative</h2>
+      <section class="hybrid-para">
+        <div class="hybrid-para__text">
+          <p>
+            My PW project 2021. A product aimed at pointing out the flaws of the
+            TraceTogether system and finding ways to solve them. After its
+            official conclusion, I decided to do some more work on it in my own
+            time. I used it as a testbed and practical example to learn things
+            that were related. For instance, since it involved transmitting
+            location and contact data, I could test different methods of data
+            transmission, using it as a practical dataset.
+          </p>
+        </div>
+        <!-- TODO: replace with Github screenshot -->
+        <div class="hybrid-para__image">
+          <img
+            src="~/assets/images/ttaCode.jpg"
+            alt="Some code behind our project"
+          />
+        </div>
+      </section>
+
+      <hr />
+
       <h2>Swift Accelerator Programme (SAP)</h2>
-      <section class="image-section">
-        <div class="image-section__image">
+      <section class="hybrid-para">
+        <div class="hybrid-para__image">
           <img src="~/assets/images/sapGroup.jpg" alt="SAP group photo" />
         </div>
-        <div class="image-section__text">
+        <div class="hybrid-para__text">
           <p>
             An educational programme and gathering place for people interested
             in UI&UX development on iOS. Hosted by Tinkercademy and sponsored by
@@ -41,8 +65,8 @@
         </div>
       </section>
 
-      <section class="image-section">
-        <div class="image-section__text">
+      <section class="hybrid-para">
+        <div class="hybrid-para__text">
           <p>
             Our group also created a final product, an app 'MusicalRooms'
             (available on the App Store
@@ -63,8 +87,8 @@
             <li>recorder</li>
           </ul>
         </div>
-<!-- TODO: mash 2 screens together -->
-<div class="image-section__image">
+        <!-- TODO: mash 2 screens together -->
+        <div class="hybrid-para__image">
           <img
             src="~/assets/images/sapProduct.jpg"
             alt="The product of my time at SAP"
@@ -74,34 +98,17 @@
 
       <hr />
 
-      <h2>TraceTogether Alternative</h2>
-      <section class="image-section">
-        <div class="image-section__image">
-          <img
-            src="~/assets/images/ttaCode.jpg"
-            alt="Some code behind our project"
-          />
-        </div>
-        <!-- TODO: replace with Github screenshot -->
-        <div class="image-section__text">
-          <p>
-            My PW project 2021. A product aimed at pointing out the flaws of the
-            TraceTogether system and finding ways to solve them. After its
-            official conclusion, I decided to do some more work on it in my own
-            time. I used it as a testbed and practical example to learn things
-            that were related. For instance, since it involved transmitting
-            location and contact data, I could test different methods of data
-            transmission, using it as a practical dataset.
-          </p>
-        </div>
-      </section>
-
-      <hr />
-
       <h2>Monster Melancholy</h2>
 
-      <section class="image-section">
-        <div class="image-section__text">
+      <section class="hybrid-para">
+        <!-- TODO: get actual screenshot -->
+        <div class="hybrid-para__image">
+          <img
+            src="~/assets/images/mmgWebsite.jpg"
+            alt="The code behind the website"
+          />
+        </div>
+        <div class="hybrid-para__text">
           <p>
             Monster Melancholy is a game project started by a friend that I
             found interesting. It's a simple adventure-style game that guides
@@ -116,13 +123,6 @@
             >. Being my first web project, I value this project as the thing
             that hooked me onto web development.
           </p>
-        </div>
-        <!-- TODO: get actual screenshot -->
-        <div class="image-section__image">
-          <img
-            src="~/assets/images/mmgWebsite.jpg"
-            alt="The code behind the website"
-          />
         </div>
       </section>
     </div>

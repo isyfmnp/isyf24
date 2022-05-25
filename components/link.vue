@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     isExternal() {
-      return this.href.startsWith("http");
+      return !this.href.startsWith("/");
     },
   },
 };
