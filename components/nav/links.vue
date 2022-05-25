@@ -1,7 +1,7 @@
 <template>
   <Link href="/"><HomeIcon />Home</Link>
   <Link href="/academic"><AcademicCapIcon />Academic</Link>
-  <Link href="/cca"><MusicNoteIcon />CCA</Link>
+  <Link href="/choir"><MusicNoteIcon />Choir</Link>
   <Link href="/programming"><DesktopComputerIcon />Programming</Link>
 </template>
 

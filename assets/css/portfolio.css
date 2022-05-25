@@ -1,9 +1,10 @@
 .header__image,
-.header__image--original {
+.header__image--saturated,
+.header__image--blurred {
   display: block;
   width: 100%;
-  min-height: min(
-    50vw,
+  max-height: min(
+    55vw,
     700px
   ); /* Prevent height expanding far beyond max content-width (1100px * 0.5) */
 
@@ -11,8 +12,11 @@
   transform: scale(0.975); /* Simpler way of providing margins */
   border-radius: 0.5rem;
 }
-.header__image--original {
+.header__image--saturated {
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.375));
+}
+.header__image--blurred {
+  filter: blur(1px) saturate(0.625) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.375));
 }
 
 .title {
@@ -34,12 +38,25 @@
   gap: 1.5rem;
   align-items: flex-start;
 }
-/*.hybrid-para__text {
-}*/
+.hybrid-para__text {
+  flex-grow: 1;
+  display: block;
+}
+.hybrid-para__image {
+  flex-grow: 1;
+}
 .hybrid-para__image > img {
-  width: 100%;
+  max-width: min(
+    45vw,
+    calc(0.45 * var(--content-width))
+  ); /* Grow with veiwport until hit max width */
   max-height: 25rem;
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .hybrid-para:nth-of-type(2n-1) {
+    flex-direction: row-reverse;
+  }
 }
 @media screen and (max-width: 768px) {
   .hybrid-para {
@@ -59,7 +76,9 @@
 h2 {
   padding-bottom: 0.75rem;
   font-size: var(--subheader-fontsize);
+  line-height: 2.25rem;
   text-decoration: underline;
+  text-decoration-skip-ink: none;
   text-underline-offset: 4px;
   text-decoration-color: var(--bg-500);
   text-decoration-thickness: 4px;

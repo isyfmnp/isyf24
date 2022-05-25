@@ -22,10 +22,10 @@ a {
 .icon:hover {
   background-color: var(--bg-700);
   border-radius: 0.5rem;
-  transform: scale(1.03);
+  /*transform: scale(1.03);*/
 }
 .icon:active {
-  transform: scale(0.95);
+  /*transform: scale(0.95);*/
 }
 
 .nav__links a {

@@ -3,7 +3,7 @@
     <img
       src="~/assets/images/githubProfile.jpg"
       alt="Xuyuan's Github Profile"
-      class="header__image--original"
+      class="header__image"
     />
 
     <hr />
@@ -26,7 +26,7 @@
 
       <hr />
 
-      <h2>TraceTogether Alternative</h2>
+      <h2>TraceTogether Alternative (TTA)</h2>
       <section class="hybrid-para">
         <div class="hybrid-para__text">
           <p>
@@ -43,7 +43,7 @@
         <div class="hybrid-para__image">
           <img
             src="~/assets/images/ttaCode.jpg"
-            alt="Some code behind our project"
+            alt="TTA code"
           />
         </div>
       </section>
@@ -52,9 +52,6 @@
 
       <h2>Swift Accelerator Programme (SAP)</h2>
       <section class="hybrid-para">
-        <div class="hybrid-para__image">
-          <img src="~/assets/images/sapGroup.jpg" alt="SAP group photo" />
-        </div>
         <div class="hybrid-para__text">
           <p>
             An educational programme and gathering place for people interested
@@ -62,6 +59,9 @@
             Apple and IMDA, I got an opportunity to meet with people of similiar
             interests and learn from people who had been in the industry.
           </p>
+        </div>
+        <div class="hybrid-para__image">
+          <img src="~/assets/images/sapGroup.jpg" alt="SAP group photo" />
         </div>
       </section>
 
@@ -102,12 +102,6 @@
 
       <section class="hybrid-para">
         <!-- TODO: get actual screenshot -->
-        <div class="hybrid-para__image">
-          <img
-            src="~/assets/images/mmgWebsite.jpg"
-            alt="The code behind the website"
-          />
-        </div>
         <div class="hybrid-para__text">
           <p>
             Monster Melancholy is a game project started by a friend that I
@@ -120,9 +114,15 @@
             the game, in the form of a website at
             <Link href="https://monster-melancholy.me"
               >monster-melancholy.me</Link
-            >. Being my first web project, I value this project as the thing
-            that hooked me onto web development.
+            >. Being my first web project, this is the hook that got me into web
+            development
           </p>
+        </div>
+        <div class="hybrid-para__image">
+          <img
+            src="~/assets/images/mmgWebsite.jpg"
+            alt="MMG website code"
+          />
         </div>
       </section>
     </div>
@@ -130,7 +130,7 @@
 </template>
 
 <style scoped>
-@import "~/assets/css/topics.css";
+@import "~/assets/css/portfolio.css";
 </style>
 
 <script>

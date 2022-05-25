@@ -27,7 +27,7 @@
 </template>
 
 <style scoped>
-@import "~/assets/css/topics.css";
+@import "~/assets/css/portfolio.css";
 
 .header {
   position: relative;

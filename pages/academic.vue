@@ -1,6 +1,10 @@
 <template>
   <main>
-    <img src="~/assets/images/gClassroom.jpg" alt="" class="header__image" />
+    <img
+      src="~/assets/images/gClassroom.jpg"
+      alt=""
+      class="header__image"
+    />
 
     <hr />
 
@@ -49,8 +53,8 @@
             On the other hand, many subjects do take deeper dives into content,
             applying previous knowledge to understand more and do more, such as
             Calculus and American history. For me, this is simultaneously
-            frustrating and fascinating. Being more challenging for assessments
-            but interesting to learn about.
+            frustrating and fascinating, more challenging for assessments but
+            more interesting to learn about.
           </p>
         </div>
       </section>
@@ -64,7 +68,10 @@
 </template>
 
 <style scoped>
-@import "~/assets/css/topics.css";
+@import "~/assets/css/portfolio.css";
+
+.header__image {
+}
 </style>
 
 <script>
