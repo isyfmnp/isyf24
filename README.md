@@ -7,6 +7,7 @@ This is my simple portfolio website. It's a little rough around the edges (creat
 
 Utilising: VueJS, NuxtJS v3
 
+<br/><br/>
 
 ## Setup
 
