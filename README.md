@@ -1,7 +1,7 @@
 # My Portfolio Website
 
 
-<a href="https://portfolio.xuyuan.me/" target="_blank">portfolio.xuyuan.me</a>
+[portfolio.xuyuan.me](https://portfolio.xuyuan.me/)
 
 This is my simple portfolio website. It's a little rough around the edges (created in 2 days) but it's nice :)
 
