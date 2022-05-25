@@ -1,0 +1,69 @@
+.header__image,
+.header__image--original {
+  display: block;
+  width: 100%;
+  min-height: min(
+    50vw,
+    700px
+  ); /* Prevent height expanding far beyond max content-width (1100px * 0.5) */
+
+  filter: saturate(0.625) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.375));
+  transform: scale(0.975); /* Simpler way of providing margins */
+  border-radius: 0.5rem;
+}
+.header__image--original {
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.375));
+}
+
+.title {
+  text-align: left;
+  font-family: "Libre Baskerville";
+}
+.subtitle {
+  font-style: italic;
+  font-weight: light;
+}
+
+.content {
+  display: block;
+  margin: 1rem 2.5rem;
+}
+
+.image-section {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+}
+@media screen and (max-width: 768px) {
+  .image-section {
+    flex-wrap: wrap;
+  }
+  .image-section__image > img {
+    max-width: 100%;
+    width: auto;
+  }
+}
+/*.image-section__text {
+}*/
+.image-section__image > img {
+  width: 100%;
+  max-height: 25rem;
+  border-radius: 0.5rem;
+}
+
+h2 {
+  font-size: var(--subheader-fontsize);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--bg-500);
+  text-decoration-thickness: 4px;
+}
+p {
+  line-height: 1.625rem;
+}
+@media screen and (min-width: 641px) {
+  p {
+    text-align: justify;
+  }
+}

@@ -1,8 +1,12 @@
 <template>
-<h1>Major Milestones & Achievements</h1>}
+  <main>
+    <h1>Major Milestones & Achievements</h1>
+  </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+@import "~/assets/css/topics.css";
+</style>
 
 <script>
 export default {

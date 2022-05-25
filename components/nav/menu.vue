@@ -43,7 +43,6 @@
   display: none;
   flex-direction: column;
   align-items: flex-start;
-  opacity: 0.3;
   width: 140px;
   position: absolute;
   top: 40px;
@@ -58,7 +57,6 @@
 }
 .menu__dropdown--shown {
   display: flex;
-  opacity: 1;
 }
 </style>
 

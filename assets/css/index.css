@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 :root {
+  --subheader-fontsize: 22px
   --normal-fontsize: 16px;
   --ui-fontsize: 16px;
   --label-fontsize: 18px;
@@ -21,7 +22,7 @@
   --bg-800: #e7e9eb;
   --bg-900: #f4f4f6;
 
-  --primary-50: #f5f3ff;
+  /* --primary-50: #f5f3ff;
   --primary-100: #ede9fe;
   --primary-200: #ddd6fe;
   --primary-300: #c4b5fd;
@@ -30,7 +31,19 @@
   --primary-600: #7c3aed;
   --primary-700: #6d28d9;
   --primary-800: #5b21b6;
-  --primary-900: #4c1d95;
+  --primary-900: #4c1d95; */
+
+  --primary-50: #eef2ff;
+  --primary-100: #e0e7ff;
+  --primary-200: #c7d2fe;
+  --primary-300: #a5b4fc;
+  --primary-400: #818cf8;
+  --primary-500: #6366f1;
+  --primary-600: #4f46e5;
+  --primary-700: #4338ca;
+  --primary-800: #3730a3;
+  --primary-900: #312e81; 
+  
 
   --content-width: 1110px;
 }
@@ -82,12 +95,13 @@ h1 {
 
 /* Style cleaning */
 a {
-  text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
 ul {
   padding: 0px;
+  list-style-position: inside;
 }
 hr {
   border: none;
+  height: 1.5rem;
 }

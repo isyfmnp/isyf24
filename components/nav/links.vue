@@ -2,7 +2,7 @@
   <Link href="/"><HomeIcon />Home</Link>
   <Link href="/academic"><AcademicCapIcon />Academic</Link>
   <Link href="/cca"><MusicNoteIcon />CCA</Link>
-  <Link href="/learning"><DesktopComputerIcon />Learning</Link>
+  <Link href="/programming"><DesktopComputerIcon />Programming</Link>
   <Link href="/milestones"><BookOpenIcon />Milestones</Link>
 </template>
 
