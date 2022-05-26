@@ -6,12 +6,10 @@
       class="header__image"
     />
 
-    <hr />
-
     <div class="content">
-      <h1 class="title">My Programming Adventures</h1>
-
-      <hr />
+      <header>
+        <h1 class="title">My Programming Adventures</h1>
+      </header>
 
       <p>
         I've been doing programming as a hobby for over 2 years, doing various
@@ -23,8 +21,6 @@
         on the web, so I spent about a week creating this website! Using various
         tools and programming languages, I can create exactly what I envision.
       </p>
-
-      <hr />
 
       <h2>TraceTogether Alternative (TTA)</h2>
       <section class="hybrid-para">
@@ -41,14 +37,9 @@
         </div>
         <!-- TODO: replace with Github screenshot -->
         <div class="hybrid-para__image">
-          <img
-            src="~/assets/images/ttaCode.jpg"
-            alt="TTA code"
-          />
+          <img src="~/assets/images/ttaCode.jpg" alt="TTA code" />
         </div>
       </section>
-
-      <hr />
 
       <h2>Swift Accelerator Programme (SAP)</h2>
       <section class="hybrid-para">
@@ -96,8 +87,6 @@
         </div>
       </section>
 
-      <hr />
-
       <h2>Monster Melancholy</h2>
 
       <section class="hybrid-para">
@@ -119,10 +108,7 @@
           </p>
         </div>
         <div class="hybrid-para__image">
-          <img
-            src="~/assets/images/mmgWebsite.jpg"
-            alt="MMG website code"
-          />
+          <img src="~/assets/images/mmgWebsite.jpg" alt="MMG website code" />
         </div>
       </section>
     </div>
@@ -130,6 +116,7 @@
 </template>
 
 <style scoped>
+@import "~/assets/css/document.css";
 @import "~/assets/css/portfolio.css";
 </style>
 

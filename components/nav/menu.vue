@@ -48,8 +48,7 @@
   top: 40px;
   right: 0;
 
-
-  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
   background-color: var(--bg);
   border: 1px solid var(--bg-800);
   border-radius: 0.5rem;

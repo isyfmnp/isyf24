@@ -40,7 +40,7 @@
   position: fixed;
   top: 0;
   z-index: 1;
- 
+
   background-color: rgba(var(--bg-rgb), 0.4);
   backdrop-filter: blur(5px);
   margin: 0;

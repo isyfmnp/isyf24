@@ -11,11 +11,17 @@ import {
   AcademicCapIcon,
   MusicNoteIcon,
   BookOpenIcon,
-  DesktopComputerIcon
+  DesktopComputerIcon,
 } from "@heroicons/vue/solid";
 export default {
   name: "NavLinks",
-  components: { HomeIcon, AcademicCapIcon, MusicNoteIcon, BookOpenIcon, DesktopComputerIcon }
+  components: {
+    HomeIcon,
+    AcademicCapIcon,
+    MusicNoteIcon,
+    BookOpenIcon,
+    DesktopComputerIcon,
+  },
 };
 </script>
 

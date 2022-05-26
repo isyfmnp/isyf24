@@ -1,9 +1,12 @@
 <template>
   <div class="footer--external">
     <div class="footer--internal">
-      <span class="copyright">
-        © 2022 Tang Xuyuan. All rights reserved
-      </span>
+      Get in touch at
+      <Link href="mailto:t.xuyuan@gmail.com">t.xuyuan@gmail.com</Link>
+
+      <br />
+
+      © 2022 Tang Xuyuan. All rights reserved
     </div>
   </div>
 </template>
@@ -19,9 +22,7 @@
 .footer--internal {
   margin: 0 auto;
   max-width: var(--content-width);
-}
-.copyright {
-  line-height: 1.2rem;
+  line-height: 2rem;
   font-weight: 300;
 }
 </style>

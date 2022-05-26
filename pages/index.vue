@@ -4,15 +4,12 @@
       <div class="header__image"></div>
     </div>
 
-    <hr />
-
     <div class="content">
-      <h1 class="title">Tang Xuyuan</h1>
-      <span class="subtitle">Hwa Chong Institution</span>
-      <br />
-      <span class="subtitle">4A2 - 22</span>
-
-      <hr />
+      <header>
+        <h1 class="title">Tang Xuyuan</h1>
+        <p class="subtitle">Hwa Chong Institution</p>
+        <p class="subtitle">4A2 - 22</p>
+      </header>
 
       <p>
         I'm a Hwa Chong student, a choir member, a hobbyist programmer and a
@@ -21,7 +18,27 @@
         programming projects in my spare time, such as this website!
       </p>
 
-      <hr />
+      <h2>Contact</h2>
+
+      <ul class="contact">
+        <li>
+          <Link href="https://github.com/txuyuan" class="button--outline"
+            ><GithubIcon />@txuyuan</Link
+          >
+        </li>
+        <li>
+          <Link href="mailto:t.xuyuan@gmail.com" class="button--outline"
+            ><MailIcon />t.xuyuan@gmail.com</Link
+          >
+        </li>
+        <li>
+          <Link href="mailto:191519R@student.hci.edu.sg" class="button--outline"
+            ><MailIcon />191519R@student.hci.edu.sg</Link
+          >
+        </li>
+      </ul>
+
+      <h2>Works & Experiences</h2>
 
       <NavPanel />
     </div>
@@ -29,7 +46,13 @@
 </template>
 
 <style scoped>
+@import "~/assets/css/document.css";
 @import "~/assets/css/portfolio.css";
+
+.contact {
+  list-style: none;
+  margin: 0;
+}
 
 .header {
   position: relative;
@@ -60,4 +83,9 @@
 }
 </style>
 
-<script></script>
+<script>
+import { MailIcon } from "@heroicons/vue/solid";
+export default {
+  components: { MailIcon },
+};
+</script>

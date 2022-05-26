@@ -9,6 +9,8 @@
   min-width: max(40%, 15rem);
   width: fit-content;
   padding: 1rem;
+  margin: 1rem 0;
+
   border-radius: 0.5rem;
   background-color: var(--bg);
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));

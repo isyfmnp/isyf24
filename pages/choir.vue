@@ -6,17 +6,11 @@
       class="header__image"
     />
 
-    <hr />
-
     <div class="content">
-      <h1 class="title">My Choir Experience</h1>
-      <span class="subtitle">4th year Senior, Vice Section Head</span>
-
-      <hr />
-
-      <p></p>
-
-      <hr />
+      <header>
+        <h1 class="title">My Choir Experience</h1>
+        <p class="subtitle">4th year Senior, Vice Section Head</p>
+      </header>
 
       <h2>Teaching juniors</h2>
       <section class="hybrid-para">
@@ -37,8 +31,6 @@
         </div>
       </section>
 
-      <hr />
-
       <h2>Preparing for Performances</h2>
       <section class="hybrid-para">
         <div class="hybrid-para__text">
@@ -56,6 +48,7 @@
 </template>
 
 <style scoped>
+@import "~/assets/css/document.css";
 @import "~/assets/css/portfolio.css";
 </style>
 

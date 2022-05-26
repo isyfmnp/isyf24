@@ -89,13 +89,23 @@ h1 {
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
   text-align: center;
 }
+svg {
+  color: var(--fg);
+  height: 16px;
+  width: 16px;
+}
 
 /* Style cleaning */
 a {
   -webkit-tap-highlight-color: transparent;
+  color: var(--primary-700);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 a:active {
-  opacity: 0.625;
+  color: var(--primary-500);
 }
 ul {
   padding: 0px;

@@ -1,18 +1,12 @@
 <template>
   <main>
-    <img
-      src="~/assets/images/gClassroom.jpg"
-      alt=""
-      class="header__image"
-    />
-
-    <hr />
+    <img src="~/assets/images/gClassroom.jpg" alt="" class="header__image" />
 
     <div class="content">
-      <h1 class="title">Academics</h1>
-      <span class="subtitle">4th year Student, 7 subjects + PW</span>
-
-      <hr />
+      <header>
+        <h1 class="title">Academics</h1>
+        <p class="subtitle">4th year Student, 7 subjects + PW</p>
+      </header>
 
       <p>
         The 4th year is always considered amongst the more stressful, if not
@@ -24,8 +18,6 @@
         pursuits is greatly lessened.
       </p>
 
-      <hr />
-
       <h2>Content</h2>
       <p>
         Although the focus is more on revision than on new learning and hence
@@ -35,8 +27,6 @@
         familiar and apply it in the curriculum that is taught now.
       </p>
 
-      <hr />
-
       <h2>Complexity</h2>
       <section class="hybrid-para">
         <div class="hybrid-para__image">
@@ -44,7 +34,7 @@
             src="~/assets/images/macarthurHead.jpg"
             alt="Some code behind our project"
           />
-            <span class="caption">General Douglas MacArthur</span>
+          <span class="caption">General Douglas MacArthur</span>
         </div>
         <div class="hybrid-para__text">
           <p>
@@ -56,20 +46,13 @@
           </p>
         </div>
       </section>
-
-      <hr />
-
-      <h2></h2>
-      <section></section>
     </div>
   </main>
 </template>
 
 <style scoped>
+@import "~/assets/css/document.css";
 @import "~/assets/css/portfolio.css";
-
-.header__image {
-}
 </style>
 
 <script>

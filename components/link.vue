@@ -1,5 +1,11 @@
 <template style="display: inherit">
-  <a v-if="isExternal" :href="href" v-bind="$attrs" :target="isExternal ? '_blank' : ''"><slot /></a>
+  <a
+    v-if="isExternal"
+    :href="href"
+    v-bind="$attrs"
+    :target="isExternal ? '_blank' : ''"
+    ><slot
+  /></a>
   <NuxtLink v-else :to="href"><slot /></NuxtLink>
 </template>
 
