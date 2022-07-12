@@ -9,7 +9,7 @@
           <img
             width="26"
             height="26"
-            src="~/assets/favicon.ico"
+            src="/favicon.ico"
             alt="Xuyuan's Profile"
           />
           <span>Tang&nbsp;Xuyuan</span>
