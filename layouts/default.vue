@@ -26,3 +26,19 @@
   max-width: var(--content-width);
 }
 </style>
+
+<script>
+import { defineComponent } from "@vue/composition-api";
+
+export default defineComponent({
+  head: {
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+      },
+    ],
+  },
+});
+</script>
