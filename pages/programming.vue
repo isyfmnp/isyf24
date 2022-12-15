@@ -86,6 +86,21 @@
           />
         </div>
       </section>
+      
+      <section class="hybrid-para">
+        <div class="hybrid-para__text">
+          <br>
+          <p>
+            We were invited to present our project as a booth at the 2022
+            Digital For Life Youth Award ceremony, representing the Swift
+            Accelerator Programme.
+          </p>
+        </div>
+        <div class="hybrid-para__image">
+          <img src="~/assets/images/dflyaBooth.jpg" alt="Our booth at the DFLYA award ceremony" />
+        </div>
+      </section>
+
 
       <h2>Monster Melancholy</h2>
 
@@ -116,15 +131,15 @@
 </template>
 
 <style scoped>
-@import "~/assets/css/document.css";
-@import "~/assets/css/portfolio.css";
+@import '~/assets/css/document.css';
+@import '~/assets/css/portfolio.css';
 </style>
 
 <script>
 export default {
   head() {
     return {
-      title: "My Programming Adventures",
+      title: 'My Programming Adventures',
     };
   },
 };
