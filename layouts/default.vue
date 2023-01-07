@@ -1,5 +1,8 @@
 <template>
   <div>
+    <Head>
+      <Title>Tang Xuyuan</Title>
+    </Head>
     <NavBar />
     <hr class="navbar-space" />
     <div class="body">
