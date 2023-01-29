@@ -5,9 +5,9 @@
         <h1>{{ error.statusCode }}</h1>
         <h3>{{ error.message }}</h3>
 
-        <br style="display: block; margin-block: 4rem;">
+        <br style="display: block; margin-block: 4rem" />
 
-        <NuxtLink to='/'>Return to Home</NuxtLink>
+        <NuxtLink to="/">Return to Home</NuxtLink>
       </div>
     </main>
   </DefaultLayout>
@@ -33,7 +33,7 @@ a {
   font-weight: semibold;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width: 800px) {
   h1 {
     font-size: 128px;
   }

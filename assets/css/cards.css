@@ -57,9 +57,10 @@
   align-items: center;
   gap: 2rem;
   justify-content: space-between;
+  margin-top: 1.5rem;
 }
 .card .metadata h4 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -94,16 +95,20 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
+  .card {
+    aspect-ratio: 7/9;
+  }
   .card .metadata h4 {
     letter-spacing: 0.2rem;
   }
   .card .info h3 {
-    font-size: 16px;
+    margin-top: 3rem;
+    font-size: 26px;
   }
 }
 @media screen and (min-width: 1200px) {
   .deck {
     gap: 3rem;
-    padding-inline: 8rem;
+    padding-inline: 10rem;
   }
 }

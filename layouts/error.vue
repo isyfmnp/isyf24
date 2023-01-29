@@ -1,7 +1,5 @@
-<template>
-
-</template>
+<template></template>
 
 <script>
-exo
+exo;
 </script>

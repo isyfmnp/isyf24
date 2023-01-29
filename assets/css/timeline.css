@@ -65,7 +65,7 @@
 @media screen and (min-width: 800px) {
   .timeline {
     padding: 0 4rem;
-  margin: 2.5rem auto 0;
+    margin: 2.5rem auto 0;
   }
   .timeline::after {
     left: 50%;

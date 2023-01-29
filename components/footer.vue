@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <hr class="footer-top"/>
+    <hr class="footer-top" />
 
     <section class="links">
       <div>
