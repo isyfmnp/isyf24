@@ -1,0 +1,119 @@
+#masthead {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-between;
+  padding: 1rem 0 7rem;
+  margin-bottom: -7rem;
+  box-sizing: border-box;
+}
+#masthead .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3vh;
+}
+#masthead .image {
+  object-fit: contain;
+  height: min(40vh, 32rem);
+  margin: 0 auto;
+}
+#masthead .title {
+  font-size: 32px;
+  margin-block: 1rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+#masthead .subtitle {
+  font-size: 16px;
+  color: rgba(var(--fg), 0.7);
+}
+
+#masthead .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 14px;
+}
+#masthead .contact svg {
+  margin: 0 0.25rem;
+  color: var(--fg);
+}
+#masthead .scroll {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  #masthead {
+    position: relative;
+    padding: calc(14vh + 3vw) 2rem 2rem;
+    margin-bottom: 8rem;
+    text-align: right;
+  }
+  #masthead .profile {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+  #masthead .profile * {
+    flex: 1 1 50%;
+  }
+  #masthead .image {
+    height: min(55vh, 50vw);
+    width: 100%;
+  }
+  #masthead .wrapper {
+    position: relative;
+    z-index: 10;
+  }
+  #masthead .title {
+    font-size: 48px;
+  }
+  #masthead .subtitle {
+    font-size: 24px;
+  }
+  #masthead .contact {
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 16px;
+  }
+  #masthead .scroll-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  #masthead .scroll {
+    width: 16px;
+    height: 28px;
+    border-radius: 25px;
+    border: 2px solid var(--fg);
+    display: block;
+    position: relative;
+  }
+  #masthead .scroll::after {
+    content: "";
+    width: 4px;
+    height: 6px;
+    background: var(--fg);
+    border-radius: 1px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    animation-name: scroll-to-loaded;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-diretion: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+  @keyframes scroll-to-loaded {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+}

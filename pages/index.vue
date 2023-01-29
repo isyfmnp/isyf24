@@ -1,91 +1,164 @@
 <template>
   <main>
-    <div class="header">
-      <div class="header__image"></div>
-    </div>
+    <section id="masthead" :style="{ 'min-height': windowHeight + 'px' }">
+      <div class="profile">
+        <img
+          class="image"
+          src="~/assets/images/xuyuan_portrait.png"
+          alt="A picture of Xuyuan"
+        />
+        <div class="wrapper">
+          <h1 class="title">hello, I'm Tang Xuyuan.</h1>
+          <h3 class="subtitle">
+            I'm a student, aspiring software designer and former chorister
+            currently studying at Hwa Chong Institution (JC), Singapore.
+          </h3>
+        </div>
+      </div>
 
-    <div class="content">
-      <header>
-        <h1 class="title">Tang Xuyuan</h1>
-        <p class="subtitle">Hwa Chong Institution</p>
-        <p class="subtitle">4A2 - 22</p>
-      </header>
+      <div class="contact">
+        <a href="mailto:t.xuyuan@gmail.com" target="_blank"
+          ><IconMail />Personal&nbsp;Email (preferred)</a
+        >
+        <a href="mailto:191519R@student.hci.edu.sg" target="_blank"
+          ><IconMail />School&nbsp;Email</a
+        >
+        <a href="https://github.com/txuyuan" target="_blank"
+          ><IconGithub />Github</a
+        >
+        <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
+          ><IconInstagram />Instagram</a
+        >
+      </div>
 
-      <p>
-        I'm a Hwa Chong student, a choir member, a hobbyist programmer and a
-        sleeper. I enjoy learning about sciences and history during lessons and
-        spending time with my friends and cca-mates. I also like doing various
-        programming projects in my spare time, such as this website!
-      </p>
+      <div class="scroll-wrapper">
+        <div class="scroll"></div>
+      </div>
+    </section>
 
-      <h2>Contact</h2>
+    <section>
+      <h2>Experience</h2>
 
-      <ul class="contact">
-        <li>
-          <Link href="https://github.com/txuyuan" class="button--outline"
-            ><GithubIcon />@txuyuan</Link
-          >
-        </li>
-        <li>
-          <Link href="mailto:t.xuyuan@gmail.com" class="button--outline"
-            ><MailIcon />t.xuyuan@gmail.com</Link
-          >
-        </li>
-        <li>
-          <Link href="mailto:191519R@student.hci.edu.sg" class="button--outline"
-            ><MailIcon />191519R@student.hci.edu.sg</Link
-          >
-        </li>
-      </ul>
+      <div class="deck">
+        <a class="card">
+          <div class="header">
+            <h4>Internship</h4>
+            <h4>2022</h4>
+          </div>
+          <h3>Garuda Robotics - Airspace management for UAVS</h3>
+        </a>
 
-      <h2>Works & Experiences</h2>
+        <a class="card">
+          <div class="header">
+            <h4>Programme / Project</h4>
+            <h4>2021 - 2022</h4>
+          </div>
+          <h3>
+            Swift Accelerator Programme - Educational toolbox for Music Theory
+          </h3>
+        </a>
 
-      <NavPanel />
-    </div>
+        <a class="card">
+          <div class="header">
+            <h4>PW Project</h4>
+            <h4>2022</h4>
+          </div>
+          <h3>Aquarium Insider - All you need for aquarium care</h3>
+        </a>
+
+        <a class="card">
+          <div class="header">
+            <h4>PW Project</h4>
+            <h4>2021</h4>
+          </div>
+          <h3>
+            Trace Together Alternative (TTA) - An exploration into contact
+            tracing technology
+          </h3>
+        </a>
+
+        <a class="card">
+          <div class="header">
+            <h4>Project</h4>
+            <h4>2021</h4>
+          </div>
+          <h3>
+            Monster Melancholy - A simple yet endlessly fun adventure game
+          </h3>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Academic Qualifications</h2>
+      <p>GCE 'O' Level Equivalent - Secondary 4 Integrated Programme (2022)</p>
+      <p>Singapore-Cambridge GCE 'O' Level - Higher Chinese (2022)</p>
+    </section>
+
+    <section>
+      <h2>Academic Timeline</h2>
+
+      <div class="timeline">
+        <span class="comment right">2023 - present</span>
+        <div class="elm left">
+          <h3>Hwa Chong Junior College</h3>
+          <p>Enrolled in 2023</p>
+        </div>
+
+        <span class="comment left">2019 - 2022</span>
+        <div class="elm right">
+          <h3>Hwa Chong High School</h3>
+          <p>
+            Subjects offered: Physics, Chemistry, Math, Higher Chinese, English,
+            History and Social Studies
+          </p>
+        </div>
+
+        <span class="comment right">2016 - 2018</span>
+        <div class="elm left">
+          <h3>Nan Hua Primary School</h3>
+        </div>
+
+        <span class="comment left">2013 - 2015</span>
+        <div class="elm right">
+          <h3>Rulang Primary School</h3>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <style scoped>
-@import "~/assets/css/document.css";
-@import "~/assets/css/portfolio.css";
+@import "~/assets/css/masthead.css";
+@import "~/assets/css/cards.css";
+@import "~/assets/css/timeline.css";
 
-.contact {
-  list-style: none;
-  margin: 0;
+main {
+  text-align: center;
 }
 
-.header {
-  position: relative;
-  /* perspective: 20px; */
-  min-height: min(
-    50vw,
-    700px
-  ); /* Prevent height expanding far beyond max content-width (1100px * 0.5) */
+:not(#masthead) h2 {
+  font-weight: semibold;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  margin: 6rem 0 2rem;
 }
-.header__image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  background: url("~/assets/images/titleImage.jpg") center/cover no-repeat;
-  filter: saturate(0.625) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.375));
-  transform: scale(0.975); /* Don't wanna mess with the measurements */
-  border-radius: 0.5rem;
-}
-/* ATM unused */
-.header__text {
-  position: absolute;
-  top: 40%;
-  left: clamp(5%, 20%, 20%);
-
-  font-size: 2.2rem;
-  color: var(--bg);
+@media screen and (min-width: 800px) {
+  :not(#masthead) h2 {
+    letter-spacing: 1.25rem;
+    margin: 7rem 0 2rem;
+  }
 }
 </style>
 
-<script>
-import { MailIcon } from "@heroicons/vue/solid";
-export default {
-  components: { MailIcon },
-};
+<script setup>
+import EmailIcon from "vue-material-design-icons/Email.vue";
+import { ref, onMounted, onUnmounted } from "vue";
+
+let windowHeight = ref(6000);
+
+onMounted(() => {
+  windowHeight.value = window.innerHeight;
+});
 </script>

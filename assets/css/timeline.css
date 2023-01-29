@@ -1,0 +1,106 @@
+.timeline * {
+  box-sizing: border-box;
+}
+.timeline {
+  position: relative;
+  max-width: 100%;
+  margin: 2.5rem 0;
+  margin-left: 1rem;
+  text-align: left;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background: var(--fg);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: -0.5px;
+}
+
+.timeline .elm {
+  margin: 0.5rem 0 1rem;
+  padding: 0 2rem 1rem;
+  position: relative;
+  width: 100%;
+}
+.timeline .elm.right,
+.timeline .elm.left {
+  left: 0%;
+  text-align: left;
+}
+.timeline .elm::after {
+  --dot-size: 14px;
+  content: "";
+  position: absolute;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  top: 0.26rem;
+  border-radius: 50%;
+  background: var(--fg);
+}
+.timeline .elm.right::after,
+.timeline .elm.left::after {
+  left: calc(-1 * var(--dot-size) / 2);
+}
+
+.timeline .comment {
+  margin: 0;
+  margin-top: 2px;
+  padding: 0 2rem;
+
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.075rem;
+}
+.timeline .comment.left {
+  right: 50%;
+}
+
+.timeline h3 {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .timeline {
+    padding: 0 4rem;
+  margin: 2.5rem auto 0;
+  }
+  .timeline::after {
+    left: 50%;
+  }
+  .timeline .elm {
+    width: 50%;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+  }
+  .timeline .elm::after {
+    top: 1.3rem;
+  }
+  .timeline .elm.left {
+    right: 50%;
+    text-align: right;
+  }
+  .timeline .elm.right {
+    left: 50%;
+    text-align: left;
+  }
+  .timeline .elm.left::after {
+    left: unset;
+    right: calc(-1 * var(--dot-size) / 2);
+  }
+  .timeline .elm.right::after {
+    left: calc(-1 * var(--dot-size) / 2);
+  }
+  .timeline .comment {
+    margin: 1.2rem 0 1rem;
+    position: absolute;
+  }
+  .timeline .comment.left {
+    right: 50%;
+  }
+  .timeline .comment.right {
+    left: 50%;
+  }
+}

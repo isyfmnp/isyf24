@@ -1,0 +1,45 @@
+.deck {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  text-align: left;
+}
+
+.card {
+  border: 1px dotted blue;
+  padding: 1rem;
+}
+.card .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.card .header h4 {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+.card .header h4 + h4 {
+  text-align: right;
+}
+.card::after {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .deck {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card .header h4 {
+    letter-spacing: 0.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .deck {
+    gap: 2.5rem;
+  }
+}
