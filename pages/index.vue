@@ -8,7 +8,7 @@
           alt="A picture of Xuyuan"
         />
         <div class="wrapper">
-          <h1 class="title">hello, I'm Tang Xuyuan.</h1>
+          <h1 class="title">Hello, I'm Xuyuan.</h1>
           <h3 class="subtitle">
             I'm a student, aspiring software designer and former chorister
             currently studying at Hwa Chong Institution (JC), Singapore.
@@ -16,20 +16,28 @@
         </div>
       </div>
 
-      <div class="contact">
-        <a href="mailto:t.xuyuan@gmail.com" target="_blank"
-          ><IconMail />Personal&nbsp;Email (preferred)</a
-        >
-        <a href="mailto:191519R@student.hci.edu.sg" target="_blank"
-          ><IconMail />School&nbsp;Email</a
-        >
-        <a href="https://github.com/txuyuan" target="_blank"
-          ><IconGithub />Github</a
-        >
-        <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
-          ><IconInstagram />Instagram</a
-        >
-      </div>
+      <ul class="contact">
+        <li>
+          <a href="mailto:t.xuyuan@gmail.com" target="_blank"
+            ><IconMail />Personal&nbsp;Email (preferred)</a
+          >
+        </li>
+        <li>
+          <a href="mailto:191519R@student.hci.edu.sg" target="_blank"
+            ><IconMail />School&nbsp;Email</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/txuyuan" target="_blank"
+            ><IconGithub />Github</a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
+            ><IconInstagram />Instagram</a
+          >
+        </li>
+      </ul>
 
       <div class="scroll-wrapper">
         <div class="scroll"></div>
@@ -40,52 +48,72 @@
       <h2>Experience</h2>
 
       <div class="deck">
-        <a class="card">
-          <div class="header">
-            <h4>Internship</h4>
-            <h4>2022</h4>
+        <NuxtLink class="card">
+          <img class="image" src="/images/mydronefleets.png" />
+          <div class="info">
+            <div class="metadata">
+              <h4>Internship</h4>
+              <h4>2022</h4>
+            </div>
+            <h3>Garuda Robotics - Airspace management for UAVS</h3>
+            <SeeMore />
           </div>
-          <h3>Garuda Robotics - Airspace management for UAVS</h3>
-        </a>
+        </NuxtLink>
 
-        <a class="card">
-          <div class="header">
-            <h4>Programme / Project</h4>
-            <h4>2021 - 2022</h4>
+        <NuxtLink class="card">
+          <img class="image" src="/images/musicalrooms.png" />
+          <div class="info">
+            <div class="metadata">
+              <h4>Programme / Project</h4>
+              <h4>2021 - 2022</h4>
+            </div>
+            <h3>
+              Swift Accelerator Programme - Educational toolbox for Music Theory
+            </h3>
+            <SeeMore />
           </div>
-          <h3>
-            Swift Accelerator Programme - Educational toolbox for Music Theory
-          </h3>
-        </a>
+        </NuxtLink>
 
-        <a class="card">
-          <div class="header">
-            <h4>PW Project</h4>
-            <h4>2022</h4>
+        <NuxtLink class="card">
+          <img class="image" src="/images/aquarium_insider.png" />
+          <div class="info">
+            <div class="metadata">
+              <h4>PW Project</h4>
+              <h4>2022</h4>
+            </div>
+            <h3>Aquarium Insider - All you need for aquarium care</h3>
+            <SeeMore />
           </div>
-          <h3>Aquarium Insider - All you need for aquarium care</h3>
-        </a>
+        </NuxtLink>
 
-        <a class="card">
-          <div class="header">
-            <h4>PW Project</h4>
-            <h4>2021</h4>
+        <NuxtLink class="card">
+          <img class="image" src="/images/tta_code.png" />
+          <div class="info">
+            <div class="metadata">
+              <h4>PW Project</h4>
+              <h4>2021</h4>
+            </div>
+            <h3>
+              Trace Together Alternative (TTA) - An exploration into contact
+              tracing technology
+            </h3>
+            <SeeMore />
           </div>
-          <h3>
-            Trace Together Alternative (TTA) - An exploration into contact
-            tracing technology
-          </h3>
-        </a>
+        </NuxtLink>
 
-        <a class="card">
-          <div class="header">
-            <h4>Project</h4>
-            <h4>2021</h4>
+        <NuxtLink class="card">
+          <img class="image" src="/images/monster_melancholy.png" />
+          <div class="info">
+            <div class="metadata">
+              <h4>Project</h4>
+              <h4>2021</h4>
+            </div>
+            <h3>
+              Monster Melancholy - A simple yet endlessly fun adventure game
+            </h3>
+            <SeeMore />
           </div>
-          <h3>
-            Monster Melancholy - A simple yet endlessly fun adventure game
-          </h3>
-        </a>
+        </NuxtLink>
       </div>
     </section>
 
@@ -136,25 +164,29 @@
 main {
   text-align: center;
 }
+ul {
+  list-style: none;
+  padding-left: 0;
+}
 
 :not(#masthead) h2 {
   font-weight: semibold;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.6rem;
-  margin: 6rem 0 2rem;
+  margin: 7rem 0 3rem;
 }
 @media screen and (min-width: 800px) {
   :not(#masthead) h2 {
-    letter-spacing: 1.25rem;
-    margin: 7rem 0 2rem;
+    letter-spacing: 1rem;
+    margin: 8.5rem 0 3rem;
   }
 }
 </style>
 
 <script setup>
 import EmailIcon from "vue-material-design-icons/Email.vue";
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted } from "vue";
 
 let windowHeight = ref(6000);
 

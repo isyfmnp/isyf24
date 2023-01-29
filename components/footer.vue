@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <hr />
+    <hr class="footer-top"/>
 
     <section class="links">
       <div>
@@ -25,6 +25,22 @@
         <h2>Projects</h2>
         <ul></ul>
       </div>
+
+      <div>
+        <h2>Socials</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/txuyuan" target="_blank"
+              ><IconGithub />Github</a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
+              ><IconInstagram />Instagram</a
+            >
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="copyright">
@@ -44,10 +60,12 @@
 .footer {
   max-width: var(--content-width);
   padding: 4rem;
+  margin: 0 auto;
 }
-hr {
-  margin: 6rem -2rem;
+.footer-top {
+  margin: 2rem -2rem;
 }
+
 h2 {
   font-size: 20px;
 }
@@ -58,25 +76,31 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+ul > li {
+  margin-block: 0.75rem;
+}
 
 .links {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin: 2rem 0;
 }
 .links .light {
   color: var(--fg-secondary);
 }
+.links svg {
+  margin-right: 0.25rem;
+}
 
 .copyright {
   display: flex;
   align-items: center;
   padding: 1rem 0;
-  margin: 2rem 0;
+  margin: 1rem 0 0;
   gap: 1rem;
-  color: var(--fg-secondary);
   font-size: 14px;
+  font-weight: 500;
   line-height: 1.7;
 }
 .copyright .xuyuan-icon {
@@ -85,5 +109,19 @@ ul {
   --size: clamp(37px, 4.5vw, 52px);
   width: var(--size);
   height: var(--size);
+}
+
+@media screen and (min-width: 800px) {
+  .footer-top {
+    margin: 6rem -2rem;
+  }
+  .links {
+    flex-direction: row;
+    padding-right: 2rem;
+    margin: 0.5rem 0;
+  }
+  .copyright {
+    margin: 4rem 0 0;
+  }
 }
 </style>

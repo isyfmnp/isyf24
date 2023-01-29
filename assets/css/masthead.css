@@ -11,9 +11,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-grow: 1;
+  flex-shrink: 1;
   gap: 3vh;
 }
 #masthead .image {
+  text-align: left;
   object-fit: contain;
   height: min(40vh, 32rem);
   margin: 0 auto;
@@ -55,6 +58,7 @@
   #masthead .profile {
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     gap: 3rem;
   }
   #masthead .profile * {
@@ -62,7 +66,7 @@
   }
   #masthead .image {
     height: min(55vh, 50vw);
-    width: 100%;
+    padding-right: 4rem;
   }
   #masthead .wrapper {
     position: relative;
@@ -117,3 +121,4 @@
     }
   }
 }
+
