@@ -1,34 +1,34 @@
 <template>
-    <main class="project">
-      <section class="masthead">
-        <div class="metadata">
-          <span class="type">
-            <slot name="type">Project / Type</slot>
-          </span>
-          <span class="title">
-            <slot name="title">Title - Important Information</slot>
-          </span>
-          <span class="role">
-            <slot name="role">Software Developer</slot>
-          </span>
-          <span class="time">
-            <slot name="time">2022</slot>
-          </span>
-        </div>
+  <main class="project">
+    <section class="masthead">
+      <div class="metadata">
+        <span class="type">
+          <slot name="type">Project / Type</slot>
+        </span>
+        <span class="title">
+          <slot name="title">Title - Important Information</slot>
+        </span>
+        <span class="role">
+          <slot name="role">Software Developer</slot>
+        </span>
+        <span class="time">
+          <slot name="time">2022</slot>
+        </span>
+      </div>
 
-        <div class="description">
-          <slot name="description"
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.</slot
-          >
-        </div>
-      </section>
+      <div class="description">
+        <slot name="description"
+          >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.</slot
+        >
+      </div>
+    </section>
 
-      <section class="content">
-        <slot />
-      </section>
-    </main>
+    <section class="content">
+      <slot />
+    </section>
+  </main>
 </template>
 
 <style scoped>

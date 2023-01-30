@@ -26,7 +26,6 @@
 import { ref, onMounted } from "vue";
 const height = ref(0);
 onMounted(() => {
-  height.value = window.innerHeight * 0.7
-  console.log(height.value)
-})
+  height.value = window.innerHeight * 0.7;
+});
 </script>

@@ -40,8 +40,19 @@ export default defineNuxtConfig({
   buildModules: ["@nuxtjs/eslint-module"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxt/image-edge"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  image: {
+    presets: {
+      default: {
+        format: "webp",
+        quality: "80",
+        fit: "cover",
+        loading: "lazy",
+      },
+    },
+  },
 });
