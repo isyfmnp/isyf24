@@ -4,9 +4,12 @@
       <Title>Portfolio | Tang Xuyuan</Title>
     </Head>
     <NavBar />
+    <ButtonScroll />
+
     <div id="body">
       <slot />
     </div>
+
     <Footer />
   </div>
 </template>
