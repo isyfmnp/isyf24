@@ -52,6 +52,9 @@ import MenuIcon from "vue-material-design-icons/Menu.vue";
 .nav__elm {
   padding: 1rem;
 }
+.nav > a::after {
+  display: none;
+}
 @media screen and (min-width: 800px) {
   .nav {
     position: fixed;
@@ -65,7 +68,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue";
     box-shadow: 0px 0px 10px 4px rgba(var(--fg-rgb), 0.2);
   }
   .nav__elm:hover {
-    --fg: var(--fg-secondary);
+    color: var(--fg-secondary);
   }
   .nav__menu {
     --size: 1.25rem;

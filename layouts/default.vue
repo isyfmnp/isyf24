@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <Head>
       <Title>Portfolio | Tang Xuyuan</Title>
     </Head>
@@ -11,7 +11,7 @@
     </div>
 
     <Footer />
-  </main>
+  </div>
 </template>
 
 <style scoped>

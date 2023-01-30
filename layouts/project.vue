@@ -1,6 +1,5 @@
 <template>
-  <DefaultLayout>
-    <div class="project">
+    <main class="project">
       <section class="masthead">
         <div class="metadata">
           <span class="type">
@@ -29,8 +28,7 @@
       <section class="content">
         <slot />
       </section>
-    </div>
-  </DefaultLayout>
+    </main>
 </template>
 
 <style scoped>
@@ -116,7 +114,3 @@
   }
 }
 </style>
-
-<script setup>
-import DefaultLayout from "~/layouts/default.vue";
-</script>
