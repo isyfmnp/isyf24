@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
+  ssr: true,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -45,7 +46,6 @@ export default defineNuxtConfig({
   build: {},
 
   image: {
-    provider: 'static',
     presets: {
       default: {
         format: "webp",
