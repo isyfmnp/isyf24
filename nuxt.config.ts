@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/eslint-module"],
+  buildModules: ["@nuxtjs/eslint-module", "@nuxt/image-edge"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxt/image-edge"],
