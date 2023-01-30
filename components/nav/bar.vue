@@ -1,5 +1,5 @@
 <template>
-  <main class="nav">
+  <div class="nav">
     <NuxtLink to="/">
       <div class="nav__icon nav__elm">
         <img
@@ -18,7 +18,7 @@
       <!-- TODO: Open menu -->
       <MenuIcon size="26" />
     </a>
-  </main>
+  </div>
 </template>
 
 <script>

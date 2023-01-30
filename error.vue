@@ -1,6 +1,6 @@
 <template>
   <DefaultLayout>
-    <main :style="{ 'min-height': windowHeight - 200 + 'px' }">
+    <div class="status" :style="{ 'min-height': windowHeight - 200 + 'px' }">
       <div>
         <h1>{{ error.statusCode }}</h1>
         <h3>{{ error.message }}</h3>
@@ -9,13 +9,14 @@
 
         <NuxtLink to="/">Return to Home</NuxtLink>
       </div>
-    </main>
+    </div>
   </DefaultLayout>
 </template>
 
 <style scoped>
-main {
+.status {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;

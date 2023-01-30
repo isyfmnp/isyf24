@@ -48,7 +48,7 @@
       <h2>Experience</h2>
 
       <div class="deck">
-        <NuxtLink class="card">
+        <NuxtLink class="card" to="/projects/garuda-robotics">
           <img class="image" src="/images/mydronefleets.png" />
           <div class="info">
             <div class="metadata">
@@ -60,25 +60,25 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card">
+        <NuxtLink class="card" to="/projects/musicalrooms">
           <img class="image" src="/images/musicalrooms.png" />
           <div class="info">
             <div class="metadata">
-              <h4>Programme / Project</h4>
+              <h4>Mobile App (Educational)</h4>
               <h4>2021 - 2022</h4>
             </div>
             <h3>
-              Swift Accelerator Programme - Educational toolbox for Music Theory
+              MusicalRooms - Educational toolbox for Music Theory
             </h3>
             <SeeMore />
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card">
+        <NuxtLink class="card" to="/projects/aquarium-insider">
           <img class="image" src="/images/aquarium_insider.png" />
           <div class="info">
             <div class="metadata">
-              <h4>PW Project</h4>
+              <h4>Website (Educational)</h4>
               <h4>2022</h4>
             </div>
             <h3>Aquarium Insider - All you need for aquarium care</h3>
@@ -86,11 +86,11 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card">
+        <NuxtLink class="card" to="/projects/trace-together-alternative">
           <img class="image" src="/images/tta_code.png" />
           <div class="info">
             <div class="metadata">
-              <h4>PW Project</h4>
+              <h4>Mobile App</h4>
               <h4>2021</h4>
             </div>
             <h3>
@@ -101,11 +101,11 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card">
+        <NuxtLink class="card" to="/projects/monster-melancholy">
           <img class="image" src="/images/monster_melancholy.png" />
           <div class="info">
             <div class="metadata">
-              <h4>Project</h4>
+              <h4>Game / Website</h4>
               <h4>2021</h4>
             </div>
             <h3>
