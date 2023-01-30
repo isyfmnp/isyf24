@@ -1,9 +1,7 @@
 <template>
   <ProjectLayout>
     <template #type>Game / Website</template>
-    <template #title
-      >Monster Melancholy - A simple yet endlessly fun adventure game</template
-    >
+    <template #title>Monster Melancholy - A simple yet endlessly fun adventure game</template>
     <template #role>Web Developer</template>
     <template #time>2021</template>
 

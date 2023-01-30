@@ -2,9 +2,8 @@
   <div class="nav">
     <NuxtLink to="/">
       <div class="nav__icon nav__elm">
-        <nuxt-img
-          preset="default"
-          src="/images/xuyuan_icon.png"
+        <img
+          src="~/assets/images/xuyuan_icon.png"
           class="nav__icon__pic"
           alt=""
         />

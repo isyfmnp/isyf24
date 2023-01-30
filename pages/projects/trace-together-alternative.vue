@@ -1,10 +1,8 @@
 <template>
   <ProjectLayout>
     <template #type>Mobile App</template>
-    <template #title
-      >Trace Together Alternative (TTA) - An exploration into contact tracing
-      technology</template
-    >
+    <template #title>Trace Together Alternative (TTA) - An exploration into contact
+              tracing technology</template>
     <template #role>Network / Backend Developer</template>
     <template #time>2021</template>
 

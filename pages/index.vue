@@ -2,10 +2,9 @@
   <main>
     <section id="masthead" :style="{ 'min-height': windowHeight + 'px' }">
       <div class="profile">
-        <nuxt-img
-          preset="default"
+        <img
           class="image"
-          src="/images/xuyuan_portrait.png"
+          src="~/assets/images/xuyuan_portrait.png"
           alt="A picture of Xuyuan"
         />
         <div class="wrapper">
@@ -50,12 +49,7 @@
 
       <div class="deck">
         <NuxtLink class="card" to="/projects/garuda-robotics">
-          <nuxt-img
-            preset="default"
-            loading="lazy"
-            class="image"
-            src="/images/mydronefleets.png"
-          />
+          <img class="image" src="/images/mydronefleets.png" />
           <div class="info">
             <div class="metadata">
               <h4>Internship</h4>
@@ -67,29 +61,21 @@
         </NuxtLink>
 
         <NuxtLink class="card" to="/projects/musicalrooms">
-          <nuxt-img
-            preset="default"
-            loading="lazy"
-            class="image"
-            src="/images/musicalrooms.png"
-          />
+          <img class="image" src="/images/musicalrooms.png" />
           <div class="info">
             <div class="metadata">
               <h4>Mobile App (Educational)</h4>
               <h4>2021 - 2022</h4>
             </div>
-            <h3>MusicalRooms - Educational toolbox for Music Theory</h3>
+            <h3>
+              MusicalRooms - Educational toolbox for Music Theory
+            </h3>
             <SeeMore />
           </div>
         </NuxtLink>
 
         <NuxtLink class="card" to="/projects/aquarium-insider">
-          <nuxt-img
-            preset="default"
-            loading="lazy"
-            class="image"
-            src="/images/aquarium_insider.png"
-          />
+          <img class="image" src="/images/aquarium_insider.png" />
           <div class="info">
             <div class="metadata">
               <h4>Website (Educational)</h4>
@@ -101,7 +87,7 @@
         </NuxtLink>
 
         <NuxtLink class="card" to="/projects/trace-together-alternative">
-          <nuxt-img preset="default" loading="lazy" class="image" src="/images/tta_code.png" />
+          <img class="image" src="/images/tta_code.png" />
           <div class="info">
             <div class="metadata">
               <h4>Mobile App</h4>
@@ -116,12 +102,7 @@
         </NuxtLink>
 
         <NuxtLink class="card" to="/projects/monster-melancholy">
-          <nuxt-img
-            preset="default"
-            loading="lazy"
-            class="image"
-            src="/images/monster_melancholy.png"
-          />
+          <img class="image" src="/images/monster_melancholy.png" />
           <div class="info">
             <div class="metadata">
               <h4>Game / Website</h4>

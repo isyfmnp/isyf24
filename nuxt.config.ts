@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
-  ssr: true,
+  ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -40,19 +40,8 @@ export default defineNuxtConfig({
   buildModules: ["@nuxtjs/eslint-module"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/image-edge"],
+  modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-
-  image: {
-    provider: process.env.VERCEL_ENV ? 'vercel' : 'ipx',
-    presets: {
-      default: {
-        format: "webp",
-        quality: "80",
-        fit: "cover",
-      },
-    },
-  },
 });
