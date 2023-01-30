@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/eslint-module", "@nuxt/image-edge"],
+  buildModules: ["@nuxtjs/eslint-module"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxt/image-edge"],
@@ -46,6 +46,7 @@ export default defineNuxtConfig({
   build: {},
 
   image: {
+    provider: "ipx",
     presets: {
       default: {
         format: "webp",
