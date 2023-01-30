@@ -52,6 +52,7 @@
         <NuxtLink class="card" to="/projects/garuda-robotics">
           <nuxt-img
             preset="default"
+            loading="lazy"
             class="image"
             src="/images/mydronefleets.png"
           />
@@ -68,6 +69,7 @@
         <NuxtLink class="card" to="/projects/musicalrooms">
           <nuxt-img
             preset="default"
+            loading="lazy"
             class="image"
             src="/images/musicalrooms.png"
           />
@@ -84,6 +86,7 @@
         <NuxtLink class="card" to="/projects/aquarium-insider">
           <nuxt-img
             preset="default"
+            loading="lazy"
             class="image"
             src="/images/aquarium_insider.png"
           />
@@ -98,7 +101,7 @@
         </NuxtLink>
 
         <NuxtLink class="card" to="/projects/trace-together-alternative">
-          <nuxt-img preset="default" class="image" src="/images/tta_code.png" />
+          <nuxt-img preset="default" loading="lazy" class="image" src="/images/tta_code.png" />
           <div class="info">
             <div class="metadata">
               <h4>Mobile App</h4>
@@ -115,6 +118,7 @@
         <NuxtLink class="card" to="/projects/monster-melancholy">
           <nuxt-img
             preset="default"
+            loading="lazy"
             class="image"
             src="/images/monster_melancholy.png"
           />
