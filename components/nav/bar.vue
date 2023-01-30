@@ -3,7 +3,7 @@
     <NuxtLink to="/">
       <div class="nav__icon nav__elm">
         <img
-          src="~/assets/images/xuyuan_icon.png"
+          src="/images/xuyuan_icon.png"
           class="nav__icon__pic"
           alt=""
         />

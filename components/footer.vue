@@ -50,7 +50,7 @@
     </section>
 
     <section class="copyright">
-      <img src="~/assets/images/xuyuan_icon.png" class="xuyuan-icon" alt="" />
+      <img src="/images/xuyuan_icon.png" class="xuyuan-icon" alt="" />
       <div>
         © 2023 Tang Xuyuan.
         <br />

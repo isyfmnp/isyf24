@@ -4,7 +4,7 @@
       <div class="profile">
         <img
           class="image"
-          src="~/assets/images/xuyuan_portrait.png"
+          src="/images/xuyuan_portrait.png"
           alt="A picture of Xuyuan"
         />
         <div class="wrapper">
