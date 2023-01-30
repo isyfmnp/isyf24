@@ -6,7 +6,7 @@
     <NavBar />
     <ButtonScroll />
 
-    <div id="body">
+    <div id="body" :style="{ 'min-height': height + 'px' }">
       <slot />
     </div>
 
@@ -21,3 +21,12 @@
   padding-inline: 1.5rem;
 }
 </style>
+
+<script setup>
+import { ref, onMounted } from "vue";
+const height = ref(0);
+onMounted(() => {
+  height.value = window.innerHeight * 0.7
+  console.log(height.value)
+})
+</script>
