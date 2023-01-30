@@ -46,7 +46,7 @@ export default defineNuxtConfig({
   build: {},
 
   image: {
-    provider: "ipx",
+    provider: process.env.VERCEL_ENV ? 'vercel' : 'ipx',
     presets: {
       default: {
         format: "webp",
