@@ -1,6 +1,6 @@
 .page-enter-active,
 .page-leave-active {
-  --trn-time: 550ms;
+  --trn-time: 450ms;
   --trn-func: cubic-bezier(.29,.11,.06,1);
   transition: all var(--trn-time) var(--trn-func);
 }
@@ -11,19 +11,23 @@
   width: 100%;
   height: 120%;
   left: 0;
-  transition: top var(--trn-time) var(--trn-func), bottom var(--trn-time) var(--trn-func);
-  background-color: rgba(var(--bg-rgb), 97%);
-  border-block: 1px solid var(--fg);
+  transition: top var(--trn-time) var(--trn-func), bottom var(--trn-time) var(--trn-func), background-color var(--trn-time) cubic-bezier(.75, 0, .25, 1);
+  background-color: rgba(var(--bg-rgb), 90%);
+  border-block: 1px solid rgba(var(--fg-rgb), 50%);
 } 
 .page-leave-from::before {
   top: 100vh;
+  background-color: rgba(var(--bg-rgb), 90%);
 }
 .page-leave-to::before {
   top: 0;
+  background-color: rgba(var(--bg-rgb), 99%);
 }
 .page-enter-from::before {
   bottom: 0;
+  background-color: rgba(var(--bg-rgb), 99%);
 }
 .page-enter-to::before {
   bottom: 100vh;
+  background-color: rgba(var(--bg-rgb), 90%);
 }

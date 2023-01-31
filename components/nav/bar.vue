@@ -66,6 +66,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue";
     border: 1px solid var(--fg);
     background-color: rgba(var(--bg-rgb), 0.9);
     box-shadow: 0px 0px 10px 4px rgba(var(--fg-rgb), 0.2);
+    border-radius: 0.25rem;
   }
   .nav__elm:hover {
     color: var(--fg-secondary);
