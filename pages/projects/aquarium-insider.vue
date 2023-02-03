@@ -1,7 +1,9 @@
 <template>
   <ProjectLayout>
     <template #type>Website (Educational)</template>
-    <template #title>Aquarium Insider - All you need for aquarium care</template>
+    <template #title
+      >Aquarium Insider - All you need for aquarium care</template
+    >
     <template #role>Frontend Developer</template>
     <template #time>2022</template>
 

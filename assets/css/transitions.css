@@ -1,20 +1,25 @@
 .page-enter-active,
 .page-leave-active {
   --trn-time: 450ms;
-  --trn-func: cubic-bezier(.29,.11,.06,1);
+  --trn-func: cubic-bezier(0.29, 0.11, 0.06, 1);
   transition: all var(--trn-time) var(--trn-func);
 }
-.page-enter-active::before, .page-leave-active::before {
-  content: '';
+.page-enter-from::before,
+.page-enter-to::before,
+.page-leave-from::before,
+.page-leave-to::before {
+  content: "";
   position: fixed;
   z-index: 99;
   width: 100%;
   height: 120%;
   left: 0;
-  transition: top var(--trn-time) var(--trn-func), bottom var(--trn-time) var(--trn-func), background-color var(--trn-time) cubic-bezier(.75, 0, .25, 1);
+  transition: top var(--trn-time) var(--trn-func),
+    bottom var(--trn-time) var(--trn-func),
+    background-color var(--trn-time) cubic-bezier(0.75, 0, 0.25, 1);
   background-color: rgba(var(--bg-rgb), 90%);
   border-block: 1px solid rgba(var(--fg-rgb), 50%);
-} 
+}
 .page-leave-from::before {
   top: 100vh;
   background-color: rgba(var(--bg-rgb), 90%);

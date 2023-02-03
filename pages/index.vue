@@ -16,7 +16,7 @@
         </div>
       </div>
 
-      <ul class="contact scroll-hidden" style="--delay: 500ms;">
+      <ul class="contact scroll-hidden" style="--delay: 500ms">
         <li>
           <a href="mailto:t.xuyuan@gmail.com" target="_blank"
             ><IconMail />Personal&nbsp;Email (preferred)</a
@@ -39,7 +39,7 @@
         </li>
       </ul>
 
-      <div class="scroll-wrapper scroll-hidden" style="--delay: 750ms;">
+      <div class="scroll-wrapper scroll-hidden" style="--delay: 750ms">
         <div class="scroll"></div>
       </div>
     </section>
@@ -67,9 +67,7 @@
               <h4>Mobile App (Educational)</h4>
               <h4>2021 - 2022</h4>
             </div>
-            <h3>
-              MusicalRooms - Educational toolbox for Music Theory
-            </h3>
+            <h3>MusicalRooms - Educational toolbox for Music Theory</h3>
             <SeeMore />
           </div>
         </NuxtLink>
@@ -86,7 +84,10 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card scroll-hidden" to="/projects/trace-together-alternative">
+        <NuxtLink
+          class="card scroll-hidden"
+          to="/projects/trace-together-alternative"
+        >
           <img class="image" src="/images/tta_code.png" />
           <div class="info">
             <div class="metadata">
@@ -120,9 +121,10 @@
     <section>
       <h2 class="scroll-hidden">Academic Qualifications</h2>
       <div class="scroll-hidden">
-
-      <p>GCE 'O' Level Equivalent - Secondary 4 Integrated Programme (2022)</p>
-      <p>Singapore-Cambridge GCE 'O' Level - Higher Chinese (2022)</p>
+        <p>
+          GCE 'O' Level Equivalent - Secondary 4 Integrated Programme (2022)
+        </p>
+        <p>Singapore-Cambridge GCE 'O' Level - Higher Chinese (2022)</p>
       </div>
     </section>
 

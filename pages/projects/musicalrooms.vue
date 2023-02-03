@@ -1,7 +1,9 @@
 <template>
   <ProjectLayout>
     <template #type>Mobile App (Educational)</template>
-    <template #title>MusicalRooms - Educational Toolbox for Music Theory</template>
+    <template #title
+      >MusicalRooms - Educational Toolbox for Music Theory</template
+    >
     <template #role>
       <ul>
         <li>UI Designer</li>

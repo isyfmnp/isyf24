@@ -24,11 +24,25 @@
       <div>
         <h2>Past Experience</h2>
         <ul>
-          <li><NuxtLink to="/projects/garuda-robotics">Garuda Robotics</NuxtLink></li>
+          <li>
+            <NuxtLink to="/projects/garuda-robotics">Garuda Robotics</NuxtLink>
+          </li>
           <li><NuxtLink to="/projects/musicalrooms">MusicalRooms</NuxtLink></li>
-          <li><NuxtLink to="/projects/aquarium-insider">Aquarium Insider</NuxtLink></li>
-          <li><NuxtLink to="/projects/trace-together-alternative">Trace Together Alternative</NuxtLink></li>
-          <li><NuxtLink to="/projects/monster-melancholy">Monster Melancholy</NuxtLink></li>
+          <li>
+            <NuxtLink to="/projects/aquarium-insider"
+              >Aquarium Insider</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink to="/projects/trace-together-alternative"
+              >Trace Together Alternative</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink to="/projects/monster-melancholy"
+              >Monster Melancholy</NuxtLink
+            >
+          </li>
         </ul>
       </div>
 
