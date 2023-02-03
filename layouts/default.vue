@@ -23,10 +23,23 @@
 </style>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, } from "vue";
 const height = ref(0);
 onMounted(() => {
-  height.value = window.innerHeight * 0.7
-  console.log(height.value)
-})
+  height.value = window.innerHeight * 0.7;
+});
+
+const watchScrollAnim = () => {
+  console.debug("Registered")
+  const observer = new IntersectionObserver((elements) => {
+    elements.forEach((elm) => {
+      if (elm.isIntersecting) {
+        elm.target.classList.add("scroll-shown");
+      }
+    });
+  });
+  const hiddenElms = document.querySelectorAll(".scroll-hidden");
+  hiddenElms.forEach((elm) => observer.observe(elm));
+}
+onMounted(watchScrollAnim);
 </script>

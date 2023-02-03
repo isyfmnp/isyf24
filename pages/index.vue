@@ -3,11 +3,11 @@
     <section id="masthead" :style="{ 'min-height': windowHeight + 'px' }">
       <div class="profile">
         <img
-          class="image"
+          class="image scroll-hidden"
           src="/images/xuyuan_portrait.png"
           alt="A picture of Xuyuan"
         />
-        <div class="wrapper">
+        <div class="wrapper scroll-hidden" style="--delay: 250ms">
           <h1 class="title">Hello, I'm Xuyuan.</h1>
           <h3 class="subtitle">
             I'm a student, aspiring software designer and former chorister
@@ -16,7 +16,7 @@
         </div>
       </div>
 
-      <ul class="contact">
+      <ul class="contact scroll-hidden" style="--delay: 500ms;">
         <li>
           <a href="mailto:t.xuyuan@gmail.com" target="_blank"
             ><IconMail />Personal&nbsp;Email (preferred)</a
@@ -39,16 +39,16 @@
         </li>
       </ul>
 
-      <div class="scroll-wrapper">
+      <div class="scroll-wrapper scroll-hidden" style="--delay: 750ms;">
         <div class="scroll"></div>
       </div>
     </section>
 
     <section>
-      <h2>Experience</h2>
+      <h2 class="scroll-hidden">Experience</h2>
 
       <div class="deck">
-        <NuxtLink class="card" to="/projects/garuda-robotics">
+        <NuxtLink class="card scroll-hidden" to="/projects/garuda-robotics">
           <img class="image" src="/images/mydronefleets.png" />
           <div class="info">
             <div class="metadata">
@@ -60,7 +60,7 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card" to="/projects/musicalrooms">
+        <NuxtLink class="card scroll-hidden" to="/projects/musicalrooms">
           <img class="image" src="/images/musicalrooms.png" />
           <div class="info">
             <div class="metadata">
@@ -74,7 +74,7 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card" to="/projects/aquarium-insider">
+        <NuxtLink class="card scroll-hidden" to="/projects/aquarium-insider">
           <img class="image" src="/images/aquarium_insider.png" />
           <div class="info">
             <div class="metadata">
@@ -86,7 +86,7 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card" to="/projects/trace-together-alternative">
+        <NuxtLink class="card scroll-hidden" to="/projects/trace-together-alternative">
           <img class="image" src="/images/tta_code.png" />
           <div class="info">
             <div class="metadata">
@@ -101,7 +101,7 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card" to="/projects/monster-melancholy">
+        <NuxtLink class="card scroll-hidden" to="/projects/monster-melancholy">
           <img class="image" src="/images/monster_melancholy.png" />
           <div class="info">
             <div class="metadata">
@@ -118,23 +118,26 @@
     </section>
 
     <section>
-      <h2>Academic Qualifications</h2>
+      <h2 class="scroll-hidden">Academic Qualifications</h2>
+      <div class="scroll-hidden">
+
       <p>GCE 'O' Level Equivalent - Secondary 4 Integrated Programme (2022)</p>
       <p>Singapore-Cambridge GCE 'O' Level - Higher Chinese (2022)</p>
+      </div>
     </section>
 
     <section>
-      <h2>Academic Timeline</h2>
+      <h2 class="scroll-hidden">Academic Timeline</h2>
 
       <div class="timeline">
-        <span class="comment right">2023 - present</span>
-        <div class="elm left">
+        <span class="comment right scroll-hidden">2023 - present</span>
+        <div class="elm left scroll-hidden">
           <h3>Hwa Chong Junior College</h3>
           <p>Enrolled in 2023</p>
         </div>
 
-        <span class="comment left">2019 - 2022</span>
-        <div class="elm right">
+        <span class="comment left scroll-hidden">2019 - 2022</span>
+        <div class="elm right scroll-hidden">
           <h3>Hwa Chong High School</h3>
           <p>
             Subjects offered: Physics, Chemistry, Math, Higher Chinese, English,
@@ -142,13 +145,13 @@
           </p>
         </div>
 
-        <span class="comment right">2016 - 2018</span>
-        <div class="elm left">
+        <span class="comment right scroll-hidden">2016 - 2018</span>
+        <div class="elm left scroll-hidden">
           <h3>Nan Hua Primary School</h3>
         </div>
 
-        <span class="comment left">2013 - 2015</span>
-        <div class="elm right">
+        <span class="comment left scroll-hidden">2013 - 2015</span>
+        <div class="elm right scroll-hidden">
           <h3>Rulang Primary School</h3>
         </div>
       </div>

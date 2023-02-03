@@ -9,7 +9,7 @@
 
 .page-btn {
   opacity: 1;
-  transition: 200ms opacity ease-in-out;
+  transition: 200ms opacity ease-in-out, 200ms background-color ease-in-out;
 }
 .page-btn.hidden {
   opacity: 0;

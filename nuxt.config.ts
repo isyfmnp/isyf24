@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
 
-  middleware: ["~/middleware/routeScroll.js"],
+  middleware: ["~/middleware/scrollAnim.js"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

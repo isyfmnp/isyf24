@@ -2,21 +2,21 @@
     <main class="project">
       <section class="masthead">
         <div class="metadata">
-          <span class="type">
+          <span class="type scroll-hidden">
             <slot name="type">Project / Type</slot>
           </span>
-          <span class="title">
+          <span class="title scroll-hidden">
             <slot name="title">Title - Important Information</slot>
           </span>
-          <span class="role">
+          <span class="role scroll-hidden" style="--delay: 250ms">
             <slot name="role">Software Developer</slot>
           </span>
-          <span class="time">
+          <span class="time scroll-hidden" style="--delay: 250ms">
             <slot name="time">2022</slot>
           </span>
         </div>
 
-        <div class="description">
+        <div class="description scroll-hidden" style="--delay: 500ms">
           <slot name="description"
             >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -25,7 +25,7 @@
         </div>
       </section>
 
-      <section class="content">
+      <section class="content scroll-hidden" style="--delay: 750ms">
         <slot />
       </section>
     </main>
@@ -114,3 +114,21 @@
   }
 }
 </style>
+
+<script setup>
+import { onMounted } from "vue";
+
+const watchScrollAnim = () => {
+  console.debug("Registered")
+  const observer = new IntersectionObserver((elements) => {
+    elements.forEach((elm) => {
+      if (elm.isIntersecting) {
+        elm.target.classList.add("scroll-shown");
+      }
+    });
+  });
+  const hiddenElms = document.querySelectorAll(".scroll-hidden");
+  hiddenElms.forEach((elm) => observer.observe(elm));
+}
+onMounted(watchScrollAnim);
+</script>
