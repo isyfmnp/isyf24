@@ -18,6 +18,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+const props = defineProps({ displayScroll: Boolean });
 
 const showScroll = ref(false);
 const checkScroll = () => {

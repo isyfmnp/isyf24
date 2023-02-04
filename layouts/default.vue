@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="page">
     <Head>
       <Title>Portfolio | Tang Xuyuan</Title>
     </Head>
@@ -28,6 +28,8 @@ const height = ref(0);
 onMounted(() => {
   height.value = window.innerHeight * 0.7;
 });
+
+const displayScroll = ref(false)
 
 const observerSuccess = ref(false);
 const watchScrollAnim = () => {

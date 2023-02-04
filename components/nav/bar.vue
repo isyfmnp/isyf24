@@ -12,12 +12,11 @@
       </NuxtLink>
 
       <a class="nav__menu nav__elm" @click="menuClick">
-        <!-- TODO: Open menu -->
         <MenuIcon size="26" />
       </a>
     </div>
     <div class="menu" :class="{ 'menu--shown': isMenuOpen }">
-      <ul>
+      <ul class="links">
         <li><NuxtLink to="/" @click="menuClick">Home</NuxtLink></li>
         <li><NuxtLink to="/academic" @click="menuClick">Academic</NuxtLink></li>
         <li>
@@ -25,10 +24,9 @@
             >Test</NuxtLink
           >
         </li>
-        <!-- TODO: Academic Page -->
-        <li></li>
       </ul>
     </div>
+    <br class="nav-spacer">
   </nav>
 </template>
 
@@ -38,52 +36,11 @@ import { ref } from "vue";
 const isMenuOpen = ref(false);
 function menuClick() {
   isMenuOpen.value = !isMenuOpen.value;
+  //TODO: stop page scroll when modal open
 }
 </script>
 
 <style scoped>
-.menu {
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 100%;
-  background-color: rgba(var(--bg-rgb), 0.98);
-  transition: top 450ms cubic-bezier(0.29, 0.11, 0.06, 1);
-  border-block: 1px solid rgba(var(--fg-rgb), 50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.menu * {
-  opacity: 0;
-  transition: opacity 450ms cubic-bezier(0.29, 0.11, 0.06, 1);
-}
-.menu--shown {
-  top: 0;
-}
-.menu--shown * {
-  opacity: 1;
-}
-.menu ul {
-  list-style: none;
-  padding-left: 0;
-  text-align: center;
-  font-weight: bold;
-  font-size: 28px;
-}
-.menu ul * {
-  margin-block: 0.75rem;
-  color: rgba(var(--fg-rgb), 0.6);
-  transition: 200ms color ease-in-out
-}
-.menu ul *:hover {
-  color: var(--fg);
-}
-.menu ul *:hover::after {
-  display: none;
-}
 
 .nav {
   position: fixed;
@@ -144,6 +101,62 @@ function menuClick() {
   letter-spacing: 0.15rem;
 }
 
+.menu {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 100%;
+  background-color: rgba(var(--bg-rgb), 0.99);
+  --trn-func: cubic-bezier(0.29, 0.11, 0.06, 1);
+  --trn-time: 600ms;
+  transition: top var(--trn-time) var(--trn-func);
+  border-block: 1px solid rgba(var(--fg-rgb), 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu--shown {
+  top: 0;
+}
+.menu .links {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  opacity: 0;
+  transition: opacity var(--trn-time) var(--trn-func);
+}
+.menu .links::before {
+  display: block;
+  margin-bottom: 1rem;
+  content: 'Menu';
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+}
+.menu--shown .links {
+  opacity: 1;
+}
+.menu .links * {
+  margin-bottom: 1rem;
+  color: rgba(var(--fg-rgb), 0.6);
+  transition: 200ms color ease-in-out
+}
+.menu .links *:hover {
+  color: var(--fg);
+}
+.menu .links *:hover::after {
+  display: none;
+}
+
+.nav-spacer {
+  margin-block: 2rem;
+}
+
 @media screen and (min-width: 800px) {
   .nav {
     position: fixed;
@@ -164,6 +177,9 @@ function menuClick() {
     --size: 1.25rem;
     width: var(--size);
     height: var(--size);
+  }
+  .nav-spacer {
+    margin: 0;
   }
 }
 </style>

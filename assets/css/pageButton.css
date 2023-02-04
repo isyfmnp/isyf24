@@ -1,6 +1,6 @@
 .page-btn {
   position: fixed;
-  z-index: 100;
+  z-index: 90;
   bottom: 2rem;
   right: 2rem;
   --size: 3rem;
