@@ -10,8 +10,8 @@
         <div class="wrapper scroll-hidden" style="--delay: 250ms">
           <h1 class="title">Hello, I'm Xuyuan.</h1>
           <h3 class="subtitle">
-            I'm a student, aspiring software designer and former chorister
-            currently studying at Hwa Chong Institution (JC), Singapore.
+            I'm a student and aspiring software designer currently studying at
+            Hwa Chong Institution (JC), Singapore.
           </h3>
         </div>
       </div>
