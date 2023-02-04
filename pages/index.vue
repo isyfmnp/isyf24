@@ -18,13 +18,13 @@
 
       <ul class="contact scroll-hidden" style="--delay: 500ms">
         <li>
-          <a href="mailto:t.xuyuan@gmail.com" target="_blank"
+          <a href="mailto:t.xuyuan@gmail.com" onclick="javascript:window.open('mailto:t.xuyuan@gmail.com', 'mail');event.preventDefault()" target="_blank"
             ><IconMail />Personal&nbsp;Email (preferred)</a
           >
         </li>
         <li>
-          <a href="mailto:191519R@student.hci.edu.sg" target="_blank"
-            ><IconMail />School&nbsp;Email</a
+          <a href="mailto:191519R@student.hci.edu.sg" onclick="javascript:window.open('mailto:191519R@student.hci.edu.sg', 'mail');event.preventDefault()" target="_blank"
+            ><IconMail />Institution&nbsp;Email</a
           >
         </li>
         <li>
