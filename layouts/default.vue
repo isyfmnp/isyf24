@@ -17,7 +17,7 @@
 <style scoped>
 #body {
   max-width: var(--content-width);
-  margin: 0 auto 5rem;
+  margin: 7rem auto 5rem;
   padding-inline: 1.5rem;
 }
 </style>
