@@ -32,6 +32,10 @@
 </template>
 
 <style scoped>
+.project {
+  margin-top: 7rem;
+}
+
 .masthead {
   display: flex;
   flex-direction: column;
