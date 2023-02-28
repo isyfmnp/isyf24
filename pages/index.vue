@@ -158,6 +158,34 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <h2 class="scroll-hidden">Contact Me</h2>
+      
+      <ul class="contact scroll-hidden">
+        <li style="--delay:0ms">
+          <a href="mailto:t.xuyuan@gmail.com" onclick="javascript:window.open('mailto:t.xuyuan@gmail.com', 'mail');event.preventDefault()" target="_blank"
+            ><IconMail />Personal&nbsp;Email (preferred)</a
+          >
+        </li>
+        <li style="--delay:50ms">
+          <a href="mailto:191519R@student.hci.edu.sg" onclick="javascript:window.open('mailto:191519R@student.hci.edu.sg', 'mail');event.preventDefault()" target="_blank"
+            ><IconMail />Institution&nbsp;Email</a
+          >
+        </li>
+        <li style="--delay:100ms">
+          <a href="https://github.com/txuyuan" target="_blank"
+            ><IconGithub />Github</a
+          >
+        </li>
+        <li style="--delay:150ms">
+          <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
+            ><IconInstagram />Instagram</a
+          >
+        </li>
+      </ul>
+    </section>
+
   </main>
 </template>
 
@@ -185,6 +213,10 @@ ul {
   :not(#masthead) h2 {
     letter-spacing: 1rem;
     margin: 8.5rem 0 3rem;
+  }
+
+  :not(#masthead) .contact {
+    gap: 3rem; 
   }
 }
 </style>
