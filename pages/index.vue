@@ -135,7 +135,7 @@
         <span class="comment right scroll-hidden">2023 - present</span>
         <div class="elm left scroll-hidden">
           <h3>Hwa Chong Junior College</h3>
-          <p>Enrolled in 2023</p>
+          <p>Subjects offered : Physics (H2), Computing (H2), Math (H2), Economics (H2), GP (H1), PW (H1)</p>
         </div>
 
         <span class="comment left scroll-hidden">2019 - 2022</span>
