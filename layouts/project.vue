@@ -25,7 +25,7 @@
       </div>
     </section>
 
-    <section class="content scroll-hidden" style="--delay: 750ms">
+    <section class="content" style="--delay: 750ms">
       <slot />
     </section>
   </main>
@@ -91,6 +91,28 @@
   font-weight: 500;
   color: rgba(var(--fg-rgb), 0.75);
 }
+.content {
+  margin-top: 10rem;
+}
+:deep(.image) {
+  max-height: 90vh;
+  max-width: 90%;
+  margin: 3.5rem 1rem 0.5rem;
+  border-radius: 12.5px;
+  border: 1px solid rgba(var(--fg-rgb), 0.25);
+}
+:deep(.h-gallery) {
+  display: flex;
+  flex-direction: column;
+}
+:deep(.h-gallery .image) {
+  min-width: 0;
+}
+:deep(.image-caption) {
+  display: block;
+  margin-left: 2rem;
+  font-style: italic;
+}
 
 @media screen and (min-width: 800px) {
   .project {
@@ -106,6 +128,9 @@
   }
   .description {
     flex: 1 1 70%;
+  }
+  :deep(.h-gallery) {
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1200px) {

@@ -108,20 +108,6 @@
             <SeeMore />
           </div>
         </NuxtLink>
-
-        <NuxtLink class="card scroll-hidden" to="/projects/monster-melancholy">
-          <img class="image" src="/images/monster_melancholy.png" />
-          <div class="info">
-            <div class="metadata">
-              <h4>Game / Website</h4>
-              <h4>2021</h4>
-            </div>
-            <h3>
-              Monster Melancholy - A simple yet endlessly fun adventure game
-            </h3>
-            <SeeMore />
-          </div>
-        </NuxtLink>
       </div>
     </section>
 
@@ -145,7 +131,7 @@
           <h3>Hwa Chong Junior College</h3>
           <p>
             Subjects offered : Physics (H2), Computing (H2), Math (H2),
-            Economics (H2), GP (H1), PW (H1)
+            Economics (H2), GP (H1) and PW (H1)
           </p>
         </div>
 
