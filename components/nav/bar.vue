@@ -11,19 +11,17 @@
         </div>
       </NuxtLink>
 
-      <a class="nav__menu nav__elm" @click="menuClick">
-        <MenuIcon size="26" />
+      <a class="nav__menu nav__elm" :class="{'nav__menu--open': isMenuOpen}" @click="menuClick">
+        <MenuIcon class="open" size="26" />
+        <CloseIcon class="close" size="26" />
       </a>
     </div>
     <div class="menu" :class="{ 'menu--shown': isMenuOpen }">
       <ul class="links">
         <li><NuxtLink to="/" @click="menuClick">Home</NuxtLink></li>
-        <li><NuxtLink to="/academic" @click="menuClick">Academic</NuxtLink></li>
-        <li>
-          <NuxtLink to="/projects/garuda-robotics" @click="menuClick"
-            >Test</NuxtLink
-          >
-        </li>
+        <li><NuxtLink to="/#experience" @click="menuClick">Experience</NuxtLink></li>
+        <li><NuxtLink to="/#academic" @click="menuClick">Academic</NuxtLink></li>
+        <li><NuxtLink to="/#contact" @click="menuClick">Contact Me</NuxtLink></li>
       </ul>
     </div>
     <br class="nav-spacer">
@@ -32,6 +30,7 @@
 
 <script setup>
 import MenuIcon from "vue-material-design-icons/Menu.vue";
+import CloseIcon from "vue-material-design-icons/Close.vue";
 import { ref } from "vue";
 const isMenuOpen = ref(false);
 function menuClick() {
@@ -52,6 +51,7 @@ function menuClick() {
   right: 0;
   background-color: rgba(var(--bg-rgb), 0.95);
   box-shadow: 0px 0px 10px 4px rgba(var(--fg-rgb), 0.2);
+  overflow: hidden;
 
   border-bottom: 1px solid var(--fg);
   display: flex;
@@ -67,11 +67,36 @@ function menuClick() {
   display: none;
 }
 .nav__menu {
+  width: 30px;
   display: flex;
   z-index: 111;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  --trn: var(--trn-time) top ease-out, var(--trn-time) bottom ease-out, var(--trn-time) opacity ease-out;
+  --trn-time: 600ms;
 }
+.nav__menu .open {
+  transition: var(--trn);
+  position: absolute;
+  bottom: calc(50% - 16px);
+  opacity: 1;
+}
+.nav__menu .close {
+  transition: var(--trn);
+  position: absolute;
+  top: 150%;
+  opacity: 0;
+}
+.nav__menu.nav__menu--open .open {
+  bottom: 150%;
+  opacity: 0;
+}
+.nav__menu.nav__menu--open .close {
+  top: calc(50% - 13px);
+  opacity: 1;
+}
+
 .nav__icon {
   display: flex;
   flex-direction: row;
@@ -142,7 +167,7 @@ function menuClick() {
   opacity: 1;
 }
 .menu .links * {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: rgba(var(--fg-rgb), 0.6);
   transition: 200ms color ease-in-out
 }
@@ -177,7 +202,17 @@ function menuClick() {
     --size: 1.25rem;
     width: var(--size);
     height: var(--size);
+    --trn-time: 400ms
   }
+  .nav__menu .close {
+    top: 100%;
+    opacity: 0.4;
+  }
+  .nav__menu--open .open {
+    bottom: 100%;
+    opacity: 0.4;
+  }
+
   .nav-spacer {
     margin: 0;
   }

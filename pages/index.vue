@@ -18,12 +18,18 @@
 
       <ul class="contact scroll-hidden" style="--delay: 500ms">
         <li>
-          <a href="mailto:t.xuyuan@gmail.com" onclick="javascript:window.open('mailto:t.xuyuan@gmail.com', 'mail');event.preventDefault()" target="_blank"
+          <a
+            href="mailto:t.xuyuan@gmail.com"
+            onclick="javascript:window.open('mailto:t.xuyuan@gmail.com', 'mail');event.preventDefault()"
+            target="_blank"
             ><IconMail />Personal&nbsp;Email (preferred)</a
           >
         </li>
         <li>
-          <a href="mailto:191519R@student.hci.edu.sg" onclick="javascript:window.open('mailto:191519R@student.hci.edu.sg', 'mail');event.preventDefault()" target="_blank"
+          <a
+            href="mailto:191519R@student.hci.edu.sg"
+            onclick="javascript:window.open('mailto:191519R@student.hci.edu.sg', 'mail');event.preventDefault()"
+            target="_blank"
             ><IconMail />Institution&nbsp;Email</a
           >
         </li>
@@ -45,6 +51,7 @@
     </section>
 
     <section>
+      <a id="experience" class="scroll-id"></a>
       <h2 class="scroll-hidden">Experience</h2>
 
       <div class="deck">
@@ -118,6 +125,7 @@
       </div>
     </section>
 
+    <a id="academic" class="scroll-id"></a>
     <section>
       <h2 class="scroll-hidden">Academic Qualifications</h2>
       <div class="scroll-hidden">
@@ -135,7 +143,10 @@
         <span class="comment right scroll-hidden">2023 - present</span>
         <div class="elm left scroll-hidden">
           <h3>Hwa Chong Junior College</h3>
-          <p>Subjects offered : Physics (H2), Computing (H2), Math (H2), Economics (H2), GP (H1), PW (H1)</p>
+          <p>
+            Subjects offered : Physics (H2), Computing (H2), Math (H2),
+            Economics (H2), GP (H1), PW (H1)
+          </p>
         </div>
 
         <span class="comment left scroll-hidden">2019 - 2022</span>
@@ -159,33 +170,39 @@
       </div>
     </section>
 
+    <a id="contact" class="scroll-id"></a>
     <section>
       <h2 class="scroll-hidden">Contact Me</h2>
-      
+
       <ul class="contact scroll-hidden">
-        <li style="--delay:0ms">
-          <a href="mailto:t.xuyuan@gmail.com" onclick="javascript:window.open('mailto:t.xuyuan@gmail.com', 'mail');event.preventDefault()" target="_blank"
+        <li style="--delay: 0ms">
+          <a
+            href="mailto:t.xuyuan@gmail.com"
+            onclick="javascript:window.open('mailto:t.xuyuan@gmail.com', 'mail');event.preventDefault()"
+            target="_blank"
             ><IconMail />Personal&nbsp;Email (preferred)</a
           >
         </li>
-        <li style="--delay:50ms">
-          <a href="mailto:191519R@student.hci.edu.sg" onclick="javascript:window.open('mailto:191519R@student.hci.edu.sg', 'mail');event.preventDefault()" target="_blank"
+        <li style="--delay: 50ms">
+          <a
+            href="mailto:191519R@student.hci.edu.sg"
+            onclick="javascript:window.open('mailto:191519R@student.hci.edu.sg', 'mail');event.preventDefault()"
+            target="_blank"
             ><IconMail />Institution&nbsp;Email</a
           >
         </li>
-        <li style="--delay:100ms">
+        <li style="--delay: 100ms">
           <a href="https://github.com/txuyuan" target="_blank"
             ><IconGithub />Github</a
           >
         </li>
-        <li style="--delay:150ms">
+        <li style="--delay: 150ms">
           <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
             ><IconInstagram />Instagram</a
           >
         </li>
       </ul>
     </section>
-
   </main>
 </template>
 
@@ -216,7 +233,7 @@ ul {
   }
 
   :not(#masthead) .contact {
-    gap: 3rem; 
+    gap: 3rem;
   }
 }
 </style>
