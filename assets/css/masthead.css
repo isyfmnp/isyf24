@@ -53,6 +53,7 @@
   #masthead {
     position: relative;
     padding: calc(14vh + 3vw) 2rem 2rem;
+    margin-top: -7rem;
     margin-bottom: 8rem;
     text-align: right;
   }
