@@ -119,6 +119,7 @@
           GCE 'O' Level Equivalent - Secondary 4 Integrated Programme (2022)
         </p>
         <p>Singapore-Cambridge GCE 'O' Level - Higher Chinese (2022)</p>
+        <p>Primary School Leaving Examination (2018)</p>
       </div>
     </section>
 
