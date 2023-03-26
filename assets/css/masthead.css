@@ -4,7 +4,7 @@
   gap: 3rem;
   justify-content: space-between;
   padding: 1rem 0 7rem;
-  margin-top: -7rem; /* Remove default navbar space */
+  margin-top: 0; /* Remove default navbar space */
   margin-bottom: -7rem;
   box-sizing: border-box;
 }
