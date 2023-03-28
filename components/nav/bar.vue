@@ -11,7 +11,11 @@
         </div>
       </NuxtLink>
 
-      <a class="nav__menu nav__elm" :class="{'nav__menu--open': isMenuOpen}" @click="menuClick">
+      <a
+        class="nav__menu nav__elm"
+        :class="{ 'nav__menu--open': isMenuOpen }"
+        @click="menuClick"
+      >
         <MenuIcon class="open" size="26" />
         <CloseIcon class="close" size="26" />
       </a>
@@ -19,12 +23,18 @@
     <div class="menu" :class="{ 'menu--shown': isMenuOpen }">
       <ul class="links">
         <li><NuxtLink to="/" @click="menuClick">Home</NuxtLink></li>
-        <li><NuxtLink to="/#experience" @click="menuClick">Experience</NuxtLink></li>
-        <li><NuxtLink to="/#academic" @click="menuClick">Academic</NuxtLink></li>
-        <li><NuxtLink to="/#contact" @click="menuClick">Contact Me</NuxtLink></li>
+        <li>
+          <NuxtLink to="/#experience" @click="menuClick">Experience</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/#academic" @click="menuClick">Academic</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/#contact" @click="menuClick">Contact Me</NuxtLink>
+        </li>
       </ul>
     </div>
-    <br class="nav-spacer">
+    <br class="nav-spacer" />
   </nav>
 </template>
 
@@ -40,7 +50,6 @@ function menuClick() {
 </script>
 
 <style scoped>
-
 .nav {
   position: fixed;
 
@@ -73,7 +82,8 @@ function menuClick() {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  --trn: var(--trn-time) top ease-out, var(--trn-time) bottom ease-out, var(--trn-time) opacity ease-out;
+  --trn: var(--trn-time) top ease-out, var(--trn-time) bottom ease-out,
+    var(--trn-time) opacity ease-out;
   --trn-time: 600ms;
 }
 .nav__menu .open {
@@ -157,7 +167,7 @@ function menuClick() {
 .menu .links::before {
   display: block;
   margin-bottom: 1rem;
-  content: 'Menu';
+  content: "Menu";
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 300;
@@ -169,7 +179,7 @@ function menuClick() {
 .menu .links * {
   margin-bottom: 1.5rem;
   color: rgba(var(--fg-rgb), 0.6);
-  transition: 200ms color ease-in-out
+  transition: 200ms color ease-in-out;
 }
 .menu .links *:hover {
   color: var(--fg);
@@ -202,7 +212,7 @@ function menuClick() {
     --size: 1.25rem;
     width: var(--size);
     height: var(--size);
-    --trn-time: 400ms
+    --trn-time: 400ms;
   }
   .nav__menu .close {
     top: 100%;

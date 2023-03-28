@@ -37,12 +37,14 @@
     </template>
 
     <img
-      class="image scroll-hidden" style="max-width: 75%;"
+      class="image scroll-hidden"
+      style="max-width: 75%"
       src="~/assets/images/tracetogetheralternative/tta_code.jpg"
       alt="A sampler of the code I wrote for this project"
     />
-    <span class="image-caption">A sampler of the code I wrote for this project.</span>
-
+    <span class="image-caption"
+      >A sampler of the code I wrote for this project.</span
+    >
   </ProjectLayout>
 </template>
 

@@ -34,18 +34,24 @@
       </p>
     </template>
 
-      <img
-        class="image"
-        src="~/assets/images/garudarobotics/garuda_groupPhoto.jpg"
-        alt="The last day of the internship, a photo with some of the people we had worked with most"
-      />
-    <span class="image-caption">The last day of the internship, a photo with some of the people we had worked with most.</span>
-      <img
-        class="image"
-        src="~/assets/images/garudarobotics/garuda_mydronefleets.jpg"
-        alt="The product that I worked on, an airspace and drone management system and interface"
-      />
-    <span class="image-caption">The product that I worked on, an airspace and drone management system and interface.</span>
+    <img
+      class="image"
+      src="~/assets/images/garudarobotics/garuda_groupPhoto.jpg"
+      alt="The last day of the internship, a photo with some of the people we had worked with most"
+    />
+    <span class="image-caption"
+      >The last day of the internship, a photo with some of the people we had
+      worked with most.</span
+    >
+    <img
+      class="image"
+      src="~/assets/images/garudarobotics/garuda_mydronefleets.jpg"
+      alt="The product that I worked on, an airspace and drone management system and interface"
+    />
+    <span class="image-caption"
+      >The product that I worked on, an airspace and drone management system and
+      interface.</span
+    >
   </ProjectLayout>
 </template>
 

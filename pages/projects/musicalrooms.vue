@@ -85,7 +85,10 @@
       src="~/assets/images/musicalrooms/sap_team.jpg"
       alt="The absolutely wonderful team I had the pleasure to work with at the Swift Accelator Programme to create this app"
     />
-    <span class="image-caption">The absolutely wonderful team I had the pleasure to work with at the Swift Accelator Programme to create this app.</span>
+    <span class="image-caption"
+      >The absolutely wonderful team I had the pleasure to work with at the
+      Swift Accelator Programme to create this app.</span
+    >
   </ProjectLayout>
 </template>
 

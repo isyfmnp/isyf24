@@ -29,7 +29,7 @@ onMounted(() => {
   height.value = window.innerHeight * 0.7;
 });
 
-const displayScroll = ref(false)
+const displayScroll = ref(false);
 
 const observerSuccess = ref(false);
 const watchScrollAnim = () => {

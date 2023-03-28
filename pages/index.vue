@@ -111,6 +111,73 @@
       </div>
     </section>
 
+    <section class="tech-skills">
+      <h2 class="scroll-hidden">Tech Skills</h2>
+
+      <div class="scroll-hidden">
+        <h3>Programming Languages</h3>
+        <div class="badge-list">
+          <img
+            src="https://img.shields.io/badge/Go-292929?style=for-the-badge&logo=go&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/Swift-292929?style=for-the-badge&logo=swift&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/JavaScript-292929?style=for-the-badge&logo=javascript&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/HTML5-292929?style=for-the-badge&logo=html5&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/CSS3-292929?style=for-the-badge&logo=css3&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/Java-292929?style=for-the-badge&logo=java&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/Kotlin-292929?style=for-the-badge&logo=kotlin&logoColor=white"
+          />
+        </div>
+      </div>
+
+      <div class="scroll-hidden">
+        <h3>Tools</h3>
+        <div class="badge-list">
+          <img
+            src="https://img.shields.io/badge/VueJS-292929?style=for-the-badge&logo=vue.js&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/NuxtJS-292929?style=for-the-badge&logo=nuxt.js&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/TailwindCSS-292929?style=for-the-badge&logo=tailwindcss&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/MongoDB-292929?style=for-the-badge&logo=mongodb&logoColor=white"
+          />
+        </div>
+      </div>
+
+      <div class="scroll-hidden">
+        <h3>Platforms</h3>
+        <div class="badge-list">
+          <img
+            src="https://img.shields.io/badge/Docker-292929?style=for-the-badge&logo=docker&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/Nginx-292929?style=for-the-badge&logo=nginx&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/Vercel-292929?style=for-the-badge&logo=vercel&logoColor=white"
+          />
+          <img
+            src="https://img.shields.io/badge/Google_Cloud-292929?style=for-the-badge&logo=googlecloud&logoColor=white"
+          />
+        </div>
+      </div>
+    </section>
+
     <a id="academic" class="scroll-id"></a>
     <section>
       <h2 class="scroll-hidden">Academic Qualifications</h2>
@@ -204,6 +271,16 @@ main {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+.tech-skills h3 {
+  margin: 1.25rem 0 0.75rem;
+  font-style: italic;
+  font-weight: 500;
+}
+.badge-list * {
+  display: inline-block;
+  margin: 0 0.25rem;
 }
 
 :not(#masthead) h2 {
