@@ -20,7 +20,8 @@
   text-align: left;
   object-fit: contain;
   height: min(40vh, 32rem);
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 #masthead .title {
   font-size: 32px;
@@ -68,7 +69,6 @@
   }
   #masthead .image {
     height: min(55vh, 50vw);
-    padding-right: 4rem;
   }
   #masthead .wrapper {
     position: relative;
@@ -121,5 +121,12 @@
     50% {
       transform: translateY(10px);
     }
+  }
+}
+
+@media screen and (min-width: 1000px){
+  #masthead .profile {
+    padding-left: 3rem;
+    padding-right: min(6rem + 5vw, 9rem);
   }
 }
