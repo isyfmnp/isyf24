@@ -23,7 +23,7 @@
         MongoDB and RabbitMQ.
       </p>
       <p>
-        I worked closey with the senior developers, collaborating on code
+        I worked closely with the senior developers, collaborating on code
         reviews and learning from their expertise. Overall, my internship at
         Garuda was an incredibly rewarding experience, where I was able to
         contribute to the company's mission of developing UAV technology to
@@ -37,11 +37,10 @@
     <img
       class="image"
       src="~/assets/images/garudarobotics/garuda_groupPhoto.jpg"
-      alt="The last day of the internship, a photo with some of the people we had worked with most"
+      alt="The last day of the internship, a photo with some of the people I had the pleasure to work with."
     />
     <span class="image-caption"
-      >The last day of the internship, a photo with some of the people we had
-      worked with most.</span
+      >The last day of the internship, a photo with some of the people I had the pleasure to work with.</span
     >
     <img
       class="image"

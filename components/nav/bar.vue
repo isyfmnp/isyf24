@@ -69,7 +69,7 @@ function menuClick() {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: calc(clamp(1.125rem, 2.5vw, 3rem) - 1rem);
+  padding: clamp(1.5rem, calc(2.5vw - 1rem), 3rem);
   padding-bottom: 0;
 }
 .nav__elm {
@@ -163,10 +163,11 @@ function menuClick() {
   padding-left: 0;
   text-align: center;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px;
   opacity: 0;
   transition: opacity var(--trn-time) var(--trn-func);
 }
+
 .menu .links::before {
   display: block;
   margin-bottom: 1rem;
@@ -228,6 +229,10 @@ function menuClick() {
 
   .nav-spacer {
     margin: 0;
+  }
+
+  .menu .links {
+    font-size: 32px;
   }
 }
 </style>

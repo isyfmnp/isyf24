@@ -20,7 +20,7 @@
   text-align: left;
   object-fit: contain;
   height: min(40vh, 32rem);
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 #masthead .title {

@@ -6,12 +6,12 @@
 
   --fs: 16px;
   --font: "Montserrat", "Helvetica Now Display DW", sans-serif;
-  --fg: #15181e;
-  --bg: #f5f7f9;
+  --fg: #242933;
+  --bg: #e8ebed;
   --fg-secondary: #6e7a91;
 
-  --fg-rgb: 21, 24, 30;
-  --bg-rgb: 245, 247, 249;
+  --fg-rgb: 36, 41, 51;
+  --bg-rgb: 232, 235, 237;
 }
 html {
   background-color: var(--bg);

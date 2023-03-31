@@ -295,7 +295,7 @@ ul {
   }
 
   :not(#masthead) .contact {
-    gap: 3rem;
+    gap: 2.125rem;
   }
 }
 </style>
