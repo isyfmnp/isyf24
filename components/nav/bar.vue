@@ -27,6 +27,9 @@
           <NuxtLink to="/#experience" @click="menuClick">Experience</NuxtLink>
         </li>
         <li>
+          <NuxtLink to="/#tech-skills" @click="menuClick">Tech Skills</NuxtLink>
+        </li>
+        <li>
           <NuxtLink to="/#academic" @click="menuClick">Academic</NuxtLink>
         </li>
         <li>

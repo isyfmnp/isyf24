@@ -112,6 +112,7 @@
     </section>
 
     <section class="tech-skills">
+      <a id="tech-skills" class="scroll-id"></a>
       <h2 class="scroll-hidden">Tech Skills</h2>
 
       <div class="scroll-hidden">
