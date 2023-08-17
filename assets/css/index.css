@@ -1,17 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("~/assets/css/transitions.css");
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
   --content-width: 1400px;
 
   --fs: 16px;
-  --font: "Montserrat", "Helvetica Now Display DW", sans-serif;
+  --font: "IBM Plex Sans", "Open Sans", "Helvetica Now Display DW", sans-serif;
   --fg: #242933;
   --bg: #e8ebed;
   --fg-secondary: #6e7a91;
 
   --fg-rgb: 36, 41, 51;
-  --bg-rgb: 232, 235, 237;
+  --bg-rgb: 224, 228, 230;
 }
 html {
   background-color: var(--bg);
@@ -40,31 +40,6 @@ a {
 hr {
   border: none;
   border-bottom: 1px solid var(--fg-secondary);
-}
-
-@media screen and (min-width: 800px) {
-  a,
-  a * {
-    transition: 200ms color ease-in-out, 200ms border-color ease-in-out,
-      200ms text-decoration ease-in-out;
-    position: relative;
-  }
-  a::after {
-    content: "";
-    height: 1px;
-    border-bottom: 1px solid var(--fg);
-    background: transparent;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    opacity: 0%;
-    transition: 200ms opacity ease-in-out;
-  }
-  a:hover::after,
-  a:active::after {
-    opacity: 100%;
-  }
 }
 
 .scroll-id {

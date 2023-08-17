@@ -1,147 +1,108 @@
 <template>
   <div class="footer">
-    <hr class="footer-top" />
+    <section>LOGO</section>
 
-    <section class="links">
-      <div>
-        <h2>Contact Information</h2>
-        <ul>
-          <li>
-            <span class="light">E: </span>
-            <a href="mailto:t.xuyuan@gmail.com" target="_blank"
-              >t.xuyuan@gmail.com</a
-            >
-          </li>
-          <li>
-            <span class="light">E: </span>
-            <a href="mailto:191519R@student.hci.edu.sg" target="_blank"
-              >191519R@student.hci.edu.sg</a
-            >
-          </li>
-        </ul>
-      </div>
+    <section>
+      <h1>© International Science Youth Forum 2024. All rights reserved.</h1>
 
-      <div>
-        <h2>Past Experience</h2>
-        <ul>
-          <li>
-            <NuxtLink to="/projects/garuda-robotics">Garuda Robotics</NuxtLink>
-          </li>
-          <li><NuxtLink to="/projects/musicalrooms">MusicalRooms</NuxtLink></li>
-          <li>
-            <NuxtLink to="/projects/aquarium-insider"
-              >Aquarium Insider</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink to="/projects/trace-together-alternative"
-              >Trace Together Alternative</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink to="/projects/monster-melancholy"
-              >Monster Melancholy</NuxtLink
-            >
-          </li>
-        </ul>
-      </div>
+      <p>Website by John Doe</p>
 
-      <div>
-        <h2>Socials</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/txuyuan" target="_blank"
-              ><IconGithub />Github</a
-            >
-          </li>
-          <li>
-            <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
-              ><IconInstagram />Instagram</a
-            >
-          </li>
-        </ul>
-      </div>
+      <p>Photos by Studio Ardent and ISYF M&P Team 2024</p>
+
+      <p>Videos by Jane Doe and John Doe</p>
+
+      <p style="font-style: italic; ">
+        Any advice and information found on the pages are solely for the event
+        and educational purposes only. Information related to the speakers are
+        displayed with their consent.
+      </p>
     </section>
 
-    <section class="copyright">
-      <img src="/images/xuyuan_icon.png" class="xuyuan-icon" alt="" />
-      <div>
-        © 2023 Tang Xuyuan.
-        <br />
-        Licensed under MIT License.
-        <br />
-        Made with love in Singapore.
+    <section>
+      <h1 class="header">About</h1>
+      <p>
+        <a href="#">Acknowledgements</a>
+      </p>
+      <p>
+        <a href="#">Report Site Issue</a>
+      </p>
+    </section>
+
+    <section>
+      <h1 class="header">Our Parent Organisations</h1>
+      <p>
+        <a href="#">Hwa Chong Institution</a>
+      </p>
+      <p>
+        <a href="#">Student Science Research Club (SSRC)</a>
+      </p>
+    </section>
+
+    <section class="contact-list">
+      <h1 class="header">Contact Us!</h1>
+      <div class="contact">
+        <span class="material-icons-outlined">mail</span>
+        <a href="mailto:reach_isyf@hci.edu.sg">reach_isyf@hci.edu.sg</a>
+      </div>
+      <div class="contact">
+        <span class="material-icons-outlined">call</span>
+        <a href="tel:+6564683955">+65 6468 3955 </a>
+      </div>
+      <div class="contact">
+        <span class="material-icons-outlined">fax</span>
+        <a href="fax:+6567695857">+65 6769 5857</a>
+      </div>
+      <div class="contact">
+        <span class="material-icons-outlined">location_on</span>
+        661 Bukit Timah Road, Singapore 269734
       </div>
     </section>
   </div>
 </template>
 
 <style scoped>
+/* ========== WRAPPER ========== */
 .footer {
   max-width: var(--content-width);
-  padding: 4rem;
-  margin: 0 auto;
-}
-.footer-top {
-  margin: 2rem -2rem;
+  padding: 3rem 2rem 1rem;
+  margin: 0 auto -2rem;
+
+  background-color: #334;
+  color: var(--bg);
 }
 
-h2 {
-  font-size: 20px;
+
+/* ========== GENERAL STYLING ========== */
+a {
+  color: var(--bg);
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+h1 {
+  font-size: var(--fs);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+}
+.header {
+  text-transform: uppercase;
 }
 p {
-  margin: 0.1rem;
-}
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-ul > li {
-  margin-block: 0.75rem;
+  margin-block: 0.875rem;
 }
 
-.links {
+
+/* ========== CONTACT LIST ========== */
+.contact-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 2rem 0;
+  gap: 0.875rem;
 }
-.links .light {
-  color: var(--fg-secondary);
-}
-.links svg {
-  margin-right: 0.25rem;
-}
-
-.copyright {
+.contact {
   display: flex;
   align-items: center;
-  padding: 1rem 0;
-  margin: 1rem 0 0;
-  gap: 1rem;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.7;
-}
-.copyright .xuyuan-icon {
-  border-radius: 50%;
-  border: 1px solid var(--fg-secondary);
-  --size: clamp(37px, 4.5vw, 52px);
-  width: var(--size);
-  height: var(--size);
-}
-
-@media screen and (min-width: 800px) {
-  .footer-top {
-    margin: 6rem -2rem;
-  }
-  .links {
-    flex-direction: row;
-    padding-right: 2rem;
-    margin: 0.5rem 0;
-  }
-  .copyright {
-    margin: 4rem 0 0;
-  }
+  gap: 0.75rem;
 }
 </style>
