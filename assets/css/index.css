@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
-  --content-width: 1400px;
+  --content-width: 900px;
 
-  --fs: 16px;
+  --fs: 18px;
   --font: "IBM Plex Sans", "Open Sans", "Helvetica Now Display DW", sans-serif;
   --fg: #242933;
   --bg: #e8ebed;
@@ -27,6 +27,9 @@ body {
   margin: 0;
 }
 
+h1 {
+  margin: 5rem 0 0.75rem;
+}
 h3 {
   font-weight: normal;
 }
@@ -40,6 +43,15 @@ a {
 hr {
   border: none;
   border-bottom: 1px solid var(--fg-secondary);
+}
+ul {
+  padding-left: 1.5rem;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+ul li::marker {
+  padding-right: 0.5rem;
 }
 
 .scroll-id {

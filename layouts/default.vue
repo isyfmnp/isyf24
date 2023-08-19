@@ -17,7 +17,7 @@
 <style scoped>
 #body {
   max-width: min(var(--content-width), 100vw);
-  margin: 7rem auto 5rem;
+  margin: 1rem auto 5rem;
   padding-inline: 2rem;
   overflow-x: hidden;
 }

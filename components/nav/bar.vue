@@ -152,7 +152,7 @@ nav.transparent {
   transition: opacity 300ms;
 }
 .menu {
-  transform: translateX(-282px);
+  transform: translateX(-300px);
   transition: transform 400ms;
 }
 .menu.open {
@@ -254,7 +254,6 @@ const checkScroll = () => {
     navTransparent.value = false;
   else if (!navTransparent.value && window.pageYOffset < window.innerHeight)
     navTransparent.value = true;
-  console.log(navTransparent.value)
 };
 onMounted(() => {
   document.addEventListener("scroll", checkScroll);
