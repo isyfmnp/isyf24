@@ -1,7 +1,7 @@
 <template>
   <div id="page">
     <Head>
-      <Title>Portfolio | Tang Xuyuan</Title>
+      <Title>ISYF 2024</Title>
     </Head>
     <NavBar />
     <ButtonScroll />
@@ -16,7 +16,7 @@
 
 <style scoped>
 #body {
-  max-width: var(--content-width);
+  max-width: min(var(--content-width), 100vw);
   margin: 7rem auto 5rem;
   padding-inline: 2rem;
   overflow-x: hidden;
