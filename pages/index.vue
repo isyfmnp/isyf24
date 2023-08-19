@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="masthead">
+    <Masthead> <!-- .masthead is declared in component -->
       <img class="title" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="info">
         <h2 class="subtitle">International Science Youth Forum 2024</h2>
@@ -15,8 +15,7 @@
           </div>
         </div>
       </div>
-      <div></div>
-    </section>
+    </MastHead>
 
     <div class="masthead-space"></div>
 
@@ -66,39 +65,10 @@
 </template>
 
 <style>
-#body {
-  margin: 0 !important;
-  padding-inline: 0 !important;
-}
-main {
-  margin: 7rem auto 5rem;
-  padding-inline: 2rem;
-}
 
 /* ========== MASTHEAD ========== */
 
-.masthead,
 .masthead::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.masthead {
-  text-align: center;
-  color: white;
-
-  display: flex;
-  padding: 7rem 2rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.masthead::before {
-  content: "";
-  z-index: -1;
-
   color: var(--bg);
   background-image: url("/images/clocktower.jpg");
   filter: brightness(50%);
@@ -195,4 +165,6 @@ main {
 }
 </style>
 
-<script setup></script>
+<script setup>
+import Masthead from "../components/masthead.vue";
+</script>
