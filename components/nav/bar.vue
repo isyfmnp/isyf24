@@ -1,9 +1,9 @@
 <template>
-  <nav>
+  <nav :class="{ transparent: navTransparent }">
     <div class="stamp">
-      <div class="logo">ICON</div>
+      <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="text">
-        <div class="title">XXXX 2024</div>
+        <div class="title">ISYF 2024</div>
         <!--<div class="subtitle">24th January 2024 | Hwa Chong Institition (SG)</div>-->
       </div>
     </div>
@@ -73,6 +73,16 @@ nav {
   background-color: #f1f3f488;
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 20px 2px #272f4044;
+
+  transition-property: background-color, color, backdrop-filter, box-shadow;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+nav.transparent {
+  background-color: transparent;
+  color: white;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 /* ========== STAMP ========== */
@@ -86,6 +96,10 @@ nav {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+}
+
+.stamp .logo {
+  height: 3rem;
 }
 
 .stamp .text {
@@ -114,6 +128,10 @@ nav {
   width: 24px;
   height: 24px;
   padding: 1rem 2rem;
+}
+
+.transparent .hamburger .material-icons {
+  color: white;
 }
 
 /* ========== MENU ========== */
@@ -224,8 +242,24 @@ nav {
 </style>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const profilesOpen = ref(false);
 const menuOpen = ref(false);
+
+// Scroll behaviour
+const navTransparent = ref(true);
+const checkScroll = () => {
+  if (navTransparent.value && window.pageYOffset > window.innerHeight)
+    navTransparent.value = false;
+  else if (!navTransparent.value && window.pageYOffset < window.innerHeight)
+    navTransparent.value = true;
+  console.log(navTransparent.value)
+};
+onMounted(() => {
+  document.addEventListener("scroll", checkScroll);
+});
+onUnmounted(() => {
+  document.removeEventListener("scroll", checkScroll);
+});
 </script>

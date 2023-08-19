@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Masthead> <!-- .masthead is declared in component -->
+    <Masthead>
+      <!-- .masthead is declared in component -->
       <img class="title" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="info">
         <h2 class="subtitle">International Science Youth Forum 2024</h2>
@@ -15,7 +16,7 @@
           </div>
         </div>
       </div>
-    </MastHead>
+    </Masthead>
 
     <div class="masthead-space"></div>
 
@@ -65,7 +66,6 @@
 </template>
 
 <style>
-
 /* ========== MASTHEAD ========== */
 
 .masthead::before {
@@ -166,5 +166,27 @@
 </style>
 
 <script setup>
+import { onMounted } from "vue";
 import Masthead from "../components/masthead.vue";
+import { gsap } from "gsap";
+
+onMounted(() => {
+  console.log("TEST");
+
+  gsap.from(".masthead .info *",{
+    opacity: 0,
+    y: 10,
+    duration: 0.5,
+    ease: 'power2.inOut',
+    stagger: 0.1,
+  });
+
+  gsap.from(".masthead .title", {
+    opacity: 0,
+    y: -160,
+    duration: 1.25,
+    delay: 1,
+    ease: 'back.inOut'
+  })
+});
 </script>
