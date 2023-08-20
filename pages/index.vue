@@ -219,14 +219,15 @@ onMounted(() => {
     duration: 1,
     ease: "power2.inOut",
     stagger: 0.1,
+    delay: 0.5,
   });
 
   gsap.from(".masthead .title", {
     opacity: 0,
-    y: -160,
+    y: -200,
     duration: 1.5,
-    delay: 1,
-    ease: "back.inOut",
+    delay: 1.5,
+    ease: "power2.inOut",
   });
 
   gsap.registerPlugin(ScrollTrigger)

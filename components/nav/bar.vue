@@ -75,7 +75,6 @@
   scale: 0.8;
 }
 
-
 nav {
   z-index: 10;
   position: fixed;
@@ -306,7 +305,7 @@ nav.transparent {
 
     color: black;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
 
     transition: color 100ms linear;
   }
@@ -360,6 +359,7 @@ nav.transparent {
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
 
 const profilesOpen = ref(false);
 const menuOpen = ref(false);
@@ -377,5 +377,18 @@ onMounted(() => {
 });
 onUnmounted(() => {
   document.removeEventListener("scroll", checkScroll);
+});
+
+onMounted(() => {
+  if (window.innerWidth < 900) {
+    return;
+  }
+  gsap.from(".stamp, .menu .item", {
+    opacity: 0,
+    x: -5,
+    duration: 0.75,
+    ease: "power2.inOut",
+    stagger: 0.05,
+  });
 });
 </script>

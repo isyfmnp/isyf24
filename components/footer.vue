@@ -67,8 +67,6 @@
 /* ========== WRAPPER ========== */
 .footer-wrapper {
   background-color: #334;
-  margin: 0 -100vh;
-  padding: 0 100vh;
 }
 .footer {
   max-width: var(--content-width);
@@ -80,7 +78,7 @@
 
 
 /* ========== GENERAL STYLING ========== */
-a {
+a, h1 {
   color: var(--bg);
 }
 
