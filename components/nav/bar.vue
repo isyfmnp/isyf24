@@ -367,9 +367,9 @@ const menuOpen = ref(false);
 // Scroll behaviour
 const navTransparent = ref(true);
 const checkScroll = () => {
-  if (navTransparent.value && window.pageYOffset > window.innerHeight)
+  if (navTransparent.value && window.pageYOffset > window.innerHeight-64)
     navTransparent.value = false;
-  else if (!navTransparent.value && window.pageYOffset < window.innerHeight)
+  else if (!navTransparent.value && window.pageYOffset < window.innerHeight-64)
     navTransparent.value = true;
 };
 onMounted(() => {
