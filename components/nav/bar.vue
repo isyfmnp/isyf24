@@ -11,47 +11,47 @@
     <a class="hamburger" @click="menuOpen = !menuOpen">
       <span class="material-icons">menu</span>
     </a>
-  </nav>
 
-  <div class="menu-backdrop" :class="{ open: menuOpen}" @click="menuOpen = false"/>
-  <nav class="menu" :class="{ open: menuOpen }">
-    <a class="item">
-      <span class="material-icons-outlined">home</span>
-      Home
-    </a>
-    <a class="item">
-      <span class="material-icons-outlined">info</span>
-      About
-    </a>
-    <a class="item">
-      <span class="material-icons-outlined">event_note</span>
-      Programme
-    </a>
     <div
-      class="closed"
-      :class="{ open: profilesOpen }"
-      @click="profilesOpen = !profilesOpen"
-    >
+      class="menu-backdrop"
+      :class="{ open: menuOpen }"
+      @click="menuOpen = false"
+    />
+    <div class="menu" :class="{ open: menuOpen }">
       <a class="item">
-        <span class="material-icons-outlined">chevron_right</span>
-        Profiles
+        <span class="material-icons-outlined">home</span>
+        Home
       </a>
-      <div class="subitems-wrapper">
-        <ul class="subitems">
-          <li><a>Speakers</a></li>
-          <li><a>Schools</a></li>
-          <li><a>Organising Team</a></li>
-        </ul>
+      <a class="item">
+        <span class="material-icons-outlined">info</span>
+        About
+      </a>
+      <a class="item">
+        <span class="material-icons-outlined">event_note</span>
+        Programme
+      </a>
+      <div class="closed" :class="{ open: profilesOpen }">
+        <a class="item" @click="profilesOpen = !profilesOpen">
+          <span class="material-icons-outlined">chevron_right</span>
+          Profiles
+        </a>
+        <div class="subitems-wrapper">
+          <ul class="subitems">
+            <li><a>Speakers</a></li>
+            <li><a>Schools</a></li>
+            <li><a>Organising Team</a></li>
+          </ul>
+        </div>
       </div>
+      <a class="item">
+        <span class="material-icons-outlined">image</span>
+        Media
+      </a>
+      <a class="item">
+        <span class="material-icons-outlined">help</span>
+        FAQ
+      </a>
     </div>
-    <a class="item">
-      <span class="material-icons-outlined">image</span>
-      Media
-    </a>
-    <a class="item">
-      <span class="material-icons-outlined">help</span>
-      FAQ
-    </a>
   </nav>
 </template>
 
@@ -134,12 +134,19 @@ nav.transparent {
   color: white;
 }
 
+@media screen and (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+}
+
 /* ========== MENU ========== */
 .menu-backdrop {
   z-index: 19;
   position: fixed;
-  top: 0;
+  top: 4rem;
   left: 0;
+  bottom: 0;
   width: 0;
   height: 100vh;
   opacity: 0;
@@ -238,6 +245,77 @@ nav.transparent {
 .menu .open .subitems,
 .menu .closed:hover .subitems {
   transform: translateY(0);
+}
+
+@media screen and (min-width: 900px) {
+  nav {
+    height: 4rem;
+  }
+
+  .menu {
+    position: static;
+    width: fit-content;
+    height: fit-content;
+    transform: translateX(0);
+    padding: 0;
+    padding-right: 2rem;
+
+    flex-direction: row;
+    gap: 1.5rem;
+
+    background-color: transparent;
+    color: white;
+    backdrop-filter: none;
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  /* Link styling */
+  .menu .item,
+  .menu .subitems a {
+    width: fit-content;
+    gap: 0.25rem;
+
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: color 100ms linear;
+  }
+  nav.transparent .menu .item,
+  nav.transparent .menu .subitems a {
+    color: white;
+  }
+
+  /* ========== DROPDOWN MENU ========== */
+  .menu .closed {
+    /* Parent of both item and subitem */
+    position: relative;
+  }
+  .menu .closed .item {
+    height: 4rem;
+    margin-block: -24px;
+  }
+  .menu .subitems-wrapper {
+    position: absolute;
+    top: 3.15rem;
+    left: -0.75rem;
+    padding: 0 2rem 2rem;
+    margin: 0 -2rem -2rem;
+  }
+  .menu .subitems {
+    margin-block: 0;
+    gap: 0.25rem;
+    width: 7rem;
+    padding: 0.5rem 2.5rem 0.75rem 1.5rem;
+
+    background-color: #f1f3f4aa;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px 2px #272f4044;
+    border-radius: 0 0 4px 4px;
+
+    transform: translateY(-150px);
+  }
 }
 </style>
 

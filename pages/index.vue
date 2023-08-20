@@ -22,7 +22,7 @@
 
     <main>
       <section>
-        <h1>
+        <h1 style="margin: 0.75rem 0;">
           Science and Technology for Humanity: Building a Sustainable Future
         </h1>
         <p>
@@ -116,6 +116,9 @@
   height: 100vh;
 }
 
+.masthead .info {
+  margin-bottom: 2rem;
+}
 .masthead .title {
   font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
   height: 32vh;
@@ -160,7 +163,7 @@
   height: 32px;
   width: 100%;
   position: absolute;
-  bottom: 64px;
+  bottom: 3rem;
 
   background-image: url("/images/rounded-down-arrow.svg");
   background-position: center;

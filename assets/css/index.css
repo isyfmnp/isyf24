@@ -21,6 +21,7 @@ html {
   font-size: var(--fs);
   font-family: var(--font);
   text-underline-offset: 4px;
+  width: 100vw;
   overflow-x: hidden;
 }
 body {
