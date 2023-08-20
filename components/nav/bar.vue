@@ -37,9 +37,24 @@
         </a>
         <div class="subitems-wrapper">
           <ul class="subitems">
-            <li><a>Speakers</a></li>
-            <li><a>Schools</a></li>
-            <li><a>Organising Team</a></li>
+            <li>
+              <a>
+                <span class="material-icons-outlined">person</span>
+                Speakers
+              </a>
+            </li>
+            <li>
+              <a>
+                <span class="material-icons-outlined">school</span>
+                Schools</a
+              >
+            </li>
+            <li>
+              <a>
+                <span class="material-icons-outlined">group</span>
+                Organising Team</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -56,6 +71,11 @@
 </template>
 
 <style scoped>
+.material-icons-outlined {
+  scale: 0.8;
+}
+
+
 nav {
   z-index: 10;
   position: fixed;
@@ -159,7 +179,7 @@ nav.transparent {
   transition: opacity 300ms;
 }
 .menu {
-  transform: translateX(-300px);
+  transform: translateX(-325px);
   transition: transform 400ms;
 }
 .menu.open {
@@ -209,8 +229,8 @@ nav.transparent {
 .menu .material-icons-outlined {
   transition: transform 200ms;
 }
-.menu .open .material-icons-outlined,
-.menu .closed:hover .material-icons-outlined {
+.menu .open .item .material-icons-outlined,
+.menu .closed:hover .item .material-icons-outlined {
   transform: rotate(90deg);
 }
 .menu .open .item,
@@ -226,21 +246,29 @@ nav.transparent {
 .menu .subitems {
   list-style: none;
   margin: 0.5rem 0 0.75rem;
-  padding-left: 2.25rem;
+  padding-left: 1.75rem;
 
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: 0.375rem;
   width: 100%;
 
   font-size: 20px;
 
-  transform: translateY(-105px);
+  transform: translateY(-124px);
   transition: transform 200ms;
+}
+.menu .subitems a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .menu .open .subitems-wrapper,
 .menu .closed:hover .subitems-wrapper {
-  height: 7.5rem;
+  height: 124px;
 }
 .menu .open .subitems,
 .menu .closed:hover .subitems {
@@ -299,22 +327,25 @@ nav.transparent {
   .menu .subitems-wrapper {
     position: absolute;
     top: 3.15rem;
-    left: -0.75rem;
+    left: -1.5rem;
     padding: 0 2rem 2rem;
     margin: 0 -2rem -2rem;
   }
   .menu .subitems {
     margin-block: 0;
     gap: 0.25rem;
-    width: 7rem;
-    padding: 0.5rem 2.5rem 0.75rem 1.5rem;
+    width: 9rem;
+    padding: 1rem 2.5rem 0.75rem 1.5rem;
 
-    background-color: #f1f3f4aa;
+    background-color: #f1f3f488;
     backdrop-filter: blur(5px);
     box-shadow: 0px 0px 20px 2px #272f4044;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 6px 6px;
 
     transform: translateY(-150px);
+  }
+  .menu .subitems a {
+    gap: 0.5rem;
   }
   nav.transparent .menu .subitems {
     background-color: transparent;
