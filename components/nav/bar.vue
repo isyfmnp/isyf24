@@ -316,6 +316,14 @@ nav.transparent {
 
     transform: translateY(-150px);
   }
+  nav.transparent .menu .subitems {
+    background-color: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  nav.transparent .menu .subitems-wrapper {
+    top: 2.5rem;
+  }
 }
 </style>
 
