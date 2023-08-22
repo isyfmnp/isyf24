@@ -22,7 +22,7 @@
 
     <main>
       <section>
-        <h1 style="margin: 0.75rem 0;">
+        <h1>
           Science and Technology for Humanity: Building a Sustainable Future
         </h1>
         <p>
