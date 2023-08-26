@@ -114,6 +114,7 @@
 .masthead .info {
   margin-bottom: 2rem;
 }
+
 .masthead .title {
   font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
   height: 32vh;
