@@ -33,4 +33,23 @@
 .masthead-space {
   height: 100vh;
 }
+
+h1 {
+  font-size: 72px;
+  color: white;
+  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
+  
+}
+
+@media screen and (min-width: 800px){
+    h1 {
+      font-size: 96px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    h1 {
+      font-size: 128px;
+    }
+}
 </style>
