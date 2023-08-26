@@ -18,8 +18,6 @@
       </div>
     </Masthead>
 
-    <div class="masthead-space"></div>
-
     <main>
       <section>
         <h1>
@@ -111,9 +109,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 43% 50%;
-}
-.masthead-space {
-  height: 100vh;
 }
 
 .masthead .info {

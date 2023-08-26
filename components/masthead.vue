@@ -3,6 +3,8 @@
 
   <slot />
   </div>
+
+    <div class="masthead-space"></div>
 </template>
 
 <style>
@@ -27,5 +29,8 @@
 .masthead::before {
   content: "";
   z-index: -1;
+}
+.masthead-space {
+  height: 100vh;
 }
 </style>
