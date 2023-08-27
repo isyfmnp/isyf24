@@ -1,10 +1,9 @@
 <template>
   <div class="masthead">
-
-  <slot />
+    <slot />
   </div>
 
-    <div class="masthead-space"></div>
+  <div class="masthead-space"></div>
 </template>
 
 <style>
@@ -27,29 +26,28 @@
   justify-content: center;
 }
 .masthead::before {
-  content: "";
+  content: '';
   z-index: -1;
 }
 .masthead-space {
-  height: 100vh;
+  height: 85vh;
 }
 
-h1 {
+.masthead h1 {
   font-size: 72px;
   color: white;
-  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
-  
+  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
 }
 
-@media screen and (min-width: 800px){
-    h1 {
-      font-size: 96px;
-    }
+@media screen and (min-width: 800px) {
+  .masthead h1 {
+    font-size: 96px;
+  }
 }
 
-@media screen and (min-width: 1200px){
-    h1 {
-      font-size: 128px;
-    }
+@media screen and (min-width: 1200px) {
+  .masthead h1 {
+    font-size: 128px;
+  }
 }
 </style>

@@ -30,9 +30,11 @@ body {
 }
 
 h1 {
-  margin: 5rem 0 0.75rem;
+  font-size: 32px;
+  margin: 5rem 0 2rem;
   color: var(--primary);
 }
+
 h3 {
   font-weight: normal;
 }
@@ -55,6 +57,12 @@ ul li {
 }
 ul li::marker {
   padding-right: 0.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 42px;
+  }
 }
 
 .scroll-id {

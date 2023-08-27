@@ -18,15 +18,15 @@
       @click="menuOpen = false"
     />
     <div class="menu" :class="{ open: menuOpen }">
-      <a class="item">
+      <a class="item" href="/">
         <span class="material-icons-outlined">home</span>
         Home
       </a>
-      <a class="item">
+      <a class="item" href="/about">
         <span class="material-icons-outlined">info</span>
         About
       </a>
-      <a class="item">
+      <a class="item" href="/programme">
         <span class="material-icons-outlined">event_note</span>
         Programme
       </a>
@@ -38,19 +38,19 @@
         <div class="subitems-wrapper">
           <ul class="subitems">
             <li>
-              <a>
+              <a href="/profiles/speakers">
                 <span class="material-icons-outlined">person</span>
                 Speakers
               </a>
             </li>
             <li>
-              <a>
+              <a href="/profiles/schools">
                 <span class="material-icons-outlined">school</span>
                 Schools</a
               >
             </li>
             <li>
-              <a>
+              <a href="/profiles/organising-team">
                 <span class="material-icons-outlined">group</span>
                 Organising Team</a
               >
@@ -385,10 +385,10 @@ onMounted(() => {
   }
   gsap.from(".stamp, .menu .item", {
     opacity: 0,
-    x: -5,
+    x: -5, 
     duration: 0.75,
     ease: "power2.inOut",
-    stagger: 0.05,
+    stagger: 0.025,
   });
 });
 </script>

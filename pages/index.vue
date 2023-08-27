@@ -4,7 +4,7 @@
       <!-- .masthead is declared in component -->
       <img class="title" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="info">
-        <h2 class="subtitle">International Science Youth Forum 2024</h2>
+        <h1 class="subtitle">International Science Youth Forum 2024</h1>
         <div class="detail-list">
           <div class="detail">
             <span class="description">Date</span>
@@ -111,39 +111,60 @@
   background-position: 43% 50%;
 }
 
-.masthead .info {
-  margin-bottom: 2rem;
-}
-
 .masthead .title {
   font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
-  height: 32vh;
-  padding-top: 4vh;
+  height: 28vh;
+  margin-top: 3rem;
 }
 
 .masthead .subtitle {
   font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
-  font-size: 32px;
-  margin-block: 4vh;
+  font-size: 36px;
+  margin-block: 1.5rem 4rem;
 }
 
 .masthead .detail {
-  margin-block: 2vh;
   display: flex;
-  gap: 0.25rem;
+  gap: 0.5rem;
   flex-direction: column;
+  margin-top: 2rem;
 }
+
 .masthead .description {
-  font-size: 12px;
+  font-size: 10px;
+  opacity: 0.4;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
 }
+
+.masthead .description::before, .masthead .description::after {
+  display: inline-block;
+  content: '';
+  height: 1px;
+  width: 6rem;
+  border-radius: 1px;
+  background-color: white;
+  
+  position: relative;
+  bottom: 3px;
+}
+.masthead .description::before {
+  right: 0.8rem;
+}
+.masthead .description::after {
+  left: 0.5rem;
+}
+
 .masthead .value {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.05rem;
   line-spacing: 0.1rem;
+}
+
+.masthead {
+  padding-block: 8rem 12rem;
 }
 
 @keyframes down-arrow {
@@ -156,10 +177,10 @@
 }
 .masthead::after {
   content: "";
-  height: 32px;
+  height: 2rem;
   width: 100%;
   position: absolute;
-  bottom: 3rem;
+  bottom: 1.5rem;
 
   background-image: url("/images/rounded-down-arrow.svg");
   background-position: center;
@@ -195,7 +216,19 @@
   }
   .masthead .subtitle {
     font-size: 72px;
-    max-width: 48rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .masthead .subtitle {
+    font-size: 84px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .masthead .subtitle {
+    font-size: 96px;
+    max-width: 64rem;
   }
 }
 </style>
