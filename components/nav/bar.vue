@@ -93,16 +93,14 @@ nav {
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 20px 2px #272f4044;
 
-  transition-property: background-color, color, backdrop-filter, box-shadow;
-  transition-duration: 100ms;
-  transition-timing-function: linear;
+  transition: background-color 100ms, color 100ms, backdrop-filter 100ms,
+    box-shadow 100ms, opacity 800ms;
 }
 nav.transparent {
   background-color: transparent;
   color: white;
   backdrop-filter: none;
   box-shadow: none;
-  opacity: 0.85;
 }
 
 /* ========== STAMP ========== */
@@ -232,7 +230,7 @@ nav.transparent {
 }
 .menu .open .item,
 .menu .item:hover {
-  color: red;
+  color: var(--primary);
 }
 
 .menu .subitems-wrapper {
@@ -275,6 +273,12 @@ nav.transparent {
 @media screen and (min-width: 900px) {
   nav {
     height: 4rem;
+  }
+  nav.transparent {
+    opacity: 0.4;
+  }
+  nav:hover {
+    opacity: 1 !important;
   }
 
   .menu {
@@ -335,7 +339,7 @@ nav.transparent {
     padding: 1rem 2.5rem 0.75rem 1.5rem;
 
     background-color: #f1f3f488;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px) brightness(1.05);
     box-shadow: 0px 0px 20px 2px #272f4044;
     border-radius: 0 0 6px 6px;
 
@@ -365,13 +369,25 @@ const menuOpen = ref(false);
 // Scroll behaviour
 const navTransparent = ref(true);
 const checkScroll = () => {
-  if (navTransparent.value && window.pageYOffset > window.innerHeight-64)
+  if (window.error) {
+    return;
+  }
+  if (navTransparent.value && window.pageYOffset > window.innerHeight - 64)
     navTransparent.value = false;
-  else if (!navTransparent.value && window.pageYOffset < window.innerHeight-64)
+  else if (
+    !navTransparent.value &&
+    window.pageYOffset < window.innerHeight - 64
+  )
     navTransparent.value = true;
 };
 onMounted(() => {
   document.addEventListener("scroll", checkScroll);
+  setTimeout(() => {
+    console.log(window.error);
+    if (window.error) {
+      navTransparent.value = false;
+    }
+  }, 1);
 });
 onUnmounted(() => {
   document.removeEventListener("scroll", checkScroll);
@@ -383,7 +399,7 @@ onMounted(() => {
   }
   gsap.from(".stamp, .menu .item", {
     opacity: 0,
-    x: -5, 
+    x: -5,
     duration: 0.75,
     ease: "power2.inOut",
     stagger: 0.025,

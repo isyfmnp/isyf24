@@ -7,12 +7,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue"
-const masthead = ref(null)
-const mhHeight = ref("100vh")
+import { ref, onMounted } from "vue";
+const masthead = ref(null);
+const mhHeight = ref("100vh");
 onMounted(() => {
-  mhHeight.value = masthead.value.clientHeight + "px"
-})
+  mhHeight.value = masthead.value.clientHeight + "px";
+});
 </script>
 
 <style>
@@ -35,14 +35,14 @@ onMounted(() => {
   justify-content: center;
 }
 .masthead::before {
-  content: '';
+  content: "";
   z-index: -1;
 }
 
 .masthead h1 {
   font-size: 72px;
   color: white;
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
 }
 
 @media screen and (min-width: 800px) {

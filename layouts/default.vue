@@ -24,10 +24,11 @@
 </style>
 
 <script setup>
-import ButtonScroll from "../components/button/scroll.vue"
+import ButtonScroll from "../components/button/scroll.vue";
 import { ref, onMounted, onUpdated } from "vue";
 const height = ref(0);
 onMounted(() => {
+  window.error = false;
   height.value = window.innerHeight * 0.7;
 });
 

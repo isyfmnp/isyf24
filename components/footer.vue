@@ -149,7 +149,7 @@ p {
   background-color: var(--bg);
   border-radius: 50%;
 
-  box-shadow: 0 0 3px 0 var(--primary) inset; 
+  box-shadow: 0 0 3px 0 var(--primary) inset;
 }
 
 /* ========== CONTACT LIST ========== */

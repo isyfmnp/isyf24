@@ -1,7 +1,6 @@
 <template>
   <Masthead>
-      <h1>About ISYF 2024</h1>
-
+    <h1>About ISYF 2024</h1>
   </Masthead>
 
   <h2>Reconnecting, Reimagining: Looking Ahead to a Better World</h2>
@@ -80,18 +79,18 @@
 </template>
 
 <style>
-  .masthead::before {
+.masthead::before {
   color: var(--bg);
   background-image: url("/images/aboutbg2.webp");
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 43% 50%;
-  }
+}
 
-  h2 {
-    margin-top: 3rem;
-  }
+h2 {
+  margin-top: 3rem;
+}
 </style>
 
 <script></script>

@@ -1,6 +1,6 @@
 <template>
   <DefaultLayout>
-    <div class="status" :style="{ 'min-height': windowHeight - 200 + 'px' }">
+    <div class="status">
       <div>
         <h1>{{ error.statusCode }}</h1>
         <h3>{{ error.message }}</h3>
@@ -20,9 +20,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 100vh;
 }
 h1 {
-  font-size: 96px;
+  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-size: min(40vh, 40vw);
   font-weight: 500;
   margin: 1rem 0 2rem;
 }
@@ -33,25 +35,18 @@ a {
   color: var(--fg);
   font-weight: semibold;
 }
-
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 128px;
-  }
-}
 </style>
 
 <script setup>
-import DefaultLayout from "~/layouts/default.vue";
-import { ref, onMounted } from "vue";
+import DefaultLayout from '~/layouts/default.vue';
+import {onMounted} from 'vue';
 
-let windowHeight = ref(6000);
 onMounted(() => {
-  windowHeight.value = window.innerHeight;
+  window.error = true;
 });
 
 const props = defineProps({
   error: Object,
 });
-const handleError = () => clearError({ redirect: "/" });
+const handleError = () => clearError({redirect: '/'});
 </script>

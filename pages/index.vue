@@ -107,7 +107,7 @@
 }
 .masthead::before {
   color: var(--bg);
-  background-image: url('/images/clocktower.jpg');
+  background-image: url("/images/clocktower.jpg");
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -115,7 +115,7 @@
 }
 
 .masthead .title {
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: "tosefin Sans", "IBM Plex Sans", sans-serif;
   height: max(28vh);
   margin-block: 1rem;
   margin-inline: 2rem;
@@ -132,7 +132,7 @@
 }
 
 .masthead .subtitle {
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
   font-size: min(8vw, 48px);
   margin-block: 0;
 }
@@ -188,7 +188,7 @@
 .masthead .description::before,
 .masthead .description::after {
   display: inline-block;
-  content: '';
+  content: "";
   height: 1px;
   width: 4rem;
   border-radius: 1px;
@@ -233,13 +233,13 @@
   }
 }
 .masthead::after {
-  content: '';
+  content: "";
   height: 2rem;
   width: 100%;
   position: absolute;
   bottom: 2rem;
 
-  background-image: url('/images/rounded-down-arrow.svg');
+  background-image: url("/images/rounded-down-arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -254,41 +254,41 @@
 </style>
 
 <script setup>
-import {onMounted} from 'vue';
-import Masthead from '../components/masthead.vue';
-import Button from '../components/button/button.vue';
+import { onMounted } from "vue";
+import Masthead from "../components/masthead.vue";
+import Button from "../components/button/button.vue";
 
-import {gsap} from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 onMounted(() => {
-  gsap.from('.masthead .title', {
+  gsap.from(".masthead .title", {
     opacity: 0,
     y: -200,
     duration: 1,
     delay: 0.25,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
   });
 
-  gsap.from('.masthead .info *', {
+  gsap.from(".masthead .info *", {
     opacity: 0,
     y: 20,
     duration: 1,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
     stagger: 0.15,
     delay: 0.75,
   });
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const sections = gsap.utils.toArray('main section');
+  const sections = gsap.utils.toArray("main section");
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
     gsap.from(section, {
       opacity: 0,
       y: 10,
       duration: 0.5,
-      ease: 'power2.inOut',
+      ease: "power2.inOut",
       scrollTrigger: section,
     });
   });

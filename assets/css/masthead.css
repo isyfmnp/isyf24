@@ -124,7 +124,7 @@
   }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px) {
   #masthead .profile {
     padding-left: 3rem;
     padding-right: min(6rem + 5vw, 9rem);
