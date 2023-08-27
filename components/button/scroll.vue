@@ -22,9 +22,9 @@ const props = defineProps({ displayscroll: Boolean });
 
 const showScroll = ref(false);
 const checkScroll = () => {
-  if (!showScroll.value && window.pageYOffset > window.innerHeight * 0.4)
+  if (!showScroll.value && window.pageYOffset > window.innerHeight * 0.25)
     showScroll.value = true;
-  else if (showScroll.value && window.pageYOffset < window.innerHeight * 0.4)
+  else if (showScroll.value && window.pageYOffset < window.innerHeight * 0.25)
     showScroll.value = false;
 };
 onMounted(() => {

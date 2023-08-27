@@ -11,13 +11,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(var(--fg-rgb), 0.3);
+  background-color: rgba(var(--fg-rgb), 0.25);
   color: var(--bg);
   transition: 200ms background-color ease-in-out;
 }
 @media screen and (min-width: 800px) {
   .page-btn:hover {
-    background-color: rgba(var(--fg-rgb), 0.8) !important;
+    background-color: rgba(var(--fg-rgb), 0.75) !important;
   }
 }
 .page-btn:hover::after {

@@ -6,7 +6,7 @@
     <NavBar />
     <ButtonScroll />
 
-    <div id="body" :style="{ 'min-height': height + 'px' }">
+    <div id="body">
       <slot />
     </div>
 
@@ -20,39 +20,15 @@
   margin: 1rem auto 5rem;
   padding-inline: 2rem;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 </style>
 
 <script setup>
 import ButtonScroll from "../components/button/scroll.vue";
-import { ref, onMounted, onUpdated } from "vue";
+import { ref, onMounted } from "vue";
 const height = ref(0);
 onMounted(() => {
   window.error = false;
-  height.value = window.innerHeight * 0.7;
-});
-
-const displayScroll = ref(false);
-
-const observerSuccess = ref(false);
-const watchScrollAnim = () => {
-  const observer = new IntersectionObserver((elements) => {
-    elements.forEach((elm) => {
-      if (!observerSuccess.value) observerSuccess.value = true;
-      if (elm.isIntersecting) {
-        elm.target.classList.add("scroll-shown");
-      }
-    });
-  });
-  const hiddenElms = document.querySelectorAll(".scroll-hidden");
-  hiddenElms.forEach((elm) => observer.observe(elm));
-};
-onUpdated(() => {
-  function tryObserver(attempt) {
-    watchScrollAnim();
-    if (!observerSuccess.value && attempt < 100) setTimeout(tryObserver, 500);
-  }
-  observerSuccess.value = false;
-  tryObserver(0);
 });
 </script>
