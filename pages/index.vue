@@ -156,6 +156,18 @@
   left: 0.5rem;
 }
 
+@media screen and (min-width: 900px) {
+  .masthead .description {
+    padding-left: 1rem;
+  }
+  .masthead .description::before {
+    width: 2rem;
+  }
+  .masthead .description::after {
+    width: 2rem;
+  }
+}
+
 .masthead .value {
   font-weight: 500;
   font-size: 18px;
