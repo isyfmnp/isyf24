@@ -54,7 +54,7 @@
         </p>
 
         <Button href="#" icon="east">See Our Full Programme!</Button>
-        <Button href="#">Our Invited Speakers</Button>
+        <Button href="#" icon="person">Our Invited Speakers</Button>
       </section>
 
       <section>

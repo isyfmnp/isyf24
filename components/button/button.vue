@@ -1,7 +1,7 @@
 <template>
   <a :href="href">
     <slot />
-    <span class="icon material-icons-outlined">
+    <span v-if="icon" class="icon material-icons-outlined">
       {{ icon }}
     </span>
   </a>
@@ -9,7 +9,7 @@
 
 <style scoped>
 a {
-  padding: 0.75rem 2rem;
+  padding: 0.875rem 1.75rem 0.875rem 1.25rem;
   margin: 0.75rem 0;
   border-radius: 8px;
 
