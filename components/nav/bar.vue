@@ -102,7 +102,7 @@ nav.transparent {
   color: white;
   backdrop-filter: none;
   box-shadow: none;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 /* ========== STAMP ========== */
