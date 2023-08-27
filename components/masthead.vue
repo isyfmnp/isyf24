@@ -1,10 +1,19 @@
 <template>
-  <div class="masthead">
+  <div class="masthead" ref="masthead">
     <slot />
   </div>
 
-  <div class="masthead-space"></div>
+  <div class="masthead-space" :style="{ height: mhHeight }"></div>
 </template>
+
+<script setup>
+import { ref, onMounted } from "vue"
+const masthead = ref(null)
+const mhHeight = ref("100vh")
+onMounted(() => {
+  mhHeight.value = masthead.value.clientHeight + "px"
+})
+</script>
 
 <style>
 .masthead,
@@ -20,7 +29,7 @@
   color: white;
 
   display: flex;
-  padding: 7rem 2rem;
+  padding: 0 2rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -28,9 +37,6 @@
 .masthead::before {
   content: '';
   z-index: -1;
-}
-.masthead-space {
-  height: 85vh;
 }
 
 .masthead h1 {

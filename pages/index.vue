@@ -5,15 +5,13 @@
       <img class="title" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="info">
         <h1 class="subtitle">International Science Youth Forum 2024</h1>
-        <div class="detail-list">
-          <div class="detail">
-            <span class="description">Date</span>
-            <span class="value">15-19 January 2023</span>
-          </div>
-          <div class="detail">
-            <span class="description">Venue</span>
-            <span class="value">Hwa Chong Institution (Singapore)</span>
-          </div>
+        <div class="detail">
+          <span class="description">Date</span>
+          <span class="value">15-19 January 2023</span>
+        </div>
+        <div class="detail">
+          <span class="description">Venue</span>
+          <span class="value">Hwa Chong Institution (Singapore)</span>
         </div>
       </div>
     </Masthead>
@@ -101,10 +99,15 @@
 
 <style>
 /* ========== MASTHEAD ========== */
-
+.masthead {
+  padding: 4.5rem 1.5rem 5.5rem;
+}
+.masthead * {
+  max-width: 500px;
+}
 .masthead::before {
   color: var(--bg);
-  background-image: url("/images/clocktower.jpg");
+  background-image: url('/images/clocktower.jpg');
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -112,40 +115,85 @@
 }
 
 .masthead .title {
-  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
-  height: 28vh;
-  margin-top: 3rem;
+  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  height: max(28vh);
+  margin-block: 1rem;
+  margin-inline: 2rem;
+}
+
+.masthead .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-grow: 0.4;
+  flex-basis: 210px;
 }
 
 .masthead .subtitle {
-  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
-  font-size: 36px;
-  margin-block: 1.5rem 4rem;
+  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-size: min(8vw, 48px);
+  margin-block: 0;
 }
 
-.masthead .detail {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  margin-top: 2rem;
+@media screen and (min-width: 900px) {
+  .masthead {
+    flex-direction: row;
+    padding: 5.5rem 1.5rem;
+    justify-content: space-around;
+  }
+  .masthead * {
+    max-width: initial;
+  }
+  .masthead::before {
+    background-position: center;
+  }
+  .masthead .info {
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5vh;
+    gap: 5vh;
+    flex-grow: 1.2;
+  }
+  .masthead .title {
+    height: 25vw;
+  }
+  .masthead .subtitle {
+    font-size: min(8vw, 96px);
+  }
 }
 
+@media screen and (min-width: 1200px) {
+  .masthead .subtitle {
+    max-width: 64rem;
+  }
+}
+
+/* ========== INFORMATIONAL BLOCKS ========== */
 .masthead .description {
+  display: block;
   font-size: 10px;
-  opacity: 0.4;
+  opacity: 0.5;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
+  margin-bottom: 0.325rem;
 }
 
-.masthead .description::before, .masthead .description::after {
+.masthead .description::before,
+.masthead .description::after {
   display: inline-block;
   content: '';
   height: 1px;
-  width: 6rem;
+  width: 4rem;
   border-radius: 1px;
   background-color: white;
-  
+
   position: relative;
   bottom: 3px;
 }
@@ -175,114 +223,74 @@
   line-spacing: 0.1rem;
 }
 
-.masthead {
-  padding-block: 8rem 12rem;
-}
-
+/* ========== HOVERING DOWN ARROW ========== */
 @keyframes down-arrow {
   0% {
-    transform: translateY(-8px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(8px);
+    transform: translateY(0.75rem);
   }
 }
 .masthead::after {
-  content: "";
+  content: '';
   height: 2rem;
   width: 100%;
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 2rem;
 
-  background-image: url("/images/rounded-down-arrow.svg");
+  background-image: url('/images/rounded-down-arrow.svg');
   background-position: center;
   background-repeat: no-repeat;
 
   animation-name: down-arrow;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-play-state: running;
 }
-
-@media screen and (min-width: 900px) {
-  .masthead {
-    flex-direction: row;
-    gap: min(1vw, 2rem);
-  }
-  .masthead::before {
-    background-position: center;
-  }
-  .masthead .info {
-    text-align: left;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  .masthead .title {
-    height: 40vh;
-  }
-  .masthead .subtitle {
-    font-size: 72px;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .masthead .subtitle {
-    font-size: 84px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .masthead .subtitle {
-    font-size: 96px;
-    max-width: 64rem;
-  }
-}
 </style>
 
 <script setup>
-import { onMounted } from "vue";
-import Masthead from "../components/masthead.vue";
-import Button from "../components/button/button.vue";
+import {onMounted} from 'vue';
+import Masthead from '../components/masthead.vue';
+import Button from '../components/button/button.vue';
 
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 onMounted(() => {
-  gsap.from(".masthead .info *", {
+  gsap.from('.masthead .title', {
+    opacity: 0,
+    y: -200,
+    duration: 1,
+    delay: 0.25,
+    ease: 'power2.inOut',
+  });
+
+  gsap.from('.masthead .info *', {
     opacity: 0,
     y: 20,
     duration: 1,
-    ease: "power2.inOut",
-    stagger: 0.1,
-    delay: 0.5,
+    ease: 'power2.inOut',
+    stagger: 0.15,
+    delay: 0.75,
   });
 
-  gsap.from(".masthead .title", {
-    opacity: 0,
-    y: -200,
-    duration: 1.5,
-    delay: 1.5,
-    ease: "power2.inOut",
-  });
-
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
   const sections = gsap.utils.toArray('main section');
 
-  sections.forEach((section) => {
+  sections.forEach(section => {
     gsap.from(section, {
       opacity: 0,
       y: 10,
       duration: 0.5,
-      ease: "power2.inOut",
-      scrollTrigger: section
-    })
-  })
+      ease: 'power2.inOut',
+      scrollTrigger: section,
+    });
+  });
 });
 </script>

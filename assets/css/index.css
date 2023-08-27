@@ -30,8 +30,8 @@ body {
 }
 
 h1 {
-  font-size: 32px;
-  margin: 5rem 0 2rem;
+  font-size: 28px;
+  margin: 4rem 0 1rem;
   color: var(--primary);
 }
 
@@ -61,7 +61,7 @@ ul li::marker {
 
 @media screen and (min-width: 900px) {
   h1 {
-    font-size: 42px;
+    font-size: 32px;
   }
 }
 

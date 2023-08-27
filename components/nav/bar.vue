@@ -102,6 +102,7 @@ nav.transparent {
   color: white;
   backdrop-filter: none;
   box-shadow: none;
+  opacity: 0.75;
 }
 
 /* ========== STAMP ========== */
@@ -140,9 +141,6 @@ nav.transparent {
 }
 
 /* ========== HAMBURGER ========== */
-.hamburger {
-}
-
 .hamburger .material-icons {
   width: 24px;
   height: 24px;
