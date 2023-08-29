@@ -3,7 +3,7 @@
     <h1>FAQ</h1>
   </Masthead>
 
-  <div class="faq-qn">
+  <div class="faq-qn" @click="change">
     <h2>Who are we?</h2>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -58,10 +58,11 @@
 }
 </style>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 
-
-var faq_questions = document.getElementsByClassName("faq-qn");
+function change() {
+    var faq_questions = document.getElementsByClassName("faq-qn");
 
 for (var i = 0; i < faq_questions.length; i++) {
   faq_questions[i].onclick = function () {
@@ -75,4 +76,6 @@ for (var i = 0; i < faq_questions.length; i++) {
     }
   };
 }
+}
+
 </script>
