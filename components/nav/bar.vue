@@ -62,7 +62,7 @@
         <span class="material-icons-outlined">image</span>
         Media
       </a>
-      <a class="item">
+      <a class="item" href="/faq">
         <span class="material-icons-outlined">help</span>
         FAQ
       </a>
