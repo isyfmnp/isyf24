@@ -8,16 +8,14 @@
       </div>
     </div>
 
-    <a class="hamburger" @click="menuOpen = !menuOpen">
+    <a class="hamburger" href="#" @click="menuOpen = !menuOpen">
       <span class="material-icons">menu</span>
     </a>
 
-    <div
-      class="menu-backdrop"
-      :class="{ open: menuOpen }"
-      @click="menuOpen = false"
-    />
     <div class="menu" :class="{ open: menuOpen }">
+      <a class="item close-button" href="#" @click="menuOpen = !menuOpen">
+        <span class="material-icons-outlined">close</span>
+      </a>
       <a class="item" href="/">
         <span class="material-icons-outlined">home</span>
         Home
@@ -102,6 +100,7 @@ nav {
   padding-top: 4rem;
   margin-top: -4rem;
 
+  --fg: black;
   background-color: #f1f3f488;
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 20px 2px #272f4044;
@@ -111,7 +110,7 @@ nav {
 }
 nav.transparent {
   background-color: transparent;
-  color: white;
+  --fg: white;
   backdrop-filter: none;
   box-shadow: none;
 }
@@ -144,12 +143,14 @@ nav.transparent {
   font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
   font-weight: bold;
   font-size: 24px;
+  color: var(--fg);
 }
 
 .stamp .text .subtitle {
   font-weight: 400;
   font-size: 16px;
 }
+
 
 /* ========== HAMBURGER ========== */
 .hamburger .material-icons {
@@ -168,30 +169,18 @@ nav.transparent {
   }
 }
 
+
 /* ========== MENU ========== */
-.menu-backdrop {
-  z-index: 19;
-  position: fixed;
-  top: 4rem;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 100vh;
-  opacity: 0;
-  transition: opacity 300ms;
-  background-color: #666666;
-}
-.menu-backdrop.open {
-  width: 100vw;
-  opacity: 0.3;
-  transition: opacity 300ms;
-}
 .menu {
-  transform: translateX(-325px);
-  transition: transform 400ms;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 400ms, visibility 400ms;
 }
 .menu.open {
-  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  --fg: white;
 }
 
 .menu {
@@ -199,9 +188,9 @@ nav.transparent {
   position: fixed;
   top: 0;
   left: 0;
-  width: fit-content;
+  right: 0;
   height: 100vh;
-  padding: 2rem;
+  padding: 1.125rem 2rem;
   padding-right: 4rem;
   margin: 0;
 
@@ -213,7 +202,7 @@ nav.transparent {
 
   user-select: none;
 
-  background-color: #f1f3f488;
+  background-color: var(--primary-700);
   backdrop-filter: blur(7px);
   box-shadow: 0px 0px 20px 2px #272f3d44;
 }
@@ -232,35 +221,6 @@ nav.transparent {
   transition: color 200ms;
 
   overflow: hidden;
-}
-
-.socials {
-  display: flex;
-  align-item: center;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-:deep(.menu .socials .item svg) {
-  fill: black; 
-  height: 17px;
-  width: 17px;
-  padding: 0.125rem;
-  transition: fill 200ms;
-}
-
-.menu .material-icons-outlined {
-  transition: transform 200ms;
-}
-.menu .open .item .indicator,
-.menu .closed:hover .item .indicator {
-  transform: rotate(90deg);
-}
-.menu .open .item,
-.menu .item:hover,
-.menu .subitems a:hover,
-:deep(.menu .socials .item:hover svg) {
-  color: var(--primary);
-  fill: var(--primary);
 }
 
 .menu .subitems-wrapper {
@@ -290,6 +250,8 @@ nav.transparent {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+
+  transition: color 200ms;
 }
 .menu .open .subitems-wrapper,
 .menu .closed:hover .subitems-wrapper {
@@ -299,6 +261,53 @@ nav.transparent {
 .menu .closed:hover .subitems {
   transform: translateY(0);
 }
+
+.menu .item.close-button {
+  position: fixed;
+  z-index: 21;
+  top: 1.325rem;
+  right: 2rem;
+  width: fit-content;
+  transform: scale(1.2);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--fg);
+}
+.socials * {
+  flex-grow: 0;
+}
+:deep(.menu .socials .item svg) {
+  height: 17px;
+  width: 17px;
+  padding: 4px;
+  transition: fill 200ms;
+}
+
+.menu :deep(.socials .item svg) {
+  fill: var(--fg);
+}
+.menu .material-icons-outlined {
+  transition: transform 200ms;
+}
+.menu .open .item .indicator,
+.menu .closed:hover .item .indicator {
+  transform: rotate(90deg);
+}
+.menu .open .item,
+.menu .item:hover,
+.menu .subitems a:hover,
+:deep(.menu .socials .item:hover svg) {
+  color: var(--primary);
+  fill: var(--primary);
+}
+
 
 @media screen and (min-width: 1000px) {
   nav {
@@ -327,6 +336,7 @@ nav.transparent {
     backdrop-filter: none;
     box-shadow: none;
     opacity: 1;
+    visibility: visible;
   }
 
   /* Link styling */
@@ -335,7 +345,7 @@ nav.transparent {
     width: fit-content;
     gap: 0.25rem;
 
-    color: black;
+    color: var(--fg);
     font-size: 16px;
     font-weight: 500;
 
@@ -343,10 +353,10 @@ nav.transparent {
   }
   .transparent .item,
   .transparent .subitems a {
-    color: white;
+    color: var(--fg);
   }
   .transparent .socials .item :deep(svg) {
-    fill: white;
+    fill: var(--fg);
   }
 
   /* ========== DROPDOWN MENU ========== */
@@ -388,6 +398,14 @@ nav.transparent {
   }
   nav.transparent .menu .subitems-wrapper {
     top: 2.5rem;
+  }
+  .item.close-button {
+    display: none;
+  }
+  .socials {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: none;
   }
 }
 </style>
