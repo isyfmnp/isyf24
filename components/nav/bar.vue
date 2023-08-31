@@ -63,10 +63,22 @@
         <span class="material-icons-outlined">image</span>
         Media
       </a>
+        
       <a class="item" href="/faq">
         <span class="material-icons-outlined">help</span>
         FAQ
       </a>
+      <div class="socials">
+      <a class="item" href="https://m.facebook.com/isyf.2023/" target="_blank">
+        <FacebookIcon />
+      </a>
+      <a class="item" href="https://www.instagram.com/isyf.2023/" target="_blank">
+        <InstagramIcon />
+      </a>
+      <a class="item" href="https://www.youtube.com/channel/UCs9CbJcxC2x8OPYiNx5QDTg" target="_blank">
+        <YoutubeIcon />
+      </a>
+      </div>
     </div>
   </nav>
 </template>
@@ -222,6 +234,20 @@ nav.transparent {
   overflow: hidden;
 }
 
+.socials {
+  display: flex;
+  align-item: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+:deep(.menu .socials .item svg) {
+  fill: black; 
+  height: 17px;
+  width: 17px;
+  padding: 0.125rem;
+  transition: fill 200ms;
+}
+
 .menu .material-icons-outlined {
   transition: transform 200ms;
 }
@@ -231,8 +257,10 @@ nav.transparent {
 }
 .menu .open .item,
 .menu .item:hover,
-.menu .subitems a:hover {
+.menu .subitems a:hover,
+:deep(.menu .socials .item:hover svg) {
   color: var(--primary);
+  fill: var(--primary);
 }
 
 .menu .subitems-wrapper {
@@ -272,7 +300,7 @@ nav.transparent {
   transform: translateY(0);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   nav {
     height: 4rem;
   }
@@ -313,9 +341,12 @@ nav.transparent {
 
     transition: color 100ms linear;
   }
-  nav.transparent .menu .item,
-  nav.transparent .menu .subitems a {
+  .transparent .item,
+  .transparent .subitems a {
     color: white;
+  }
+  .transparent .socials .item :deep(svg) {
+    fill: white;
   }
 
   /* ========== DROPDOWN MENU ========== */
@@ -364,6 +395,9 @@ nav.transparent {
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { gsap } from "gsap";
+import InstagramIcon from "../icons/instagram.vue";
+import FacebookIcon from "../icons/facebook.vue";
+import YoutubeIcon from "../icons/youtube.vue";
 
 const profilesOpen = ref(false);
 const menuOpen = ref(false);

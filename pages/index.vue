@@ -172,7 +172,7 @@
   }
   .masthead .subtitle {
     font-size: min(8vw, 96px);
-    padding: 2.5rem 4rem 1.5rem;
+    padding: 3rem 4rem 2rem;
     margin-right: -15vw;
     padding-right: 15vw;
     background: linear-gradient(
