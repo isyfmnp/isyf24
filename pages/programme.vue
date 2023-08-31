@@ -218,6 +218,7 @@ ul {
 }
 .event-day h3::before {
   left: -2.75rem;
+  top: calc(50% - 0.75rem);
   width: 1.5rem;
   height: 1.5rem;
 
