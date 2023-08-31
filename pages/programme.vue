@@ -169,7 +169,7 @@ ul {
 /* TIMELINE EFFECT */
 .event-day {
   --tm-radius: 2rem;
-  margin-left: calc(-100vw - 2.75rem + 5vw);
+  margin-left: calc(-100vw - 2rem + 5vw);
   padding-left: calc(100vw + var(--tm-radius) * 2);
   position: relative;
 }
@@ -177,7 +177,12 @@ ul {
   top: 6rem;
 }
 .event-day:last-of-type::before {
-  bottom: 11rem;
+  bottom: 12rem;
+}
+@media screen and (min-width: 402px) {
+  .event-day:last-of-type::before {
+    bottom: 11rem;
+  }
 }
 @media screen and (min-width: 666px) {
   .event-day:last-of-type::before {
@@ -216,18 +221,6 @@ ul {
   width: 1.5rem;
   height: 1.5rem;
 
-}
-
-
-
-/* ========== SCREEN-SIZE DEPENDENCY ========== */
-.timeline,
-.details {
-  display: none;
-}
-@media screen and (min-width: 600px) {
-}
-@media screen and (min-width: 900px) {
 }
 </style>
 
