@@ -1,64 +1,27 @@
 <template>
+  <Masthead>
+    <h1>Programme Outline</h1>
+  </Masthead>
+  <div class="programme-wrapper">
+
   <div class="programme">
     <div class="navigator">
-      <div class="day">
-        <div class="text">1</div>
-      </div>
-      <div class="day">
-        <div class="text">2</div>
-      </div>
-      <div class="day">
-        <div class="text">3</div>
-      </div>
-      <div class="day">
-        <div class="text">4</div>
-      </div>
-      <div class="day">
-        <div class="text">5</div>
-      </div>
+      <a class="day" v-for="dayIndex in [0, 1, 2, 3, 4]" :href="'#day-' + dayIndex">
+        <div class="text">{{ dayIndex + 1 }}</div>
+      </a>
     </div>
 
     <div class="condensed-timeline">
       <ul>
-        <li v-for="(dayTitle, dayIndex) in days">
-          <h2>{{ dayTitle }}</h2>
+        <li class="event-day" v-for="(dayTitle, dayIndex) in days">
+          <h2 class="scroll-anchor" :id="'day-' + dayIndex">{{ dayTitle }}</h2>
           <ul>
-            <li v-for="event in events[dayIndex]">
+            <li class="event-details" v-for="event in events[dayIndex]">
+              <div class="event-title">
+
               <h3 class="name">{{ event.name }}</h3>
               <span class="time">{{ event.time }}</span>
-              <img
-                v-if="event.image"
-                :src="event.image"
-                :alt="'Image for ' + event.name"
-              />
-              <p v-if="event.description">{{ event.description }}</p>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="timeline">
-      <ul>
-        <li v-for="(dayTitle, dayIndex) in days">
-          <h2>{{ dayTitle }}</h2>
-          <ul>
-            <li v-for="event in events[dayIndex]">
-              <h3 class="name">{{ event.name }}</h3>
-              <span class="time">{{ event.time }}</span>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="details">
-      <ul>
-        <li v-for="(dayTitle, dayIndex) in days">
-          <h2>{{ dayTitle }}</h2>
-          <ul>
-            <li v-for="event in events[dayIndex]">
-              <h3 class="name">{{ event.name }}</h3>
+              </div>
               <img
                 v-if="event.image"
                 :src="event.image"
@@ -71,9 +34,18 @@
       </ul>
     </div>
   </div>
+  </div>
 </template>
 
 <style scoped>
+:global(.masthead::before) {
+  color: var(--bg);
+  background-image: url("/images/progbg.webp");
+  filter: brightness(40%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 43% 50%;
+}
 ul {
   list-style: none;
   padding-left: 0;
@@ -81,15 +53,24 @@ ul {
 
 
 /* ========== OVERALL BOX STYLING ========== */
-
+@media screen and (min-width: 1140px) {
+  .programme {
+    margin-inline: -10vw;
+  }
+}
+.programme {
+  margin-bottom: 50vh; /* Prevent clash between last box and footer coloring */
+}
 
 
 /* ========== DAY NAVIGATOR ========== */
 .navigator {
+  display: none; /* TODO: Evaluate if this is neccesary, else remove */
+
   padding: 1rem;
   position: relative;
 
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -131,7 +112,7 @@ ul {
   color: var(--bg);
 }
 .navigator .day .text {
-  transform: translateY(2px) translateX(1px);
+  transform: translateY(2px);
 }
 
 /* ========== TIMELINE ========== */
@@ -141,8 +122,8 @@ ul {
   font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
   font-style: italic;
   font-weight: normal;
-  font-size: 36px;
-  margin-top: 4rem;
+  font-size: 44px;
+  margin-block: 3rem 2rem;
 }
 .condensed-timeline h3,
 .timeline h3,
@@ -150,6 +131,94 @@ ul {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+.event-day {
+  margin: 0 -100vw;
+  padding: 2rem 100vw;
+  color: var(--fg);
+}
+.event-day:nth-of-type(even) {
+  background-color: var(--primary);
+  --fg: var(--bg);
+}
+
+.event-details {
+  margin-bottom: 3rem;
+}
+.event-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+  margin-block: 0.325rem 0.75rem;
+  margin-right: 1rem;
+}
+
+.time {
+  display: block;
+  font-style: italic;
+  white-space: nowrap;
+}
+.scroll-anchor {
+  scroll-margin-top: 7rem;
+}
+
+
+/* TIMELINE EFFECT */
+.event-day {
+  --tm-radius: 2rem;
+  margin-left: calc(-100vw - 2.75rem + 5vw);
+  padding-left: calc(100vw + var(--tm-radius) * 2);
+  position: relative;
+}
+.event-day:first-of-type::before {
+  top: 6rem;
+}
+.event-day:last-of-type::before {
+  bottom: 11rem;
+}
+@media screen and (min-width: 666px) {
+  .event-day:last-of-type::before {
+    bottom: 10rem;
+  }
+}
+.event-day::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(100vw + var(--tm-radius));
+  width: 2px;
+
+  background-color: var(--fg);
+}
+.event-day h2, .event-day h3 {
+  position: relative;
+}
+.event-day h2::before, .event-day h3::before {
+  content: '';
+  position: absolute;
+  display: block;
+  
+  border-radius: 50%;
+  background-color: var(--fg);
+}
+.event-day h2::before {
+  left: -3rem;
+  top: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+}
+.event-day h3::before {
+  left: -2.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+
+}
+
+
 
 /* ========== SCREEN-SIZE DEPENDENCY ========== */
 .timeline,
@@ -159,18 +228,11 @@ ul {
 @media screen and (min-width: 600px) {
 }
 @media screen and (min-width: 900px) {
-  .condensed-timeline {
-    display: none;
-  }
-  .timeline,
-  .details {
-    display: block;
-  }
 }
 </style>
 
 <script setup>
-import {onMounted} from 'vue';
+import { onMounted } from 'vue';
 
 const days = [
   'Day 1 (15 Jan)',

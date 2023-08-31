@@ -33,6 +33,7 @@ html {
   text-underline-offset: 4px;
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
