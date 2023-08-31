@@ -32,8 +32,9 @@
       </a>
       <div class="closed" :class="{ open: profilesOpen }">
         <a class="item" @click="profilesOpen = !profilesOpen">
-          <span class="material-icons-outlined">chevron_right</span>
+          <span class="material-icons-outlined">person</span>
           Profiles
+          <span class="material-icons-outlined indicator">chevron_right</span>
         </a>
         <div class="subitems-wrapper">
           <ul class="subitems">
@@ -196,7 +197,7 @@ nav.transparent {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 0.625rem;
 
   user-select: none;
 
@@ -224,12 +225,13 @@ nav.transparent {
 .menu .material-icons-outlined {
   transition: transform 200ms;
 }
-.menu .open .item .material-icons-outlined,
-.menu .closed:hover .item .material-icons-outlined {
+.menu .open .item .indicator,
+.menu .closed:hover .item .indicator {
   transform: rotate(90deg);
 }
 .menu .open .item,
-.menu .item:hover {
+.menu .item:hover,
+.menu .subitems a:hover {
   color: var(--primary);
 }
 

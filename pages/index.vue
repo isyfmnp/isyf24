@@ -5,13 +5,15 @@
       <img class="title" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="info">
         <h1 class="subtitle">International Science Youth Forum 2024</h1>
-        <div class="detail">
-          <span class="description">Date</span>
-          <span class="value">15-19 January 2023</span>
-        </div>
-        <div class="detail">
-          <span class="description">Venue</span>
-          <span class="value">Hwa Chong Institution (Singapore)</span>
+        <div class="detail-list">
+          <div class="detail">
+            <span class="description">Date</span>
+            <span class="value">15-19 January 2023</span>
+          </div>
+          <div class="detail">
+            <span class="description">Venue</span>
+            <span class="value">Hwa Chong Institution (Singapore)</span>
+          </div>
         </div>
       </div>
     </Masthead>
@@ -107,17 +109,17 @@
 }
 .masthead::before {
   color: var(--bg);
-  background-image: url("/images/clocktower.jpg");
-  filter: brightness(40%);
+  background-image: url('/images/clocktower.jpg');
+  filter: brightness(50%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 43% 50%;
 }
 
 .masthead .title {
-  font-family: "tosefin Sans", "IBM Plex Sans", sans-serif;
+  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
   height: max(28vh);
-  margin-block: 1rem;
+  margin-bottom: 1rem;
   margin-inline: 2rem;
 }
 
@@ -132,9 +134,14 @@
 }
 
 .masthead .subtitle {
-  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
+  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
   font-size: min(8vw, 48px);
   margin-block: 0;
+  padding: 1.25rem 1rem 1rem;
+
+  background: rgba(var(--bg-rgb), 0.325);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
 }
 
 @media screen and (min-width: 900px) {
@@ -165,6 +172,14 @@
   }
   .masthead .subtitle {
     font-size: min(8vw, 96px);
+    padding: 2.5rem 4rem 1.5rem;
+    margin-right: -15vw;
+    padding-right: 15vw;
+    background: linear-gradient(
+      90deg,
+      rgba(var(--bg-rgb), 0.325),
+      rgba(var(--bg-rgb), 0.05)
+    );
   }
 }
 
@@ -175,8 +190,13 @@
 }
 
 /* ========== INFORMATIONAL BLOCKS ========== */
+.masthead .detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(15vh - 5.5rem);
+}
 .masthead .description {
-  display: block;
+  display: none; /* Full display: block */
   font-size: 10px;
   opacity: 0.5;
   font-weight: 600;
@@ -188,7 +208,7 @@
 .masthead .description::before,
 .masthead .description::after {
   display: inline-block;
-  content: "";
+  content: '';
   height: 1px;
   width: 4rem;
   border-radius: 1px;
@@ -206,6 +226,7 @@
 
 @media screen and (min-width: 900px) {
   .masthead .description {
+    display: block;
     padding-left: 1rem;
   }
   .masthead .description::before {
@@ -233,13 +254,13 @@
   }
 }
 .masthead::after {
-  content: "";
+  content: '';
   height: 2rem;
   width: 100%;
   position: absolute;
   bottom: 2rem;
 
-  background-image: url("/images/rounded-down-arrow.svg");
+  background-image: url('/images/rounded-down-arrow.svg');
   background-position: center;
   background-repeat: no-repeat;
 
@@ -254,41 +275,41 @@
 </style>
 
 <script setup>
-import { onMounted } from "vue";
-import Masthead from "../components/masthead.vue";
-import Button from "../components/button/button.vue";
+import {onMounted} from 'vue';
+import Masthead from '../components/masthead.vue';
+import Button from '../components/button/button.vue';
 
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 onMounted(() => {
-  gsap.from(".masthead .title", {
+  gsap.from('.masthead .title', {
     opacity: 0,
     y: -200,
     duration: 1,
     delay: 0.25,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
   });
 
-  gsap.from(".masthead .info *", {
+  gsap.from('.masthead .info *', {
     opacity: 0,
     y: 20,
     duration: 1,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
     stagger: 0.15,
     delay: 0.75,
   });
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const sections = gsap.utils.toArray("main section");
+  const sections = gsap.utils.toArray('main section');
 
-  sections.forEach((section) => {
+  sections.forEach(section => {
     gsap.from(section, {
       opacity: 0,
       y: 10,
       duration: 0.5,
-      ease: "power2.inOut",
+      ease: 'power2.inOut',
       scrollTrigger: section,
     });
   });

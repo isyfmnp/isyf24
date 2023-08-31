@@ -10,10 +10,18 @@
   --fg: #242933;
   --fg-rgb: 36, 41, 51;
   --bg: #e8ebed;
-  --fg-secondary: #6e7a91;
+  --bg-rgb: 232, 235, 237;
 
-  --primary: #6350fd;
+  --primary: #6350fd; 
+  --primary-rgb: 99, 80, 253;
+  --primary-200: #ad9bfc;
   --primary-700: #3f2ec2;
+
+  --red: #FB4D3D;
+  --yellow: #FFC759;
+  --green: #03CEA4;
+  --blue: #345995;
+  --purple: #6350fd;
 }
 html {
   background-color: var(--bg);
@@ -48,7 +56,6 @@ a {
 }
 hr {
   border: none;
-  border-bottom: 1px solid var(--fg-secondary);
 }
 ul {
   padding-left: 1.5rem;
