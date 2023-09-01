@@ -151,7 +151,7 @@ ul {
   background-color: var(--primary-200);
   backdrop-filter: blur(5px);
   border-radius: 16px;
-  transform: skew(-15deg);
+  transform: skew(-10deg);
 }
 .event-day:nth-of-type(even) h2::after {
   opacity: 0.125;

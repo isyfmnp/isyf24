@@ -136,12 +136,25 @@
 .masthead .subtitle {
   font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
   font-size: min(8vw, 48px);
-  margin-block: 0;
-  padding: 1.25rem 1rem 1rem;
+  margin-block: 0 1.5rem;
+  padding: 1.25rem 0.75rem 1rem;
+  line-height: 1.25em;
 
+  position: relative;
+}
+.masthead .subtitle::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
   background: rgba(var(--bg-rgb), 0.325);
   backdrop-filter: blur(5px);
-  border-radius: 16px;
+  border-radius: 24px;
+  transform: skew(-10deg);
 }
 
 @media screen and (min-width: 900px) {
@@ -171,15 +184,18 @@
     height: 25vw;
   }
   .masthead .subtitle {
-    font-size: min(8vw, 96px);
+    font-size: min(5vw, 96px);
     padding: 3rem 4rem 2rem;
     margin-right: -15vw;
     padding-right: 15vw;
+  }
+  .masthead .subtitle::before {
     background: linear-gradient(
       90deg,
       rgba(var(--bg-rgb), 0.325),
       rgba(var(--bg-rgb), 0.05)
     );
+  transform: skew(10deg);
   }
 }
 
@@ -204,6 +220,12 @@
   letter-spacing: 0.25rem;
   margin-bottom: 0.325rem;
 }
+.masthead .value {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05rem;
+  line-spacing: 0.1rem;
+}
 
 .masthead .description::before,
 .masthead .description::after {
@@ -225,6 +247,9 @@
 }
 
 @media screen and (min-width: 900px) {
+  .masthead .detail-list {
+    margin-left: 4.5rem;
+  }
   .masthead .description {
     display: block;
     padding-left: 1rem;
@@ -235,13 +260,9 @@
   .masthead .description::after {
     width: 2rem;
   }
-}
-
-.masthead .value {
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.05rem;
-  line-spacing: 0.1rem;
+  .masthead .value {
+    font-size: 20px;
+  }
 }
 
 /* ========== HOVERING DOWN ARROW ========== */
