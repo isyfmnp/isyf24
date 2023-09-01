@@ -1,12 +1,12 @@
 <template>
   <nav :class="{ transparent: navTransparent }">
-    <div class="stamp">
+    <a class="stamp" href="/">
       <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="text">
         <div class="title">ISYF 2024</div>
         <!--<div class="subtitle">24th January 2024 | Hwa Chong Institition (SG)</div>-->
       </div>
-    </div>
+    </a>
 
     <a class="hamburger" href="#" @click="menuOpen = !menuOpen">
       <span class="material-icons">menu</span>

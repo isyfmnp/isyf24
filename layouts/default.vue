@@ -19,7 +19,7 @@
   max-width: min(var(--content-width), 100vw);
   margin: 1rem auto 5rem;
   padding-inline: 2rem;
-  min-height: 100vh;
+  min-height: 110vh;
 }
 </style>
 

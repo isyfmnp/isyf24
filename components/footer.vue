@@ -71,7 +71,7 @@
 <style scoped>
 /* ========== WRAPPER ========== */
 .footer-wrapper {
-  background-color: var(--primary);
+  background-color: var(--fg);
 }
 .footer {
   max-width: var(--outer-width);
@@ -148,8 +148,6 @@ p {
   margin-inline: 1rem;
   background-color: var(--bg);
   border-radius: 50%;
-
-  box-shadow: 0 0 3px 0 var(--primary) inset;
 }
 
 /* ========== CONTACT LIST ========== */
