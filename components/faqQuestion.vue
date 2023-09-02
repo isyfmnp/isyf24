@@ -40,7 +40,8 @@
 .faq-qn h3 {
   font-weight: 500;
   font-size: 20px;
-  margin-block: 1rem;
+  margin-block: 0;
+  padding-block: 1rem;
   transition: color 200ms;
 }
 .opened .faq-qn h3 {

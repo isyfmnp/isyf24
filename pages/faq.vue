@@ -52,7 +52,7 @@ const questions = {
       "We believe the 5 days of ISYF will be an exciting and enriching experience for you. You can look forward to the cultural exhibition, learning and experiencing the vibrant and unique cultures of each and every participant from various countries. In a typical day, you can expect engaging dialogue sessions or lessons with eminent scientists in our Dialogue sessions and Masterclasses, and an opportunity to visit Singapore's own industries and universities for further insight into the research culture in Singapore. Most importantly, a typical day is best described as the memories and joy you had with all your friends you have made during ISYF!",
   },
   Accomodation: {
-    'Where will I be staying':
+    'Where will I be staying?':
       "All delegates and educators will be housed at the Hwa Chong Institution Boarding School. More information of the boarding school can be found at <a href='http://www.hcibs.edu.sg' target='_blank'>http://www.hcibs.edu.sg</a>",
     'Will I be sharing rooms with other participants?':
       "Yes you will. In fact, the rooms of the boarding school that you'll be staying in are either 2 bedders or 4 bedders. Your roommates are likely to be delegates from other countries. We believe that this is an invaluable opportunity for you to form close friendships and create precious memories.",
