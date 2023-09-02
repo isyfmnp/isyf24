@@ -14,22 +14,14 @@
 
 <style scoped>
 .faq-wrapper {
-  position: relative;
   margin-block: 1.25rem;
-  padding-inline: 1.25rem;
-}
-.faq-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  z-index: -1;
-  background-color: var(--primary-200);
+  padding-inline: 1rem;
   border-radius: 16px;
-  opacity: 0.25;
+  border: 1px solid var(--fg);
+  transition: border 200ms;
+}
+.faq-wrapper.opened {
+  border: 1px solid var(--primary);
 }
 
 .faq-qn {
@@ -49,7 +41,7 @@
   font-weight: 500;
   font-size: 20px;
   margin-block: 0;
-  padding-block: 1.125rem;
+  padding-block: 1rem;
   transition: color 200ms;
 }
 .opened .faq-qn h3 {
