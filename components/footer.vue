@@ -132,6 +132,7 @@
 a,
 h1 {
   color: var(--fg);
+  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;

@@ -85,6 +85,9 @@
 .material-icons-outlined {
   scale: 0.8;
 }
+a {
+  text-decoration: none;
+}
 
 nav {
   z-index: 10;
@@ -437,7 +440,6 @@ const checkScroll = () => {
 onMounted(() => {
   document.addEventListener("scroll", checkScroll);
   setTimeout(() => {
-    console.log(window.error);
     if (window.error) {
       navTransparent.value = false;
     }

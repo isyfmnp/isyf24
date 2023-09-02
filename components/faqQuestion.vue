@@ -7,7 +7,7 @@
       >
     </div>
     <div class="faq-ans" :style="{ '--height': ansHeight }">
-      <p ref="ansRef"><slot name="ans">Unanswered Question</slot></p>
+      <p ref="ansRef" v-html="slots.ans()[0].children"></p> <!-- Black magic I don't understand why either -->
     </div>
   </div>
 </template>
@@ -74,7 +74,10 @@
 </style>
 
 <script setup>
-import {ref, onMounted} from 'vue';
+import {ref, onMounted, useSlots} from 'vue';
+
+const slots = useSlots()
+const test = ""
 
 const opened = ref(false);
 const ansRef = ref(null);

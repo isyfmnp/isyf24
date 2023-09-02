@@ -61,7 +61,6 @@ p {
 }
 a {
   color: var(--fg);
-  text-decoration: none;
 }
 hr {
   border: none;
