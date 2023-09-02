@@ -42,7 +42,7 @@ onMounted(() => {
 .masthead h1 {
   font-size: 72px;
   color: white;
-  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
+  font-family: var(--font-display);
 }
 
 @media screen and (min-width: 800px) {

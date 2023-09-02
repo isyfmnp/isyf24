@@ -23,7 +23,7 @@
   min-height: 100vh;
 }
 h1 {
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-display);
   font-size: min(40vh, 40vw);
   font-weight: 500;
   margin: 1rem 0 2rem;

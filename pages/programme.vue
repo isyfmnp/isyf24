@@ -102,7 +102,7 @@ ul {
 
   font-weight: bold;
   font-size: 28px;
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-display);
 
   background-color: var(--bg);
   border: 3px solid var(--primary);
@@ -124,7 +124,7 @@ ul {
 
 /* ========== TIMELINE ========== */
 .event-day h2 {
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
   font-size: 44px;
@@ -133,7 +133,7 @@ ul {
 .event-day h3 {
   text-transform: uppercase;
   font-weight: bold;
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-display);
   margin-block: 0;
   line-height: 1.5rem;
 }
@@ -201,7 +201,7 @@ ul {
   font-weight: 300;
   font-size: 20px;
   white-space: nowrap;
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-display);
 
   width: 80px;
   flex-shrink: 0;

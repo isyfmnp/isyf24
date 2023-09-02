@@ -117,7 +117,7 @@
 }
 
 .masthead .title {
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-display);
   height: max(28vh);
   margin-bottom: 1rem;
   margin-inline: 2rem;
@@ -134,7 +134,7 @@
 }
 
 .masthead .subtitle {
-  font-family: 'Josefin Sans', 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-display);
   font-size: min(8vw, 48px);
   margin-block: 0 1.5rem;
   padding: 1.25rem 0.75rem 1rem;

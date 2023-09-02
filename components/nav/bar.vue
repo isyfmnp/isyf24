@@ -140,7 +140,7 @@ nav.transparent {
 }
 
 .stamp .text .title {
-  font-family: "Josefin Sans", "IBM Plex Sans", sans-serif;
+  font-family: var(--font-display);
   font-weight: bold;
   font-size: 24px;
   color: var(--fg);
