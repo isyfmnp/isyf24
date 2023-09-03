@@ -44,9 +44,6 @@
   padding-block: 1rem;
   transition: color 200ms;
 }
-.opened .faq-qn h3 {
-  color: var(--primary);
-}
 
 .icon {
   scale: 1.25;
@@ -57,7 +54,6 @@
 }
 .opened .icon {
   transform: rotate(-180deg);
-  color: var(--primary);
 }
 
 .faq-ans {
@@ -74,7 +70,7 @@
 </style>
 
 <script setup>
-import {ref, onMounted, useSlots} from 'vue';
+import {ref, watch, onMounted, useSlots} from 'vue';
 
 const slots = useSlots()
 const test = ""
@@ -82,6 +78,12 @@ const test = ""
 const opened = ref(false);
 const ansRef = ref(null);
 const ansHeight = ref('100rem');
+
+const props = defineProps(['sectionOpen'])
+
+watch(props, async (oldValue, newValue) => {
+  opened.value = newValue.sectionOpen;
+})
 
 onMounted(() => {
   ansHeight.value = ansRef.value.offsetHeight + 36 + 'px';

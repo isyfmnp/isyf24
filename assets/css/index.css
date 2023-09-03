@@ -74,6 +74,15 @@ ul li {
 ul li::marker {
   padding-right: 0.5rem;
 }
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 @media screen and (min-width: 900px) {
   h1 {

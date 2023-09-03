@@ -1,16 +1,31 @@
 <template>
-  <Masthead>
-    <h1>FAQ</h1>
-  </Masthead>
-
   <div>
-    <div class="section_wrapper" v-for="(section, title) in questions">
-      <h2>{{ title }}</h2>
-      <div v-for="(answer, question) in section">
-        <FAQQuestion>
-          <template #qn>{{ question }}</template>
-          <template #ans>{{ answer }}</template>
-        </FAQQuestion>
+    <Masthead>
+      <h1>FAQ</h1>
+    </Masthead>
+
+    <div>
+      <div
+        class="section-wrapper"
+        v-for="(section, title, sectionIndex) in questions"
+      >
+        <h2>{{ title }}</h2>
+        <button
+          class="expand-all"
+          @click="sectionsOpen[sectionIndex] = !sectionsOpen[sectionIndex]"
+          :class="{opened: sectionsOpen[sectionIndex]}"
+        >
+          Expand All<span class="icon material-icons-outlined"
+            >expand_more</span
+          >
+        </button>
+
+        <div v-for="(answer, question) in section">
+          <FAQQuestion :sectionOpen="sectionsOpen[sectionIndex]">
+            <template #qn>{{ question }}</template>
+            <template #ans>{{ answer }}</template>
+          </FAQQuestion>
+        </div>
       </div>
     </div>
   </div>
@@ -26,16 +41,30 @@
   background-position: 43% 50%;
 }
 
-.section_wrapper {
+.section-wrapper {
   padding-top: 3rem;
 }
-  
+
 h2 {
   font-family: var(--font-display);
   font-size: 32px;
   margin-block: 1rem;
 }
-
+.expand-all {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  opacity: 0.75;
+  border-bottom: 1px solid var(--fg);
+}
+.expand-all .icon {
+  color: var(--fg);
+  scale: 0.75;
+  transition: transform 200ms;
+}
+.expand-all.opened .icon {
+  transform: rotate(-180deg);
+}
 </style>
 
 <script setup>
@@ -73,20 +102,5 @@ const questions = {
   },
 };
 
-function change() {
-  var faq_questions = document.getElementsByClassName('faq-qn');
-
-  for (var i = 0; i < faq_questions.length; i++) {
-    faq_questions[i].onclick = function () {
-      this.children[1].classList.toggle('rotate-180'); //this refers to the div of class faq:qn
-
-      var content = this.nextElementSibling; //select the div of class:faq-ans
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    };
-  }
-}
+const sectionsOpen = ref(Array(Object.keys(questions).length).fill(false));
 </script>
