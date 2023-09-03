@@ -14,8 +14,8 @@
 
 <style scoped>
 .faq-wrapper {
-  margin-block: 1.25rem;
-  padding-inline: 1rem;
+  margin: 1.25rem -0.75rem;
+  padding: 0 1rem;
   border-radius: 16px;
   border: 1px solid var(--fg);
   transition: border 200ms;
@@ -29,6 +29,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+
   cursor: pointer;
   border-bottom: 1px solid #ffffff00;
   transition: border 200ms;
