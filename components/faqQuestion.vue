@@ -1,5 +1,5 @@
 <template>
-  <div class="faq-wrapper" :class="{opened: opened}">
+  <div class="faq-wrapper" :class="{ opened: opened }">
     <div class="faq-qn" @click="opened = !opened">
       <h3><slot name="qn">Unasked Question</slot></h3>
       <span class="icon material-icons-outlined"
@@ -7,7 +7,8 @@
       >
     </div>
     <div class="faq-ans" :style="{ '--height': ansHeight }">
-      <p ref="ansRef" v-html="slots.ans()[0].children"></p> <!-- Black magic I don't understand why either -->
+      <p ref="ansRef" v-html="slots.ans()[0].children"></p>
+      <!-- Black magic I don't understand why either -->
     </div>
   </div>
 </template>
@@ -72,22 +73,22 @@
 </style>
 
 <script setup>
-import {ref, watch, onMounted, useSlots} from 'vue';
+import { ref, watch, onMounted, useSlots } from "vue";
 
-const slots = useSlots()
-const test = ""
+const slots = useSlots();
+const test = "";
 
 const opened = ref(false);
 const ansRef = ref(null);
-const ansHeight = ref('100rem');
+const ansHeight = ref("100rem");
 
-const props = defineProps(['sectionOpen'])
+const props = defineProps(["sectionOpen"]);
 
 watch(props, async (oldValue, newValue) => {
   opened.value = newValue.sectionOpen;
-})
+});
 
 onMounted(() => {
-  ansHeight.value = ansRef.value.offsetHeight + 36 + 'px';
+  ansHeight.value = ansRef.value.offsetHeight + 36 + "px";
 });
 </script>

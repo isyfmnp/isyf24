@@ -41,19 +41,29 @@ onMounted(() => {
 
 .masthead h1 {
   font-size: 72px;
-  color: white;
   font-family: var(--font-display);
+}
+
+.masthead h3 {
+  opacity: 0.924;
+  max-width: max(500px, 60vw);
 }
 
 @media screen and (min-width: 800px) {
   .masthead h1 {
     font-size: 96px;
   }
+  .masthead h3 {
+    font-size: 22px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .masthead h1 {
     font-size: 128px;
+  }
+  .masthead h3 {
+    font-size: 26px;
   }
 }
 </style>

@@ -4,10 +4,10 @@
       <section class="stamp">
         <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
 
-        <div class="copyright">
-          <h1>
+        <div class="credits">
+          <span class="copyright">
             © International Science Youth Forum 2024. All rights reserved.
-          </h1>
+          </span>
 
           <p>Website by John Doe</p>
 
@@ -26,27 +26,33 @@
       <div class="footer-columns">
         <section>
           <h1 class="header">Socials</h1>
-          <p><a
-            class="item"
-            href="https://m.facebook.com/isyf.2024/"
-            target="_blank"
-          >
-            <FacebookIcon />@isyf.2024
-          </a></p>
-          <p><a
-            class="item"
-            href="https://www.instagram.com/isyf.2024/"
-            target="_blank"
-          >
-            <InstagramIcon />@isyf.2024
-          </a></p>
-          <p><a
-            class="item"
-            href="https://www.youtube.com/channel/UCs9CbJcxC2x8OPYiNx5QDTg"
-            target="_blank"
-          >
-            <YoutubeIcon />@isyfsg
-          </a></p>
+          <p>
+            <a
+              class="item"
+              href="https://m.facebook.com/isyf.2024/"
+              target="_blank"
+            >
+              <FacebookIcon />@isyf.2024
+            </a>
+          </p>
+          <p>
+            <a
+              class="item"
+              href="https://www.instagram.com/isyf.2024/"
+              target="_blank"
+            >
+              <InstagramIcon />@isyf.2024
+            </a>
+          </p>
+          <p>
+            <a
+              class="item"
+              href="https://www.youtube.com/channel/UCs9CbJcxC2x8OPYiNx5QDTg"
+              target="_blank"
+            >
+              <YoutubeIcon />@isyfsg
+            </a>
+          </p>
         </section>
 
         <section>
@@ -142,10 +148,15 @@ section {
   margin-bottom: 3.5rem;
 }
 
-h1 {
+h1,
+.copyright {
+  display: block;
   font-size: var(--fs);
   font-weight: 800;
   margin-block: 1.25rem;
+}
+h1 {
+  font-family: var(--font-display);
 }
 .header {
   text-transform: uppercase;
@@ -168,7 +179,7 @@ p {
     align-items: center;
     gap: 2rem;
   }
-  .copyright {
+  .credits {
     width: 70%;
   }
 }
@@ -210,7 +221,7 @@ p {
 </style>
 
 <script setup>
-import InstagramIcon from './icons/instagram.vue';
-import FacebookIcon from './icons/facebook.vue';
-import YoutubeIcon from './icons/youtube.vue';
+import InstagramIcon from "./icons/instagram.vue";
+import FacebookIcon from "./icons/facebook.vue";
+import YoutubeIcon from "./icons/youtube.vue";
 </script>

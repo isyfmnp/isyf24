@@ -1,6 +1,10 @@
 <template>
   <Masthead>
     <h1>Programme Outline</h1>
+    <h3>
+      Wondering what you'll be doing for 5 days? Here's a brief introduction to
+      all the wonderful activities we have planned for you!
+    </h3>
   </Masthead>
   <div class="programme-wrapper">
     <div class="programme">
@@ -44,7 +48,7 @@
 <style scoped>
 :global(.masthead::before) {
   color: var(--bg);
-  background-image: url('/images/progbg.webp');
+  background-image: url("/images/progbg.webp");
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -84,7 +88,7 @@ ul {
   gap: 1rem;
 }
 .navigator::after {
-  content: '';
+  content: "";
   background-color: var(--primary);
   position: absolute;
   display: block;
@@ -140,7 +144,7 @@ ul {
 
 /* DAY HEADER BACKGROUND */
 .event-day h2::after {
-  content: '';
+  content: "";
   z-index: -1;
   position: absolute;
   right: -15vw;
@@ -241,7 +245,7 @@ ul {
   }
 }
 .event-day::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -258,7 +262,7 @@ ul {
 }
 .event-day h2::before,
 .event-day .event-title::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
 
@@ -286,93 +290,93 @@ ul {
 </style>
 
 <script setup>
-import {onMounted} from 'vue';
+import { onMounted } from "vue";
 
 const days = [
-  'Day 1 (15 Jan)',
-  'Day 2 (16 Jan)',
-  'Day 3 (17 Jan)',
-  'Day 4 (18 Jan)',
-  'Day 5 (19 Jan)',
+  "Day 1 (15 Jan)",
+  "Day 2 (16 Jan)",
+  "Day 3 (17 Jan)",
+  "Day 4 (18 Jan)",
+  "Day 5 (19 Jan)",
 ];
 
 const events = [
   [
     {
-      name: 'Introduction to Team Project Challenge',
-      time: '8:30AM',
-      image: '/dummyImage.png',
+      name: "Introduction to Team Project Challenge",
+      time: "8:30AM",
+      image: "/dummyImage.png",
       description:
         "The Team Project Challenge is a signature ISYF event that started in 2019. Participants will have 5 days to work with their teams to ideate and prototype a product based on a challenge theme. Delegates will be sure to channel their inner makers and hone their problem solving skills to showcase their creativity and scientific knowledge. Leveraging on the diversity of ISYF's delegation, we hope that participants are able to gather their strengths to create something truly unique and deepen their appreciation for Science.",
     },
     {
-      name: 'Amazing Tour',
-      time: '12:30PM',
+      name: "Amazing Tour",
+      time: "12:30PM",
       description:
-        'Explore Singapore and get to know your teams better through this Amazing Tour around Singapore! Delegates will get to experience uniquely Singapore cuisines and learn more about Singapore. Do take this chance to connect with your fellow delegates!',
+        "Explore Singapore and get to know your teams better through this Amazing Tour around Singapore! Delegates will get to experience uniquely Singapore cuisines and learn more about Singapore. Do take this chance to connect with your fellow delegates!",
     },
   ],
   [
     {
-      name: 'Dialogue and Master Class Session 1',
-      time: '9:30AM',
+      name: "Dialogue and Master Class Session 1",
+      time: "9:30AM",
       description:
-        'During the Dialogues & Masterclasses Sessions, delegates can look forward to an exciting and interactive session with the scientists to discover more about their lives and their passion for science. Delegates will have the opportunity to pose questions to the scientists and learn more about careers in Science.',
+        "During the Dialogues & Masterclasses Sessions, delegates can look forward to an exciting and interactive session with the scientists to discover more about their lives and their passion for science. Delegates will have the opportunity to pose questions to the scientists and learn more about careers in Science.",
     },
     {
-      name: 'Excursions to OmniTheatre',
-      time: '1:30PM',
+      name: "Excursions to OmniTheatre",
+      time: "1:30PM",
     },
     {
-      name: 'Team Project Challenge Preparation',
-      time: '7:30PM',
-      description: 'Challenge yourselves and solve the problem creatively!',
+      name: "Team Project Challenge Preparation",
+      time: "7:30PM",
+      description: "Challenge yourselves and solve the problem creatively!",
     },
   ],
   [
     {
-      name: 'Cultural Exhibition',
-      time: '10:30AM',
+      name: "Cultural Exhibition",
+      time: "10:30AM",
     },
     {
-      name: 'Dialogue and Master Class Session 2',
-      time: '2:30PM',
+      name: "Dialogue and Master Class Session 2",
+      time: "2:30PM",
     },
     {
-      name: 'Team Project Challenge Preparation',
-      time: '5:00PM',
-      description: 'Last minute preparations before the final presentation!',
+      name: "Team Project Challenge Preparation",
+      time: "5:00PM",
+      description: "Last minute preparations before the final presentation!",
     },
   ],
   [
     {
-      name: 'Team Project Challenge Presentation',
-      time: '9:00AM',
-      description: 'Gather your teammates and showcase your work!',
+      name: "Team Project Challenge Presentation",
+      time: "9:00AM",
+      description: "Gather your teammates and showcase your work!",
     },
     {
-      name: 'ISYF Grand Ceremony & Poster Exhibition',
-      time: '2:00PM',
+      name: "ISYF Grand Ceremony & Poster Exhibition",
+      time: "2:00PM",
       description:
-        'At the ISYF Grand Ceremony, Nobel Laureates and eminent scientists share their views on issues centered around the theme of the forum, as well as address questions posed by the audience. The panel discussion and question-and-answer session will be facilitated by a panel moderator. Delegates can look forward to learning more through the sharing of insights by the Nobel Laureates and eminent scientists. This is followed by a Poster Exhibition where ISYF student delegates showcase their scientific research.',
+        "At the ISYF Grand Ceremony, Nobel Laureates and eminent scientists share their views on issues centered around the theme of the forum, as well as address questions posed by the audience. The panel discussion and question-and-answer session will be facilitated by a panel moderator. Delegates can look forward to learning more through the sharing of insights by the Nobel Laureates and eminent scientists. This is followed by a Poster Exhibition where ISYF student delegates showcase their scientific research.",
     },
     {
-      name: 'Cultural Hour',
-      time: '7:30PM',
+      name: "Cultural Hour",
+      time: "7:30PM",
       description:
         "Being the cultural highlight of ISYF, the Cultural Hour & Exhibition gives delegates the opportunity to present a microcosm of their homelands, showcasing the unique history, culture and customs. The event also encourages youths to view the world through a global lens. Delegates and the Hwa Chong community will be able to visit the booths to gain fascinating insights into the traditions of other cultures - through verbal sharing, photographs, snacks and even games. Let's celebrate multiculturalism and traverse the global village!",
     },
   ],
   [
     {
-      name: 'Closing Ceremony & Formal Lunch',
-      time: '12:00PM',
+      name: "Closing Ceremony & Formal Lunch",
+      time: "12:00PM",
     },
     {
-      name: 'Departure',
-      time: '4:30PM',
+      name: "Departure",
+      time: "4:30PM",
       description:
-        'We hope that ISYF 2023 has been fulfilling and memorable for you!',
+        "We hope that ISYF 2023 has been fulfilling and memorable for you!",
     },
   ],
 ];

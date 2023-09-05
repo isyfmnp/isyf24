@@ -21,8 +21,11 @@
     <main>
       <section>
         <h2>
-          Science and Technology for Humanity: Building a Sustainable Future 
-          </h2>
+          This Year's Theme:
+          <PrimaryHighlight
+            >Science and Technology for Humanity: Building a Sustainable Future
+          </PrimaryHighlight>
+        </h2>
         <p>
           ISYF 2024 endeavours to inspire delegates to use Science and
           Technology to lead the change into the future by reconnecting,
@@ -44,7 +47,7 @@
       </section>
 
       <section>
-        <h2>Events</h2>
+        <h2>What will you get to do?</h2>
         <p>
           At ISYF 2024, you can look forward to Amazing Race, Lorem ipsum dolor
           sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -53,8 +56,10 @@
           commodo consequat
         </p>
 
-        <Button href="#" icon="east">See Our Full Programme!</Button>
-        <Button href="#" icon="person">Our Invited Speakers</Button>
+        <Button href="/programme" icon="east">See Our Full Programme!</Button>
+        <Button href="/profiles/speakers" icon="person"
+          >Our Invited Speakers</Button
+        >
       </section>
 
       <section>
@@ -83,7 +88,7 @@
       </section>
 
       <section>
-        <h2>Lorem Ipsum Dolor Sit Amet. Header</h2>
+        <h2>Who are the organisers?</h2>
         <p>
           ISYF is hosted and organised by Hwa Chong Institution’s very own
           Student Science Research Club (SSRC). Lorem ipsum dolor sit amet,
@@ -109,7 +114,7 @@
 }
 .masthead::before {
   color: var(--bg);
-  background-image: url('/images/clocktower.jpg');
+  background-image: url("/images/clocktower.jpg");
   filter: brightness(50%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -143,14 +148,14 @@
   position: relative;
 }
 .masthead .subtitle::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  
+
   background: rgba(var(--bg-rgb), 0.325);
   backdrop-filter: blur(5px);
   border-radius: 24px;
@@ -195,7 +200,7 @@
       rgba(var(--bg-rgb), 0.325),
       rgba(var(--bg-rgb), 0.05)
     );
-  transform: skew(10deg);
+    transform: skew(10deg);
   }
 }
 
@@ -230,7 +235,7 @@
 .masthead .description::before,
 .masthead .description::after {
   display: inline-block;
-  content: '';
+  content: "";
   height: 1px;
   width: 4rem;
   border-radius: 1px;
@@ -275,13 +280,13 @@
   }
 }
 .masthead::after {
-  content: '';
+  content: "";
   height: 2rem;
   width: 100%;
   position: absolute;
   bottom: 2rem;
 
-  background-image: url('/images/rounded-down-arrow.svg');
+  background-image: url("/images/rounded-down-arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -296,41 +301,42 @@
 </style>
 
 <script setup>
-import {onMounted} from 'vue';
-import Masthead from '../components/masthead.vue';
-import Button from '../components/button/button.vue';
+import { onMounted } from "vue";
+import Masthead from "../components/masthead.vue";
+import Button from "../components/button/button.vue";
+import PrimaryHighlight from "../components/primaryHighlight.vue";
 
-import {gsap} from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 onMounted(() => {
-  gsap.from('.masthead .title', {
+  gsap.from(".masthead .title", {
     opacity: 0,
     y: -200,
     duration: 1,
     delay: 0.25,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
   });
 
-  gsap.from('.masthead .info *', {
+  gsap.from(".masthead .info *", {
     opacity: 0,
     y: 20,
     duration: 1,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
     stagger: 0.15,
     delay: 0.75,
   });
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const sections = gsap.utils.toArray('main section');
+  const sections = gsap.utils.toArray("main section");
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
     gsap.from(section, {
       opacity: 0,
       y: 10,
       duration: 0.5,
-      ease: 'power2.inOut',
+      ease: "power2.inOut",
       scrollTrigger: section,
     });
   });

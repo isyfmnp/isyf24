@@ -18,7 +18,7 @@ a {
   align-items: center;
   gap: 2rem;
 
-  background-color: var(--primary);
+  background-color: var(--gray-900);
   color: white;
   font-weight: 600;
   text-decoration: none;

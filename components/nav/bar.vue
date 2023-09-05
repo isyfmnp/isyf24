@@ -61,21 +61,33 @@
         <span class="material-icons-outlined">image</span>
         Media
       </a>
-        
+
       <a class="item" href="/faq">
         <span class="material-icons-outlined">help</span>
         FAQ
       </a>
       <div class="socials">
-      <a class="item" href="https://m.facebook.com/isyf.2023/" target="_blank">
-        <FacebookIcon />
-      </a>
-      <a class="item" href="https://www.instagram.com/isyf.2023/" target="_blank">
-        <InstagramIcon />
-      </a>
-      <a class="item" href="https://www.youtube.com/channel/UCs9CbJcxC2x8OPYiNx5QDTg" target="_blank">
-        <YoutubeIcon />
-      </a>
+        <a
+          class="item"
+          href="https://m.facebook.com/isyf.2023/"
+          target="_blank"
+        >
+          <FacebookIcon />
+        </a>
+        <a
+          class="item"
+          href="https://www.instagram.com/isyf.2023/"
+          target="_blank"
+        >
+          <InstagramIcon />
+        </a>
+        <a
+          class="item"
+          href="https://www.youtube.com/channel/UCs9CbJcxC2x8OPYiNx5QDTg"
+          target="_blank"
+        >
+          <YoutubeIcon />
+        </a>
       </div>
     </div>
   </nav>
@@ -154,7 +166,6 @@ nav.transparent {
   font-size: 16px;
 }
 
-
 /* ========== HAMBURGER ========== */
 .hamburger .material-icons {
   width: 24px;
@@ -171,7 +182,6 @@ nav.transparent {
     display: none;
   }
 }
-
 
 /* ========== MENU ========== */
 .menu {
@@ -205,9 +215,22 @@ nav.transparent {
 
   user-select: none;
 
-  background-color: var(--primary-700);
+  background-color: #f1f3f488;
   backdrop-filter: blur(7px);
   box-shadow: 0px 0px 20px 2px #272f3d44;
+}
+
+@media screen and (max-width: 900px) {
+  .menu::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(150deg, var(--primary-900), var(--primary));
+  }
 }
 
 .menu .item {
@@ -310,7 +333,6 @@ nav.transparent {
   color: var(--primary);
   fill: var(--primary);
 }
-
 
 @media screen and (min-width: 1000px) {
   nav {

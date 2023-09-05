@@ -1,16 +1,18 @@
-@import url('~/assets/css/transitions.css');
-@import url('https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("~/assets/css/transitions.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 :root {
   --content-width: 900px;
   --outer-width: 1100px;
 
   --fs: 18px;
-  --font: 'IBM Plex Sans', 'Open Sans', 'Helvetica Now Display DW', sans-serif;
-  --font-display: 'Josefin Sans', 'IBM Plex Sans', 'Open Sans', "Helvetica Now Display DW", sans-serif;
+  --font: "IBM Plex Sans", "Open Sans", "Helvetica Now Display DW", sans-serif;
+  --font-display: "Josefin Sans", "IBM Plex Sans", "Open Sans",
+    "Helvetica Now Display DW", sans-serif;
 
-  --gray-900: #242933;
-  --gray-100: #e9ebed;
+  --gray-900: hsl(220, 17%, 17%);
+  --gray-200: hsl(210, 12%, 80%);
+  --gray-100: hsl(210, 10%, 92%);
 
   --fg: var(--gray-900);
   --fg-rgb: 36, 41, 51;
@@ -19,14 +21,17 @@
 
   --primary: hsl(247, 80%, 65%);
   --primary-rgb: 99, 80, 253;
+  --primary-50: hsl(247, 35%, 90%);
+  --primary-100: hsl(247, 50%, 85%);
   --primary-200: hsl(247, 60%, 80%);
   --primary-400: hsl(247, 80%, 70%);
   --primary-700: hsl(247, 62%, 30%);
+  --primary-900: hsl(247, 20%, 17%);
 
   --red: #fb4d3d;
   --yellow: #ffc759;
   --green: #03cea4;
-  --blue: #345995;
+  --blue: #5e95ed;
   --purple: #6350fd;
 }
 html {
@@ -50,13 +55,16 @@ body {
 h2 {
   font-size: 28px;
   font-family: var(--font-display);
-  line-height: 2rem;
+  line-height: 2.25rem;
   margin: 4rem 0 1rem;
 }
-
 h3 {
-  font-weight: normal;
+  font-family: var(--font-display);
+  font-weight: semibold;
+  line-height: 1.5rem;
+  margin: 2rem 0 0rem;
 }
+
 p {
   line-height: 1.6;
 }
@@ -75,14 +83,16 @@ ul li {
 ul li::marker {
   padding-right: 0.5rem;
 }
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 @media screen and (min-width: 900px) {
