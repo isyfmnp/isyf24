@@ -6,7 +6,7 @@
       all the wonderful activities we have planned for you!
     </h3>
   </Masthead>
-  <div class="programme-wrapper">
+  <main class="programme-wrapper">
     <div class="programme">
       <div class="navigator">
         <a
@@ -42,7 +42,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <style scoped>
@@ -155,7 +155,6 @@ ul {
   background-color: var(--primary-200);
   backdrop-filter: blur(5px);
   border-radius: 16px;
-  transform: skew(-10deg);
 }
 .event-day:nth-of-type(even) h2::after {
   opacity: 0.125;

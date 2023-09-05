@@ -21,9 +21,10 @@
 
   --primary: hsl(247, 80%, 65%);
   --primary-rgb: 99, 80, 253;
-  --primary-50: hsl(247, 35%, 90%);
+  --primary-50: hsl(247, 35%, 88%);
   --primary-100: hsl(247, 50%, 85%);
   --primary-200: hsl(247, 60%, 80%);
+  --primary-300: hsl(247, 100%, 75%);
   --primary-400: hsl(247, 80%, 70%);
   --primary-700: hsl(247, 62%, 30%);
   --primary-900: hsl(247, 20%, 17%);
@@ -53,15 +54,16 @@ body {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 34px;
   font-family: var(--font-display);
-  line-height: 2.25rem;
+  line-height: 1.5em;
   margin: 4rem 0 1rem;
 }
 h3 {
+  font-size: 22px;
   font-family: var(--font-display);
   font-weight: semibold;
-  line-height: 1.5rem;
+  line-height: 1.5em;
   margin: 2rem 0 0rem;
 }
 
@@ -105,4 +107,12 @@ input[type="reset"] {
   position: relative;
   top: -5vh;
   visibility: hidden;
+}
+
+main {
+  margin-top: -1rem;
+}
+
+section {
+  padding-block: 0.5rem 3rem;
 }

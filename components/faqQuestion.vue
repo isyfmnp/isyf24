@@ -44,7 +44,7 @@
   font-weight: 500;
   font-size: 20px;
   margin-block: 0;
-  padding-block: 1rem;
+  padding-block: 0.875rem 0.625rem;
   transition: color 200ms;
 }
 

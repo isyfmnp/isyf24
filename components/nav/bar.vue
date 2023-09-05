@@ -215,22 +215,9 @@ nav.transparent {
 
   user-select: none;
 
-  background-color: #f1f3f488;
+  background-color: var(--gray-900);
   backdrop-filter: blur(7px);
   box-shadow: 0px 0px 20px 2px #272f3d44;
-}
-
-@media screen and (max-width: 900px) {
-  .menu::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(150deg, var(--primary-900), var(--primary));
-  }
 }
 
 .menu .item {
@@ -330,8 +317,7 @@ nav.transparent {
 .menu .item:hover,
 .menu .subitems a:hover,
 :deep(.menu .socials .item:hover svg) {
-  color: var(--primary);
-  fill: var(--primary);
+  --fg: var(--primary-300);
 }
 
 @media screen and (min-width: 1000px) {

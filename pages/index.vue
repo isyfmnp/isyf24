@@ -20,12 +20,7 @@
 
     <main>
       <section>
-        <h2>
-          This Year's Theme:
-          <PrimaryHighlight
-            >Science and Technology for Humanity: Building a Sustainable Future
-          </PrimaryHighlight>
-        </h2>
+        <h2>What is ISYF?</h2>
         <p>
           ISYF 2024 endeavours to inspire delegates to use Science and
           Technology to lead the change into the future by reconnecting,
@@ -44,9 +39,7 @@
           exchanges.
         </p>
         <p>We hope to see you at ISYF!</p>
-      </section>
 
-      <section>
         <h2>What will you get to do?</h2>
         <p>
           At ISYF 2024, you can look forward to Amazing Race, Lorem ipsum dolor
@@ -56,22 +49,21 @@
           commodo consequat
         </p>
 
-        <Button href="/programme" icon="east">See Our Full Programme!</Button>
+        <Button href="/programme" icon="event_note"
+          >See Our Full Programme!</Button
+        >
         <Button href="/profiles/speakers" icon="person"
           >Our Invited Speakers</Button
         >
       </section>
 
-      <section>
+      <section class="colored people">
         <h2>How can you join?</h2>
+
+        <h3>For Students</h3>
         <p>
-          Participation in ISYF is via invitation to selected schools across the
-          globe.
-        </p>
-        <p>
-          The programme targets top science students from schools all over the
-          world. Student participants from each school should meet the following
-          criteria:
+          This forum invites top science students from schools around the world.
+          They should:
         </p>
         <ul>
           <li>Be between 16 and 17 years of age in 2023,</li>
@@ -85,20 +77,60 @@
             students from all over the world.
           </li>
         </ul>
+
+        <h3>For Educators</h3>
+        <p>
+          In addition to the students' activities, the educators' programme
+          provides opportunities for the educators to share, interact with and
+          learn from one another. To ensure that the educator benefits fully
+          from the experience, the educator should:
+        </p>
+        <ul>
+          <li>Possess good oral proficiency in English, and</li>
+          <li>
+            Possess enthusiasm and strong interest in forging ties with fellow
+            educators.
+          </li>
+        </ul>
       </section>
 
       <section>
         <h2>Who are the organisers?</h2>
         <p>
           ISYF is hosted and organised by Hwa Chong Institution’s very own
-          Student Science Research Club (SSRC). Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam
+          Student Science Research Club (SSRC), with the support of the Ministry
+          of Education (MOE).
         </p>
+        <ul class="supporters">
+          <li>
+            <img src="/images/logos/hc_logo.png" alt="">
+          </li>
+          <li>
+            <img src="/images/logos/moe_logo.png" alt="">
+          </li>
+        </ul>
+        
         <p>
           We are also deeply honoured to have the support and help of these
           organisations:
         </p>
+        <ul class="supporters">
+          <li>
+            <img src="/images/logos/ntuias_logo.png" alt="">
+          </li>
+          <li>
+            <img src="/images/logos/nus_logo.png" alt="">
+          </li>
+          <li>
+            <img src="/images/logos/sutd_logo.png" alt="">
+          </li>
+          <li>
+            <img src="/images/logos/astar_logo.png" alt="">
+          </li>
+          <li>
+            <img src="/images/logos/nrf_logo.png" alt="">
+          </li>
+        </ul>
       </section>
     </main>
   </div>
@@ -107,6 +139,7 @@
 <style>
 /* ========== MASTHEAD ========== */
 .masthead {
+  font-family: var(--font-display);
   padding: 4.5rem 1.5rem 5.5rem;
 }
 .masthead * {
@@ -114,7 +147,7 @@
 }
 .masthead::before {
   color: var(--bg);
-  background-image: url("/images/clocktower.jpg");
+  background-image: url('/images/clocktower.jpg');
   filter: brightness(50%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -122,7 +155,6 @@
 }
 
 .masthead .title {
-  font-family: var(--font-display);
   height: max(28vh);
   margin-bottom: 1rem;
   margin-inline: 2rem;
@@ -148,7 +180,7 @@
   position: relative;
 }
 .masthead .subtitle::before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -235,7 +267,7 @@
 .masthead .description::before,
 .masthead .description::after {
   display: inline-block;
-  content: "";
+  content: '';
   height: 1px;
   width: 4rem;
   border-radius: 1px;
@@ -280,13 +312,13 @@
   }
 }
 .masthead::after {
-  content: "";
+  content: '';
   height: 2rem;
   width: 100%;
   position: absolute;
   bottom: 2rem;
 
-  background-image: url("/images/rounded-down-arrow.svg");
+  background-image: url('/images/rounded-down-arrow.svg');
   background-position: center;
   background-repeat: no-repeat;
 
@@ -298,45 +330,87 @@
   animation-iteration-count: infinite;
   animation-play-state: running;
 }
+
+/* ========== CONTENT ========== */
+.people {
+  margin-inline: -100vw;
+  padding-inline: 100vw;
+  background-color: var(--primary-50);
+}
+
+/* ========== SUPPORTING ORGANISATIONS ========== */
+.supporters {
+  list-style: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--fg);
+}
+@media screen and (min-width: 950px) {
+  .supporters {
+    justify-content: flex-start;
+  }
+}
+.supporters li {
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.supporters span {
+  text-align: center;
+  text-style: italic;
+  font-size: 14px;
+  opacity: 0.75;
+}
+.supporters img {
+  width: 10rem;
+}
 </style>
 
 <script setup>
-import { onMounted } from "vue";
-import Masthead from "../components/masthead.vue";
-import Button from "../components/button/button.vue";
-import PrimaryHighlight from "../components/primaryHighlight.vue";
+import {onMounted} from 'vue';
+import Masthead from '../components/masthead.vue';
+import Button from '../components/button/button.vue';
+import PrimaryHighlight from '../components/primaryHighlight.vue';
 
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 onMounted(() => {
-  gsap.from(".masthead .title", {
+  gsap.from('.masthead .title', {
     opacity: 0,
     y: -200,
     duration: 1,
     delay: 0.25,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
   });
 
-  gsap.from(".masthead .info *", {
+  gsap.from('.masthead .info *', {
     opacity: 0,
     y: 20,
     duration: 1,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
     stagger: 0.15,
     delay: 0.75,
   });
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const sections = gsap.utils.toArray("main section");
+  const sections = gsap.utils.toArray('main section');
 
-  sections.forEach((section) => {
+  sections.forEach(section => {
     gsap.from(section, {
       opacity: 0,
       y: 10,
       duration: 0.5,
-      ease: "power2.inOut",
+      ease: 'power2.inOut',
       scrollTrigger: section,
     });
   });

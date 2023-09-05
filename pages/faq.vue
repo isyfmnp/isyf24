@@ -8,7 +8,7 @@
       </h3>
     </Masthead>
 
-    <div>
+    <main>
       <div
         class="section-wrapper"
         v-for="(section, title, sectionIndex) in questions"
@@ -31,7 +31,7 @@
           </FAQQuestion>
         </div>
       </div>
-    </div>
+    </main>
   </div>
 </template>
 
