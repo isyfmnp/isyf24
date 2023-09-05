@@ -20,9 +20,9 @@
 
     <main>
       <section>
-        <h1>
-          Science and Technology for Humanity: Building a Sustainable Future
-        </h1>
+        <h2>
+          Science and Technology for Humanity: Building a Sustainable Future 
+          </h2>
         <p>
           ISYF 2024 endeavours to inspire delegates to use Science and
           Technology to lead the change into the future by reconnecting,
@@ -44,7 +44,7 @@
       </section>
 
       <section>
-        <h1>Events</h1>
+        <h2>Events</h2>
         <p>
           At ISYF 2024, you can look forward to Amazing Race, Lorem ipsum dolor
           sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -58,7 +58,7 @@
       </section>
 
       <section>
-        <h1>How can you join?</h1>
+        <h2>How can you join?</h2>
         <p>
           Participation in ISYF is via invitation to selected schools across the
           globe.
@@ -83,7 +83,7 @@
       </section>
 
       <section>
-        <h1>Lorem Ipsum Dolor Sit Amet. Header</h1>
+        <h2>Lorem Ipsum Dolor Sit Amet. Header</h2>
         <p>
           ISYF is hosted and organised by Hwa Chong Institution’s very own
           Student Science Research Club (SSRC). Lorem ipsum dolor sit amet,

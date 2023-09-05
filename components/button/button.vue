@@ -21,6 +21,7 @@ a {
   background-color: var(--primary);
   color: white;
   font-weight: 600;
+  text-decoration: none;
 }
 </style>
 
