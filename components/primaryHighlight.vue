@@ -9,7 +9,7 @@
   position: relative;
   display: block;
   padding: 0.875rem 1rem 0.625rem;
-  margin: 0.325rem -1rem 0.5rem;
+  margin: 0.325rem -0.5rem 0.5rem;
 
   text-align: center;
   color: var(--fg);
@@ -27,14 +27,14 @@
   border-radius: 2px;
 
   background: linear-gradient(80deg, var(--green), var(--primary));
-  box-shadow: 0px 0px 20px 2px #272f4022;
+  box-shadow: 0px 0px 20px 2px #272f4044;
 }
 .text::after {
   content: "";
   z-index: -1;
   position: absolute;
-  top: 4px;
-  bottom: 4px;
+  top: 2px;
+  bottom: 2px;
   left: 0;
   right: 0;
 

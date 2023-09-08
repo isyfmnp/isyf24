@@ -152,15 +152,15 @@ ul {
   top: -1.5rem;
   bottom: -1rem;
 
-  background-color: var(--primary-200);
+  border: 1px solid var(--gray-900);
   backdrop-filter: blur(5px);
   border-radius: 16px;
 }
 .event-day:nth-of-type(even) h2::after {
-  opacity: 0.125;
+  background-color: hsla(var(--primary-200-hsla), 0.125);
 }
 .event-day:nth-of-type(odd) h2::after {
-  opacity: 0.325;
+  background-color: hsla(var(--primary-200-hsla), 0.25);
 }
 
 @media screen and (min-width: 900px) {
@@ -250,7 +250,7 @@ ul {
   bottom: 0;
   left: calc(100vw + var(--tm-radius));
   width: 2px;
-  z-index: 3;
+  z-index: 4;
 
   background-color: var(--cl);
 }

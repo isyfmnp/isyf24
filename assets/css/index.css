@@ -19,11 +19,12 @@
   --bg: var(--gray-100);
   --bg-rgb: 232, 235, 237;
 
-  --primary: hsl(247, 80%, 65%);
+  --primary: hsl(247, 80%, 58%);
   --primary-rgb: 99, 80, 253;
   --primary-50: hsl(247, 35%, 88%);
   --primary-100: hsl(247, 50%, 85%);
   --primary-200: hsl(247, 60%, 80%);
+  --primary-200-hsla: 247, 60%, 80%;
   --primary-300: hsl(247, 100%, 75%);
   --primary-400: hsl(247, 80%, 70%);
   --primary-700: hsl(247, 62%, 30%);

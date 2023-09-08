@@ -18,6 +18,7 @@ a {
   align-items: center;
   gap: 1rem;
 
+  background-color: hsla(var(--primary-200-hsla), 0.25);
   border: 1px solid var(--gray-900);
   font-weight: 600;
   text-decoration: none;

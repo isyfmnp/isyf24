@@ -102,34 +102,36 @@
           of Education (MOE).
         </p>
         <ul class="supporters">
-          <li>
-            <img src="/images/logos/hc_logo.png" alt="">
-          </li>
-          <li>
-            <img src="/images/logos/moe_logo.png" alt="">
-          </li>
+          <a href="https://www.hci.edu.sg" target="_blank" style="scale: 1.125;">
+            <img src="/images/logos/hc_logo.png" alt="" />
+          </a>
+          <a href="https://www.moe.gov.sg" target="_blank">
+            <img src="/images/logos/moe_logo.png" alt="" />
+          </a>
         </ul>
-        
+
+        <br />
+
         <p>
           We are also deeply honoured to have the support and help of these
           organisations:
         </p>
         <ul class="supporters">
-          <li>
-            <img src="/images/logos/ntuias_logo.png" alt="">
-          </li>
-          <li>
-            <img src="/images/logos/nus_logo.png" alt="">
-          </li>
-          <li>
-            <img src="/images/logos/sutd_logo.png" alt="">
-          </li>
-          <li>
-            <img src="/images/logos/astar_logo.png" alt="">
-          </li>
-          <li>
-            <img src="/images/logos/nrf_logo.png" alt="">
-          </li>
+          <a href="https://www.ntu.edu.sg/ias" target="_blank" style="scale: 1.125;">
+            <img src="/images/logos/ntuias_logo.png" alt="" />
+          </a>
+          <a href="https://nus.edu.sg" target="_blank">
+            <img src="/images/logos/nus_logo.png" alt="" />
+          </a>
+          <a href="https://sutd.edu.sg" target="_blank">
+            <img src="/images/logos/sutd_logo.png" alt="" />
+          </a>
+          <a href="https://a-star.edu.sg" target="_blank">
+            <img src="/images/logos/astar_logo.png" alt="" />
+          </a>
+          <a href="https://www.nrf.gov.sg" target="_blank">
+            <img src="/images/logos/nrf_logo.png" alt="" style="scale: 0.8;" />
+          </a>
         </ul>
       </section>
     </main>
@@ -141,12 +143,12 @@
 .masthead {
   font-family: var(--font-display);
   padding: 4.5rem 1.5rem 5.5rem;
+  --fg: var(--bg);
 }
 .masthead * {
   max-width: 500px;
 }
 .masthead::before {
-  color: var(--bg);
   background-image: url('/images/clocktower.jpg');
   filter: brightness(50%);
   background-size: cover;
@@ -174,8 +176,10 @@
   font-family: var(--font-display);
   font-size: min(8vw, 48px);
   margin-block: 0 1.5rem;
-  padding: 1.25rem 0.75rem 1rem;
+  padding: 1.5rem 1.25rem 1.25rem;
   line-height: 1.25em;
+
+  width: 100%;
 
   position: relative;
 }
@@ -185,8 +189,8 @@
   z-index: -1;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: -0.5rem;
+  right: -0.5rem;
 
   background: rgba(var(--bg-rgb), 0.325);
   backdrop-filter: blur(5px);
@@ -246,7 +250,7 @@
 .masthead .detail-list {
   display: flex;
   flex-direction: column;
-  gap: calc(15vh - 5.5rem);
+  gap: min(calc(15vh - 7rem), 3rem);
 }
 .masthead .description {
   display: none; /* Full display: block */
@@ -259,9 +263,10 @@
 }
 .masthead .value {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: 0.05rem;
   line-spacing: 0.1rem;
+  filter: drop-shadow(2px 2px 5px var(--gray-900));
 }
 
 .masthead .description::before,
@@ -340,7 +345,7 @@
 
 /* ========== SUPPORTING ORGANISATIONS ========== */
 .supporters {
-  list-style: none; 
+  list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,9 +362,11 @@
     justify-content: flex-start;
   }
 }
-.supporters li {
+
+.supporters > * {
   width: 15rem;
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: center;
 }

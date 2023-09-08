@@ -1,19 +1,24 @@
 <template>
-  <nav :class="{ transparent: navTransparent }">
+  <nav :class="{transparent: navTransparent}">
     <a class="stamp" href="/">
       <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="text">
         <div class="title">ISYF 2024</div>
-        <!--<div class="subtitle">24th January 2024 | Hwa Chong Institition (SG)</div>-->
       </div>
     </a>
 
-    <a class="hamburger" href="#" @click="menuOpen = !menuOpen">
+    <a class="hamburger" @click="menuOpen = !menuOpen">
       <span class="material-icons">menu</span>
     </a>
 
-    <div class="menu" :class="{ open: menuOpen }">
-      <a class="item close-button" href="#" @click="menuOpen = !menuOpen">
+    <div class="menu" :class="{open: menuOpen}">
+      <a class="stamp menu-stamp" href="/">
+        <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
+        <div class="text">
+          <div class="title">ISYF 2024</div>
+        </div>
+      </a>
+      <a class="item close-button" @click="menuOpen = !menuOpen">
         <span class="material-icons-outlined">close</span>
       </a>
       <a class="item" href="/">
@@ -28,7 +33,7 @@
         <span class="material-icons-outlined">event_note</span>
         Programme
       </a>
-      <div class="closed" :class="{ open: profilesOpen }">
+      <div class="closed" :class="{open: profilesOpen}">
         <a class="item" @click="profilesOpen = !profilesOpen">
           <span class="material-icons-outlined">person</span>
           Profiles
@@ -134,6 +139,7 @@ nav.transparent {
 .stamp {
   padding: 1rem;
   padding-top: 4rem;
+  padding-left: 1.5rem;
   margin-top: -3rem;
   width: fit-content;
 
@@ -167,6 +173,9 @@ nav.transparent {
 }
 
 /* ========== HAMBURGER ========== */
+.hamburger {
+  cursor: pointer;
+}
 .hamburger .material-icons {
   width: 24px;
   height: 24px;
@@ -218,6 +227,11 @@ nav.transparent {
   background-color: var(--gray-900);
   backdrop-filter: blur(7px);
   box-shadow: 0px 0px 20px 2px #272f3d44;
+}
+
+.menu .stamp {
+  padding: 0;
+  margin: -3px 0 1rem -0.5rem;
 }
 
 .menu .item {
@@ -282,6 +296,7 @@ nav.transparent {
   right: 2rem;
   width: fit-content;
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 .socials {
@@ -348,6 +363,10 @@ nav.transparent {
     box-shadow: none;
     opacity: 1;
     visibility: visible;
+  }
+
+  .menu .stamp {
+    display: none;
   }
 
   /* Link styling */
@@ -422,11 +441,11 @@ nav.transparent {
 </style>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
-import { gsap } from "gsap";
-import InstagramIcon from "../icons/instagram.vue";
-import FacebookIcon from "../icons/facebook.vue";
-import YoutubeIcon from "../icons/youtube.vue";
+import {ref, onMounted, onUnmounted} from 'vue';
+import {gsap} from 'gsap';
+import InstagramIcon from '../icons/instagram.vue';
+import FacebookIcon from '../icons/facebook.vue';
+import YoutubeIcon from '../icons/youtube.vue';
 
 const profilesOpen = ref(false);
 const menuOpen = ref(false);
@@ -446,7 +465,7 @@ const checkScroll = () => {
     navTransparent.value = true;
 };
 onMounted(() => {
-  document.addEventListener("scroll", checkScroll);
+  document.addEventListener('scroll', checkScroll);
   setTimeout(() => {
     if (window.error) {
       navTransparent.value = false;
@@ -454,18 +473,18 @@ onMounted(() => {
   }, 1);
 });
 onUnmounted(() => {
-  document.removeEventListener("scroll", checkScroll);
+  document.removeEventListener('scroll', checkScroll);
 });
 
 onMounted(() => {
   if (window.innerWidth < 900) {
     return;
   }
-  gsap.from(".stamp, .menu .item", {
+  gsap.from('.stamp, .menu .item', {
     opacity: 0,
     x: -5,
     duration: 0.75,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
     stagger: 0.025,
   });
 });
