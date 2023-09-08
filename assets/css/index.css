@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 :root {
-  --content-width: 900px;
-  --outer-width: 1100px;
+  --content-width: 1200px;
+  --outer-width: 1300px;
 
   --fs: 18px;
   --font: "IBM Plex Sans", "Open Sans", "Helvetica Now Display DW", sans-serif;
@@ -37,6 +37,16 @@
   --blue: #5e95ed;
   --purple: #6350fd;
 }
+.scroll-anchor {
+  margin-top: -6rem;
+  padding-top: 6rem;
+}
+@media screen and (min-width: 1100px) {
+  .scroll-anchor {
+    margin-top: -5rem;
+    padding-top: 5rem;
+  }
+}
 html {
   background-color: var(--bg);
   margin: 0;
@@ -68,7 +78,7 @@ h2 {
 h3 {
   font-size: 22px;
   font-family: var(--font-display);
-  font-weight: semibold;
+  font-weight: 600;
   line-height: 1.5em;
   margin: 2rem 0 0rem;
 }
@@ -103,9 +113,9 @@ input[type="reset"] {
   outline: inherit;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: var(--content-width)) {
   h1 {
-    font-size: 48px;
+    font-size: 54px;
   }
 }
 

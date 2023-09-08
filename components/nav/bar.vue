@@ -102,6 +102,7 @@
 <style scoped>
 .material-icons-outlined {
   scale: 0.8;
+  transform: translateY(1px);
 }
 a {
   text-decoration: none;

@@ -128,7 +128,7 @@
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: var(--content-width)) {
   .footer-columns {
     grid-template-columns: 0.55fr 1fr 1fr;
   }
@@ -173,7 +173,7 @@ p {
   align-items: flex-start;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: var(--content-width)) {
   .stamp {
     flex-direction: row;
     align-items: center;

@@ -10,12 +10,6 @@
 .content {
   margin-top: 8rem;
 }
-
-@media screen and (min-width: 900px) {
-  .content {
-    margin-top: 6.5rem;
-  }
-}
 </style>
 
 <script setup>

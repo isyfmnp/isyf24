@@ -182,7 +182,7 @@
 
   position: relative;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: var(--content-width)) {
   .masthead .subtitle {
   }
 }
@@ -201,7 +201,7 @@
   transform: skew(-10deg);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: var(--content-width)) {
   .masthead {
     flex-direction: row;
     padding: 5.5rem 1.5rem;
@@ -291,7 +291,7 @@
   left: 0.5rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: var(--content-width)) {
   .masthead .detail-list {
     margin-left: 4.5rem;
   }
