@@ -1,21 +1,8 @@
 <template>
   <h1>Invited Speakers</h1>
 
-  <p>Hover over each profile to see their name! You can also scroll down and see further details</p>
-
   <div class="collage">
-    <div
-      class="event"
-      v-for="(event, eventIndex) in profiles"
-      :class="{'event-open': eventsOpen[eventIndex]}"
-    >
-      <div
-        class="expand-button"
-        @click="eventsOpen[eventIndex] = !eventsOpen[eventIndex]"
-      >
-        Show Details
-      </div>
-
+    <div class="event" v-for="event in profiles">
       <h3 class="event-title">{{ event.event }}</h3>
       <a
         class="profile"
@@ -24,8 +11,8 @@
       >
         <img class="profile-img" :src="profile.image" alt="" />
         <div class="hover-label">
-          <span class="name">{{ profile.name }}</span>
-          <span class="title">{{ profile.title }}</span>
+          <span class="name">{{profile.name}}</span>
+          <span class="title">{{profile.title}}</span>
         </div>
       </a>
     </div>
@@ -38,32 +25,27 @@
       <div class="profile" v-for="profile in event.profiles">
         <div class="scroll-anchor" :id="profile.name.replaceAll(' ', '')"></div>
         <img :src="profile.image" :alt="profile.name" />
-        <div class="info">
-          <h3>{{ profile.name }}</h3>
-          <h4 v-if="profile.status">{{ profile.status }}</h4>
-          <p>
-            {{ profile.description }}
-          </p>
-        </div>
+        <h3>{{ profile.name }}</h3>
+        <h4>{{ profile.title }}</h4>
+        <p>
+          {{ profile.description }}
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-@import url('~/assets/css/profiles.css');
+@import url('~/assets/css/speakers.css');
 </style>
 
 <script setup>
-import {ref} from 'vue';
-
 const profiles = [
   {
     event: 'Opening Ceremony Keynote',
     profiles: [
       {
         name: 'Ms Lim Wan Yong',
-        status: 'Guest of Honour',
         title:
           'Second Permanent Secretary, Ministry of Education and Ministry of Social and Family Development',
         image: '/images/profiles/speakers/yeo-kiat-seng.jpg',
@@ -162,6 +144,4 @@ const profiles = [
     ],
   },
 ];
-
-const eventsOpen = ref(Array(profiles.length).fill(false));
 </script>

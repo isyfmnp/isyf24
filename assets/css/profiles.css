@@ -1,0 +1,182 @@
+/* ========== OVERALL ========== */
+.profile p {
+  white-space: pre-line;
+}
+
+/* ========== COLLAGES ========== */
+.collage {
+  margin-inline: -1rem;
+}
+
+.collage .event {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(40%, 9rem), 1fr));
+  padding: 1.5rem 0.75rem 0.75rem;
+  gap: 1rem;
+  margin-block: 2.5rem;
+
+  border-radius: 8px;
+  background-color: var(--primary-200);
+  border: 1px solid var(--fg);
+  box-shadow: 0px 0px 10px 2px #272f3d22;
+}
+
+.collage .event-title {
+  word-spacing: 0.125em;
+  letter-spacing: -0.0125em;
+
+  grid-column: span 2;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0.75rem 0.5rem;
+  border-radius: 8px;
+  background-color: var(--bg);
+  border: 1px solid var(--fg);
+}
+@media screen and (min-width: 590px) {
+  .collage .event-title {
+    font-size: 26px;
+  }
+}
+
+/* INDIVIDUAL PROFILE */
+
+.collage .profile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1;
+}
+
+.collage .profile .hover-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+
+  --fg: var(--gray-100);
+  color: var(--fg);
+  background-color: var(--primary);
+}
+.collage .profile .hover-label {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.collage .profile:hover .hover-label,
+.collage .event-open .hover-label {
+  opacity: 1;
+}
+.collage .profile .hover-label .name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.375rem;
+}
+.collage .profile .hover-label .title {
+  display: block;
+  font-size: 14px;
+  line-height: 1.25em;
+}
+
+.collage .profile-img {
+  max-width: 100%;
+}
+
+/* EXPAND BUTTON */
+.expand-button {
+  height: 1.5rem;
+  position: absolute;
+  top: -0.75rem;
+  left: 1.5rem;
+
+  border: 1px solid var(--primary);
+  background-color: var(--primary-200);
+  --fg: var(--primary);
+  color: var(--fg);
+  border-radius: 4px;
+  
+  transition: background-color 200ms, color 200ms;
+
+  padding-inline: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+.event-open .expand-button {
+  background-color: var(--primary);
+  --fg: var(--gray-100);
+}
+
+/* ========== PROFILE INTROS ========== */
+.intros .profile {
+  margin-block: 4rem 4rem;
+}
+
+.intros h2 {
+  position: relative;
+  margin-block: 7rem 2.5rem;
+  width: fit-content;
+}
+.intros h2::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  right: -15vw;
+  left: -100vw;
+  top: -1.5rem;
+  bottom: -1rem;
+
+  background-color: var(--primary-200);
+  border: 1px solid var(--gray-900);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+}
+
+.intros h3 {
+  font-size: 42px;
+}
+
+.intros h4 {
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  margin-block: 0rem 1.5rem;
+  color: var(--primary-400);
+}
+
+.intros img {
+  max-width: 16rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--fg);
+}
+
+@media screen and (min-width: 900px) {
+  .intros .profile {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: -2rem;
+  }
+
+  .intros img {
+    height: 16rem;
+    width: 16rem;
+  }
+
+  .intros .profile h3 {
+    margin-top: 0;
+    display: inline;
+  }
+
+  .intros .profile h4 {
+    display: inline;
+    margin-left: 1rem;
+  }
+}
+

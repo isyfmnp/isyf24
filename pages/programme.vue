@@ -138,6 +138,9 @@ ul {
 }
 
 /* DAY HEADER BACKGROUND */
+.event-day h2 {
+  width: fit-content;
+}
 .event-day h2::after {
   content: '';
   z-index: -1;
