@@ -1,33 +1,24 @@
 <template>
-  <div id="page">
-    <Head>
-      <Title>ISYF 2024</Title>
-    </Head>
-    <NavBar />
-    <ButtonScroll />
-
-    <div id="body">
+  <TemplateLayout>
+    <div class="content">
       <slot />
     </div>
-
-    <Footer />
-  </div>
+  </TemplateLayout>
 </template>
 
 <style scoped>
-#body {
-  max-width: min(var(--content-width), 100vw);
-  margin: 1rem auto 5rem;
-  padding-inline: 2rem;
-  min-height: 110vh;
+.content {
+  margin-top: 8rem;
+}
+
+@media screen and (min-width: 900px) {
+  .content {
+    margin-top: 6.5rem;
+  }
 }
 </style>
 
 <script setup>
-import ButtonScroll from "../components/button/scroll.vue";
-import { ref, onMounted } from "vue";
-const height = ref(0);
-onMounted(() => {
-  window.error = false;
-});
+import TemplateLayout from './template.vue';
+import {onMounted} from 'vue';
 </script>

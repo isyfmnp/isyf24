@@ -107,4 +107,8 @@ const questions = {
 };
 
 const sectionsOpen = ref(Array(Object.keys(questions).length).fill(false));
+
+definePageMeta({
+  layout: "masthead",
+});
 </script>

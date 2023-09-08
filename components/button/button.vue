@@ -9,7 +9,7 @@
 
 <style scoped>
 a {
-  padding: 0.625rem 1.5rem 0.625rem 0.75rem;
+  padding: 0.75rem 2rem 0.75rem 1rem;
   margin: 0.75rem 0;
   border-radius: 8px;
 
@@ -18,8 +18,8 @@ a {
   align-items: center;
   gap: 1rem;
 
-  background-color: hsla(var(--primary-200-hsla), 0.25);
-  border: 1px solid var(--gray-900);
+  background-color: var(--primary);
+  --fg: var(--gray-100);
   font-weight: 600;
   text-decoration: none;
 }

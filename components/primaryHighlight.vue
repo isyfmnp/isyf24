@@ -1,7 +1,10 @@
 <template>
-  <span class="text">
+  <div class="text">
+    <div class="content">
+
     <slot />
-  </span>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -24,7 +27,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 2px;
+  border-radius: 8px;
 
   background: linear-gradient(80deg, var(--green), var(--primary));
   box-shadow: 0px 0px 20px 2px #272f4044;
@@ -33,12 +36,14 @@
   content: "";
   z-index: -1;
   position: absolute;
-  top: 2px;
-  bottom: 2px;
-  left: 0;
-  right: 0;
+  inset: 2px;
+  border-radius: 6px;
 
   background-color: #f1f3f488;
   backdrop-filter: blur(5px);
+}
+
+.content {
+  filter: drop-shadow(2px 2px 7px hsla(var(--gray-900-hsla), 0.25));
 }
 </style>

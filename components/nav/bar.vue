@@ -18,6 +18,7 @@
           <div class="title">ISYF 2024</div>
         </div>
       </a>
+
       <a class="item close-button" @click="menuOpen = !menuOpen">
         <span class="material-icons-outlined">close</span>
       </a>
@@ -120,17 +121,30 @@ nav {
   padding-top: 4rem;
   margin-top: -4rem;
 
-  --fg: black;
+  --fg: var(--gray-900);
+
+  transition: color 100ms, opacity 800ms;
+}
+nav.transparent {
+  --fg: var(--gray-100);
+}
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+
   background-color: #f1f3f488;
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 20px 2px #272f4044;
 
-  transition: background-color 100ms, color 100ms, backdrop-filter 100ms,
-    box-shadow 100ms, opacity 800ms;
+  transition: background-color 100ms, backdrop-filter 100ms, box-shadow 100ms;
 }
-nav.transparent {
+nav.transparent::before {
   background-color: transparent;
-  --fg: white;
   backdrop-filter: none;
   box-shadow: none;
 }
@@ -186,7 +200,7 @@ nav.transparent {
   color: white;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1100px) {
   .hamburger {
     display: none;
   }
@@ -231,7 +245,7 @@ nav.transparent {
 
 .menu .stamp {
   padding: 0;
-  margin: -3px 0 1rem -0.5rem;
+  margin: -2px 0 1rem -0.5rem;
 }
 
 .menu .item {
@@ -303,10 +317,14 @@ nav.transparent {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  padding-top: 0.25rem;
-  border-top: 1px solid var(--fg);
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-inline: 0.625rem;
+
+  box-sizing: content-box;
+  border-radius: 8px;
+  border: 1px solid var(--fg);
+  background-color: var(--primary-900);
 }
 .socials * {
   flex-grow: 0;
@@ -335,7 +353,7 @@ nav.transparent {
   --fg: var(--primary-300);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   nav {
     height: 4rem;
   }
@@ -433,9 +451,8 @@ nav.transparent {
     display: none;
   }
   .socials {
-    padding-top: 0;
     margin-top: 0;
-    border-top: none;
+    background-color: hsla(var(--primary-200-hsla), 0.25);
   }
 }
 </style>
@@ -451,11 +468,9 @@ const profilesOpen = ref(false);
 const menuOpen = ref(false);
 
 // Scroll behaviour
-const navTransparent = ref(true);
+
+const navTransparent = ref(false);
 const checkScroll = () => {
-  if (window.error) {
-    return;
-  }
   if (navTransparent.value && window.pageYOffset > window.innerHeight - 64)
     navTransparent.value = false;
   else if (
@@ -465,10 +480,10 @@ const checkScroll = () => {
     navTransparent.value = true;
 };
 onMounted(() => {
-  document.addEventListener('scroll', checkScroll);
   setTimeout(() => {
-    if (window.error) {
-      navTransparent.value = false;
+    if (window.masthead) {
+      navTransparent.value = true;
+      document.addEventListener('scroll', checkScroll);
     }
   }, 1);
 });
@@ -480,7 +495,7 @@ onMounted(() => {
   if (window.innerWidth < 900) {
     return;
   }
-  gsap.from('.stamp, .menu .item', {
+  gsap.from('.stamp, .menu .item, .menu .socials', {
     opacity: 0,
     x: -5,
     duration: 0.75,

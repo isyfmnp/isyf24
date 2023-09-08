@@ -379,4 +379,8 @@ const events = [
     },
   ],
 ];
+
+definePageMeta({
+  layout: "masthead",
+});
 </script>

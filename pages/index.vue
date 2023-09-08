@@ -144,6 +144,7 @@
   font-family: var(--font-display);
   padding: 4.5rem 1.5rem 5.5rem;
   --fg: var(--bg);
+  overflow-x: hidden;
 }
 .masthead * {
   max-width: 500px;
@@ -179,9 +180,11 @@
   padding: 1.5rem 1.25rem 1.25rem;
   line-height: 1.25em;
 
-  width: 100%;
-
   position: relative;
+}
+@media screen and (max-width: 900px) {
+  .masthead .subtitle {
+  }
 }
 .masthead .subtitle::before {
   content: '';
@@ -421,5 +424,9 @@ onMounted(() => {
       scrollTrigger: section,
     });
   });
+});
+
+definePageMeta({
+  layout: "masthead",
 });
 </script>

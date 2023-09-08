@@ -11,6 +11,7 @@
     "Helvetica Now Display DW", sans-serif;
 
   --gray-900: hsl(220, 17%, 17%);
+  --gray-900-hsla: 220, 17%, 17%;
   --gray-200: hsl(210, 12%, 80%);
   --gray-100: hsl(210, 10%, 92%);
 
@@ -28,7 +29,7 @@
   --primary-300: hsl(247, 100%, 75%);
   --primary-400: hsl(247, 80%, 70%);
   --primary-700: hsl(247, 62%, 30%);
-  --primary-900: hsl(247, 20%, 17%);
+  --primary-900: hsl(247, 20%, 30%);
 
   --red: #fb4d3d;
   --yellow: #ffc759;
@@ -54,6 +55,10 @@ body {
   overflow-y: clip;
 }
 
+h1 {
+  font-family: var(--font-display);
+  font-size: 42px;
+}
 h2 {
   font-size: 34px;
   font-family: var(--font-display);
@@ -100,7 +105,7 @@ input[type="reset"] {
 
 @media screen and (min-width: 900px) {
   h1 {
-    font-size: 32px;
+    font-size: 48px;
   }
 }
 

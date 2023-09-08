@@ -92,4 +92,8 @@
 
 <script setup>
 import PrimaryHighlight from '../components/primaryHighlight.vue';
+
+definePageMeta({
+  layout: "masthead",
+});
 </script>
