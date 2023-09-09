@@ -161,7 +161,7 @@ ul {
   background-color: hsla(var(--primary-200-hsla), 0.25);
 }
 
-@media screen and (min-width: var(--content-width)) {
+@media screen and (min-width: 900px) {
   .event-day h2 {
     margin-block: 3rem;
   }
@@ -208,7 +208,7 @@ ul {
   flex-shrink: 0;
   transform: translateY(2px);
 }
-@media screen and (min-width: var(--content-width)) {
+@media screen and (min-width: 900px) {
   .time {
     transform: translateY(1px);
   }
@@ -274,7 +274,7 @@ ul {
   height: 1.25rem;
 }
 
-@media screen and (min-width: var(--content-width)) {
+@media screen and (min-width: 900px) {
   .event-day h2 {
     display: block;
     width: fit-content;

@@ -2,7 +2,7 @@
   <div>
     <Masthead>
       <!-- .masthead is declared in component -->
-      <img class="title" src="/images/ISYF_logo.png" alt="ISYF Logo" />
+      <img class="title" src="/icon_dark.png" alt="ISYF Logo" />
       <div class="info">
         <h1 class="subtitle">International Science Youth Forum 2024</h1>
         <div class="detail-list">
@@ -182,10 +182,6 @@
 
   position: relative;
 }
-@media screen and (max-width: var(--content-width)) {
-  .masthead .subtitle {
-  }
-}
 .masthead .subtitle::before {
   content: '';
   position: absolute;
@@ -201,7 +197,7 @@
   transform: skew(-10deg);
 }
 
-@media screen and (min-width: var(--content-width)) {
+@media screen and (min-width: 900px) {
   .masthead {
     flex-direction: row;
     padding: 5.5rem 1.5rem;
@@ -291,7 +287,7 @@
   left: 0.5rem;
 }
 
-@media screen and (min-width: var(--content-width)) {
+@media screen and (min-width: 900px) {
   .masthead .detail-list {
     margin-left: 4.5rem;
   }
