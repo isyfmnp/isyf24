@@ -9,8 +9,6 @@
             © International Science Youth Forum 2024. All rights reserved.
           </span>
 
-          <p>Website by John Doe</p>
-
           <p>Photos by Studio Ardent and ISYF M&P Team 2024</p>
 
           <p>Videos by Jane Doe and John Doe</p>

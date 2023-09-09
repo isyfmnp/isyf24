@@ -453,7 +453,7 @@ nav.transparent::before {
   }
   .socials {
     margin-top: 0;
-    background-color: hsla(var(--primary-200-hsla), 0.25);
+    background-color: hsla(var(--primary-200-hsla), 0.75);
   }
 }
 </style>
