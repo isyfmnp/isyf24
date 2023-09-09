@@ -36,7 +36,7 @@
 </template>
 
 <style scoped>
-@import url('~/assets/css/speakers.css');
+@import url('~/assets/css/profiles.css');
 </style>
 
 <script setup>
