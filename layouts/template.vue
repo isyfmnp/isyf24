@@ -16,7 +16,7 @@
 
 <style scoped>
 #body {
-  max-width: min(900px, 100vw);
+  max-width: min(var(--content-width), 100vw);
   margin: 1rem auto 5rem;
   padding-inline: 2rem;
   min-height: 110vh;

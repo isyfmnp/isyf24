@@ -1,13 +1,11 @@
 <template>
-  <Masthead>
     <h1>Programme Outline</h1>
-    <h3>
+    <p>
       Wondering what you'll be doing for 5 days? Here's a brief introduction to
       all the wonderful activities we have planned for you!
-    </h3>
-  </Masthead>
-  <main class="programme-wrapper">
-    <div class="programme">
+    </p>
+
+    <main class="programme">
       <div class="navigator">
         <a
           class="day"
@@ -41,8 +39,7 @@
           </li>
         </ul>
       </div>
-    </div>
-  </main>
+    </main>
 </template>
 
 <style scoped>
@@ -373,8 +370,4 @@ const events = [
     },
   ],
 ];
-
-definePageMeta({
-  layout: 'masthead',
-});
 </script>

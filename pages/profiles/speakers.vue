@@ -13,7 +13,7 @@
         class="expand-button"
         @click="eventsOpen[eventIndex] = !eventsOpen[eventIndex]"
       >
-        Show Details
+        Show Names
       </div>
 
       <h3 class="event-title">{{ event.event }}</h3>

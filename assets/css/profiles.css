@@ -93,7 +93,7 @@
   top: -0.75rem;
   left: 1.5rem;
 
-  border: 1px solid var(--primary);
+  border: 1px solid var(--gray-900);
   background-color: var(--primary-200);
   --fg: var(--primary);
   color: var(--fg);
@@ -109,6 +109,7 @@
   cursor: pointer;
 }
 .event-open .expand-button {
+  border: 1px solid var(--primary);
   background-color: var(--primary);
   --fg: var(--gray-100);
 }
