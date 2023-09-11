@@ -2,18 +2,16 @@
   <div>
     <Masthead>
       <!-- .masthead is declared in component -->
-      <img class="title" src="/icon_dark.png" alt="ISYF Logo" />
+      <img class="logo" src="/icon_dark.png" alt="ISYF Logo" />
       <div class="info">
-        <h1 class="subtitle">International Science Youth Forum 2024</h1>
+        <h1 class="title">International Science Youth Forum 2024</h1>
         <div class="detail-list">
-          <div class="detail">
-            <span class="description">Date</span>
-            <span class="value">15-19 January 2023</span>
-          </div>
-          <div class="detail">
-            <span class="description">Venue</span>
-            <span class="value">Hwa Chong Institution (Singapore)</span>
-          </div>
+          <span class="detail">
+            15-19 January 2023
+          </span>
+          <span class="detail">
+            Hwa Chong Institution (Singapore)
+          </span>
         </div>
       </div>
     </Masthead>
@@ -142,198 +140,82 @@
 /* ========== MASTHEAD ========== */
 .masthead {
   font-family: var(--font-display);
-  padding: 4.5rem 1.5rem 5.5rem;
-  --fg: var(--bg);
-  overflow-x: hidden;
+  --fg: var(--gray-100);
+  overflow: hidden;
+
+  padding: 5rem 1rem 3rem;
+  gap: 1rem;
+
+  justify-content: flex-start;
 }
 .masthead * {
-  max-width: 500px;
+  margin: 0;
 }
+
+@media screen and (min-width: 900px) {
+  .masthead {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+
+    padding: 1rem 3rem;
+    text-align: left;
+  }
+  .masthead .logo {
+    margin-inline: auto;
+  }
+  .masthead .detail {
+    padding-inline: 1rem 2rem;
+    width: fit-content;
+  }
+}
+
 .masthead::before {
   background-image: url('/images/clocktower.jpg');
-  filter: brightness(50%);
+  filter: brightness(65%) blur(2px);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 43% 50%;
 }
 
-.masthead .title {
-  height: max(28vh);
-  margin-bottom: 1rem;
-  margin-inline: 2rem;
+.masthead .logo {
+  height: min(30vh, 50vw);
+  filter: opacity(0.875);
 }
 
 .masthead .info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  flex-grow: 0.4;
-  flex-basis: 210px;
+  gap: 2.5rem;
 }
 
-.masthead .subtitle {
-  font-family: var(--font-display);
-  font-size: min(8vw, 48px);
-  margin-block: 0 1.5rem;
-  padding: 1.5rem 1.25rem 1.25rem;
-  line-height: 1.25em;
-
-  position: relative;
-}
-.masthead .subtitle::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: -0.5rem;
-  right: -0.5rem;
-
-  background: rgba(var(--bg-rgb), 0.325);
-  backdrop-filter: blur(5px);
-  border-radius: 24px;
-  transform: skew(-10deg);
+.masthead .title {
+  font-size: min(13vw, 10vh);
+  line-height: 1.125em;
 }
 
-@media screen and (min-width: 900px) {
-  .masthead {
-    flex-direction: row;
-    padding: 5.5rem 1.5rem;
-    justify-content: space-around;
-  }
-  .masthead * {
-    max-width: initial;
-  }
-  .masthead::before {
-    background-position: center;
-  }
-  .masthead .info {
-    text-align: left;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 5vh;
-    gap: 5vh;
-    flex-grow: 1.2;
-  }
-  .masthead .title {
-    height: 25vw;
-  }
-  .masthead .subtitle {
-    font-size: min(5vw, 96px);
-    padding: 3rem 4rem 2rem;
-    margin-right: -15vw;
-    padding-right: 15vw;
-  }
-  .masthead .subtitle::before {
-    background: linear-gradient(
-      90deg,
-      rgba(var(--bg-rgb), 0.325),
-      rgba(var(--bg-rgb), 0.05)
-    );
-    transform: skew(10deg);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .masthead .subtitle {
-    max-width: 64rem;
-  }
-}
-
-/* ========== INFORMATIONAL BLOCKS ========== */
 .masthead .detail-list {
   display: flex;
   flex-direction: column;
-  gap: min(calc(15vh - 7rem), 3rem);
+  justify-content: space-between;
+  gap: 0.75rem;
 }
-.masthead .description {
-  display: none; /* Full display: block */
-  font-size: 10px;
-  opacity: 0.5;
+
+.masthead .detail {
+  display: block;
+  padding-block: 0.625rem 0.325rem;
+  border-radius: 4px;
+ 
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  margin-bottom: 0.325rem;
-}
-.masthead .value {
-  font-weight: 500;
-  font-size: 24px;
-  letter-spacing: 0.05rem;
-  line-spacing: 0.1rem;
-  filter: drop-shadow(2px 2px 5px var(--gray-900));
+  font-size: min(5vw, 22px);
+  border: 1px solid var(--fg);
+  filter: opacity(0.875);
+  backdrop-filter: blur(10px);
 }
 
-.masthead .description::before,
-.masthead .description::after {
-  display: inline-block;
-  content: '';
-  height: 1px;
-  width: 4rem;
-  border-radius: 1px;
-  background-color: white;
 
-  position: relative;
-  bottom: 3px;
-}
-.masthead .description::before {
-  right: 0.8rem;
-}
-.masthead .description::after {
-  left: 0.5rem;
-}
-
-@media screen and (min-width: 900px) {
-  .masthead .detail-list {
-    margin-left: 4.5rem;
-  }
-  .masthead .description {
-    display: block;
-    padding-left: 1rem;
-  }
-  .masthead .description::before {
-    width: 2rem;
-  }
-  .masthead .description::after {
-    width: 2rem;
-  }
-  .masthead .value {
-    font-size: 20px;
-  }
-}
-
-/* ========== HOVERING DOWN ARROW ========== */
-@keyframes down-arrow {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0.75rem);
-  }
-}
-.masthead::after {
-  content: '';
-  height: 2rem;
-  width: 100%;
-  position: absolute;
-  bottom: 2rem;
-
-  background-image: url('/images/rounded-down-arrow.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-
-  animation-name: down-arrow;
-  animation-duration: 0.75s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
 
 /* ========== CONTENT ========== */
 .people {
@@ -390,7 +272,7 @@ import {gsap} from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 onMounted(() => {
-  gsap.from('.masthead .title', {
+  gsap.from('.masthead .logo', {
     opacity: 0,
     y: -200,
     duration: 1,

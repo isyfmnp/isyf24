@@ -26,7 +26,7 @@ onMounted(() => {
 }
 .masthead {
   text-align: center;
-  color: white;
+  --fg: var(--gray-100);
 
   display: flex;
   padding: 0 2rem;

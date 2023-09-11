@@ -124,7 +124,7 @@ nav {
 
   --fg: var(--gray-900);
 
-  transition: color 100ms, opacity 800ms;
+  transition: color 200ms, opacity 800ms;
 }
 nav.transparent {
   --fg: var(--gray-100);
@@ -142,7 +142,7 @@ nav::before {
   backdrop-filter: blur(5px);
   box-shadow: 0px 0px 20px 2px #272f4044;
 
-  transition: background-color 100ms, backdrop-filter 100ms, box-shadow 100ms;
+  transition: background-color 200ms, backdrop-filter 200ms, box-shadow 200ms;
 }
 nav.transparent::before {
   background-color: transparent;
@@ -330,18 +330,15 @@ nav.transparent::before {
 .socials * {
   flex-grow: 0;
 }
-:deep(.menu .socials .item svg) {
+.menu .socials :deep(.item svg) {
   height: 17px;
   width: 17px;
   padding: 4px;
+  fill: red;
   transition: fill 200ms;
 }
-
-.menu :deep(.socials .item svg) {
-  fill: var(--fg);
-}
 .menu .material-icons-outlined {
-  transition: transform 200ms;
+  transition: transform 200ms, color 200ms;
 }
 .menu .open .item .indicator,
 .menu .closed:hover .item .indicator {
@@ -350,7 +347,7 @@ nav.transparent::before {
 .menu .open .item,
 .menu .item:hover,
 .menu .subitems a:hover,
-:deep(.menu .socials .item:hover svg) {
+.menu .socials :deep(.item:hover svg) {
   --fg: var(--primary-300);
 }
 
@@ -398,7 +395,7 @@ nav.transparent::before {
     font-size: 16px;
     font-weight: 500;
 
-    transition: color 100ms linear;
+    transition: color 200ms linear;
   }
   .transparent .item,
   .transparent .subitems a {
