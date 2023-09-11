@@ -206,7 +206,7 @@
 .masthead .detail {
   display: block;
   padding-block: 0.625rem 0.325rem;
-  border-radius: 4px;
+  border-radius: 8px;
  
   font-weight: 600;
   font-size: min(5vw, 22px);
