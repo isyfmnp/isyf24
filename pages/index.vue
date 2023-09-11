@@ -146,7 +146,7 @@
   padding: 5rem 1rem 3rem;
   gap: 1rem;
 
-  justify-content: flex-start;
+  justify-content: center;
 }
 .masthead * {
   margin: 0;
@@ -165,10 +165,6 @@
   }
   .masthead .logo {
     margin-inline: auto;
-  }
-  .masthead .detail {
-    padding-inline: 1rem 2rem;
-    width: fit-content;
   }
 }
 
@@ -192,7 +188,7 @@
 }
 
 .masthead .title {
-  font-size: min(13vw, 10vh);
+  font-size: min(11vw, 10vh);
   line-height: 1.125em;
 }
 
@@ -213,6 +209,17 @@
   border: 1px solid var(--fg);
   filter: opacity(0.875);
   backdrop-filter: blur(10px);
+}
+
+@media screen and (min-width: 900px) {
+  .masthead .detail-list {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .masthead .detail {
+    padding-inline: 1rem;
+    width: fit-content;
+  }
 }
 
 

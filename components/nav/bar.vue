@@ -114,7 +114,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -162,10 +162,12 @@ nav.transparent::before {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+
+  transform: translateY(2px);
 }
 
 .stamp .logo {
-  height: 3rem;
+  height: 2.5rem;
 }
 
 .stamp .text {
@@ -227,7 +229,7 @@ nav.transparent::before {
   left: 0;
   right: 0;
   height: 100vh;
-  padding: 1.125rem 2rem;
+  padding: 0.875rem 2rem;
   padding-right: 4rem;
   margin: 0;
 
@@ -246,7 +248,7 @@ nav.transparent::before {
 
 .menu .stamp {
   padding: 0;
-  margin: -2px 0 1rem -0.5rem;
+  margin: -3px 0 0.25rem -0.5rem;
 }
 
 .menu .item {
@@ -307,7 +309,7 @@ nav.transparent::before {
 .menu .item.close-button {
   position: fixed;
   z-index: 21;
-  top: 1.325rem;
+  top: 0.825rem;
   right: 2rem;
   width: fit-content;
   transform: scale(1.2);
@@ -352,9 +354,6 @@ nav.transparent::before {
 }
 
 @media screen and (min-width: 1100px) {
-  nav {
-    height: 4rem;
-  }
   nav.transparent {
     opacity: 0.4;
   }
