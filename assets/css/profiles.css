@@ -116,12 +116,12 @@
 
 /* ========== PROFILE INTROS ========== */
 .intros .profile {
-  margin-block: 4rem 4rem;
+  margin-block: 2rem 4rem;
 }
 
 .intros h2 {
   position: relative;
-  margin-block: 7rem 2.5rem;
+  margin-block: 4rem 2.5rem;
   width: fit-content;
 }
 .intros h2::after {
@@ -141,12 +141,14 @@
 
 .intros h3 {
   font-size: 42px;
+  line-height: 1em;
+  margin-block: 2.5rem 0;
 }
 
 .intros h4 {
   text-transform: uppercase;
   font-family: var(--font-display);
-  margin-block: 0rem 1.5rem;
+  margin-block: 0.5rem 1.5rem;
   color: var(--primary-400);
 }
 

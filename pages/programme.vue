@@ -185,7 +185,7 @@ ul {
 }
 .event-title {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 
@@ -205,7 +205,10 @@ ul {
   flex-shrink: 0;
   transform: translateY(2px);
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px)  {
+  .event-title {
+    flex-direction: row;
+  }
   .time {
     transform: translateY(1px);
   }
@@ -251,7 +254,7 @@ ul {
   z-index: 3;
 }
 .event-day h2::before,
-.event-day .event-title::before {
+.event-day h3::before {
   content: '';
   position: absolute;
   display: block;
@@ -265,7 +268,7 @@ ul {
   width: 2rem;
   height: 2rem;
 }
-.event-day .event-title::before {
+.event-day h3::before {
   left: -2.625rem;
   width: 1.25rem;
   height: 1.25rem;
