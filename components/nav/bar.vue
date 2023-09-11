@@ -336,7 +336,7 @@ nav.transparent::before {
   height: 17px;
   width: 17px;
   padding: 4px;
-  fill: red;
+  fill: var(--fg);
   transition: fill 200ms;
 }
 .menu .material-icons-outlined {
