@@ -6,12 +6,8 @@
       <div class="info">
         <h1 class="title">International Science Youth Forum 2024</h1>
         <div class="detail-list">
-          <span class="detail">
-            15-19 January 2023
-          </span>
-          <span class="detail">
-            Hwa Chong Institution (Singapore)
-          </span>
+          <span class="detail"> 15-19 January 2023 </span>
+          <span class="detail"> Hwa Chong Institution (Singapore) </span>
         </div>
       </div>
     </Masthead>
@@ -100,7 +96,7 @@
           of Education (MOE).
         </p>
         <ul class="supporters">
-          <a href="https://www.hci.edu.sg" target="_blank" style="scale: 1.125;">
+          <a href="https://www.hci.edu.sg" target="_blank" style="scale: 1.125">
             <img src="/images/logos/hc_logo.png" alt="" />
           </a>
           <a href="https://www.moe.gov.sg" target="_blank">
@@ -115,7 +111,11 @@
           organisations:
         </p>
         <ul class="supporters">
-          <a href="https://www.ntu.edu.sg/ias" target="_blank" style="scale: 1.125;">
+          <a
+            href="https://www.ntu.edu.sg/ias"
+            target="_blank"
+            style="scale: 1.125"
+          >
             <img src="/images/logos/ntuias_logo.png" alt="" />
           </a>
           <a href="https://nus.edu.sg" target="_blank">
@@ -128,7 +128,7 @@
             <img src="/images/logos/astar_logo.png" alt="" />
           </a>
           <a href="https://www.nrf.gov.sg" target="_blank">
-            <img src="/images/logos/nrf_logo.png" alt="" style="scale: 0.8;" />
+            <img src="/images/logos/nrf_logo.png" alt="" style="scale: 0.8" />
           </a>
         </ul>
       </section>
@@ -169,7 +169,7 @@
 }
 
 .masthead::before {
-  background-image: url('/images/clocktower.jpg');
+  background-image: url("/images/clocktower.jpg");
   filter: brightness(65%) blur(2px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -203,7 +203,7 @@
   display: block;
   padding-block: 0.625rem 0.325rem;
   border-radius: 8px;
- 
+
   font-weight: 600;
   font-size: min(5vw, 22px);
   border: 1px solid var(--fg);
@@ -221,8 +221,6 @@
     width: fit-content;
   }
 }
-
-
 
 /* ========== CONTENT ========== */
 .people {
@@ -270,42 +268,42 @@
 </style>
 
 <script setup>
-import {onMounted} from 'vue';
-import Masthead from '../components/masthead.vue';
-import Button from '../components/button/button.vue';
-import PrimaryHighlight from '../components/primaryHighlight.vue';
+import { onMounted } from "vue";
+import Masthead from "../components/masthead.vue";
+import Button from "../components/button/button.vue";
+import PrimaryHighlight from "../components/primaryHighlight.vue";
 
-import {gsap} from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 onMounted(() => {
-  gsap.from('.masthead .logo', {
+  gsap.from(".masthead .logo", {
     opacity: 0,
     y: -200,
     duration: 1,
     delay: 0.25,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
   });
 
-  gsap.from('.masthead .info *', {
+  gsap.from(".masthead .info *", {
     opacity: 0,
     y: 20,
     duration: 1,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
     stagger: 0.15,
     delay: 0.75,
   });
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const sections = gsap.utils.toArray('main section');
+  const sections = gsap.utils.toArray("main section");
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
     gsap.from(section, {
       opacity: 0,
       y: 10,
       duration: 0.5,
-      ease: 'power2.inOut',
+      ease: "power2.inOut",
       scrollTrigger: section,
     });
   });

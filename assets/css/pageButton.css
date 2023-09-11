@@ -11,19 +11,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(var(--fg-rgb), 0.25);
-  color: var(--bg);
-  transition: 200ms background-color ease-in-out;
+
+  background-color: hsla(var(--primary-200-hsla), 0.5);
+  backdrop-filter: blur(2px);
+  color: var(--fg);
+  transition: 200ms background-color, 200ms fill;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .page-btn:hover {
-    background-color: rgba(var(--fg-rgb), 0.75) !important;
+    background-color: var(--primary);
+    --fg: var(--gray-100);
   }
 }
-.page-btn:hover::after {
-  display: none;
-}
 
-.page-btn svg {
+.page-btn :deep(svg) {
   transform: scale(1.2);
+  fill: var(--fg);
+  transition: 200ms fill;
 }

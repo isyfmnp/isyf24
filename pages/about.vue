@@ -82,7 +82,7 @@
 <style>
 .masthead::before {
   color: var(--bg);
-  background-image: url('/images/aboutbg2.webp');
+  background-image: url("/images/aboutbg2.webp");
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,7 +91,7 @@
 </style>
 
 <script setup>
-import PrimaryHighlight from '../components/primaryHighlight.vue';
+import PrimaryHighlight from "../components/primaryHighlight.vue";
 
 definePageMeta({
   layout: "masthead",

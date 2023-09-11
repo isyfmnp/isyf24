@@ -98,7 +98,7 @@
   --fg: var(--primary);
   color: var(--fg);
   border-radius: 4px;
-  
+
   transition: background-color 200ms, color 200ms;
 
   padding-inline: 0.5rem;
@@ -125,7 +125,7 @@
   width: fit-content;
 }
 .intros h2::after {
-  content: '';
+  content: "";
   z-index: -1;
   position: absolute;
   right: -15vw;
@@ -167,13 +167,16 @@
     margin-left: -2rem;
   }
 
+  .intros .info {
+    padding-top: 0.5rem;
+  }
+
   .intros img {
     height: 16rem;
     width: 16rem;
   }
 
   .intros .profile h3 {
-    margin-top: 0;
     display: inline;
   }
 
@@ -182,4 +185,3 @@
     margin-left: 1rem;
   }
 }
-

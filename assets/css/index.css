@@ -37,13 +37,12 @@
   --green: #03cea4;
   --blue: #5e95ed;
   --purple: #6350fd;
-  
- -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 * {
   color: var(--fg);
-  fill: var(--fg);
 }
 
 .scroll-anchor {

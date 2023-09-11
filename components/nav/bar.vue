@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{transparent: navTransparent}">
+  <nav :class="{ transparent: navTransparent }">
     <a class="stamp" href="/">
       <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="text">
@@ -11,7 +11,7 @@
       <span class="material-icons">menu</span>
     </a>
 
-    <div class="menu" :class="{open: menuOpen}">
+    <div class="menu" :class="{ open: menuOpen }">
       <a class="stamp menu-stamp" href="/">
         <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
         <div class="text">
@@ -34,7 +34,7 @@
         <span class="material-icons-outlined">event_note</span>
         Programme
       </a>
-      <div class="closed" :class="{open: profilesOpen}">
+      <div class="closed" :class="{ open: profilesOpen }">
         <a class="item" @click="profilesOpen = !profilesOpen">
           <span class="material-icons-outlined">person</span>
           Profiles
@@ -130,7 +130,7 @@ nav.transparent {
   --fg: var(--gray-100);
 }
 nav::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -355,7 +355,7 @@ nav.transparent::before {
 
 @media screen and (min-width: 1100px) {
   nav.transparent {
-    opacity: 0.4;
+    opacity: 0.75;
   }
   nav:hover {
     opacity: 1 !important;
@@ -455,11 +455,11 @@ nav.transparent::before {
 </style>
 
 <script setup>
-import {ref, onMounted, onUnmounted} from 'vue';
-import {gsap} from 'gsap';
-import InstagramIcon from '../icons/instagram.vue';
-import FacebookIcon from '../icons/facebook.vue';
-import YoutubeIcon from '../icons/youtube.vue';
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import InstagramIcon from "../icons/instagram.vue";
+import FacebookIcon from "../icons/facebook.vue";
+import YoutubeIcon from "../icons/youtube.vue";
 
 const profilesOpen = ref(false);
 const menuOpen = ref(false);
@@ -480,23 +480,23 @@ onMounted(() => {
   setTimeout(() => {
     if (window.masthead) {
       navTransparent.value = true;
-      document.addEventListener('scroll', checkScroll);
+      document.addEventListener("scroll", checkScroll);
     }
   }, 1);
 });
 onUnmounted(() => {
-  document.removeEventListener('scroll', checkScroll);
+  document.removeEventListener("scroll", checkScroll);
 });
 
 onMounted(() => {
   if (window.innerWidth < 900) {
     return;
   }
-  gsap.from('.stamp, .menu .item, .menu .socials', {
+  gsap.from(".stamp, .menu .item, .menu .socials", {
     opacity: 0,
     x: -5,
     duration: 0.75,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
     stagger: 0.025,
   });
 });
