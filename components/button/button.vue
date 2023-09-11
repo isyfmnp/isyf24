@@ -22,6 +22,12 @@ a {
   --fg: var(--gray-100);
   font-weight: 600;
   text-decoration: none;
+
+  transition: background-color 200ms, box-shadow 200ms;
+}
+a:hover {
+  background-color: var(--gray-900);
+  box-shadow: 0px 0px 20px 2px #272f4066;
 }
 </style>
 
