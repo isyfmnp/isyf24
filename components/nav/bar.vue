@@ -56,7 +56,7 @@
           </ul>
         </div>
       </div>
-      <a class="item">
+      <a class="item" href="/media">
         <span class="item-text"> Media </span>
       </a>
 
