@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{ transparent: navTransparent }">
+  <nav :class="{transparent: navTransparent}">
     <a class="stamp" href="/">
       <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
       <div class="text">
@@ -11,7 +11,7 @@
       <span class="material-icons">menu</span>
     </a>
 
-    <div class="menu" :class="{ open: menuOpen }">
+    <div class="menu" :class="{open: menuOpen}">
       <a class="stamp menu-stamp" href="/">
         <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
         <div class="text">
@@ -23,54 +23,45 @@
         <span class="material-icons-outlined">close</span>
       </a>
       <a class="item" href="/">
-        <span class="material-icons-outlined">home</span>
-        Home
+        <span class="item-text"> Home </span>
       </a>
       <a class="item" href="/about">
-        <span class="material-icons-outlined">info</span>
-        About
+        <span class="item-text"> About </span>
       </a>
       <a class="item" href="/programme">
-        <span class="material-icons-outlined">event_note</span>
-        Programme
+        <span class="item-text"> Programme </span>
       </a>
-      <div class="closed" :class="{ open: profilesOpen }">
+      <div class="closed" :class="{open: profilesOpen}">
         <a class="item" @click="profilesOpen = !profilesOpen">
-          <span class="material-icons-outlined">person</span>
-          Profiles
+          <span class="item-text"> Profiles </span>
           <span class="material-icons-outlined indicator">chevron_right</span>
         </a>
         <div class="subitems-wrapper">
           <ul class="subitems">
             <li>
               <a href="/profiles/speakers">
-                <span class="material-icons-outlined">person</span>
-                Speakers
+                <span class="item-text"> Speakers </span>
               </a>
             </li>
             <li>
               <a href="/profiles/schools">
-                <span class="material-icons-outlined">school</span>
-                Schools</a
-              >
+                <span class="item-text"> Schools </span>
+              </a>
             </li>
             <li>
               <a href="/profiles/organising-team">
-                <span class="material-icons-outlined">group</span>
-                Organising Team</a
-              >
+                <span class="item-text"> Organising Team </span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <a class="item">
-        <span class="material-icons-outlined">image</span>
-        Media
+        <span class="item-text"> Media </span>
       </a>
 
       <a class="item" href="/faq">
-        <span class="material-icons-outlined">help</span>
-        FAQ
+        <span class="item-text"> FAQ </span>
       </a>
       <div class="socials">
         <a
@@ -113,42 +104,32 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 4rem;
+  right: 0;
+  height: 3.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  background-color: var(--gray-100);
+  border-bottom: 1px solid var(--gray-500);
 
-  padding-top: 4rem;
-  margin-top: -4rem;
-
-  --fg: var(--gray-900);
-
-  transition: color 200ms, opacity 800ms;
+  transition: background-color 100ms, color 200ms, top 100ms, left 100ms, right 100ms;
 }
 nav.transparent {
-  --fg: var(--gray-100);
-}
-nav::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -10;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
 
-  background-color: #f1f3f488;
-  backdrop-filter: blur(5px);
-  box-shadow: 0px 0px 20px 2px #272f4044;
-
-  transition: background-color 200ms, backdrop-filter 200ms, box-shadow 200ms;
-}
-nav.transparent::before {
   background-color: transparent;
-  backdrop-filter: none;
   box-shadow: none;
+  backdrop-filter: blur(50px);
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+
+  --fg: var(--gray-100);
+  --bg: var(--gray-900);
 }
+
 
 /* ========== STAMP ========== */
 .stamp {
@@ -161,13 +142,13 @@ nav.transparent::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 
   transform: translateY(2px);
 }
 
 .stamp .logo {
-  height: 2.5rem;
+  height: 2rem;
 }
 
 .stamp .text {
@@ -214,23 +195,33 @@ nav.transparent::before {
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity 400ms, visibility 400ms;
+  transition: opacity 200ms, visibility 200ms, right 200ms, left 200ms;
 }
 .menu.open {
   opacity: 1;
   visibility: visible;
-  --fg: white;
+
+}
+.transparent .menu {
+  top: -1.1rem;
+}
+.transparent .menu.open {
+  left: -1.1rem;
+  right: -1.1rem;
 }
 
+.menu.open {
+  left: 0;
+  right: 0;
+}
 .menu {
   z-index: 20;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 1.1rem;
+  right: 1.1rem;
   height: 100vh;
-  padding: 0.875rem 2rem;
-  padding-right: 4rem;
+  padding: 2rem 4rem 1.875rem 2rem;
   margin: 0;
 
   display: flex;
@@ -241,8 +232,10 @@ nav.transparent::before {
 
   user-select: none;
 
-  background-color: var(--gray-900);
-  backdrop-filter: blur(7px);
+  --fg: var(--gray-100);
+  --bg: var(--gray-900);
+
+  background-color: var(--bg);
   box-shadow: 0px 0px 20px 2px #272f3d44;
 }
 
@@ -259,12 +252,18 @@ nav.transparent::before {
   padding: 0.5rem 0;
   width: 100%;
 
-  font-weight: bold;
-  font-size: 20px;
-
-  transition: color 200ms;
-
   overflow: hidden;
+}
+
+.item-text {
+  font-weight: semibold;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  transition: color 100ms;
+  transform: translateY(5px);
+}
+.closed .item-text {
+  transform: translateY(3px);
 }
 
 .menu .subitems-wrapper {
@@ -285,7 +284,7 @@ nav.transparent::before {
 
   font-size: 20px;
 
-  transform: translateY(-124px);
+  transform: translateY(-114px);
   transition: transform 200ms;
 }
 .menu .subitems a {
@@ -307,10 +306,10 @@ nav.transparent::before {
 }
 
 .menu .item.close-button {
-  position: fixed;
+  position: absolute;
   z-index: 21;
-  top: 0.825rem;
-  right: 2rem;
+  top: 1.75rem;
+  right: 2.5rem;
   width: fit-content;
   transform: scale(1.2);
   cursor: pointer;
@@ -326,8 +325,7 @@ nav.transparent::before {
 
   box-sizing: content-box;
   border-radius: 8px;
-  border: 1px solid var(--fg);
-  background-color: var(--primary-900);
+  border: 1px solid var(--gray-200);
 }
 .socials * {
   flex-grow: 0;
@@ -350,24 +348,16 @@ nav.transparent::before {
 .menu .item:hover,
 .menu .subitems a:hover,
 .menu .socials :deep(.item:hover svg) {
-  --fg: var(--primary-300);
+  --fg: var(--primary-100);
 }
 
 @media screen and (min-width: 1100px) {
-  nav.transparent {
-    opacity: 0.75;
-  }
-  nav:hover {
-    opacity: 1 !important;
-  }
-
   .menu {
     position: static;
     width: fit-content;
     height: fit-content;
     transform: translateX(0);
-    padding: 0;
-    padding-right: 2rem;
+    padding: 0 2rem;
 
     flex-direction: row;
     gap: 1.5rem;
@@ -378,6 +368,12 @@ nav.transparent::before {
     box-shadow: none;
     opacity: 1;
     visibility: visible;
+    --fg: var(--gray-900);
+    --bg: var(--gray-100);
+  }
+  .transparent .menu {
+    --fg: var(--gray-100);
+    --bg: var(--gray-900);
   }
 
   .menu .stamp {
@@ -404,6 +400,14 @@ nav.transparent::before {
     fill: var(--fg);
   }
 
+  /* ========== MASTHEAD ========== */
+  .transparent .stamp {
+    display: none;
+  }
+  .transparent {
+    justify-content: center;
+  }
+
   /* ========== DROPDOWN MENU ========== */
   .menu .closed {
     /* Parent of both item and subitem */
@@ -414,52 +418,54 @@ nav.transparent::before {
     margin-block: -24px;
   }
   .menu .subitems-wrapper {
+    z-index: -1;
     position: absolute;
-    top: 3.15rem;
+    top: 55px;
     left: -1.5rem;
     padding: 0 2rem 2rem;
     margin: 0 -2rem -2rem;
   }
   .menu .subitems {
+    position: relative;
+    z-index: -1;
     margin-block: 0;
     gap: 0.25rem;
     width: 9rem;
     padding: 1rem 2.5rem 0.75rem 1.5rem;
 
-    background-color: #f1f3f488;
-    backdrop-filter: blur(5px) brightness(1.05);
+    background-color: var(--bg);
     box-shadow: 0px 0px 20px 2px #272f4044;
     border-radius: 0 0 6px 6px;
+    border: 1px solid var(--gray-500);
+    border-top: none;
 
-    transform: translateY(-150px);
+    transform: translateY(-170px);
   }
   .menu .subitems a {
     gap: 0.5rem;
   }
   nav.transparent .menu .subitems {
     background-color: transparent;
+    border: 1px solid var(--gray-200);
+    border-top: none;
     backdrop-filter: none;
     box-shadow: none;
-  }
-  nav.transparent .menu .subitems-wrapper {
-    top: 2.5rem;
   }
   .item.close-button {
     display: none;
   }
   .socials {
     margin-top: 0;
-    background-color: hsla(var(--primary-200-hsla), 0.75);
   }
 }
 </style>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
-import { gsap } from "gsap";
-import InstagramIcon from "../icons/instagram.vue";
-import FacebookIcon from "../icons/facebook.vue";
-import YoutubeIcon from "../icons/youtube.vue";
+import {ref, onMounted, onUnmounted} from 'vue';
+import {gsap} from 'gsap';
+import InstagramIcon from '../icons/instagram.vue';
+import FacebookIcon from '../icons/facebook.vue';
+import YoutubeIcon from '../icons/youtube.vue';
 
 const profilesOpen = ref(false);
 const menuOpen = ref(false);
@@ -480,23 +486,23 @@ onMounted(() => {
   setTimeout(() => {
     if (window.masthead) {
       navTransparent.value = true;
-      document.addEventListener("scroll", checkScroll);
+      document.addEventListener('scroll', checkScroll);
     }
   }, 1);
 });
 onUnmounted(() => {
-  document.removeEventListener("scroll", checkScroll);
+  document.removeEventListener('scroll', checkScroll);
 });
 
 onMounted(() => {
   if (window.innerWidth < 900) {
     return;
   }
-  gsap.from(".stamp, .menu .item, .menu .socials", {
+  gsap.from('.stamp, .menu .item, .menu .socials', {
     opacity: 0,
     x: -5,
     duration: 0.75,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
     stagger: 0.025,
   });
 });

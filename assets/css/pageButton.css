@@ -12,14 +12,15 @@
   align-items: center;
   justify-content: center;
 
-  background-color: hsla(var(--primary-200-hsla), 0.5);
-  backdrop-filter: blur(2px);
+  background-color: var(--bg);
+  border: 1px solid var(--fg);
   color: var(--fg);
   transition: 200ms background-color, 200ms fill;
 }
 @media screen and (min-width: 900px) {
   .page-btn:hover {
     background-color: var(--primary);
+    border: 1px solid var(--primary);
     --fg: var(--gray-100);
   }
 }

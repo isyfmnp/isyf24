@@ -4,51 +4,60 @@
       <!-- .masthead is declared in component -->
       <img class="logo" src="/icon_dark.png" alt="ISYF Logo" />
       <div class="info">
-        <h1 class="title">International Science Youth Forum 2024</h1>
         <div class="detail-list">
           <span class="detail"> 15-19 January 2023 </span>
           <span class="detail"> Hwa Chong Institution (Singapore) </span>
+        </div>
+        <h1 class="title">International Science Youth Forum 2024</h1>
+        <div class="scroll-prompt">
+          <span class="material-icons-outlined arrow-down">
+            keyboard_double_arrow_down </span
+          >Scroll down to learn more!
         </div>
       </div>
     </Masthead>
 
     <main>
-      <section>
-        <h2>What is ISYF?</h2>
-        <p>
-          ISYF 2024 endeavours to inspire delegates to use Science and
-          Technology to lead the change into the future by reconnecting,
-          reimagining, and looking ahead, to create a better world marked by
-          common goals, shared knowledge and global solidarity.
-        </p>
-        <p>
-          The International Science Youth Forum (ISYF) is a prestigious science
-          enrichment programme for top research students from all over the
-          world, hosted by Hwa Chong Institution’s Student Science Research Club
-          (SSRC). The delegates of ISYF will have the opportunity to participate
-          in a multitude of exciting and meaningful activities, which include
-          intellectual discourse with Nobel laureates and eminent scientists who
-          utilise technology and data to make decisions. Delegates will also be
-          able to network with peers through collaborative projects and cultural
-          exchanges.
-        </p>
-        <p>We hope to see you at ISYF!</p>
+      <section class="cards">
+        <div>
+          <h2>What is ISYF?</h2>
+          <p>
+            ISYF 2024 endeavours to inspire delegates to use Science and
+            Technology to lead the change into the future by reconnecting,
+            reimagining, and looking ahead, to create a better world marked by
+            common goals, shared knowledge and global solidarity.
+          </p>
+          <p>
+            The International Science Youth Forum (ISYF) is a prestigious
+            science enrichment programme for top research students from all over
+            the world, hosted by Hwa Chong Institution’s Student Science
+            Research Club (SSRC). The delegates of ISYF will have the
+            opportunity to participate in a multitude of exciting and meaningful
+            activities, which include intellectual discourse with Nobel
+            laureates and eminent scientists who utilise technology and data to
+            make decisions. Delegates will also be able to network with peers
+            through collaborative projects and cultural exchanges.
+          </p>
+          <p>We hope to see you at ISYF!</p>
+        </div>
 
-        <h2>What will you get to do?</h2>
-        <p>
-          At ISYF 2024, you can look forward to Amazing Race, Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat
-        </p>
+        <div>
+          <h2>What will you get to do?</h2>
+          <p>
+            At ISYF 2024, you can look forward to Amazing Race, Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat
+          </p>
 
-        <Button href="/programme" icon="event_note"
-          >See Our Full Programme!</Button
-        >
-        <Button href="/profiles/speakers" icon="person"
-          >Our Invited Speakers</Button
-        >
+          <Button href="/programme" icon="event_note"
+            >See Our Full Programme!</Button
+          >
+          <Button href="/profiles/speakers" icon="person"
+            >Our Invited Speakers</Button
+          >
+        </div>
       </section>
 
       <section class="colored people">
@@ -137,6 +146,8 @@
 </template>
 
 <style>
+@import "~/assets/css/cards.vue"
+
 /* ========== MASTHEAD ========== */
 .masthead {
   font-family: var(--font-display);
@@ -169,8 +180,8 @@
 }
 
 .masthead::before {
-  background-image: url("/images/clocktower.jpg");
-  filter: brightness(65%) blur(2px);
+  background-image: url('/images/clocktower.jpg');
+  filter: brightness(65%) blur(2px) saturate(1.2);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 43% 50%;
@@ -196,19 +207,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.75rem;
 }
 
 .masthead .detail {
   display: block;
-  padding-block: 0.625rem 0.325rem;
-  border-radius: 8px;
+  padding-block: 0.5rem 0.25rem;
 
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: min(5vw, 22px);
-  border: 1px solid var(--fg);
-  filter: opacity(0.875);
-  backdrop-filter: blur(10px);
+  font-size: min(5vw, 20px);
+  text-transform: uppercase;
+}
+.masthead .detail + .detail {
+  border-top: 1px solid var(--gray-100);
 }
 
 @media screen and (min-width: 900px) {
@@ -220,6 +231,47 @@
     padding-inline: 1rem;
     width: fit-content;
   }
+.masthead .detail + .detail {
+    border-top: none;
+  }
+}
+
+.scroll-prompt {
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 900px) {
+  .scroll-prompt {
+    margin-inline: 0;
+  }
+}
+@keyframes arrow-bob {
+  0% {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.825;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+}
+.arrow-down {
+  animation-name: arrow-bob;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 /* ========== CONTENT ========== */
@@ -268,48 +320,48 @@
 </style>
 
 <script setup>
-import { onMounted } from "vue";
-import Masthead from "../components/masthead.vue";
-import Button from "../components/button/button.vue";
-import PrimaryHighlight from "../components/primaryHighlight.vue";
+import {onMounted} from 'vue';
+import Masthead from '../components/masthead.vue';
+import Button from '../components/button/button.vue';
+import PrimaryHighlight from '../components/primaryHighlight.vue';
 
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 onMounted(() => {
-  gsap.from(".masthead .logo", {
+  gsap.from('.masthead .logo', {
     opacity: 0,
-    y: -200,
-    duration: 1,
-    delay: 0.25,
-    ease: "power2.inOut",
+    y: -100,
+    duration: 0.75,
+    delay: 0,
+    ease: 'power2.inOut',
   });
 
-  gsap.from(".masthead .info *", {
+  gsap.from('.masthead .info *', {
     opacity: 0,
-    y: 20,
-    duration: 1,
-    ease: "power2.inOut",
+    y: 15,
+    duration: 0.5,
+    ease: 'power2.inOut',
     stagger: 0.15,
-    delay: 0.75,
+    delay: 0.5,
   });
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const sections = gsap.utils.toArray("main section");
+  const sections = gsap.utils.toArray('main section');
 
-  sections.forEach((section) => {
+  sections.forEach(section => {
     gsap.from(section, {
       opacity: 0,
       y: 10,
       duration: 0.5,
-      ease: "power2.inOut",
+      ease: 'power2.inOut',
       scrollTrigger: section,
     });
   });
 });
 
 definePageMeta({
-  layout: "masthead",
+  layout: 'masthead',
 });
 </script>

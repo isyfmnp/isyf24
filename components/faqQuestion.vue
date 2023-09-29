@@ -69,7 +69,7 @@
 }
 @media screen and (min-width: 900px) {
   .faq-ans {
-    transition: max-height 0.2s ease-in-out;
+    transition: max-height 200ms ease-in-out;
   }
 }
 .faq-ans p {

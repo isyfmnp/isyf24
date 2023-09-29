@@ -19,10 +19,10 @@ onMounted(() => {
 .masthead,
 .masthead::before {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
 }
 .masthead {
   text-align: center;
@@ -33,6 +33,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .masthead::before {
   content: "";

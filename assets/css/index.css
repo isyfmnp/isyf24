@@ -76,23 +76,29 @@ body {
 h1 {
   font-family: var(--font-display);
   font-size: 48px;
+  margin: 2rem 0;
+  font-weight: bold;
 }
 h2 {
   font-size: 34px;
   font-family: var(--font-display);
   line-height: 1.5em;
-  margin: 4rem 0 1rem;
+  margin: 1.5rem 0;
+  font-weight: bold;
 }
 h3 {
   font-size: 22px;
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.5em;
-  margin: 2rem 0 0rem;
+  margin: 1.5rem 0 1rem; 
+  font-weight: bold;
+  font-style: italic;
 }
 
 p {
   line-height: 1.6;
+  margin: 1.25rem 0;
 }
 a {
   color: var(--fg);
@@ -138,7 +144,8 @@ main {
 }
 
 section {
-  padding-block: 0.5rem 3rem;
+  margin-block: 1rem;
+  padding-block: 1rem 1.5rem;
 }
 
 img svg {
