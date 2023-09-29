@@ -327,6 +327,9 @@ nav.transparent {
   border-radius: 8px;
   border: 1px solid var(--gray-200);
 }
+.transparent .socials {
+  border: 1px solid var(--gray-400);
+}
 .socials * {
   flex-grow: 0;
 }

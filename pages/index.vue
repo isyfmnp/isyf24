@@ -146,7 +146,7 @@
 </template>
 
 <style>
-@import "~/assets/css/cards.vue"
+@import url("~/assets/css/cards.css");
 
 /* ========== MASTHEAD ========== */
 .masthead {
@@ -204,9 +204,15 @@
 }
 
 .masthead .detail-list {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  .masthead .detail-list {
+    margin-inline: auto;
+  }
 }
 
 .masthead .detail {

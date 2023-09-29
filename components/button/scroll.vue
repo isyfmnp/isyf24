@@ -23,11 +23,49 @@
 @import "~/assets/css/pageButton.css";
 
 .page-btn {
+  position: fixed;
+  z-index: 90;
+  bottom: 2rem;
+  right: 2rem;
+  --size: 3rem;
+  height: var(--size);
+  width: var(--size);
+  border-radius: calc(var(--size) / 2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bg);
+  border: 1px solid var(--fg);
+  color: var(--fg);
+  
   opacity: 1;
-  transition: 200ms opacity ease-in-out, 200ms background-color ease-in-out;
+  
+  transition: background-color 200ms, fill 200ms, border 200ms, box-shadow 200ms, opacity 200ms;
 }
+.page-btn:active {
+  border: 1px solid var(--primary);
+  --fg: var(--gray-100);
+  box-shadow: 0px 0px 20px 2px #272f4066;
+}
+@media screen and (min-width: 900px) {
+  .page-btn:hover {
+    --bg: var(--primary);
+    --fg: var(--gray-100);
+    border: 1px solid var(--bg);
+    box-shadow: 0px 0px 20px 2px #272f4066;
+  }
+}
+
 .page-btn.hidden {
   opacity: 0;
+}
+
+.page-btn :deep(svg) {
+  transform: scale(1.2);
+  fill: var(--fg);
+  transition: 200ms fill;
 }
 </style>
 
