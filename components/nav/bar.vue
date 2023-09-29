@@ -348,8 +348,16 @@ nav.transparent {
 .menu .item:hover,
 .menu .subitems a:hover,
 .menu .socials :deep(.item:hover svg) {
+  --fg: var(--primary);
+}
+
+.transparent .menu .open .item,
+.transparent .menu .item:hover,
+.transparent .menu .subitems a:hover,
+.transparent .menu .socials :deep(.item:hover svg) {
   --fg: var(--primary-100);
 }
+
 
 @media screen and (min-width: 1100px) {
   .menu {
@@ -500,8 +508,9 @@ onMounted(() => {
   }
   gsap.from('.stamp, .menu .item, .menu .socials', {
     opacity: 0,
-    x: -5,
-    duration: 0.75,
+
+    x: -7,
+    duration: 0.5,
     ease: 'power2.inOut',
     stagger: 0.025,
   });

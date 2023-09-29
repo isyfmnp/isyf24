@@ -12,13 +12,6 @@
       v-for="(event, eventIndex) in profiles"
       :class="{ 'event-open': eventsOpen[eventIndex] }"
     >
-      <div
-        class="expand-button"
-        @click="eventsOpen[eventIndex] = !eventsOpen[eventIndex]"
-      >
-        Show Names
-      </div>
-
       <h3 class="event-title">{{ event.event }}</h3>
       <a
         class="profile"
@@ -26,9 +19,8 @@
         :href="'#' + profile.name.replaceAll(' ', '')"
       >
         <img class="profile-img" :src="profile.image" alt="" />
-        <div class="hover-label">
-          <span class="name">{{ profile.name }}</span>
-          <span class="title">{{ profile.title }}</span>
+        <div class="name">
+          {{ profile.name }}
         </div>
       </a>
     </div>
@@ -36,7 +28,7 @@
 
   <div class="intros">
     <div class="event" v-for="event in profiles">
-      <h2>{{ event.event }}</h2>
+      <h2><span class="scroll-banner">{{ event.event.concat("&nbsp;&nbsp;•&nbsp;&nbsp;").repeat(10) }}</span></h2>
 
       <div class="profile" v-for="profile in event.profiles">
         <div class="scroll-anchor" :id="profile.name.replaceAll(' ', '')"></div>
@@ -58,7 +50,11 @@
 </style>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+
+onMounted(() => {
+
+})
 
 const profiles = [
   {
