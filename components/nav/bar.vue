@@ -109,11 +109,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   background-color: var(--gray-100);
   border-bottom: 1px solid var(--gray-500);
 
-  transition: background-color 100ms, color 200ms, top 100ms, left 100ms, right 100ms;
+  transition: background-color 100ms, color 200ms, top 100ms, left 100ms,
+    right 100ms;
 }
 nav.transparent {
   top: 1rem;
@@ -129,7 +130,6 @@ nav.transparent {
   --fg: var(--gray-100);
   --bg: var(--gray-900);
 }
-
 
 /* ========== STAMP ========== */
 .stamp {
@@ -200,7 +200,6 @@ nav.transparent {
 .menu.open {
   opacity: 1;
   visibility: visible;
-
 }
 .transparent .menu {
   top: -1.1rem;
@@ -361,7 +360,6 @@ nav.transparent {
   --fg: var(--primary-100);
 }
 
-
 @media screen and (min-width: 1100px) {
   .menu {
     position: static;
@@ -459,7 +457,7 @@ nav.transparent {
     background-color: transparent;
     border: 1px solid var(--gray-200);
     border-top: none;
-    backdrop-filter: none;
+    backdrop-filter: blur(3px);
     box-shadow: none;
   }
   .item.close-button {
