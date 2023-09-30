@@ -10,28 +10,31 @@
   --font-display: "Josefin Sans", "IBM Plex Sans", "Open Sans",
     "Helvetica Now Display DW", sans-serif;
 
-  --gray-900-hsla: 250, 17%, 17%;
+  --primary-hue: 218; 
+
+  --gray-900-hsla: var(--primary-hue), 17%, 17%;
   --gray-900: hsl(var(--gray-900-hsla));
-  --gray-500: hsl(220, 10%, 40%);
-  --gray-400: hsl(220, 11%, 55%);
-  --gray-200: hsl(210, 12%, 80%);
-  --gray-100: hsl(210, 10%, 92%);
+  --gray-500: hsl(var(--primary-hue), 10%, 40%);
+  --gray-400: hsl(var(--primary-hue), 11%, 55%);
+  --gray-200: hsl(var(--primary-hue), 12%, 80%);
+  --gray-100-hsla: var(--primary-hue), 10%, 92%;
+  --gray-100: hsl(var(--gray-100-hsla));
 
   --fg: var(--gray-900);
-  --fg-rgb: 36, 41, 51;
+  --fg-hsla: var(--gray-900-hsla);
   --bg: var(--gray-100);
-  --bg-rgb: 232, 235, 237;
+  --bg-hsla: var(--gray-100-hsla);
 
-  --primary: hsl(252, 60%, 58%);
-  --primary-rgb: 99, 80, 253;
-  --primary-50: hsl(247, 35%, 88%);
-  --primary-100: hsl(247, 50%, 85%);
-  --primary-200: hsl(247, 29%, 89%);
-  --primary-200-hsla: 247, 60%, 80%;
-  --primary-300: hsl(247, 100%, 75%);
-  --primary-400: hsl(247, 80%, 70%);
-  --primary-700: hsl(247, 62%, 30%);
-  --primary-900: hsl(247, 20%, 30%);
+  --primary-50: hsl(var(--primary-hue), 35%, 90%);
+  --primary-100: hsl(var(--primary-hue), 50%, 85%);
+  --primary-200-hsla: var(--primary-hue), 50%, 80%;
+  --primary-200: hsl(var(--primary-200-hsla));
+  --primary-300: hsl(var(--primary-hue), 100%, 75%);
+  --primary-400: hsl(var(--primary-hue), 80%, 70%);
+  --primary-500: hsl(var(--primary-hue), 60%, 58%);
+  --primary: var(--primary-500);
+  --primary-700: hsl(var(--primary-hue), 62%, 30%);
+  --primary-900: hsl(var(--primary-hue), 20%, 30%);
 
   --red: #fb4d3d;
   --yellow: #ffc759;

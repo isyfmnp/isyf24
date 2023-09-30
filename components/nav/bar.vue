@@ -23,13 +23,13 @@
         <span class="material-icons-outlined">close</span>
       </a>
       <a class="item" href="/">
-        <span class="item-text"> Home </span>
+        <span class="item-text">Home</span>
       </a>
       <a class="item" href="/about">
-        <span class="item-text"> About </span>
+        <span class="item-text">About</span>
       </a>
       <a class="item" href="/programme">
-        <span class="item-text"> Programme </span>
+        <span class="item-text">Programme</span>
       </a>
       <div class="closed" :class="{open: profilesOpen}">
         <a class="item" @click="profilesOpen = !profilesOpen">
@@ -40,28 +40,31 @@
           <ul class="subitems">
             <li>
               <a href="/profiles/speakers">
-                <span class="item-text"> Speakers </span>
+                <span class="material-icons-outlined icon">person</span>
+                <span class="item-text">Speakers</span>
               </a>
             </li>
             <li>
               <a href="/profiles/schools">
-                <span class="item-text"> Schools </span>
+                <span class="material-icons-outlined icon">school</span>
+                <span class="item-text">Schools</span>
               </a>
             </li>
             <li>
               <a href="/profiles/organising-team">
-                <span class="item-text"> Organising Team </span>
+                <span class="material-icons-outlined icon">group</span>
+                <span class="item-text">Organising Team</span>
               </a>
             </li>
           </ul>
         </div>
       </div>
       <a class="item" href="/media">
-        <span class="item-text"> Media </span>
+        <span class="item-text">Media</span>
       </a>
 
       <a class="item" href="/faq">
-        <span class="item-text"> FAQ </span>
+        <span class="item-text"> FAQ</span>
       </a>
       <div class="socials">
         <a
@@ -273,17 +276,16 @@ nav.transparent {
 .menu .subitems {
   list-style: none;
   margin: 0.5rem 0 0.75rem;
-  padding-left: 1.75rem;
+  padding-left: 0.5rem;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.375rem;
+  gap: 0.5rem;
   width: 100%;
 
-  font-size: 20px;
 
-  transform: translateY(-114px);
+  transform: translateY(-110px);
   transition: transform 200ms;
 }
 .menu .subitems a {
@@ -291,13 +293,13 @@ nav.transparent {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
 
   transition: color 200ms;
 }
 .menu .open .subitems-wrapper,
 .menu .closed:hover .subitems-wrapper {
-  height: 124px;
+  height: 120px;
 }
 .menu .open .subitems,
 .menu .closed:hover .subitems {
@@ -401,6 +403,9 @@ nav.transparent {
 
     transition: color 200ms linear;
   }
+  .menu .subitems .icon {
+    display: none;
+  }
   .transparent .item,
   .transparent .subitems a {
     color: var(--fg);
@@ -438,7 +443,6 @@ nav.transparent {
     position: relative;
     z-index: -1;
     margin-block: 0;
-    gap: 0.25rem;
     width: 9rem;
     padding: 1rem 2.5rem 0.75rem 1.5rem;
 

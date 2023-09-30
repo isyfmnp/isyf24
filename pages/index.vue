@@ -2,7 +2,7 @@
   <div>
     <Masthead>
       <!-- .masthead is declared in component -->
-      <img class="logo" src="/icon_dark.png" alt="ISYF Logo" />
+      <img class="logo" src="/icon_light.png" alt="ISYF Logo" />
       <div class="info">
         <div class="detail-list">
           <span class="detail"> 15-19 January 2023 </span>
@@ -154,7 +154,7 @@
   --fg: var(--gray-100);
   overflow: hidden;
 
-  padding: 5rem 1rem 3rem;
+  padding: 5rem 1rem 1rem;
   gap: 1rem;
 
   justify-content: center;
@@ -181,25 +181,30 @@
 
 .masthead::before {
   background-image: url('/images/clocktower.jpg');
-  filter: brightness(65%) blur(2px) saturate(1.2);
+  filter: brightness(55%) blur(2px) saturate(1.2);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 43% 50%;
 }
 
 .masthead .logo {
-  height: min(30vh, 50vw);
+  height: min(20vh, 50vw);
+  width: min(20vh, 50vw);
   filter: opacity(0.875);
+  background-color: var(--bg);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  padding: clamp(0.75rem, 1.5vh, 1.5rem);
 }
 
 .masthead .info {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3vh;
 }
 
 .masthead .title {
-  font-size: min(11vw, 10vh);
+  font-size: min(10vw, 10vh);
   line-height: 1.125em;
 }
 
@@ -221,7 +226,7 @@
 
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: min(5vw, 20px);
+  font-size: min(5vw, 22px);
   text-transform: uppercase;
 }
 .masthead .detail + .detail {
@@ -232,9 +237,10 @@
   .masthead .detail-list {
     flex-direction: row;
     justify-content: flex-start;
+    gap: 2rem;
   }
   .masthead .detail {
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
     width: fit-content;
   }
 .masthead .detail + .detail {
@@ -242,13 +248,21 @@
   }
 }
 
+.masthead .detail, .scroll-prompt {
+  text-shadow: 0 0 20px var(--gray-900);
+}
+
 .scroll-prompt {
-  font-size: 22px;
+  font-size: min(2.5vh, 22px);
   font-weight: bold;
   display: flex;
   margin-inline: auto;
   align-items: center;
   gap: 0.5rem;
+  color: var(--primary-400);
+}
+.scroll-prompt * {
+  color: var(--primary-400);
 }
 @media screen and (min-width: 900px) {
   .scroll-prompt {
