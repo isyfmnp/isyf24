@@ -2,146 +2,248 @@
   <h1>Participating Schools</h1>
 
   <div class="collage">
-    <div class="event" v-for="event in profiles">
-      <h3 class="event-title">{{ event.event }}</h3>
+    <div class="event" v-for="country in schools">
+      <h3 class="event-title">{{ country.country }}</h3>
       <a
         class="profile"
-        v-for="profile in event.profiles"
+        v-for="profile in country.schools"
         :href="'#' + profile.name.replaceAll(' ', '')"
       >
         <img class="profile-img" :src="profile.image" alt="" />
-        <div class="hover-label">
-          <span class="name">{{ profile.name }}</span>
-          <span class="title">{{ profile.title }}</span>
-        </div>
+        <span class="name">{{ profile.name }}</span>
       </a>
-    </div>
-  </div>
-
-  <div class="intros">
-    <div class="event" v-for="event in profiles">
-      <h2>{{ event.event }}</h2>
-
-      <div class="profile" v-for="profile in event.profiles">
-        <div class="scroll-anchor" :id="profile.name.replaceAll(' ', '')"></div>
-        <img :src="profile.image" :alt="profile.name" />
-        <h3>{{ profile.name }}</h3>
-        <h4>{{ profile.title }}</h4>
-        <p>
-          {{ profile.description }}
-        </p>
-      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
 @import url("~/assets/css/profiles.css");
+
+.collage .event {
+  grid-template-columns: repeat(auto-fill, minmax(min(80%, 16rem), 1fr));
+}
+.collage .event-title {
+  grid-column: span 1;
+  background-color: white;
+}
+.collage .profile {
+  --bg: var(--gray-900);
+  grid-column: span 1;
+  aspect-ratio: 2.1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+}
+.collage .profile-img {
+  padding: 18.75%;
+  width: 62.5%;
+  height: 62.5%;
+}
+.collage .name {
+  position: static;
+  padding-left: 0.75rem;
+  text-align: left;
+  display: grid;
+  place-items: center start;
+  box-shadow: 0px 0px 20px 0px #272f4077;
+  text-decoration: underline;
+  --bg: inherit;
+  text-decoration-color: var(--bg);
+  background-color: var(--bg);
+  /* Theres a thin black underline for some reason, this is just to cancel it out */
+  font-size: 17px;
+}
 </style>
 
 <script setup>
-const profiles = [
+const schoolsUnordered = [
   {
-    event: "Opening Ceremony Keynote",
-    profiles: [
-      {
-        name: "Ms Lim Wan Yong",
-        title:
-          "Second Permanent Secretary, Ministry of Education and Ministry of Social and Family Development",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Ms Lim Wan Yong is Second Permanent Secretary at the Ministry of Education from October 2021, and Second Permanent Secretary at the Ministry of Social and Family Development from April 2022. Prior to this, she was Deputy Secretary (Planning), Ministry of National Development from 2017, and concurrently Deputy Secretary (Security Coordination), Prime Minister's Office from 2019.\n\nShe previously held various appointments in the Trade Development Board (now Enterprise Singapore), Ministry of Trade and Industry, Ministry of Education, Ministry of Finance and Civil Service College, and was Special Assistant to then-DPM/Coordinating Minister for National Security Teo Chee Hean.\n\nMs Lim graduated with a Bachelor of Arts in International Relations, and a Master of Science in Industrial Engineering and Engineering Management from Stanford University, USA. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-    ],
+    country: "Singapore 🇸🇬",
+    name: "Bendemeer Secondary School",
+    image: "/images/profiles/schools/35.webp"
   },
   {
-    event: "Meet-The-Scientist Sessions",
-    profiles: [
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-      {
-        name: "Mr Beh Kian Teik",
-        title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "Mr Beh Kian Teik is the Chief Executive Officer of the National Research Foundation (NRF) Singapore from August 2022. He is responsible for reviewing, developing and implementing the national RIE strategies and governance frameworks, to grow and sustain a vibrant RIE ecosystem in Singapore. Mr Beh joined NRF as the Deputy Chief Executive Officer in July 2020.\n\nPrior to joining NRF, Mr Beh held roles of increasing responsibilities in Economic Development Board for over 22 years. His last role was Executive Vice President of EDB and oversaw EDB New Ventures. He worked with corporate entrepreneurs with the passion and drive to create early-stage ventures in Singapore. He has over twenty years' experience of promoting foreign direct investment and building industries in the manufacturing and internationally tradeable services sectors.\n\nPreviously, he was responsible for EDB's activities in innovation & industry incubation and led efforts to foster industry-science linkages. In 2010, he was also the founding director of the Singapore Biomedical Sciences Industry Partnership Office, a unique inter-agency government organisation. In this role, he worked with senior Singapore scientists to partner industry to translate science to medicine, and with industry partners that undertook R&D projects requiring the capabilities of multiple Singapore agencies in basic sciences and clinical research.\n\nMr Beh is a Sundstrand-EDB and Glaxo-EDB scholar who graduated from the University of California, Berkeley with an MSc in Electrical Engineering, as well as a BSc in Electrical & Computer Engineering from the University of Illinois at Urbana-Champaign. ",
-      },
-    ],
+    country: "Singapore 🇸🇬",
+    name: "Cedar Girls' Secondary School",
+    image: "/images/profiles/schools/33.webp"
   },
-];
+  {
+    country: "Singapore 🇸🇬",
+    name: "CHIJ St. Nicholas Girls' School",
+    image: "/images/profiles/schools/1.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "CHIJ St. Theresa's Convent",
+    image: "/images/profiles/schools/2.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Clementi Town Secondary School",
+    image: "/images/profiles/schools/4.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Dunman High School",
+    image: "/images/profiles/schools/5.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "East Spring Secondary School",
+    image: "/images/profiles/schools/36.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Hwa Chong Institution",
+    image: "/images/profiles/schools/6.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Loyang View Secondary SChool",
+    image: "/images/profiles/schools/34.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Methodist Girls' School",
+    image: "/images/profiles/schools/9.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Nan Chiau High School",
+    image: "/images/profiles/schools/10.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "National Junior College",
+    image: "/images/profiles/schools/12.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Nanyang Girls' High School",
+    image: "/images/profiles/schools/13.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "NUS High School of Math & Science",
+    image: "/images/profiles/schools/38.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Raffles Girls' School",
+    image: "/images/profiles/schools/16.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Raffles Institution",
+    image: "/images/profiles/schools/17.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "River Valley High School",
+    image: "/images/profiles/schools/18.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "St. Joseph's Institution",
+    image: "/images/profiles/schools/21.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "St. Margaret's Secondary School",
+    image: "/images/profiles/schools/23.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "School of Science and Technology, Singapore",
+    image: "/images/profiles/schools/25.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Singapore Chinese Girls' School",
+    image: "/images/profiles/schools/31.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Tamasek Junior College",
+    image: "/images/profiles/schools/26.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Tanjong Katong Secondary School",
+    image: "/images/profiles/schools/28.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Victoria Junior College",
+    image: "/images/profiles/schools/29.webp"
+  },
+  {
+    country: "Singapore 🇸🇬",
+    name: "Zhonghua Secondary School",
+    image: "/images/profiles/schools/30.webp"
+  },
+  {
+    country: "Australia 🇦🇺",
+    name: "Presbyterian Ladies' College, Sydney",
+    image: "/images/profiles/schools/15.webp"
+  },
+  {
+    country: "Brunei 🇧🇳",
+    name: "Ministry of Education, Brunei Darussalam",
+    image: "/images/profiles/schools/37.webp"
+  },
+  {
+    country: "Chinese Taipei 🇹🇼",
+    name: "Taipei Municipal Jianguo High School",
+    image: "/images/profiles/schools/27.webp"
+  },
+  {
+    country: "Indonesia 🇮🇩",
+    name: "SMA Negeri 4 Denpasar",
+    image: "/images/profiles/schools/22.webp"
+  },
+  {
+    country: "Japan 🇯🇵",
+    name: "National Institution of Technology (KOSEN), Yonago College",
+    image: "/images/profiles/schools/11.webp"
+  },
+  {
+    country: "Malaysia 🇲🇾",
+    name: "Penang Chung Ling High School",
+    image: "/images/profiles/schools/32.webp"
+  },
+  {
+    country: "Malaysia 🇲🇾",
+    name: "Sekolah Sultan Alam Shah, Putrajaya",
+    image: "/images/profiles/schools/19.webp"
+  },
+  {
+    country: "Mexico 🇲🇽",
+    name: "San Patricio International School",
+    image: "/images/profiles/schools/24.webp"
+  },
+  {
+    country: "The Philippines 🇵🇭",
+    name: "Philippine Science High School Main Campus",
+    image: "/images/profiles/schools/14.webp"
+  }
+]
+
+const aggregatedData = schoolsUnordered.reduce((result, item) => {
+  const country = item.country;
+  if (!result[country]) {
+    result[country] = { country, schools: [] };
+  }
+  result[country].schools.push({ name: item.name, image: item.image });
+  return result;
+}, {});
+
+
+// Convert the aggregated data object back to an array
+const schools = Object.values(aggregatedData).sort((a, b) =>
+  a.country.localeCompare(b.country)
+);
+
+console.log(schools);
+
 </script>
