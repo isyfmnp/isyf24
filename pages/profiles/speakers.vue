@@ -17,6 +17,7 @@
         class="profile"
         v-for="profile in event.profiles"
         :href="'#' + profile.name.replaceAll(' ', '')"
+        @click="resetLink"
       >
         <img class="profile-img" :src="profile.image" alt="" />
         <div class="name">
@@ -28,7 +29,7 @@
 
   <div class="intros">
     <div class="event" v-for="event in profiles">
-      <h2><span class="scroll-banner">{{ event.event.concat("&nbsp;&nbsp;•&nbsp;&nbsp;").repeat(10) }}</span></h2>
+      <h2><span class="scroll-banner">{{ event.event.concat("&nbsp;&nbsp;•&nbsp;&nbsp;").repeat(30) }}</span></h2>
 
       <div class="profile" v-for="profile in event.profiles">
         <div class="scroll-anchor" :id="profile.name.replaceAll(' ', '')"></div>
@@ -50,11 +51,14 @@
 </style>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 
-onMounted(() => {
-
-})
+function resetLink() {
+  setTimeout(() => {
+    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    window.history.pushState({path:newurl},'',newurl);
+  }, 1)
+}
 
 const profiles = [
   {

@@ -259,10 +259,6 @@
   margin-inline: auto;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-400);
-}
-.scroll-prompt * {
-  color: var(--primary-400);
 }
 @media screen and (min-width: 900px) {
   .scroll-prompt {

@@ -1,7 +1,8 @@
 <template>
   <nav :class="{transparent: navTransparent}">
     <a class="stamp" href="/">
-      <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
+      <img class="logo light" src="/icon_light.png" alt="ISYF Logo" />
+      <img class="logo dark" src="/icon_dark.png" alt="ISYF Logo" />
       <div class="text">
         <div class="title">ISYF 2024</div>
       </div>
@@ -10,13 +11,9 @@
     <a class="hamburger" @click="menuOpen = !menuOpen">
       <span class="material-icons">menu</span>
     </a>
-
     <div class="menu" :class="{open: menuOpen}">
       <a class="stamp menu-stamp" href="/">
-        <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
-        <div class="text">
-          <div class="title">ISYF 2024</div>
-        </div>
+        <img class="logo" src="/icon_dark.png" alt="ISYF Logo" />
       </a>
 
       <a class="item close-button" @click="menuOpen = !menuOpen">
@@ -103,12 +100,13 @@ a {
 }
 
 nav {
-  z-index: 10;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 3.5rem;
+  padding-top: 0.375rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,6 +121,7 @@ nav.transparent {
   top: 1rem;
   left: 1rem;
   right: 1rem;
+  padding-top: 0;
 
   background-color: transparent;
   box-shadow: none;
@@ -137,9 +136,7 @@ nav.transparent {
 /* ========== STAMP ========== */
 .stamp {
   padding: 1rem;
-  padding-top: 4rem;
   padding-left: 1.5rem;
-  margin-top: -3rem;
   width: fit-content;
 
   display: flex;
@@ -149,9 +146,21 @@ nav.transparent {
 
   transform: translateY(2px);
 }
+.transparent .stamp {
+  margin-left: -0.25rem;
+}
 
 .stamp .logo {
   height: 2rem;
+}
+.dark {
+  display: none;
+}
+.transparent .light {
+  display: none;
+}
+.transparent .dark {
+  display: block;
 }
 
 .stamp .text {
@@ -159,6 +168,12 @@ nav.transparent {
   flex-direction: column;
   align-items: left;
   gap: 0.75rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .transparent .stamp .text {
+    display: none;
+  }
 }
 
 .stamp .text .title {
@@ -183,6 +198,9 @@ nav.transparent {
   padding: 1rem 2rem;
 }
 
+.transparent .hamburger {
+  margin-right: -0.25rem;
+}
 .transparent .hamburger .material-icons {
   color: white;
 }
@@ -198,18 +216,11 @@ nav.transparent {
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity 200ms, visibility 200ms, right 200ms, left 200ms;
+  transition: opacity 200ms, visibility 200ms;
 }
 .menu.open {
   opacity: 1;
   visibility: visible;
-}
-.transparent .menu {
-  top: -1.1rem;
-}
-.transparent .menu.open {
-  left: -1.1rem;
-  right: -1.1rem;
 }
 
 .menu.open {
@@ -217,13 +228,13 @@ nav.transparent {
   right: 0;
 }
 .menu {
-  z-index: 20;
+  z-index: 120;
   position: fixed;
   top: 0;
-  left: 1.1rem;
-  right: 1.1rem;
+  left: 0;
+  right: 0;
   height: 100vh;
-  padding: 2rem 4rem 1.875rem 2rem;
+  padding: 1.125rem 4rem 1.875rem 1.5rem;
   margin: 0;
 
   display: flex;
@@ -240,10 +251,28 @@ nav.transparent {
   background-color: var(--bg);
   box-shadow: 0px 0px 20px 2px #272f3d44;
 }
+.transparent .menu {
+  padding-top: 2rem;
+}
+@supports (-moz-appearance:none) {
+  .transparent .menu {
+    left: -1.01rem;
+    right: -1.01rem;
+    top: -1.01rem;
+  }
+}
 
 .menu .stamp {
   padding: 0;
-  margin: -3px 0 0.25rem -0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+.transparent .menu .stamp {
+  margin: -3.5px 0 1rem 0.32rem;
+  transition: 100ms margin;
+}
+.transparent .menu.open .stamp {
+  margin-left: -0.5rem;
 }
 
 .menu .item {
@@ -284,7 +313,6 @@ nav.transparent {
   gap: 0.5rem;
   width: 100%;
 
-
   transform: translateY(-110px);
   transition: transform 200ms;
 }
@@ -306,14 +334,19 @@ nav.transparent {
   transform: translateY(0);
 }
 
+
 .menu .item.close-button {
   position: absolute;
   z-index: 21;
-  top: 1.75rem;
-  right: 2.5rem;
+  top: 0.85rem;
+  right: 2rem;
   width: fit-content;
   transform: scale(1.2);
   cursor: pointer;
+}
+.transparent .menu .item.close-button {
+  top: 1.7rem;
+  right: 2.75rem;
 }
 
 .socials {
@@ -321,7 +354,7 @@ nav.transparent {
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   padding-inline: 0.625rem;
 
   box-sizing: content-box;
