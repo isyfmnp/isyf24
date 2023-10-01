@@ -10,8 +10,8 @@
     <section>
       <h2>
         This Year's Theme:
-        <PrimaryHighlight
-          >Science and Technology for Humanity: Building a Sustainable Future
+        <PrimaryHighlight>
+          Science and Technology for Humanity: Building a Sustainable Future
         </PrimaryHighlight>
       </h2>
 
@@ -42,7 +42,7 @@
     </section>
 
     <section class="colored goal">
-      <h2>Our Goals</h2>
+      <h2><PrimaryHighlight>Our Goals</PrimaryHighlight></h2>
 
       <h3>To Inspire Passion for Science Among Youth</h3>
       <p>
@@ -76,6 +76,7 @@
         evolving education landscape.
       </p>
     </section>
+    <p>asdasdsad</p>
   </main>
 </template>
 

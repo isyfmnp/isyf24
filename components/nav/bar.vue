@@ -63,7 +63,7 @@
           </ul>
         </div>
       </div>
-      <a class="item">
+      <a class="item" href="/media">
         <span class="material-icons-outlined">image</span>
         Media
       </a>
