@@ -2,7 +2,7 @@
   <div class="footer-wrapper">
     <div class="footer">
       <section class="stamp">
-        <img class="logo" src="/images/ISYF_logo.png" alt="ISYF Logo" />
+        <img class="logo" src="/icon_light.png" alt="ISYF Logo" />
 
         <div class="credits">
           <span class="copyright">

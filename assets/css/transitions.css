@@ -17,24 +17,24 @@
   transition: top var(--trn-time) var(--trn-func),
     bottom var(--trn-time) var(--trn-func),
     background-color var(--trn-time) cubic-bezier(0.75, 0, 0.25, 1);
-  background-color: rgba(var(--bg-rgb), 90%);
-  border-block: 1px solid rgba(var(--fg-rgb), 50%);
+  background-color: hsla(var(--bg-hsla), 90%);
+  border-block: 1px solid hsla(var(--fg-hsla), 50%);
 }
 .page-leave-from::before {
   top: 100vh;
-  background-color: rgba(var(--bg-rgb), 90%);
+  background-color: hsla(var(--bg-hsla), 90%);
 }
 .page-leave-to::before {
   top: 0;
-  background-color: rgba(var(--bg-rgb), 99%);
+  background-color: hsla(var(--bg-hsla), 99%);
 }
 .page-enter-from::before {
   bottom: 0;
-  background-color: rgba(var(--bg-rgb), 99%);
+  background-color: hsla(var(--bg-hsla), 99%);
 }
 .page-enter-to::before {
   bottom: 100vh;
-  background-color: rgba(var(--bg-rgb), 90%);
+  background-color: hsla(var(--bg-hsla), 90%);
 }
 
 .scroll-shown.scroll-shown {
@@ -45,7 +45,7 @@
   opacity: 0;
   transform: translateY(25px);
   transition-property: opacity, transform;
-  transition-duration: 500ms;
+  transition-duration: 200ms;
   transition-timing-function: ease-in-out;
   transition-delay: var(--delay);
 }

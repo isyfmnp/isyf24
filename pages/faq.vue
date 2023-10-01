@@ -1,12 +1,10 @@
 <template>
   <div>
-    <Masthead>
-      <h1>FAQ</h1>
-      <h3>
-        We know you're bound to have many questions about ISYF, so we compiled a
-        list of the most important questions about your experience!
-      </h3>
-    </Masthead>
+    <h1>FAQ</h1>
+    <p>
+      We know you're bound to have many questions about ISYF, so we compiled a
+      list of the most important questions about your experience!
+    </p>
 
     <main>
       <div
@@ -107,8 +105,4 @@ const questions = {
 };
 
 const sectionsOpen = ref(Array(Object.keys(questions).length).fill(false));
-
-definePageMeta({
-  layout: "masthead",
-});
 </script>
