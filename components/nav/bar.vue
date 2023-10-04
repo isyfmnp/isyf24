@@ -111,7 +111,6 @@ nav {
   left: 0;
   right: 0;
   height: 3.5rem;
-  padding-top: 0.375rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,8 +147,6 @@ nav.transparent {
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-
-  transform: translateY(2px);
 }
 .transparent .stamp {
   margin-left: -0.25rem;
@@ -256,9 +253,6 @@ nav.transparent {
   background-color: var(--bg);
   box-shadow: 0px 0px 20px 2px #272f3d44;
 }
-.transparent .menu {
-  padding-top: 2rem;
-}
 @supports (-moz-appearance:none) {
   .transparent .menu {
     left: -1.01rem;
@@ -296,10 +290,7 @@ nav.transparent {
   text-transform: uppercase;
   font-family: var(--font-display);
   transition: color 100ms;
-  transform: translateY(5px);
-}
-.closed .item-text {
-  transform: translateY(3px);
+  transform: translateY(2px);
 }
 
 .menu .subitems-wrapper {
@@ -309,7 +300,7 @@ nav.transparent {
 }
 .menu .subitems {
   list-style: none;
-  margin: 0.5rem 0 0.75rem;
+  margin: 0.45rem 0 0.75rem;
   padding-left: 0.5rem;
 
   display: flex;
@@ -409,6 +400,7 @@ nav.transparent {
     padding: 0 2rem;
 
     flex-direction: row;
+    align-items: center;
     gap: 1.5rem;
 
     background-color: transparent;
@@ -440,6 +432,8 @@ nav.transparent {
     font-weight: 500;
 
     transition: color 200ms linear;
+    display: flex;
+    align-items: center;
   }
   .menu .subitems .icon {
     display: none;
@@ -472,7 +466,7 @@ nav.transparent {
   .menu .subitems-wrapper {
     z-index: -1;
     position: absolute;
-    top: 55px;
+    top: 53px;
     left: -1.5rem;
     padding: 0 2rem 2rem;
     margin: 0 -2rem -2rem;
