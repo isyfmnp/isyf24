@@ -265,13 +265,15 @@ nav.transparent {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0.75rem;
-}
-.transparent .menu .stamp {
-  margin: -3.5px 0 1rem 0.32rem;
+  margin-left: -2rem;
   transition: 100ms margin;
 }
-.transparent .menu.open .stamp {
-  margin-left: -0.5rem;
+.menu.open .stamp {
+  margin-left: -0.25rem;
+}
+.transparent .menu .stamp {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .menu .item {
