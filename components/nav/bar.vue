@@ -57,12 +57,7 @@
         </div>
       </div>
       <a class="item" href="/media">
-<<<<<<< HEAD
-        <span class="material-icons-outlined">image</span>
-        Media
-=======
         <span class="item-text">Media</span>
->>>>>>> f5a59769579ac5553c054f1af00b9c896effff54
       </a>
 
       <a class="item" href="/faq">
