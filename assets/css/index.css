@@ -102,7 +102,7 @@ h3 {
 
 p {
   line-height: 1.6rem;
-  margin: 1rem 0;
+  margin: 1rem 0 1.75rem;
 }
 a {
   color: var(--fg);
