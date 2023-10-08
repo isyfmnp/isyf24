@@ -117,16 +117,12 @@ nav {
     right 100ms;
 }
 nav.transparent {
-  top: 1rem;
-  left: 1rem;
-  right: 1rem;
   padding-top: 0;
 
   background-color: transparent;
   box-shadow: none;
   backdrop-filter: blur(50px);
-  border-radius: 8px;
-  border: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
 
   --fg: var(--gray-100);
   --bg: var(--gray-900);
