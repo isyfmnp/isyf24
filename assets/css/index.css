@@ -5,7 +5,7 @@
   --content-width: 1100px;
   --outer-width: 1150px;
 
-  --fs: 18px;
+  --fs: 16px;
   --font: "IBM Plex Sans", "Open Sans", "Helvetica Now Display DW", sans-serif;
   --font-display: "Josefin Sans", "IBM Plex Sans", "Open Sans",
     "Helvetica Now Display DW", sans-serif;
@@ -80,14 +80,14 @@ body {
 h1 {
   font-family: var(--font-display);
   font-size: 48px;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
   font-weight: bold;
 }
 h2 {
   font-size: 34px;
   font-family: var(--font-display);
   line-height: 1.5em;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 -0.5rem;
   font-weight: bold;
 }
 h3 {
@@ -101,8 +101,8 @@ h3 {
 }
 
 p {
-  line-height: 1.6;
-  margin: 1.25rem 0;
+  line-height: 1.6rem;
+  margin: 1rem 0;
 }
 a {
   color: var(--fg);
@@ -148,8 +148,10 @@ main {
 }
 
 section {
-  margin-block: 1rem;
-  padding-block: 1rem 1.5rem;
+  margin-block: 2rem;
+}
+section.colored {
+  padding-block: 1rem;
 }
 
 img svg {

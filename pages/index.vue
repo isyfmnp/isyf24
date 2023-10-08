@@ -18,7 +18,7 @@
     </Masthead>
 
     <main>
-      <section class="cards">
+      <section>
         <div>
           <h2>What is ISYF?</h2>
           <p>
@@ -40,7 +40,9 @@
           </p>
           <p>We hope to see you at ISYF!</p>
         </div>
-
+      </section>
+        
+      <section>
         <div>
           <h2>What will you get to do?</h2>
           <p>
@@ -105,7 +107,7 @@
           of Education (MOE).
         </p>
         <ul class="supporters">
-          <a href="https://www.hci.edu.sg" target="_blank" style="scale: 1.125">
+          <a href="https://www.hci.edu.sg" target="_blank">
             <img src="/images/logos/hc_logo.png" alt="" />
           </a>
           <a href="https://www.moe.gov.sg" target="_blank">
@@ -123,7 +125,6 @@
           <a
             href="https://www.ntu.edu.sg/ias"
             target="_blank"
-            style="scale: 1.125"
           >
             <img src="/images/logos/ntuias_logo.png" alt="" />
           </a>
@@ -300,15 +301,13 @@
 /* ========== SUPPORTING ORGANISATIONS ========== */
 .supporters {
   list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  place-items: center;
 
-  padding: 1rem;
+  padding: 0;
   border-radius: 8px;
+  overflow: hidden;
   border: 1px solid var(--fg);
 }
 @media screen and (min-width: 950px) {
@@ -316,22 +315,37 @@
     justify-content: flex-start;
   }
 }
-
 .supporters > * {
-  width: 15rem;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
-.supporters span {
+.supporters > *::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(101%);
+  transition: 200ms transform;
+
+  background-color: var(--primary-100);
+}
+.supporters > *:hover::after {
+  transform: translateY(0);
+}
+
+.
+supporters span {
   text-align: center;
   text-style: italic;
   font-size: 14px;
   opacity: 0.75;
 }
 .supporters img {
-  width: 10rem;
+  width: 100%;
 }
 </style>
 

@@ -2,16 +2,12 @@
   <div class="footer-wrapper">
     <div class="footer">
       <section class="stamp">
-        <img class="logo" src="/icon_light.png" alt="ISYF Logo" />
+        <img class="logo" src="/icon_dark.png" alt="ISYF Logo" />
 
         <div class="credits">
           <span class="copyright">
             © International Science Youth Forum 2024. All rights reserved.
           </span>
-
-          <p>Photos by Studio Ardent and ISYF M&P Team 2024</p>
-
-          <p>Videos by Jane Doe and John Doe</p>
 
           <p style="font-style: italic">
             Any advice and information found on the pages are solely for the
@@ -21,52 +17,47 @@
         </div>
       </section>
 
+      <section>
+        <h1>ORGANIZERS</h1>
+        <div class="organizers">
+          <img
+            src="/images/logos/moe-logo_black.webp"
+            alt="Ministry of Education"
+          />
+          <img
+            class="hc-logo"
+            src="/images/logos/hc_logo.png"
+            alt="Hwa Chong Institution"
+          />
+        </div>
+      </section>
+
       <div class="footer-columns">
         <section>
           <h1 class="header">Socials</h1>
-          <p>
+          <div class="contact-list">
             <a
               class="item"
               href="https://m.facebook.com/isyf.2024/"
               target="_blank"
             >
-              <FacebookIcon />@isyf.2024
+              <FacebookIcon /><span class="full-social">@isyf.2024</span>
             </a>
-          </p>
-          <p>
             <a
               class="item"
               href="https://www.instagram.com/isyf.2024/"
               target="_blank"
             >
-              <InstagramIcon />@isyf.2024
+              <InstagramIcon /><span class="full-social">@isyf.2024</span>
             </a>
-          </p>
-          <p>
             <a
               class="item"
               href="https://www.youtube.com/channel/UCs9CbJcxC2x8OPYiNx5QDTg"
               target="_blank"
             >
-              <YoutubeIcon />@isyfsg
+              <YoutubeIcon /><span class="full-social">@isyfsg</span>
             </a>
-          </p>
-        </section>
-
-        <section>
-          <h1 class="header">Our Parent Organisations</h1>
-          <p>
-            <a href="https://www.hci.edu.sg/" target="_blank"
-              >Hwa Chong Institution</a
-            >
-          </p>
-          <p>
-            <a
-              href="https://hwachongccas.wixsite.com/ccawebsite/ssrc"
-              target="_blank"
-              >Student Science Research Club (SSRC)</a
-            >
-          </p>
+          </div>
         </section>
 
         <section>
@@ -75,20 +66,26 @@
             <div class="contact">
               <span class="material-icons-outlined">mail</span>
               <a href="mailto:reach_isyf@hci.edu.sg" target="_blank"
-                >reach_isyf@hci.edu.sg</a
+                ><span class="full-social">reach_isyf@hci.edu.sg</span></a
               >
             </div>
             <div class="contact">
               <span class="material-icons-outlined">call</span>
-              <a href="tel:+6564683955" target="_blank">+65 6468 3955 </a>
+              <a href="tel:+6564683955" target="_blank"
+                ><span class="full-social">+65 6468 3955</span></a
+              >
             </div>
             <div class="contact">
               <span class="material-icons-outlined">fax</span>
-              <a href="fax:+6567695857" target="_blank">+65 6769 5857</a>
+              <a href="fax:+6567695857" target="_blank"
+                ><span class="full-social">+65 6769 5857</span></a
+              >
             </div>
             <div class="contact">
               <span class="material-icons-outlined">location_on</span>
-              661 Bukit Timah Road, Singapore 269734
+              <span class="full-social"
+                >661 Bukit Timah Road, Singapore 269734</span
+              >
             </div>
           </div>
         </section>
@@ -115,20 +112,19 @@
 }
 
 /* ========== COLUMNS ========== */
+.footer-columns {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 3.5rem;
+}
+.footer-columns section {
+  padding: 0;
+  margin: 0;
+}
 @media screen and (min-width: 600px) {
   .footer-columns {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 0.55fr 1fr;
-    margin-bottom: 3.5rem;
-  }
-  .footer-columns section {
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 900px) {
-  .footer-columns {
-    grid-template-columns: 0.55fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -143,7 +139,7 @@ a:hover {
 }
 
 section {
-  margin-bottom: 3.5rem;
+  margin-block: 1rem;
 }
 
 h1,
@@ -151,7 +147,7 @@ h1,
   display: block;
   font-size: var(--fs);
   font-weight: 800;
-  margin-block: 1.25rem;
+  margin-block: 1rem;
 }
 h1 {
   font-family: var(--font-display);
@@ -165,47 +161,55 @@ p {
 
 /* ========== STAMP ========== */
 .stamp {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr;
   gap: 1rem;
-  align-items: flex-start;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   .stamp {
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
+    display: flex;
+  }
+  .logo {
+    padding: 1rem;
   }
   .credits {
-    width: 70%;
+    grid-column: span 2;
   }
 }
 
 .logo {
   height: 7rem;
   width: 7rem;
-  padding: 1rem;
-  margin-inline: 1rem;
-  background-color: var(--bg);
-  border-radius: 50%;
 }
 
-/* ========== SOCIALS ========== */
+/* ========== ORGANIZERS ========== */
+.organizers {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  place-items: start;
+}
+@media screen and (min-width: 600px) {
+  .organizers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.organizers img {
+  width: min(calc(100% - 4rem), 10rem);
+}
+.hc-logo {
+  filter: grayscale(1) invert(1) contrast(1) brightness(1);
+}
+
+/* ========== SOCIALS & CONTACTS ========== */
 .item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
-.item :deep(svg) {
-  fill: var(--fg);
-  height: 17px;
-  width: 17px;
-  padding: 4px;
-  transform: translateY(1px);
-}
 
-/* ========== CONTACT LIST ========== */
 .contact-list {
   display: flex;
   flex-direction: column;
@@ -216,10 +220,35 @@ p {
   align-items: center;
   gap: 0.75rem;
 }
+
+.item :deep(svg) {
+  fill: var(--fg);
+  height: 1em;
+  width: 1em;
+  padding: 4px;
+  transform: translateY(1px);
+}
+.contact .material-icons-outlined {
+  display: block;
+  width: 1.25em;
+  font-size: 1.25em;
+}
+
+@media screen and (max-width: 600px) {
+  .full-social {
+    display: none;
+  }
+  .contact-list {
+    flex-direction: row;
+  }
+  .contact {
+    gap: 0;
+  }
+}
 </style>
 
 <script setup>
-import InstagramIcon from "./icons/instagram.vue";
-import FacebookIcon from "./icons/facebook.vue";
-import YoutubeIcon from "./icons/youtube.vue";
+import InstagramIcon from './icons/instagram.vue';
+import FacebookIcon from './icons/facebook.vue';
+import YoutubeIcon from './icons/youtube.vue';
 </script>
