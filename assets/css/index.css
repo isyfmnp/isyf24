@@ -1,16 +1,17 @@
 @import url("~/assets/css/transitions.css");
 @import url("https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --content-width: 1100px;
   --outer-width: 1150px;
 
   --fs: 16px;
-  --font: "IBM Plex Sans", "Open Sans", "Helvetica Now Display DW", sans-serif;
-  --font-display: "Josefin Sans", "IBM Plex Sans", "Open Sans",
+  --font: "Fraunces", "Open Sans", "Helvetica Now Display DW", sans-serif;
+  --font-display: "Lexend", "IBM Plex Sans", "Open Sans",
     "Helvetica Now Display DW", sans-serif;
 
-  --primary-hue: 218; 
+  --primary-hue: 179; 
 
   --gray-900-hsla: var(--primary-hue), 17%, 17%;
   --gray-900: hsl(var(--gray-900-hsla));
@@ -31,7 +32,7 @@
   --primary-200: hsl(var(--primary-200-hsla));
   --primary-300: hsl(var(--primary-hue), 100%, 75%);
   --primary-400: hsl(var(--primary-hue), 80%, 70%);
-  --primary-500: hsl(var(--primary-hue), 60%, 58%);
+  --primary-500: hsl(var(--primary-hue), 60%, 40%);
   --primary: var(--primary-500);
   --primary-700: hsl(var(--primary-hue), 62%, 30%);
   --primary-900: hsl(var(--primary-hue), 20%, 30%);

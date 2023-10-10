@@ -160,7 +160,6 @@ nav.transparent {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  transform: translateY(2px);
 }
 
 @media screen and (max-width: 1100px) {
@@ -272,7 +271,6 @@ nav.transparent {
   text-transform: uppercase;
   font-family: var(--font-display);
   transition: color 100ms;
-  transform: translateY(2px);
 }
 
 .menu .subitems-wrapper {

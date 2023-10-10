@@ -114,9 +114,6 @@ ul {
   background-color: var(--primary);
   color: var(--bg);
 }
-.navigator .day .text {
-  transform: translateY(2px);
-}
 
 /* ========== TIMELINE ========== */
 .event-day h2 {
@@ -203,14 +200,10 @@ ul {
 
   width: 80px;
   flex-shrink: 0;
-  transform: translateY(2px);
 }
 @media screen and (min-width: 900px) {
   .event-title {
     flex-direction: row;
-  }
-  .time {
-    transform: translateY(1px);
   }
 }
 
