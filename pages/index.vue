@@ -151,7 +151,6 @@
 
 /* ========== MASTHEAD ========== */
 .masthead {
-  font-family: var(--font-display);
   --fg: var(--gray-100);
   overflow: hidden;
 
@@ -225,7 +224,6 @@
   display: block;
   padding-block: 0.5rem 0.25rem;
 
-  font-family: var(--font-display);
   font-weight: 600;
   font-size: min(5vw, 22px);
   text-transform: uppercase;
@@ -301,7 +299,8 @@
 /* ========== SUPPORTING ORGANISATIONS ========== */
 .supporters {
   list-style: none;
-  display: grid;
+
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   place-items: center;
 
@@ -316,9 +315,13 @@
   }
 }
 .supporters > * {
+  width: 10rem;
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 .supporters > *::after {
   content: '';

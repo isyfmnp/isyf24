@@ -7,8 +7,8 @@
   --outer-width: 1150px;
 
   --fs: 16px;
-  --font: "Fraunces", "Open Sans", "Helvetica Now Display DW", sans-serif;
-  --font-display: "Lexend", "IBM Plex Sans", "Open Sans",
+  --font: "Lexend", "Open Sans", "Helvetica Now Display DW", sans-serif;
+  --font-display: "Fraunces", "IBM Plex Sans", "Open Sans",
     "Helvetica Now Display DW", sans-serif;
 
   --primary-hue: 179; 
