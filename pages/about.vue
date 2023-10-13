@@ -42,7 +42,7 @@
     </section>
 
     <section class="colored goal">
-      <h2><PrimaryHighlight>Our Goals</PrimaryHighlight></h2>
+      <h2>Our Goals</h2>
 
       <h3>To Inspire Passion for Science Among Youth</h3>
       <p>
@@ -76,7 +76,12 @@
         evolving education landscape.
       </p>
     </section>
-    <p>asdasdsad</p>
+
+    <section>
+      <h2>About Singapore</h2>
+
+      <p>[Collaborate with handbook, locale, city skyline, garden city, food & culture]</p>
+    </section>
   </main>
 </template>
 

@@ -39,6 +39,7 @@
             through collaborative projects and cultural exchanges.
           </p>
           <p>We hope to see you at ISYF!</p>
+          <p>[Can be replaced with Co-Chairs' Address, especially if address involves this information]</p>
         </div>
       </section>
         
@@ -52,6 +53,8 @@
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat
           </p>
+
+          <p>[Brief synposis of Programme]</p>
 
           <Button href="/programme" icon="event_note"
             >See Our Full Programme!</Button

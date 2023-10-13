@@ -12,9 +12,6 @@
       <span class="material-icons">menu</span>
     </a>
     <div class="menu" :class="{open: menuOpen}">
-      <a class="stamp menu-stamp" href="/">
-        <img class="logo" src="/icon_dark.png" alt="ISYF Logo" />
-      </a>
 
       <a class="item close-button" @click="menuOpen = !menuOpen">
         <span class="material-icons-outlined">close</span>
