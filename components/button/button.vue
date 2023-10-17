@@ -20,7 +20,7 @@ a {
 
   background-color: var(--primary);
   --fg: var(--gray-100);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 
   transition: background-color 200ms, box-shadow 200ms;
