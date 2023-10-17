@@ -116,6 +116,9 @@
           <a href="https://www.moe.gov.sg" target="_blank">
             <img src="/images/logos/moe_logo.png" alt="" />
           </a>
+          <div class="null"></div>
+          <div class="null"></div>
+          <div class="null"></div>
         </ul>
 
         <br />
@@ -303,7 +306,7 @@
 .supporters {
   list-style: none;
 
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   place-items: center;
 
@@ -318,13 +321,17 @@
   }
 }
 .supporters > * {
+  display: grid;
+  place-items: center;
   width: 10rem;
-  padding: 1.5rem;
+  padding-inline: 1.5rem;
   position: relative;
   overflow: hidden;
   height: 100%;
-  display: grid;
-  place-items: center;
+}
+.supporters .null {
+  height: 0;
+  padding: 0;
 }
 .supporters > *::after {
   content: '';
@@ -338,6 +345,9 @@
   transition: 200ms transform;
 
   background-color: var(--primary-100);
+}
+.supporters > .null::after {
+  content: none;
 }
 .supporters > *:hover::after {
   transform: translateY(0);
