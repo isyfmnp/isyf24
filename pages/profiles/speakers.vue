@@ -7,7 +7,7 @@
   </p>
 
   <div class="collage">
-    <div
+    <section
       class="event"
       v-for="(event, eventIndex) in profiles"
       :class="{ 'event-open': eventsOpen[eventIndex] }"
@@ -24,14 +24,14 @@
           {{ profile.name }}
         </div>
       </a>
-    </div>
+    </section>
   </div>
 
   <div class="intros">
     <div class="event" v-for="event in profiles">
       <h2><span class="scroll-banner">{{ event.event.concat("&nbsp;&nbsp;•&nbsp;&nbsp;").repeat(30) }}</span></h2>
 
-      <div class="profile" v-for="profile in event.profiles">
+      <section class="profile" v-for="profile in event.profiles">
         <div class="scroll-anchor" :id="profile.name.replaceAll(' ', '')"></div>
         <img :src="profile.image" :alt="profile.name" />
         <div class="info">
@@ -41,7 +41,7 @@
             {{ profile.description }}
           </p>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>

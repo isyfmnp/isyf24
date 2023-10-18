@@ -7,7 +7,7 @@
     </p>
 
     <main>
-      <div
+      <section
         class="section-wrapper"
         v-for="(section, title, sectionIndex) in questions"
       >
@@ -28,7 +28,7 @@
             <template #ans>{{ answer }}</template>
           </FAQQuestion>
         </div>
-      </div>
+      </section>
     </main>
   </div>
 </template>

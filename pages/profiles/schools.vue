@@ -2,7 +2,7 @@
   <h1>Participating Schools</h1>
 
   <div class="collage">
-    <div class="event" v-for="country in schools">
+    <section class="event" v-for="country in schools">
       <h3 class="event-title">{{ country.country }}</h3>
       <a
         class="profile"
@@ -12,7 +12,7 @@
         <img class="profile-img" :src="profile.image" alt="" />
         <span class="name">{{ profile.name }}</span>
       </a>
-    </div>
+    </section>
   </div>
 </template>
 

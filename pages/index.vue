@@ -17,7 +17,7 @@
       </div>
     </Masthead>
 
-    <main>
+    <div>
       <section>
         <div>
           <h2>What is ISYF?</h2>
@@ -148,7 +148,7 @@
           </a>
         </ul>
       </section>
-    </main>
+    </div>
   </div>
 </template>
 
@@ -390,20 +390,6 @@ onMounted(() => {
     ease: 'power2.inOut',
     stagger: 0.15,
     delay: 0.5,
-  });
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  const sections = gsap.utils.toArray('main section');
-
-  sections.forEach(section => {
-    gsap.from(section, {
-      opacity: 0,
-      y: 10,
-      duration: 0.5,
-      ease: 'power2.inOut',
-      scrollTrigger: section,
-    });
   });
 });
 
