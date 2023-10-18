@@ -208,6 +208,7 @@ nav.transparent {
 .menu.open {
   left: 0;
   right: 0;
+  letter-spacing: 0.05rem;
 }
 .menu {
   z-index: 120;
@@ -226,6 +227,7 @@ nav.transparent {
   gap: 0.625rem;
 
   user-select: none;
+  font-weight: 400;
 
   --fg: var(--gray-100);
   --bg: var(--gray-900);
