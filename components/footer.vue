@@ -38,13 +38,6 @@
           <div class="contact-list">
             <a
               class="item"
-              href="https://m.facebook.com/isyf.2024/"
-              target="_blank"
-            >
-              <FacebookIcon /><span class="full-social">@isyf.2024</span>
-            </a>
-            <a
-              class="item"
               href="https://www.instagram.com/isyf.2024/"
               target="_blank"
             >
@@ -146,7 +139,7 @@ h1,
 .copyright {
   display: block;
   font-size: var(--fs);
-  font-weight: 800;
+  font-weight: 600;
   margin-block: 1rem;
 }
 h1 {
@@ -249,6 +242,5 @@ p {
 
 <script setup>
 import InstagramIcon from './icons/instagram.vue';
-import FacebookIcon from './icons/facebook.vue';
 import YoutubeIcon from './icons/youtube.vue';
 </script>

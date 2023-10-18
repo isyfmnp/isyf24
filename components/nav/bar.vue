@@ -63,13 +63,6 @@
       <div class="socials">
         <a
           class="item"
-          href="https://m.facebook.com/isyf.2023/"
-          target="_blank"
-        >
-          <FacebookIcon />
-        </a>
-        <a
-          class="item"
           href="https://www.instagram.com/isyf.2023/"
           target="_blank"
         >
@@ -482,7 +475,6 @@ nav.transparent {
 import {ref, onMounted, onUnmounted} from 'vue';
 import {gsap} from 'gsap';
 import InstagramIcon from '../icons/instagram.vue';
-import FacebookIcon from '../icons/facebook.vue';
 import YoutubeIcon from '../icons/youtube.vue';
 
 const profilesOpen = ref(false);
