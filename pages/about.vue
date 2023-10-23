@@ -17,27 +17,35 @@
 
       <!-- TODO: SHORTEN DOWN TO 1/2 PARAS -->
       <p>
-        It has been more than two years since COVID-19 first emerged, bringing
-        about unprecedented challenges and changes for the world. No corner of
-        the world has escaped unscathed.
+        The theme “Science and Technology for Humanity: Building a Sustainable
+        Future” highlights the important role of science and technology in
+        driving sustainable and inclusive development. It reflects the need for
+        a holistic approach to science and technology, considering
+        their benefits for humanity and their accompanying ethical
+        considerations in addressing societal challenges.
       </p>
       <p>
-        However, the pandemic has also provided humankind an invaluable
-        opportunity to rethink some fundamental assumptions and mindsets, and to
-        consider how to build more resilient communities going forward. It has
-        led many people around the world to embark on a journey of accelerating
-        transformation and imagining our world anew, with Science playing a key
-        role in this journey.
+        Responsible and ethical use of science and technology is essential to
+        resolve pressing global challenges such as climate change, inequality
+        and health disparities. At the same time, science and technology have
+        the role of enhancing productivity in order to induce a dynamic
+        transformation of the economy and increase growth rates. It is also
+        important to consider the social, cultural, and ethical implications of
+        scientific and technological advancements, and encourage discussions on
+        how to mitigate potential negative impact and foster positive change
+        through responsible innovation. The possibility of moving towards the
+        free provision of technologies that contribute to meeting human
+        challenges, making them accessible to all can be explored.
       </p>
-
       <p>
-        How can we, as catalysts for change, better drive humankind's progress,
-        anchored on the scientific method and discipline? In the spirit of
-        redefining boundaries and galvanising transformation, ISYF 2023
-        endeavours to inspire delegates to use Science and Technology to lead
-        the change into the future by reconnecting, reimagining, and looking
-        ahead, to create a better world marked by common goals, shared knowledge
-        and global solidarity.
+        In schools, the acquisition and dissemination of scientific knowledge,
+        the building of innovation capabilities, and the push towards the
+        collective goal of building a better world for future generations can be
+        promoted. There is a pressing need for more conversations on the reform
+        of policies and existing measures which can promote public interests in
+        our pursuit of sustainability. If we are able to move forward and each
+        adopt a more sustainable lifestyle, we definitely can make the change
+        and create an impact in not just our own country, but the world.
       </p>
     </section>
 
@@ -80,7 +88,10 @@
     <section>
       <h2>About Singapore</h2>
 
-      <p>[Collaborate with handbook, locale, city skyline, garden city, food & culture]</p>
+      <p>
+        [Collaborate with handbook, locale, city skyline, garden city, food &
+        culture]
+      </p>
     </section>
   </main>
 </template>
@@ -88,7 +99,7 @@
 <style>
 .masthead::before {
   color: var(--bg);
-  background-image: url("/images/aboutbg2.webp");
+  background-image: url('/images/aboutbg2.webp');
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -97,9 +108,9 @@
 </style>
 
 <script setup>
-import PrimaryHighlight from "../components/primaryHighlight.vue";
+import PrimaryHighlight from '../components/primaryHighlight.vue';
 
 definePageMeta({
-  layout: "masthead",
+  layout: 'masthead',
 });
 </script>
