@@ -9,6 +9,9 @@
             © International Science Youth Forum 2024. All rights reserved.
           </span>
 
+          <p>Made with ♡ by Tang Xuyuan and Nguyen Thinh Minh Tuan</p>
+          <p>Special thanks to Studio Ardent for photos & video</p>
+
           <p style="font-style: italic">
             Any advice and information found on the pages are solely for the
             event and educational purposes only. Information related to the
