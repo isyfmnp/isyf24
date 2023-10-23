@@ -20,7 +20,7 @@
 @import url("~/assets/css/profiles.css");
 
 .collage .event {
-  grid-template-columns: repeat(auto-fill, minmax(min(80%, 16rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(80%, 18rem), 1fr));
 }
 .collage .event-title {
   grid-column: span 1;
@@ -29,7 +29,7 @@
 .collage .profile {
   --bg: var(--gray-900);
   grid-column: span 1;
-  aspect-ratio: 2.1;
+  aspect-ratio: 1.9;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: white;
@@ -59,13 +59,8 @@
 const schoolsUnordered = [
   {
     country: "Singapore 🇸🇬",
-    name: "Bendemeer Secondary School",
-    image: "/images/profiles/schools/35.webp"
-  },
-  {
-    country: "Singapore 🇸🇬",
-    name: "Cedar Girls' Secondary School",
-    image: "/images/profiles/schools/33.webp"
+    name: "Anglican High School",
+    image: "/images/profiles/schools/.webp"
   },
   {
     country: "Singapore 🇸🇬",
@@ -89,18 +84,8 @@ const schoolsUnordered = [
   },
   {
     country: "Singapore 🇸🇬",
-    name: "East Spring Secondary School",
-    image: "/images/profiles/schools/36.webp"
-  },
-  {
-    country: "Singapore 🇸🇬",
     name: "Hwa Chong Institution",
     image: "/images/profiles/schools/6.webp"
-  },
-  {
-    country: "Singapore 🇸🇬",
-    name: "Loyang View Secondary SChool",
-    image: "/images/profiles/schools/34.webp"
   },
   {
     country: "Singapore 🇸🇬",
@@ -159,11 +144,6 @@ const schoolsUnordered = [
   },
   {
     country: "Singapore 🇸🇬",
-    name: "Singapore Chinese Girls' School",
-    image: "/images/profiles/schools/31.webp"
-  },
-  {
-    country: "Singapore 🇸🇬",
     name: "Tamasek Junior College",
     image: "/images/profiles/schools/26.webp"
   },
@@ -183,9 +163,14 @@ const schoolsUnordered = [
     image: "/images/profiles/schools/30.webp"
   },
   {
+    country: "Singapore 🇸🇬",
+    name: "Xinmin Secondary School",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
     country: "Australia 🇦🇺",
-    name: "Presbyterian Ladies' College, Sydney",
-    image: "/images/profiles/schools/15.webp"
+    name: "Brisbane Girls Grammar School",
+    image: "/images/profiles/schools/.webp"
   },
   {
     country: "Brunei 🇧🇳",
@@ -193,13 +178,33 @@ const schoolsUnordered = [
     image: "/images/profiles/schools/37.webp"
   },
   {
+    country: "China 🇨🇳",
+    name: "High School Affliated to Southern University of Science & Technology (HSAS)",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
+    country: "Chinese Taipei 🇹🇼",
+    name: "Taipei First Girls' High School",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
     country: "Chinese Taipei 🇹🇼",
     name: "Taipei Municipal Jianguo High School",
     image: "/images/profiles/schools/27.webp"
   },
   {
+    country: "Hong Kong SAR 🇭🇰",
+    name: "Diocesan Girls' School",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
     country: "Indonesia 🇮🇩",
-    name: "SMA Negeri 4 Denpasar",
+    name: "Centre for Young Scientists, Surya Institute",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
+    country: "Indonesia 🇮🇩",
+    name: "SMA Negeri 4 Denpasar High School",
     image: "/images/profiles/schools/22.webp"
   },
   {
@@ -218,15 +223,45 @@ const schoolsUnordered = [
     image: "/images/profiles/schools/19.webp"
   },
   {
-    country: "Mexico 🇲🇽",
-    name: "San Patricio International School",
-    image: "/images/profiles/schools/24.webp"
-  },
-  {
     country: "The Philippines 🇵🇭",
     name: "Philippine Science High School Main Campus",
     image: "/images/profiles/schools/14.webp"
-  }
+  },
+  {
+    country: "Republic of Korea 🇰🇷",
+    name: "Korea Science Academy of KAIST",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
+    country: "Thailand 🇹🇭",
+    name: "Kamnoetvidya Science Academy",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
+    country: "Cambodia 🇰🇭",
+    name: "The Angkor Intellectual Academy",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
+    country: "Cambodia 🇰🇭",
+    name: "New Generation School Preah Sisowath High School",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
+    country: "United Kingdom 🇬🇧",
+    name: "Camborne Science and International Academy",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
+    country: "United States of America 🇺🇸",
+    name: "Loudoun County Academy of Science",
+    image: "/images/profiles/schools/.webp"
+  },
+  {
+    country: "Vietnam 🇻🇳",
+    name: "Hanoi-Amsterdam High School for the Gifted",
+    image: "/images/profiles/schools/.webp"
+  },
 ]
 
 const aggregatedData = schoolsUnordered.reduce((result, item) => {
