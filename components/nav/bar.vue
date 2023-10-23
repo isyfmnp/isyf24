@@ -63,7 +63,7 @@
       <div class="socials">
         <a
           class="item"
-          href="https://www.instagram.com/isyf.2023/"
+          href="https://www.instagram.com/isyf.2024/"
           target="_blank"
         >
           <InstagramIcon />
