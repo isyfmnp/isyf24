@@ -62,7 +62,7 @@ h2 {
 .expand-all .icon {
   color: var(--fg);
   scale: 0.75;
-  transition: transform 200ms;
+  transition: transform 75ms cubic-bezier(.77,0,.175,1);
 }
 .expand-all.opened .icon {
   transform: rotate(-180deg);

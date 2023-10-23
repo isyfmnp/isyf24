@@ -19,7 +19,7 @@
   padding: 0 1rem;
   border-radius: 16px;
   border: 1px solid var(--fg);
-  transition: border 200ms;
+  transition: border 75ms cubic-bezier(.77,0,.175,1);
 }
 .faq-wrapper.opened {
   border: 1px solid var(--primary);
