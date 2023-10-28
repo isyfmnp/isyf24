@@ -45,7 +45,8 @@
 }
 
 .faq-qn h3 {
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 400;
   font-size: 20px;
   margin-block: 0;
   padding-block: 0.875rem 0.625rem;
