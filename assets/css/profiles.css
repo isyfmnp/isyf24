@@ -149,8 +149,9 @@
   }
 
   .intros img {
-    height: 16rem;
     width: 16rem;
+    aspect-ratio: auto;
+    height: fit-content;
   }
 
   .intros .profile h3 {
