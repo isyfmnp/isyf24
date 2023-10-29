@@ -20,29 +20,40 @@
     <div>
       <section>
         <div>
-          <h2>What is ISYF?</h2>
+          <p>Dear Student Delegates and Educators,</p>
           <p>
-            ISYF 2024 endeavours to inspire delegates to use Science and
-            Technology to lead the change into the future by reconnecting,
-            reimagining, and looking ahead, to create a better world marked by
-            common goals, shared knowledge and global solidarity.
+            Welcome to the 16th International Science Youth Forum (ISYF) @
+            Singapore, held from 8 to 12 January 2024!
           </p>
           <p>
-            The International Science Youth Forum (ISYF) is a prestigious
-            science enrichment programme for top research students from all over
-            the world, hosted by Hwa Chong Institution’s Student Science
-            Research Club (SSRC). The delegates of ISYF will have the
-            opportunity to participate in a multitude of exciting and meaningful
-            activities, which include intellectual discourse with Nobel
-            laureates and eminent scientists who utilise technology and data to
-            make decisions. Delegates will also be able to network with peers
-            through collaborative projects and cultural exchanges.
+            ISYF provides a platform for student delegates from around the world
+            to share their passion for science, technology and research whilst
+            building long-lasting friendships. We hope that you will enjoy the
+            lineup of activities meticulously planned by our Organising
+            Committee!
           </p>
-          <p>We hope to see you at ISYF!</p>
-          <p>[Can be replaced with Co-Chairs' Address, especially if address involves this information]</p>
+          <p>
+            The theme for this year’s ISYF is: “Science and Technology for
+            Humanity: Building a Sustainable Future”. In a world challenged by
+            climate change and worsening disparities, mankind looks to the
+            potential of science and technology in resolving pressing global
+            issues. Through ISYF, we hope that delegates will consider the role
+            of science and technology in driving sustainable and inclusive
+            development, and be inspired to be the change they want to see.
+          </p>
+          <p>
+            The Organising Committee of ISYF 2024 looks forward to meeting you
+            and we hope that you will have a fruitful time in Singapore!
+          </p>
+          <p>
+            Warmest regards, <br />
+            Ling Jun Quan and Nguyen Chi Mai <br />
+            Co-Chairpersons <br />
+            ISYF 2024 Student Organising Committee <br />
+          </p>
         </div>
       </section>
-        
+
       <section>
         <div>
           <h2>What will you get to do?</h2>
@@ -128,10 +139,7 @@
           organisations:
         </p>
         <ul class="supporters">
-          <a
-            href="https://www.ntu.edu.sg/ias"
-            target="_blank"
-          >
+          <a href="https://www.ntu.edu.sg/ias" target="_blank">
             <img src="/images/logos/ntuias_logo.png" alt="" />
           </a>
           <a href="https://nus.edu.sg" target="_blank">
@@ -153,7 +161,7 @@
 </template>
 
 <style>
-@import url("~/assets/css/cards.css");
+@import url('~/assets/css/cards.css');
 
 /* ========== MASTHEAD ========== */
 .masthead {
@@ -248,12 +256,13 @@
     padding-inline: 0.5rem;
     width: fit-content;
   }
-.masthead .detail + .detail {
+  .masthead .detail + .detail {
     border-top: none;
   }
 }
 
-.masthead .detail, .scroll-prompt {
+.masthead .detail,
+.scroll-prompt {
   text-shadow: 0 0 20px var(--gray-900);
 }
 
@@ -353,8 +362,7 @@
   transform: translateY(0);
 }
 
-.
-supporters span {
+. supporters span {
   text-align: center;
   text-style: italic;
   font-size: 14px;
