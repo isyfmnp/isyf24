@@ -342,6 +342,20 @@
   height: 0;
   padding: 0;
 }
+.supporters > *::before {
+  content: 'open_in_new';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-family: 'Material Icons Outlined';
+  color: var(--bg);
+  background-color: var(--primary);
+  padding: 0.25rem;
+  border-radius: 4px;
+  
+  transform: translateX(3rem);
+  transition: 200ms transform;
+}
 .supporters > *::after {
   content: '';
   position: absolute;
@@ -357,6 +371,9 @@
 }
 .supporters > .null::after {
   content: none;
+}
+.supporters > *:hover::before {
+  transform: translateX(0);
 }
 .supporters > *:hover::after {
   transform: translateY(0);
