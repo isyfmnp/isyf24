@@ -6,24 +6,27 @@
   <div class="letter-stripe" />
 </template>
 
-<style scoped>
+<style>
 .letter {
   position: relative;
   display: block;
   background-color: hsla(var(--gray-100-hsla), 0.95);
-  margin: 4rem -1.5rem 6rem;
+  margin: 4rem -1.5rem 7rem;
   padding: 0.125rem 1.5rem;
   font-weight: 400;
-  font-size: calc(var(--fs) + 3px);
+  font-family: var(--font-display);
+}
+.letter p {
+  line-height: 1.5rem;
 }
 .letter::before {
   content: '';
   z-index: -10;
   position: absolute;
-  top: -2rem;
-  bottom: -2rem;
-  left: -0.5rem;
-  right: -0.5rem;
+  top: -3rem;
+  bottom: -3rem;
+  left: -0.75rem;
+  right: -0.75rem;
  
   --clr-1: var(--bg);
   --clr-2: var(--primary);
