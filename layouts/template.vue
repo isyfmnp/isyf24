@@ -6,9 +6,9 @@
     <NavBar />
     <ButtonScroll />
 
-    <div id="body">
+    <main id="body">
       <slot />
-    </div>
+    </main>
 
     <Footer />
   </div>
@@ -24,10 +24,28 @@
 </style>
 
 <script setup>
-import ButtonScroll from "../components/button/scroll.vue";
-import { ref, onMounted } from "vue";
+import ButtonScroll from '../components/button/scroll.vue';
+import {ref, onMounted} from 'vue';
+
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 const height = ref(0);
 onMounted(() => {
   window.error = false;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const sections = gsap.utils.toArray('main section');
+
+  sections.forEach(section => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 10,
+      duration: 0.5,
+      ease: 'power2.inOut',
+      scrollTrigger: section,
+    });
+  });
 });
 </script>

@@ -5,7 +5,7 @@
       <img class="logo" src="/icon_light.png" alt="ISYF Logo" />
       <div class="info">
         <div class="detail-list">
-          <span class="detail"> 15-19 January 2023 </span>
+          <span class="detail"> 8-12 January 2024 </span>
           <span class="detail"> Hwa Chong Institution (Singapore) </span>
         </div>
         <h1 class="title">International Science Youth Forum 2024</h1>
@@ -17,7 +17,7 @@
       </div>
     </Masthead>
 
-    <main>
+    <div>
       <section>
         <div>
           <h2>What is ISYF?</h2>
@@ -74,7 +74,7 @@
           They should:
         </p>
         <ul>
-          <li>Be between 16 and 17 years of age in 2023,</li>
+          <li>Be between 16 and 17 years of age in 2024,</li>
           <li>Be within the top tier of their respective Science cohorts,</li>
           <li>
             Have substantial experience in science research or competitions,
@@ -148,7 +148,7 @@
           </a>
         </ul>
       </section>
-    </main>
+    </div>
   </div>
 </template>
 
@@ -390,20 +390,6 @@ onMounted(() => {
     ease: 'power2.inOut',
     stagger: 0.15,
     delay: 0.5,
-  });
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  const sections = gsap.utils.toArray('main section');
-
-  sections.forEach(section => {
-    gsap.from(section, {
-      opacity: 0,
-      y: 10,
-      duration: 0.5,
-      ease: 'power2.inOut',
-      scrollTrigger: section,
-    });
   });
 });
 

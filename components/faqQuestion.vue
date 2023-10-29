@@ -19,7 +19,7 @@
   padding: 0 1rem;
   border-radius: 16px;
   border: 1px solid var(--fg);
-  transition: border 200ms;
+  transition: border 75ms cubic-bezier(.77,0,.175,1);
 }
 .faq-wrapper.opened {
   border: 1px solid var(--primary);
@@ -45,7 +45,8 @@
 }
 
 .faq-qn h3 {
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 400;
   font-size: 20px;
   margin-block: 0;
   padding-block: 0.875rem 0.625rem;

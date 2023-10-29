@@ -54,7 +54,6 @@
     --bg: var(--primary);
     --fg: var(--gray-100);
     border: 1px solid var(--bg);
-    box-shadow: 0px 0px 20px 2px #272f4066;
   }
 }
 

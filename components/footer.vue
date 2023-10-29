@@ -9,6 +9,9 @@
             © International Science Youth Forum 2024. All rights reserved.
           </span>
 
+          <p>Made with ♡ by Tang Xuyuan and Nguyen Thinh Minh Tuan</p>
+          <p>Special thanks to Studio Ardent for photos & video</p>
+
           <p style="font-style: italic">
             Any advice and information found on the pages are solely for the
             event and educational purposes only. Information related to the
@@ -36,13 +39,6 @@
         <section>
           <h1 class="header">Socials</h1>
           <div class="contact-list">
-            <a
-              class="item"
-              href="https://m.facebook.com/isyf.2024/"
-              target="_blank"
-            >
-              <FacebookIcon /><span class="full-social">@isyf.2024</span>
-            </a>
             <a
               class="item"
               href="https://www.instagram.com/isyf.2024/"
@@ -146,7 +142,7 @@ h1,
 .copyright {
   display: block;
   font-size: var(--fs);
-  font-weight: 800;
+  font-weight: 600;
   margin-block: 1rem;
 }
 h1 {
@@ -249,6 +245,5 @@ p {
 
 <script setup>
 import InstagramIcon from './icons/instagram.vue';
-import FacebookIcon from './icons/facebook.vue';
 import YoutubeIcon from './icons/youtube.vue';
 </script>

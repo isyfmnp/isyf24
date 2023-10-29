@@ -63,14 +63,7 @@
       <div class="socials">
         <a
           class="item"
-          href="https://m.facebook.com/isyf.2023/"
-          target="_blank"
-        >
-          <FacebookIcon />
-        </a>
-        <a
-          class="item"
-          href="https://www.instagram.com/isyf.2023/"
+          href="https://www.instagram.com/isyf.2024/"
           target="_blank"
         >
           <InstagramIcon />
@@ -215,6 +208,7 @@ nav.transparent {
 .menu.open {
   left: 0;
   right: 0;
+  letter-spacing: 0.05rem;
 }
 .menu {
   z-index: 120;
@@ -233,6 +227,7 @@ nav.transparent {
   gap: 0.625rem;
 
   user-select: none;
+  font-weight: 400;
 
   --fg: var(--gray-100);
   --bg: var(--gray-900);
@@ -482,7 +477,6 @@ nav.transparent {
 import {ref, onMounted, onUnmounted} from 'vue';
 import {gsap} from 'gsap';
 import InstagramIcon from '../icons/instagram.vue';
-import FacebookIcon from '../icons/facebook.vue';
 import YoutubeIcon from '../icons/youtube.vue';
 
 const profilesOpen = ref(false);

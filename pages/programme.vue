@@ -126,6 +126,7 @@ ul {
 .event-day h3 {
   text-transform: uppercase;
   font-weight: bold;
+  font-style: normal;
   font-family: var(--font-display);
   margin-block: 0;
   line-height: 1.5rem;
@@ -178,7 +179,8 @@ ul {
 }
 
 .event-details {
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
 }
 .event-title {
   display: flex;
@@ -192,13 +194,12 @@ ul {
 
 .time {
   display: block;
-  font-style: italic;
   font-weight: 300;
   font-size: 20px;
   white-space: nowrap;
-  font-family: var(--font-display);
+  font-family: var(--font);
+  padding-right: 1rem;
 
-  width: 80px;
   flex-shrink: 0;
 }
 @media screen and (min-width: 900px) {
@@ -263,6 +264,7 @@ ul {
 }
 .event-day h3::before {
   left: -2.625rem;
+  top: 0.125rem;
   width: 1.25rem;
   height: 1.25rem;
 }
@@ -279,91 +281,133 @@ ul {
 import { onMounted } from "vue";
 
 const days = [
-  "Day 1 (15 Jan)",
-  "Day 2 (16 Jan)",
-  "Day 3 (17 Jan)",
-  "Day 4 (18 Jan)",
-  "Day 5 (19 Jan)",
+  "Day 0 (7 Jan)",
+  "Day 1 (8 Jan)",
+  "Day 2 (9 Jan)",
+  "Day 3 (10 Jan)",
+  "Day 4 (11 Jan)",
+  "Day 6 (12 Jan)",
 ];
 
 const events = [
   [
     {
-      name: "Introduction to Team Project Challenge",
-      time: "8:30AM",
-      image: "/dummyImage.png",
-      description:
-        "The Team Project Challenge is a signature ISYF event that started in 2019. Participants will have 5 days to work with their teams to ideate and prototype a product based on a challenge theme. Delegates will be sure to channel their inner makers and hone their problem solving skills to showcase their creativity and scientific knowledge. Leveraging on the diversity of ISYF's delegation, we hope that participants are able to gather their strengths to create something truly unique and deepen their appreciation for Science.",
-    },
-    {
-      name: "Amazing Tour",
-      time: "12:30PM",
-      description:
-        "Explore Singapore and get to know your teams better through this Amazing Tour around Singapore! Delegates will get to experience uniquely Singapore cuisines and learn more about Singapore. Do take this chance to connect with your fellow delegates!",
-    },
+      name: "Arrival of Delegates",
+      time: "~",
+      description: "Welcome to Singapore!"
+    }
   ],
   [
     {
-      name: "Dialogue and Master Class Session 1",
-      time: "9:30AM",
-      description:
-        "During the Dialogues & Masterclasses Sessions, delegates can look forward to an exciting and interactive session with the scientists to discover more about their lives and their passion for science. Delegates will have the opportunity to pose questions to the scientists and learn more about careers in Science.",
+      name: "Assembly Announcements",
+      time: "7:30AM"
     },
     {
-      name: "Excursions to OmniTheatre",
-      time: "1:30PM",
+      name: "Programme Briefing & Team Bonding Activities",
+      time: "8:00AM"
     },
     {
-      name: "Team Project Challenge Preparation",
-      time: "7:30PM",
-      description: "Challenge yourselves and solve the problem creatively!",
-    },
+      name: "Singapore Discovery Trail",
+      time: "TBC:AM",
+      description: "The Singapore Discovery Trail is..."
+    }
   ],
   [
     {
-      name: "Cultural Exhibition",
-      time: "10:30AM",
+      name: "Departure for National University of Singapore (NUS)",
+      time: "9:15AM"
     },
     {
-      name: "Dialogue and Master Class Session 2",
-      time: "2:30PM",
+      name: "Professor's Sow's Lecture",
+      time: "10:00AM - 12:00PM",
+      description: "Professor Sow Sow Sow's lecture is on..."
     },
     {
-      name: "Team Project Challenge Preparation",
-      time: "5:00PM",
-      description: "Last minute preparations before the final presentation!",
-    },
-  ],
-  [
-    {
-      name: "Team Project Challenge Presentation",
-      time: "9:00AM",
-      description: "Gather your teammates and showcase your work!",
+      name: "Lunch at NUS",
+      time: "12:15PM - 1:15PM"
     },
     {
-      name: "ISYF Grand Ceremony & Poster Exhibition",
-      time: "2:00PM",
-      description:
-        "At the ISYF Grand Ceremony, Nobel Laureates and eminent scientists share their views on issues centered around the theme of the forum, as well as address questions posed by the audience. The panel discussion and question-and-answer session will be facilitated by a panel moderator. Delegates can look forward to learning more through the sharing of insights by the Nobel Laureates and eminent scientists. This is followed by a Poster Exhibition where ISYF student delegates showcase their scientific research.",
+      name: "Departure for Science Centre Singapore",
+      time: "1:30PM"
+    },
+    {
+      name: "Science Quest @ Science Centre Singapore",
+      time: "2:00PM - 5:00PM",
+      description: "Science Quest is..."
+    },
+    {
+      name: "Return to HCIBS",
+      time: "5:00PM"
+    },
+    {
+      name: "Dinner",
+      time: "6:00PM - 7:00PM"
     },
     {
       name: "Cultural Hour",
-      time: "7:30PM",
-      description:
-        "Being the cultural highlight of ISYF, the Cultural Hour & Exhibition gives delegates the opportunity to present a microcosm of their homelands, showcasing the unique history, culture and customs. The event also encourages youths to view the world through a global lens. Delegates and the Hwa Chong community will be able to visit the booths to gain fascinating insights into the traditions of other cultures - through verbal sharing, photographs, snacks and even games. Let's celebrate multiculturalism and traverse the global village!",
+      time: "7:00PM - 8:00PM"
     },
+    {
+      name: "Preparation for Science Quest Product",
+      time: "8:00PM - 9:00PM",
+      description: "Take this time to prepare your final product for presentation!"
+    }
   ],
   [
     {
-      name: "Closing Ceremony & Formal Lunch",
-      time: "12:00PM",
+      name: "Prep??????",
+      time: "8:30AM -9:30AM"
     },
     {
-      name: "Departure",
-      time: "4:30PM",
-      description:
-        "We hope that ISYF 2023 has been fulfilling and memorable for you!",
+      name: "Masterclass — Dialogues by Scientists and Experts",
+      time: "9:30AM - 11:00AM",
+      description: "In this wonderful opportunity, you'll get the chance to learn from these wonderful scientists..."
     },
+    {
+      name: "Setup Poster Exhibition",
+      time: "11:00AM - 12:00PM"
+    },
+    {
+      name: "Lunch",
+      time: "12:30PM - 1:30PM"
+    },
+    {
+      name: "ISYF Keynote Lecture",
+      time: "2:00PM - 3:30PM",
+      description: "Welcome to the ISYF Keynote! Here, you'll get to meet our Guest-of-Honour, Mr Xiaoming, and our Keynote Speaker, Ms Xiaoming"
+    },
+    {
+      name: "Poster Exhibition (WHAT POSTER??)",
+      time: "3:30PM - 4:30PM"
+    },
+    {
+      name: "Dinner Out",
+      time: "5:00PM - 9:00PM"
+    }
+  ],
+  [
+    {
+      name: "Prep??????",
+      time: "8:30AM - 9:00AM"
+    },
+    {
+      name: "Collaborative Science Activity",
+      time: "9:00AM - 10:30AM"
+    },
+    {
+      name: "Departure for Hotel",
+      time: "11:00AM"
+    },
+    {
+      name: "Closing Lunch & Farewell",
+      time: "12:00AM - 3:00PM",
+      description: "Includes student research presentation, cultural performance and return to HCIBS and final Departure",
+    },
+    {
+      name: "Final Departure",
+      time: "3:00PM",
+      description: "Thanks for coming for ISYF 2024!"
+    }
   ],
 ];
 </script>
