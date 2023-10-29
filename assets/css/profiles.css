@@ -49,6 +49,12 @@
   border-radius: 8px;
   aspect-ratio: 1;
   transition: 200ms filter, 200ms box-shadow;
+
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .collage .profile:hover {
   filter: contrast(0.75) brightness(1.125);
@@ -56,7 +62,7 @@
 }
 
 .collage .profile-img {
-  max-width: 100%;
+  height: 100%;
 }
 
 .collage .name {

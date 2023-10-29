@@ -48,6 +48,10 @@
 
 <style scoped>
 @import url("~/assets/css/profiles.css");
+
+.collage .event {
+  grid-template-columns: repeat(auto-fill, minmax(min(40%, 11rem), 1fr));
+}
 </style>
 
 <script setup>
