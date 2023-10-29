@@ -95,49 +95,49 @@ const profiles = [
       {
         name: "Prof Takaaki Kajita",
         title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/speakers/Takaaki Kajita.jpg",
         description:
           " ",
       },
       {
         name: "Prof Aaron Ciechanover",
         title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/speakers/Aaron Jehuda Ciechanover.png",
         description:
           "",
       },
       {
         name: "Prof Huang Shaoying",
         title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
-        description:
-          "",
+        image: "/images/profiles/speakers/huang shao ying.jpg",
+        description: 
+          "Shao Ying HUANG is an associate professor in the pillar of Engineering Product Development, Singapore University of Technology and Design. She received her B.Eng., M. Eng., and Ph.D. degree from Nanyang Technological University, Singapore in 2003, 2006, and 2011, respectively. Her research interests include low-field portable MRI (magnets and coils), non-linear MRI image reconstructions, RF aspects of MRI, MR electrical property tomography, radiofrequency(RF)/microwave noninvasive/contactless sensing, wireless power transfer, and wideband RF/microwave components. She owns 10 patents and 6 technology disclosures. She has authored and coauthored more than 60 papers in refereed journals, 1 book chapter, and more than 200 international conference papers. ",
       },
       {
         name: "Prof Dame Sue Black",
         title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/speakers/Baroness Susan Black.jpg",
         description:
           "",
       },
       {
         name: "Sir Tim Hunt",
         title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/speakers/Tim Hunt.png",
         description:
           "",
       },
       {
         name: "Sir Richard Roberts",
         title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/speakers/Richard Roberts.jpg",
         description:
           "",
       },
       {
         name: "Dr Gregory Goh",
         title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/speakers/gregory goh.jpg",
         description:
           "",
       },
@@ -151,9 +151,9 @@ const profiles = [
       {
         name: "Dr Lee Hwee Kuan",
         title: "Chief Executive Officer, National Research Foundation",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/speakers/Lee Hwee Kuan.jpeg",
         description:
-          "",
+          "Dr. Lee Hwee Kuan earned his Ph.D. from Carnegie Mellon University in Pittsburgh, PA, USA, in theoretical physics. Currently, he serves as the Head of the Imaging Informatics Division as well as the Deputy Director for Training and Talent development at the Bioinformatics Institute, A*STAR in Singapore. Dr. Lee's expertise lies in the development and deployment of machine learning and deep learning algorithms. With a strong foundation in theoretical physics, Dr. Lee brings a unique perspective to the field of artificial intelligence, driving innovative solutions for both clinical and biological applications. \n\n At present, Dr. Lee Hwee Kuan leads a laboratory dedicated to the advancement of Artificial Intelligence (AI) research for clinical and biological purposes. His research endeavours encompass a broad spectrum of activities, from fundamental AI-centric investigations to practical AI applications. Dr. Lee's work is particularly influenced by high-impact clinical use cases, driving theoretical AI development. His laboratory addresses critical areas such as diagnostics in cancers, cardiology, dermatology, and interventional radiology. In the realm of biology, Dr. Lee's team develops bioinformatics pipelines for spatial omics and single-cell analysis, alongside pioneering AI applications in protein science and drug discovery. Beyond his role at the Bioinformatics Institute, Dr. Lee holds significant appointments in various local universities and research institutions.",
       },
       {
         name: "Assoc Prof Soo Han Sen",
