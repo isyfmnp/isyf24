@@ -19,7 +19,7 @@
 
     <div>
       <section>
-        <div>
+        <Letter>
           <p>Dear Student Delegates and Educators,</p>
           <p>
             Welcome to the 16th International Science Youth Forum (ISYF) @
@@ -51,7 +51,7 @@
             Co-Chairpersons <br />
             ISYF 2024 Student Organising Committee <br />
           </p>
-        </div>
+        </Letter>
       </section>
 
       <section>
@@ -378,6 +378,7 @@ import {onMounted} from 'vue';
 import Masthead from '../components/masthead.vue';
 import Button from '../components/button/button.vue';
 import PrimaryHighlight from '../components/primaryHighlight.vue';
+import Letter from "../components/letter.vue";
 
 import {gsap} from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';

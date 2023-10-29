@@ -20,7 +20,7 @@
   border-radius: 4px;
 
   background-image: repeating-linear-gradient(
-    -60deg,
+    -45deg,
     var(--clr-1),
     var(--clr-1) var(--stripe-width),
     var(--clr-2) var(--stripe-width),
