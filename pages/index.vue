@@ -375,8 +375,14 @@
 .supporters > *:hover::before {
   transform: translateX(0);
 }
+.supporters > *:active::before {
+  transform: scale(1.2);
+}
 .supporters > *:hover::after {
   transform: translateY(0);
+}
+.supporters > *:active::after {
+  background-color: var(--primary-200);
 }
 
 . supporters span {
