@@ -33,7 +33,7 @@
         <div class="subitems-wrapper">
           <ul class="subitems">
             <li>
-              <a href="/profiles/speakers">
+              <a class="blocked" href="/profiles/speakers">
                 <span class="material-icons-outlined icon">person</span>
                 <span class="item-text">Speakers</span>
               </a>
@@ -53,7 +53,7 @@
           </ul>
         </div>
       </div>
-      <a class="item" href="/media">
+      <a class="item blocked" href="/media">
         <span class="item-text">Media</span>
       </a>
 
@@ -81,6 +81,7 @@
 </template>
 
 <style scoped>
+@import url("~/assets/css/blocked.css");
 .material-icons-outlined {
   scale: 0.8;
   transform: translateY(1px);
@@ -259,7 +260,7 @@ nav.transparent {
 }
 
 .item-text {
-  font-weight: semibold;
+  font-weight: 600;
   text-transform: uppercase;
   font-family: var(--font-display);
   transition: color 100ms;

@@ -33,7 +33,7 @@ h3 {
 }
 a {
   color: var(--fg);
-  font-weight: semibold;
+  font-weight: 600;
 }
 </style>
 

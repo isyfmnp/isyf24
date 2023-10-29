@@ -1,0 +1,55 @@
+.blocked.blocked.blocked {
+  position: relative;
+  overflow: visible;
+}
+.blocked:active {
+  pointer-events: none;
+}
+.blocked {
+  --clr-1: hsla(var(--primary-500-hsla), 0.75);
+  --clr-2: hsla(var(--primary-200-hsla), 0.75);
+  --stripe-width: 18px;
+}
+.blocked::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  bottom: 0;
+  right: -0.5rem;
+  border-radius: 4px;
+
+  background-image: repeating-linear-gradient(
+    -60deg,
+    var(--clr-1),
+    var(--clr-1) var(--stripe-width),
+    var(--clr-2) var(--stripe-width),
+    var(--clr-2) calc(var(--stripe-width) * 2)
+  );
+}
+
+.blocked::after {
+  content: 'This is still unreleased. Check back later!';
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  width: 9rem;
+
+  --fg: var(--gray-900);
+  --bg: var(--gray-100);
+  padding: 0.5rem;
+  background-color: var(--bg);
+  border-radius: 4px;
+  color: var(--fg);
+  border: 1px solid var(--fg);
+  filter: drop-shadow(2px 2px 7px hsla(var(--gray-900-hsla), 0.25));
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 50ms;
+}
+
+.blocked:hover::after, .blocked:active::after {
+  visibility: visible;
+  opacity: 1;
+}

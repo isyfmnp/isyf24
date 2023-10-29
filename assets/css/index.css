@@ -31,12 +31,14 @@
   --primary-200: hsl(var(--primary-200-hsla));
   --primary-300: hsl(var(--primary-hue), 100%, 75%);
   --primary-400: hsl(var(--primary-hue), 80%, 70%);
-  --primary-500: hsl(var(--primary-hue), 60%, 40%);
+  --primary-500-hsla: var(--primary-hue), 60%, 40%;
+  --primary-500: hsl(var(--primary-500-hsla));
   --primary: var(--primary-500);
   --primary-700: hsl(var(--primary-hue), 62%, 30%);
   --primary-900: hsl(var(--primary-hue), 20%, 30%);
 
-  --red: #fb4d3d;
+  --red-hsla: 5, 96%, 61%;
+  --red: hsl(var(--red-hsla));
   --yellow: #ffc759;
   --green: #03cea4;
   --blue: #5e95ed;
