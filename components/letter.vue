@@ -10,7 +10,7 @@
 .letter {
   position: relative;
   display: block;
-  background-color: hsla(var(--gray-100-hsla), 0.95);
+  background-color: hsla(var(--gray-100-hsla), 0.97);
   margin: 4rem -1.5rem 7rem;
   padding: 1rem 1.5rem 0.125rem;
   font-weight: 400;
