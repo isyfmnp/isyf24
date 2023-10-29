@@ -20,7 +20,7 @@
     <div>
       <section>
         <Letter>
-          <p>Dear Student Delegates and Educators,</p>
+          <p><i>Dear Student Delegates and Educators,</i></p>
           <p>
             Welcome to the 16th International Science Youth Forum (ISYF) @
             Singapore, held from 8 to 12 January 2024!
@@ -45,12 +45,12 @@
             The Organising Committee of ISYF 2024 looks forward to meeting you
             and we hope that you will have a fruitful time in Singapore!
           </p>
-          <p>
+          <p><i>
             Warmest regards, <br />
             Ling Jun Quan and Nguyen Chi Mai <br />
             Co-Chairpersons <br />
             ISYF 2024 Student Organising Committee <br />
-          </p>
+          </i></p>
         </Letter>
       </section>
 
