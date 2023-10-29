@@ -41,6 +41,7 @@
 }
 .collage .name {
   position: static;
+  height: 100%;
   padding-left: 0.75rem;
   text-align: left;
   display: grid;
