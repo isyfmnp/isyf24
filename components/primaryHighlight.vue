@@ -11,7 +11,7 @@
   position: relative;
   display: block;
   padding: 0.875rem 1rem 0.625rem;
-  margin: 0.325rem -0.5rem 0.5rem;
+  margin: 1.25rem -0.5rem 2.5rem;
 
   text-align: center;
   color: var(--fg);
