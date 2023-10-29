@@ -12,7 +12,7 @@
   display: block;
   background-color: hsla(var(--gray-100-hsla), 0.95);
   margin: 4rem -1.5rem 7rem;
-  padding: 0.125rem 1.5rem;
+  padding: 1rem 1.5rem 0.125rem;
   font-weight: 400;
   font-family: var(--font-display);
 }
