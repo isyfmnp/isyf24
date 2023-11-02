@@ -1,32 +1,61 @@
 <template>
-  <Masthead>
-    <h1>ISYF Media</h1>
-  </Masthead>
+  <div>
+    <Masthead>
+      <h1>ISYF Media</h1>
+    </Masthead>
 
-  <main>
-    <section class="live-pictures">
-      <div class="days-wrapper-wrapper">
-        <div class="days-wrapper">
-          <div class="days">
-            <button
-              class="day"
-              :class="{selected: day == currentDay}"
-              :style="{'--day': currentDay}"
-              v-for="day in totalDays"
-              @click="currentDay = day"
-            >
-              Day {{ day }}
-            </button>
+    <main>
+      <div
+        class="picture-viewer-wrapper"
+        :class="{shown: viewerShown}"
+        @click="viewerShown = false"
+      >
+        <button
+          class="controls picture-back"
+          @click.stop="adjustPhotoIndex(-1)"
+          :class="{enabled: getPhotoOffsetAvailable(-1)}"
+        >
+          <span class="material-icons-outlined"> chevron_left </span>
+        </button>
+        <img
+          id="picture"
+          :style="{height: photoHeight + 'px', width: photoWidth + 'px'}"
+          :src="photos[currentDay - 1][currentPhotoId]"
+          @click.stop=""
+        />
+        <button
+          class="controls picture-forwards"
+          @click.stop="adjustPhotoIndex(1)"
+          :class="{enabled: getPhotoOffsetAvailable(1)}"
+        >
+          <span class="material-icons-outlined"> chevron_right </span>
+        </button>
+      </div>
+
+      <section class="live-pictures">
+        <div class="days-wrapper-wrapper">
+          <div class="days-wrapper">
+            <div class="days">
+              <button
+                class="day"
+                :class="{selected: day == currentDay}"
+                :style="{'--day': currentDay}"
+                v-for="day in totalDays"
+                @click="currentDay = day"
+              >
+                Day {{ day }}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="slider">
-        <div class="slide" v-for="link in photos[currentDay-1]">
-          <img :src="link" />
+        <div class="slider">
+          <div class="slide" v-for="(link, photoId) in photos[currentDay - 1]">
+            <img :src="link" @click="showImage(photoId)" />
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </div>
 </template>
 
 <style>
@@ -128,7 +157,10 @@
   display: grid;
   place-items: center;
   overflow: hidden;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(13vw, 12rem, 40vw), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(13vw, 12rem, 40vw), 1fr)
+  );
 
   border-radius: 0 0 8px 8px;
   border-top: 1px solid var(--fg);
@@ -155,40 +187,148 @@
   max-height: 16rem;
   margin-bottom: -4px;
 }
+
+/*
+*
+*
+*
+*/
+
+.picture-viewer-wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: #000000dd;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 200ms opacity, 200ms visibility;
+}
+.picture-viewer-wrapper.shown {
+  opacity: 1;
+  visibility: visible;
+}
+.picture-viewer {
+  width: 100%;
+  height: 100%;
+}
+#picture {
+  border-radius: 8px;
+  border: 1px solid var(--bg);
+  box-sizing: border-box;
+}
+
+.controls {
+  position: absolute;
+  --fg: var(--bg);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  border: 1px solid var(--gray-100);
+  display: grid;
+  place-items: center;
+  touch-action: manipulation;
+
+  background-color: var(--gray-400);
+}
+.controls.enabled {
+  background-color: var(--primary);
+}
+@media screen and (max-width: 600px) {
+  .picture-back,
+  .picture-forwards {
+    bottom: 4rem;
+  }
+  .picture-back {
+    left: calc(50vw - 6rem);
+  }
+  .picture-forwards {
+    right: calc(50vw - 6rem);
+  }
+}
+@media screen and (min-width: 600px) {
+  .picture-back {
+    left: max(calc(5vw - 2rem), 0.75rem);
+  }
+  .picture-forwards {
+    right: max(calc(5vw - 2rem), 0.75rem);
+  }
+}
 </style>
 
 <script setup>
-import {ref} from 'vue';
+import {ref, watch, onMounted, onUnmounted} from 'vue';
 
 const totalDays = 5;
 const currentDay = ref(1);
 
+const viewerShown = ref(false);
+const currentPhotoId = ref(0);
+const photoWidth = ref(0);
+const photoHeight = ref(0);
+
+function showImage(pictureId) {
+  currentPhotoId.value = pictureId;
+  viewerShown.value = true;
+  setTimeout(resizePhoto, 1);
+}
+function getPhotoOffsetAvailable(offset) {
+  return (
+    currentPhotoId.value + offset >= 0 &&
+    currentPhotoId.value + offset <= photos[currentDay.value - 1].length - 1
+  );
+}
+function adjustPhotoIndex(offset) {
+  //Should only be 1 or -1
+  if (!getPhotoOffsetAvailable(offset))
+    return
+  currentPhotoId.value = currentPhotoId.value + offset
+  setTimeout(resizePhoto, 1);
+}
+
+onMounted(() => window.addEventListener('resize', resizePhoto));
+onUnmounted(() => window.removeEventListener('resize', resizePhoto));
+watch(currentPhotoId, setTimeout(resizePhoto, 10));
+function resizePhoto() {
+  const img = document.querySelector('#picture');
+  const height = img.naturalHeight;
+  const width = img.naturalWidth;
+  const scale = Math.min(
+    (window.innerHeight * 0.9) / height,
+    (window.innerWidth * 0.9) / width,
+  );
+  photoHeight.value = height * scale;
+  photoWidth.value = width * scale;
+}
+
 const photos = [
   [
-    'https://picsum.photos/seed/301/500/300',
-    'https://picsum.photos/seed/302/400/300',
-    'https://picsum.photos/seed/303/400/300',
-    'https://picsum.photos/seed/304/400/300',
-    'https://picsum.photos/seed/305/400/300',
-    'https://picsum.photos/seed/306/400/300',
-    'https://picsum.photos/seed/307/400/300',
-    'https://picsum.photos/seed/308/400/300',
-    'https://picsum.photos/seed/309/400/300',
-    'https://picsum.photos/seed/310/400/300',
-    'https://picsum.photos/seed/311/400/300',
-    'https://picsum.photos/seed/312/400/300',
-    'https://picsum.photos/seed/313/400/300',
-    'https://picsum.photos/seed/314/400/300',
-    'https://picsum.photos/seed/315/400/300',
-    'https://picsum.photos/seed/316/400/300',
-    'https://picsum.photos/seed/317/400/300',
-    'https://picsum.photos/seed/318/400/300',
-    'https://picsum.photos/seed/319/400/300',
-    'https://picsum.photos/seed/320/400/300',
+    'https://picsum.photos/seed/301/2500/1500',
+    'https://picsum.photos/seed/302/2000/1500',
+    'https://picsum.photos/seed/303/2000/1500',
+    'https://picsum.photos/seed/304/2000/1500',
+    'https://picsum.photos/seed/305/2000/1500',
+    'https://picsum.photos/seed/306/2000/1500',
+    'https://picsum.photos/seed/307/2000/1500',
+    'https://picsum.photos/seed/308/2000/1500',
+    'https://picsum.photos/seed/309/2000/1500',
+    'https://picsum.photos/seed/310/2000/1500',
+    'https://picsum.photos/seed/311/2000/1500',
+    'https://picsum.photos/seed/312/2000/1500',
+    'https://picsum.photos/seed/313/2000/1500',
+    'https://picsum.photos/seed/314/2000/1500',
+    'https://picsum.photos/seed/315/2000/1500',
+    'https://picsum.photos/seed/316/2000/1500',
+    'https://picsum.photos/seed/317/2000/1500',
+    'https://picsum.photos/seed/318/2000/1500',
+    'https://picsum.photos/seed/319/2000/1500',
+    'https://picsum.photos/seed/320/2000/1500',
   ],
   [
-    'https://picsum.photos/seed/301/500/300',
-    'https://picsum.photos/seed/301/500/300',
+    'https://picsum.photos/seed/301/2500/1500',
+    'https://picsum.photos/seed/302/2500/1500',
   ],
   [],
   [],
