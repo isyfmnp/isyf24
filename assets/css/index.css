@@ -38,11 +38,11 @@
   --primary-900: hsl(var(--primary-hue), 30%, 6%);
   --primary-950: hsl(var(--primary-hue), 40%, 4%);
 
-  --red-hsla: 5, 65%, 60%;
+  --red-hsla: 5, 55%, 50%;
   --red: hsl(var(--red-hsla));
   --yellow-hsla: 40, 70%, 60%;
   --yellow: hsl(var(--yellow-hsla));
-  --green-hsla: 168, 60%, 55%;
+  --green-hsla: 168, 50%, 50%;
   --green: hsl(var(--green-hsla));
   --blue-hsla: 217, 70%, 60%;
   --blue: hsl(var(--blue-hsla));
