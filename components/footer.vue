@@ -96,6 +96,7 @@
   background-color: var(--fg);
   margin-bottom: -10vh;
   padding-bottom: 10vh;
+  overflow-x: hidden;
 }
 .footer {
   max-width: var(--outer-width);
