@@ -16,6 +16,7 @@
   --gray-900: hsl(var(--gray-900-hsla));
   --gray-500: hsl(var(--primary-hue), 10%, 40%);
   --gray-400: hsl(var(--primary-hue), 11%, 55%);
+  --gray-300: hsla(var(--primary-hue), 8%, 65%);
   --gray-200: hsl(var(--primary-hue), 12%, 80%);
   --gray-100-hsla: var(--primary-hue), 10%, 92%;
   --gray-100: hsl(var(--gray-100-hsla));
