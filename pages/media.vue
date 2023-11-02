@@ -234,6 +234,7 @@
   display: grid;
   place-items: center;
   touch-action: manipulation;
+  user-select: none;
 
   background-color: var(--gray-400);
 }
