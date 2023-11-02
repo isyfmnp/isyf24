@@ -94,7 +94,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  right: 2px;
   height: 3.5rem;
   display: flex;
   justify-content: space-between;

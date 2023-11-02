@@ -19,10 +19,7 @@ onMounted(() => {
 .masthead,
 .masthead::before {
   position: absolute;
-  top: -2px;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
+  inset: 0;
 }
 .masthead {
   text-align: center;
