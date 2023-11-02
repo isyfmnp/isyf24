@@ -11,6 +11,8 @@
   position: relative;
   display: block;
   background-color: hsla(var(--gray-100-hsla), 0.97);
+  border-radius: 8px;
+  border: 1px solid var(--fg);
   margin: 4rem -1.5rem 7rem;
   padding: 1rem 1.5rem 0.125rem;
   font-weight: 400;
