@@ -186,6 +186,10 @@
   width: 100%;
   max-height: 16rem;
   margin-bottom: -4px;
+  transition: filter 200ms;
+}
+.slide img:hover {
+  filter: brightness(0.8);
 }
 
 /*
