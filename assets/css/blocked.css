@@ -11,7 +11,7 @@
   --stripe-width: 18px;
 }
 .blocked::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -0.5rem;
@@ -29,7 +29,7 @@
 }
 
 .blocked::after {
-  content: 'This is still unreleased. Check back later!';
+  content: "This is still unreleased. Check back later!";
   position: absolute;
   top: calc(100% + 0.25rem);
   left: 0;
@@ -49,7 +49,8 @@
   transition: opacity 50ms;
 }
 
-.blocked:hover::after, .blocked:active::after {
+.blocked:hover::after,
+.blocked:active::after {
   visibility: visible;
   opacity: 1;
 }

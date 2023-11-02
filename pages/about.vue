@@ -15,7 +15,6 @@
         </PrimaryHighlight>
       </h2>
 
-      <!-- TODO: SHORTEN DOWN TO 1/2 PARAS -->
       <p>
         The theme “Science and Technology for Humanity: Building a Sustainable
         Future” highlights the important role of science and technology in
@@ -35,17 +34,15 @@
         how to mitigate potential negative impact and foster positive change
         through responsible innovation. The possibility of moving towards the
         free provision of technologies that contribute to meeting human
-        challenges, making them accessible to all can be explored.
-      </p>
-      <p>
-        In schools, the acquisition and dissemination of scientific knowledge,
-        the building of innovation capabilities, and the push towards the
-        collective goal of building a better world for future generations can be
-        promoted. There is a pressing need for more conversations on the reform
-        of policies and existing measures which can promote public interests in
-        our pursuit of sustainability. If we are able to move forward and each
-        adopt a more sustainable lifestyle, we definitely can make the change
-        and create an impact in not just our own country, but the world.
+        challenges, making them accessible to all can be explored. In schools,
+        the acquisition and dissemination of scientific knowledge, the building
+        of innovation capabilities, and the push towards the collective goal of
+        building a better world for future generations can be promoted. There is
+        a pressing need for more conversations on the reform of policies and
+        existing measures which can promote public interests in our pursuit of
+        sustainability.  If we are able to move forward and each adopt a more
+        sustainable lifestyle, we definitely can make the change and create an
+        impact in not just our own country, but the world. 
       </p>
     </section>
 
@@ -99,7 +96,7 @@
 <style>
 .masthead::before {
   color: var(--bg);
-  background-image: url('/images/aboutbg2.webp');
+  background-image: url("/images/aboutbg2.webp");
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,9 +105,9 @@
 </style>
 
 <script setup>
-import PrimaryHighlight from '../components/primaryHighlight.vue';
+import PrimaryHighlight from "../components/primaryHighlight.vue";
 
 definePageMeta({
-  layout: 'masthead',
+  layout: "masthead",
 });
 </script>

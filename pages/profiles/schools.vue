@@ -62,209 +62,209 @@ const schoolsUnordered = [
   {
     country: "Singapore 🇸🇬",
     name: "Anglican High School",
-    image: "/images/profiles/schools/39.webp"
+    image: "/images/profiles/schools/39.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "CHIJ St. Nicholas Girls' School",
-    image: "/images/profiles/schools/1.webp"
+    image: "/images/profiles/schools/1.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "CHIJ St. Theresa's Convent",
-    image: "/images/profiles/schools/2.webp"
+    image: "/images/profiles/schools/2.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Clementi Town Secondary School",
-    image: "/images/profiles/schools/4.webp"
+    image: "/images/profiles/schools/4.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Dunman High School",
-    image: "/images/profiles/schools/5.webp"
+    image: "/images/profiles/schools/5.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Hwa Chong Institution",
-    image: "/images/profiles/schools/6.webp"
+    image: "/images/profiles/schools/6.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Methodist Girls' School",
-    image: "/images/profiles/schools/9.webp"
+    image: "/images/profiles/schools/9.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Nan Chiau High School",
-    image: "/images/profiles/schools/10.webp"
+    image: "/images/profiles/schools/10.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "National Junior College",
-    image: "/images/profiles/schools/12.webp"
+    image: "/images/profiles/schools/12.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Nanyang Girls' High School",
-    image: "/images/profiles/schools/13.webp"
+    image: "/images/profiles/schools/13.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "NUS High School of Math & Science",
-    image: "/images/profiles/schools/38.webp"
+    image: "/images/profiles/schools/38.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Raffles Girls' School",
-    image: "/images/profiles/schools/16.webp"
+    image: "/images/profiles/schools/16.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Raffles Institution",
-    image: "/images/profiles/schools/17.webp"
+    image: "/images/profiles/schools/17.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "River Valley High School",
-    image: "/images/profiles/schools/18.webp"
+    image: "/images/profiles/schools/18.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "St. Joseph's Institution",
-    image: "/images/profiles/schools/21.webp"
+    image: "/images/profiles/schools/21.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "St. Margaret's Secondary School",
-    image: "/images/profiles/schools/23.webp"
+    image: "/images/profiles/schools/23.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "School of Science and Technology, Singapore",
-    image: "/images/profiles/schools/25.webp"
+    image: "/images/profiles/schools/25.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Tamasek Junior College",
-    image: "/images/profiles/schools/26.webp"
+    image: "/images/profiles/schools/26.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Tanjong Katong Secondary School",
-    image: "/images/profiles/schools/28.webp"
+    image: "/images/profiles/schools/28.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Victoria Junior College",
-    image: "/images/profiles/schools/29.webp"
+    image: "/images/profiles/schools/29.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Zhonghua Secondary School",
-    image: "/images/profiles/schools/30.webp"
+    image: "/images/profiles/schools/30.webp",
   },
   {
     country: "Singapore 🇸🇬",
     name: "Xinmin Secondary School",
-    image: "/images/profiles/schools/47.webp"
+    image: "/images/profiles/schools/47.webp",
   },
   {
     country: "Australia 🇦🇺",
     name: "Brisbane Girls Grammar School",
-    image: "/images/profiles/schools/40.webp"
+    image: "/images/profiles/schools/40.webp",
   },
   {
     country: "Brunei 🇧🇳",
     name: "Ministry of Education, Brunei Darussalam",
-    image: "/images/profiles/schools/37.webp"
+    image: "/images/profiles/schools/37.webp",
   },
   {
     country: "China 🇨🇳",
     name: "High School Affliated to Southern University of Science & Technology (HSAS)",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/.webp",
   },
   {
     country: "Chinese Taipei 🇹🇼",
     name: "Taipei First Girls' High School",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/.webp",
   },
   {
     country: "Chinese Taipei 🇹🇼",
     name: "Taipei Municipal Jianguo High School",
-    image: "/images/profiles/schools/27.webp"
+    image: "/images/profiles/schools/27.webp",
   },
   {
     country: "Hong Kong SAR 🇭🇰",
     name: "Diocesan Girls' School",
-    image: "/images/profiles/schools/42.webp"
+    image: "/images/profiles/schools/42.webp",
   },
   {
     country: "Indonesia 🇮🇩",
     name: "Centre for Young Scientists, Surya Institute",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/.webp",
   },
   {
     country: "Indonesia 🇮🇩",
     name: "SMA Negeri 4 Denpasar High School",
-    image: "/images/profiles/schools/22.webp"
+    image: "/images/profiles/schools/22.webp",
   },
   {
     country: "Japan 🇯🇵",
     name: "National Institution of Technology (KOSEN), Yonago College",
-    image: "/images/profiles/schools/11.webp"
+    image: "/images/profiles/schools/11.webp",
   },
   {
     country: "Malaysia 🇲🇾",
     name: "Penang Chung Ling High School",
-    image: "/images/profiles/schools/32.webp"
+    image: "/images/profiles/schools/32.webp",
   },
   {
     country: "Malaysia 🇲🇾",
     name: "Sekolah Sultan Alam Shah, Putrajaya",
-    image: "/images/profiles/schools/19.webp"
+    image: "/images/profiles/schools/19.webp",
   },
   {
     country: "The Philippines 🇵🇭",
     name: "Philippine Science High School Main Campus",
-    image: "/images/profiles/schools/14.webp"
+    image: "/images/profiles/schools/14.webp",
   },
   {
     country: "Republic of Korea 🇰🇷",
     name: "Korea Science Academy of KAIST",
-    image: "/images/profiles/schools/44.webp"
+    image: "/images/profiles/schools/44.webp",
   },
   {
     country: "Thailand 🇹🇭",
     name: "Kamnoetvidya Science Academy",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/.webp",
   },
   {
     country: "Cambodia 🇰🇭",
     name: "The Angkor Intellectual Academy",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/.webp",
   },
   {
     country: "Cambodia 🇰🇭",
     name: "New Generation School Preah Sisowath High School",
-    image: "/images/profiles/schools/46.webp"
+    image: "/images/profiles/schools/46.webp",
   },
   {
     country: "United Kingdom 🇬🇧",
     name: "Camborne Science and International Academy",
-    image: "/images/profiles/schools/41.webp"
+    image: "/images/profiles/schools/41.webp",
   },
   {
     country: "United States of America 🇺🇸",
     name: "Loudoun County Academy of Science",
-    image: "/images/profiles/schools/45.webp"
+    image: "/images/profiles/schools/45.webp",
   },
   {
     country: "Vietnam 🇻🇳",
     name: "Hanoi-Amsterdam High School for the Gifted",
-    image: "/images/profiles/schools/43.webp"
+    image: "/images/profiles/schools/43.webp",
   },
-]
+];
 
 const aggregatedData = schoolsUnordered.reduce((result, item) => {
   const country = item.country;
@@ -275,12 +275,10 @@ const aggregatedData = schoolsUnordered.reduce((result, item) => {
   return result;
 }, {});
 
-
 // Convert the aggregated data object back to an array
 const schools = Object.values(aggregatedData).sort((a, b) =>
   a.country.localeCompare(b.country)
 );
 
 console.log(schools);
-
 </script>

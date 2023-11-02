@@ -161,7 +161,7 @@
 </template>
 
 <style>
-@import url('~/assets/css/cards.css');
+@import url("~/assets/css/cards.css");
 
 /* ========== MASTHEAD ========== */
 .masthead {
@@ -194,7 +194,7 @@
 }
 
 .masthead::before {
-  background-image: url('/images/clocktower.jpg');
+  background-image: url("/images/clocktower.jpg");
   filter: brightness(55%) blur(2px) saturate(1.2);
   background-size: cover;
   background-repeat: no-repeat;
@@ -347,21 +347,21 @@
   padding: 0;
 }
 .supporters > *::before {
-  content: 'open_in_new';
+  content: "open_in_new";
   position: absolute;
   top: 0.5rem;
   right: 0.75rem;
-  font-family: 'Material Icons Outlined';
+  font-family: "Material Icons Outlined";
   color: var(--bg);
   background-color: var(--primary);
   padding: 0.25rem;
   border-radius: 4px;
-  
+
   transform: translateX(3rem);
   transition: 200ms transform;
 }
 .supporters > *::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   top: 0;
@@ -401,35 +401,35 @@
 </style>
 
 <script setup>
-import {onMounted} from 'vue';
-import Masthead from '../components/masthead.vue';
-import Button from '../components/button/button.vue';
-import PrimaryHighlight from '../components/primaryHighlight.vue';
+import { onMounted } from "vue";
+import Masthead from "../components/masthead.vue";
+import Button from "../components/button/button.vue";
+import PrimaryHighlight from "../components/primaryHighlight.vue";
 import Letter from "../components/letter.vue";
 
-import {gsap} from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 onMounted(() => {
-  gsap.from('.masthead .logo', {
+  gsap.from(".masthead .logo", {
     opacity: 0,
     y: -100,
     duration: 0.75,
     delay: 0,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
   });
 
-  gsap.from('.masthead .info *', {
+  gsap.from(".masthead .info *", {
     opacity: 0,
     y: 15,
     duration: 0.5,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
     stagger: 0.15,
     delay: 0.5,
   });
 });
 
 definePageMeta({
-  layout: 'masthead',
+  layout: "masthead",
 });
 </script>

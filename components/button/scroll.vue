@@ -39,10 +39,11 @@
   background-color: var(--bg);
   border: 1px solid var(--fg);
   color: var(--fg);
-  
+
   opacity: 1;
-  
-  transition: background-color 200ms, fill 200ms, border 200ms, box-shadow 200ms, opacity 200ms;
+
+  transition: background-color 200ms, fill 200ms, border 200ms, box-shadow 200ms,
+    opacity 200ms;
 }
 .page-btn:active {
   border: 1px solid var(--primary);

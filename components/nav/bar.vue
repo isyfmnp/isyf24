@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{transparent: navTransparent}">
+  <nav :class="{ transparent: navTransparent }">
     <a class="stamp" href="/">
       <img class="logo light" src="/icon_light.png" alt="ISYF Logo" />
       <img class="logo dark" src="/icon_dark.png" alt="ISYF Logo" />
@@ -11,8 +11,7 @@
     <a class="hamburger" @click="menuOpen = !menuOpen">
       <span class="material-icons">menu</span>
     </a>
-    <div class="menu" :class="{open: menuOpen}">
-
+    <div class="menu" :class="{ open: menuOpen }">
       <a class="item close-button" @click="menuOpen = !menuOpen">
         <span class="material-icons-outlined">close</span>
       </a>
@@ -25,7 +24,7 @@
       <a class="item" href="/programme">
         <span class="item-text">Programme</span>
       </a>
-      <div class="closed" :class="{open: profilesOpen}">
+      <div class="closed" :class="{ open: profilesOpen }">
         <a class="item" @click="profilesOpen = !profilesOpen">
           <span class="item-text"> Profiles </span>
           <span class="material-icons-outlined indicator">chevron_right</span>
@@ -199,7 +198,8 @@ nav.transparent {
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity 200ms cubic-bezier(.77,0,.175,1), visibility 200ms cubic-bezier(.77,0,.175,1);
+  transition: opacity 200ms cubic-bezier(0.77, 0, 0.175, 1),
+    visibility 200ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 .menu.open {
   opacity: 1;
@@ -302,7 +302,6 @@ nav.transparent {
 .menu .closed:hover .subitems {
   transform: translateY(0);
 }
-
 
 .menu .item.close-button {
   position: absolute;
@@ -475,10 +474,10 @@ nav.transparent {
 </style>
 
 <script setup>
-import {ref, onMounted, onUnmounted} from 'vue';
-import {gsap} from 'gsap';
-import InstagramIcon from '../icons/instagram.vue';
-import YoutubeIcon from '../icons/youtube.vue';
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import InstagramIcon from "../icons/instagram.vue";
+import YoutubeIcon from "../icons/youtube.vue";
 
 const profilesOpen = ref(false);
 const menuOpen = ref(false);
@@ -499,24 +498,24 @@ onMounted(() => {
   setTimeout(() => {
     if (window.masthead) {
       navTransparent.value = true;
-      document.addEventListener('scroll', checkScroll);
+      document.addEventListener("scroll", checkScroll);
     }
   }, 1);
 });
 onUnmounted(() => {
-  document.removeEventListener('scroll', checkScroll);
+  document.removeEventListener("scroll", checkScroll);
 });
 
 onMounted(() => {
   if (window.innerWidth < 900) {
     return;
   }
-  gsap.from('.stamp, .menu .item, .menu .socials', {
+  gsap.from(".stamp, .menu .item, .menu .socials", {
     opacity: 0,
 
     x: -7,
     duration: 0.5,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
     stagger: 0.025,
   });
 });

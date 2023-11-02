@@ -244,6 +244,6 @@ p {
 </style>
 
 <script setup>
-import InstagramIcon from './icons/instagram.vue';
-import YoutubeIcon from './icons/youtube.vue';
+import InstagramIcon from "./icons/instagram.vue";
+import YoutubeIcon from "./icons/youtube.vue";
 </script>

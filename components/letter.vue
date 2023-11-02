@@ -22,14 +22,14 @@
   line-height: 1.5rem;
 }
 .letter::before {
-  content: '';
+  content: "";
   z-index: -10;
   position: absolute;
   top: -3rem;
   bottom: -3rem;
   left: -0.75rem;
   right: -0.75rem;
- 
+
   --clr-1: var(--bg);
   --clr-2: var(--primary);
   --clr-3: var(--bg);

@@ -294,122 +294,131 @@ const events = [
     {
       name: "Arrival of Delegates",
       time: "~",
-      description: "Welcome to Singapore!"
-    }
+      description: "Welcome to Singapore!",
+    },
   ],
   [
     {
       name: "Assembly Announcements",
-      time: "7:30AM"
+      time: "7:30AM",
     },
     {
       name: "Programme Briefing & Team Bonding Activities",
-      time: "8:00AM"
+      time: "8:00AM",
     },
     {
       name: "Singapore Discovery Trail",
       time: "TBC:AM",
-      description: "From the phenomenal urban landscape to the lush nature in Singapore’s parks, adventure awaits! On the Singapore Discovery Trail, delegates will be able to explore key attractions in Singapore while completing challenges and tasks throughout their journey. The trail will also allow delegates to gain a deeper understanding of Singapore’s traditions and cultures while immersing in the wonders of this garden city."
-    }
+      description:
+        "From the phenomenal urban landscape to the lush nature in Singapore’s parks, adventure awaits! On the Singapore Discovery Trail, delegates will be able to explore key attractions in Singapore while completing challenges and tasks throughout their journey. The trail will also allow delegates to gain a deeper understanding of Singapore’s traditions and cultures while immersing in the wonders of this garden city.",
+    },
   ],
   [
     {
       name: "Departure for National University of Singapore (NUS)",
-      time: "9:15AM"
+      time: "9:15AM",
     },
     {
       name: "Professor's Sow's Lecture: Introduction to Nanoworld",
       time: "10:00AM - 12:00PM",
-      description: "Wonder what happens when you zoom in, in and in? Want to discover intriguing properties of matter at the nanoscale? Look no further! QnA, demonstrations and interactive activities… Get ready to be wowed the friendly and brilliant Professor Sow from the National University of Singapore! You'll be kept at the edge of your seat as you delve into the nanoworld together with your friends, exploring current and future applications of nanotechnology with this fun-filled lecture. "
+      description:
+        "Wonder what happens when you zoom in, in and in? Want to discover intriguing properties of matter at the nanoscale? Look no further! QnA, demonstrations and interactive activities… Get ready to be wowed the friendly and brilliant Professor Sow from the National University of Singapore! You'll be kept at the edge of your seat as you delve into the nanoworld together with your friends, exploring current and future applications of nanotechnology with this fun-filled lecture. ",
     },
     {
       name: "Lunch at NUS",
-      time: "12:15PM - 1:15PM"
+      time: "12:15PM - 1:15PM",
     },
     {
       name: "Departure for Science Centre Singapore",
-      time: "1:30PM"
+      time: "1:30PM",
     },
     {
       name: "Science Quest @ Science Centre Singapore",
       time: "2:00PM - 5:00PM",
-      description: "Is it a bird? Is it a plane? No, it’s the inaugural Science Quest! Through Science Quest, delegates will have the opportunity to head out to various attractions around Singapore, unlocking the wonders of Science and learning firsthand how it is applied in daily life. Get ready to be captivated by interactive displays on various scientific topics and an engaging experience!"
+      description:
+        "Is it a bird? Is it a plane? No, it’s the inaugural Science Quest! Through Science Quest, delegates will have the opportunity to head out to various attractions around Singapore, unlocking the wonders of Science and learning firsthand how it is applied in daily life. Get ready to be captivated by interactive displays on various scientific topics and an engaging experience!",
     },
     {
       name: "Return to HCIBS",
-      time: "5:00PM"
+      time: "5:00PM",
     },
     {
       name: "Dinner",
-      time: "6:00PM - 7:00PM"
+      time: "6:00PM - 7:00PM",
     },
     {
       name: "Cultural Hour",
       time: "7:00PM - 8:00PM",
-      description: "As the night unfolds, witness mesmerising performances, from dances to stories, each a window into a different country. The Cultural Hour and Exhibition provides the opportunity for delegates to showcase their unique history, culture and customs! Through this, delegates will be able to traverse the global village, better understand each others’ cultures, and view the world from a global perspective."
+      description:
+        "As the night unfolds, witness mesmerising performances, from dances to stories, each a window into a different country. The Cultural Hour and Exhibition provides the opportunity for delegates to showcase their unique history, culture and customs! Through this, delegates will be able to traverse the global village, better understand each others’ cultures, and view the world from a global perspective.",
     },
     {
       name: "Preparation for Science Quest Product",
       time: "8:00PM - 9:00PM",
-      description: "Take this time to prepare your final product for presentation!"
-    }
+      description:
+        "Take this time to prepare your final product for presentation!",
+    },
   ],
   [
     {
       name: "Prep??????",
-      time: "8:30AM -9:30AM"
+      time: "8:30AM -9:30AM",
     },
     {
       name: "Masterclass — Dialogues by Scientists and Experts",
       time: "9:30AM - 11:00AM",
-      description: "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science."
+      description:
+        "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.",
     },
     {
       name: "Setup Poster Exhibition",
-      time: "11:00AM - 12:00PM"
+      time: "11:00AM - 12:00PM",
     },
     {
       name: "Lunch",
-      time: "12:30PM - 1:30PM"
+      time: "12:30PM - 1:30PM",
     },
     {
       name: "ISYF Keynote Lecture",
       time: "2:00PM - 3:30PM",
-      description: "Hear from the insights of Nobel Laureates during the Keynote Lecture, which will also be the flagship event of ISYF 2024. After which, take a tour around the Poster Exhibition, where student delegates will share their scientific research with eminent scientists, educators, and other fellow delegates! "
+      description:
+        "Hear from the insights of Nobel Laureates during the Keynote Lecture, which will also be the flagship event of ISYF 2024. After which, take a tour around the Poster Exhibition, where student delegates will share their scientific research with eminent scientists, educators, and other fellow delegates! ",
     },
     {
       name: "Poster Exhibition",
-      time: "3:30PM - 4:30PM"
+      time: "3:30PM - 4:30PM",
     },
     {
       name: "Dinner Out",
-      time: "5:00PM - 9:00PM"
-    }
+      time: "5:00PM - 9:00PM",
+    },
   ],
   [
     {
       name: "Prep??????",
-      time: "8:30AM - 9:00AM"
+      time: "8:30AM - 9:00AM",
     },
     {
       name: "Collaborative Science Activity",
       time: "9:00AM - 10:30AM",
-      description: "Prepare for an intriguing activity that brings together the art of geometry and principles of physics! Take a plunge into the world of geometrical figures and physical laws, and work with your group to see these concepts come to life. The thrill of discovery awaits!"
+      description:
+        "Prepare for an intriguing activity that brings together the art of geometry and principles of physics! Take a plunge into the world of geometrical figures and physical laws, and work with your group to see these concepts come to life. The thrill of discovery awaits!",
     },
     {
       name: "Departure for Hotel",
-      time: "11:00AM"
+      time: "11:00AM",
     },
     {
       name: "Closing Lunch & Farewell",
       time: "12:00AM - 3:00PM",
-      description: "Includes student research presentation, cultural performance and return to HCIBS and final Departure",
+      description:
+        "Includes student research presentation, cultural performance and return to HCIBS and final Departure",
     },
     {
       name: "Final Departure",
       time: "3:00PM",
-      description: "Thanks for coming for ISYF 2024!"
-    }
+      description: "Thanks for coming for ISYF 2024!",
+    },
   ],
 ];
 </script>
