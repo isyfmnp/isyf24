@@ -35,7 +35,8 @@
   --primary-500: hsl(var(--primary-500-hsla));
   --primary: var(--primary-500);
   --primary-700: hsl(var(--primary-hue), 62%, 30%);
-  --primary-900: hsl(var(--primary-hue), 20%, 30%);
+  --primary-900: hsl(var(--primary-hue), 30%, 6%);
+  --primary-950: hsl(var(--primary-hue), 40%, 4%);
 
   --red-hsla: 5, 96%, 61%;
   --red: hsl(var(--red-hsla));

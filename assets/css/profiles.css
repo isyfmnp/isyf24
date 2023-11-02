@@ -50,7 +50,16 @@
   aspect-ratio: 1;
   transition: 200ms filter, 200ms box-shadow;
 
-  background-color: black;
+  --clr-1: var(--primary-900);
+  --clr-2: var(--primary-950);
+  --stripe-width: 8px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--clr-1),
+    var(--clr-1) var(--stripe-width),
+    var(--clr-2) var(--stripe-width),
+    var(--clr-2) calc(var(--stripe-width) * 2)
+  );
 
   display: flex;
   justify-content: center;
@@ -62,7 +71,8 @@
 }
 
 .collage .profile-img {
-  height: 100%;
+  max-height: 100%;
+  max-width: 105%;
 }
 
 .collage .name {
@@ -72,11 +82,14 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--bg);
+
+  background-image: linear-gradient(#00000000, #000000ff);
+  border-radius: 3px 3px 8px 8px;
+
   text-align: center;
-  padding: 0.25rem 0.25rem 0.325rem;
+  padding: 0.5rem 0.25rem 0.625rem;
   font-weight: 600;
-  box-shadow: 0px 0px 25px 5px #272f40ff;
+  font-size: min(14px, 3.5vw);
 }
 
 /* ========== PROFILE INTROS ========== */
@@ -136,7 +149,6 @@
 }
 
 .intros img {
-  max-width: min(16rem, 60vw);
   width: 100%;
   border-radius: 8px;
   border: 1px solid var(--fg);

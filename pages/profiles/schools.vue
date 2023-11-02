@@ -33,11 +33,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: white;
+  background-image: none;
 }
 .collage .profile-img {
   padding: 18.75%;
-  width: 62.5%;
-  height: 62.5%;
+  max-width: 62.5%;
+  max-height: 62.5%;
 }
 .collage .name {
   position: static;
@@ -61,7 +62,7 @@ const schoolsUnordered = [
   {
     country: "Singapore 🇸🇬",
     name: "Anglican High School",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/39.webp"
   },
   {
     country: "Singapore 🇸🇬",
@@ -166,12 +167,12 @@ const schoolsUnordered = [
   {
     country: "Singapore 🇸🇬",
     name: "Xinmin Secondary School",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/47.webp"
   },
   {
     country: "Australia 🇦🇺",
     name: "Brisbane Girls Grammar School",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/40.webp"
   },
   {
     country: "Brunei 🇧🇳",
@@ -196,7 +197,7 @@ const schoolsUnordered = [
   {
     country: "Hong Kong SAR 🇭🇰",
     name: "Diocesan Girls' School",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/42.webp"
   },
   {
     country: "Indonesia 🇮🇩",
@@ -231,7 +232,7 @@ const schoolsUnordered = [
   {
     country: "Republic of Korea 🇰🇷",
     name: "Korea Science Academy of KAIST",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/44.webp"
   },
   {
     country: "Thailand 🇹🇭",
@@ -246,22 +247,22 @@ const schoolsUnordered = [
   {
     country: "Cambodia 🇰🇭",
     name: "New Generation School Preah Sisowath High School",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/46.webp"
   },
   {
     country: "United Kingdom 🇬🇧",
     name: "Camborne Science and International Academy",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/41.webp"
   },
   {
     country: "United States of America 🇺🇸",
     name: "Loudoun County Academy of Science",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/45.webp"
   },
   {
     country: "Vietnam 🇻🇳",
     name: "Hanoi-Amsterdam High School for the Gifted",
-    image: "/images/profiles/schools/.webp"
+    image: "/images/profiles/schools/43.webp"
   },
 ]
 
