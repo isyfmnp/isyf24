@@ -219,16 +219,16 @@ ul {
   top: 6rem;
 }
 .event-day:last-of-type::before {
-  bottom: 11rem;
+  bottom: 14rem;
 }
-@media screen and (min-width: 402px) {
+@media screen and (min-width: 370px) {
   .event-day:last-of-type::before {
-    bottom: 10rem;
+    bottom: 13rem;
   }
 }
-@media screen and (min-width: 666px) {
+@media screen and (min-width: 900px) {
   .event-day:last-of-type::before {
-    bottom: 9rem;
+    bottom: 11rem;
   }
 }
 .event-day::before {
@@ -286,7 +286,7 @@ const days = [
   "Day 2 (9 Jan)",
   "Day 3 (10 Jan)",
   "Day 4 (11 Jan)",
-  "Day 6 (12 Jan)",
+  "Day 5 (12 Jan)",
 ];
 
 const events = [
@@ -347,7 +347,7 @@ const events = [
       time: "6:00PM - 7:00PM",
     },
     {
-      name: "Cultural Hour",
+      name: "Cultural Hour I",
       time: "7:00PM - 8:00PM",
       description:
         "As the night unfolds, witness mesmerising performances, from dances to stories, each a window into a different country. The Cultural Hour and Exhibition provides the opportunity for delegates to showcase their unique history, culture and customs! Through this, delegates will be able to traverse the global village, better understand each others’ cultures, and view the world from a global perspective.",
@@ -361,22 +361,64 @@ const events = [
   ],
   [
     {
-      name: "Prep??????",
+      name: "Preparation for Masterclass",
       time: "8:30AM -9:30AM",
     },
     {
-      name: "Masterclass — Dialogues by Scientists and Experts",
+      name: "Masterclass — Dialogues by Scientists and Experts I",
       time: "9:30AM - 11:00AM",
       description:
         "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.",
     },
     {
-      name: "Setup Poster Exhibition",
+      name: "Setup and Cultural Exhibition",
       time: "11:00AM - 12:00PM",
     },
     {
       name: "Lunch",
       time: "12:30PM - 1:30PM",
+    },
+    {
+      name: "Departure for Unlocking the Wonders Excursion",
+      time: "1:30PM",
+    },
+    {
+      name: "Unlocking the Wonders Excursion",
+      time: "2:00PM - 5:30PM",
+      description: "MISSING"
+    },
+    {
+      name: "Return to HCIBS",
+      time: "5:30PM"
+    },
+    {
+      name: "Dinner",
+      time: "6:00PM - 6:00PM",
+    },
+    {
+      name: "Cultural Hour II",
+      time: "7:00PM - 8:00PM"
+    },
+    {
+      name: "Science Quest Product",
+      time: "8:00PM - 9:00PM",
+      description: "MISSING"
+    }
+  ],
+  [
+    {
+      name: "Preparation for Masterclass",
+      time: "8:30AM -9:30AM",
+    },
+    {
+      name: "Masterclass — Dialogues by Scientists and Experts II",
+      time: "9:30AM - 11:00AM",
+      description:
+        "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.",
+    },
+    {
+      name: "Lunch",
+      time: "11:30AM - 12:30PM",
     },
     {
       name: "ISYF Keynote Lecture",
@@ -389,13 +431,13 @@ const events = [
       time: "3:30PM - 4:30PM",
     },
     {
-      name: "Dinner Out",
-      time: "5:00PM - 9:00PM",
-    },
+      name: "Team Bonding Activity",
+      time: "5:00PM - 9:00PM"
+    }
   ],
   [
     {
-      name: "Prep??????",
+      name: "Preparation for Science Activity",
       time: "8:30AM - 9:00AM",
     },
     {
@@ -405,7 +447,7 @@ const events = [
         "Prepare for an intriguing activity that brings together the art of geometry and principles of physics! Take a plunge into the world of geometrical figures and physical laws, and work with your group to see these concepts come to life. The thrill of discovery awaits!",
     },
     {
-      name: "Departure for Hotel",
+      name: "Bus Departure for Hotel",
       time: "11:00AM",
     },
     {
