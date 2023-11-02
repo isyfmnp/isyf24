@@ -30,7 +30,7 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .masthead::before {
   content: "";
