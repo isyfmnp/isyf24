@@ -6,6 +6,11 @@
   </p>
 
   <main class="programme">
+    <div class="timeline-wrapper">
+
+    <Timeline />
+    </div>
+
     <div class="navigator">
       <a
         class="day"
@@ -64,6 +69,13 @@ ul {
 /* ========== OVERALL BOX STYLING ========== */
 .programme {
   margin-bottom: 50vh; /* Prevent clash between last box and footer coloring */
+  width: 100%;
+  overflow: visible;
+}
+
+.timeline-wrapper {
+  margin-block: 3rem;
+  margin-inline: max(calc(-50vw + 1.5rem + 50%), -8rem);
 }
 
 /* ========== DAY NAVIGATOR ========== */
@@ -167,8 +179,8 @@ ul {
 }
 
 .event-day {
-  margin: 0 -100vw;
-  padding: 2rem 100vw;
+  margin: 0 calc(50% - 50vw);
+  padding: 2rem calc(50vw - 50%);
   color: var(--fg);
   --cl: var(--primary);
 }
@@ -278,6 +290,7 @@ ul {
 </style>
 
 <script setup>
+import Timeline from "../components/timeline.vue";
 import { onMounted } from "vue";
 
 const days = [

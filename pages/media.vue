@@ -105,7 +105,7 @@
 
   font-family: var(--font-display);
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   color: var(--gray-300);
   border-radius: 8px 8px 0 0;
 }
