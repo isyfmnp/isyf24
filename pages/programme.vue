@@ -7,18 +7,7 @@
 
   <main class="programme">
     <div class="timeline-wrapper">
-
-    <Timeline />
-    </div>
-
-    <div class="navigator">
-      <a
-        class="day"
-        v-for="dayIndex in [0, 1, 2, 3, 4]"
-        :href="'#day-' + dayIndex"
-      >
-        <div class="text">{{ dayIndex + 1 }}</div>
-      </a>
+      <Timeline />
     </div>
 
     <div class="condensed-timeline">
@@ -47,10 +36,12 @@
   </main>
 </template>
 
+<style></style>
+
 <style scoped>
 :global(.masthead::before) {
   color: var(--bg);
-  background-image: url("/images/progbg.webp");
+  background-image: url('/images/progbg.webp');
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -78,88 +69,39 @@ ul {
   margin-inline: max(calc(-50vw + 1.5rem + 50%), -8rem);
 }
 
-/* ========== DAY NAVIGATOR ========== */
-.navigator {
-  display: none; /* TODO: Evaluate if this is neccesary, else remove */
-
-  padding: 1rem;
-  position: relative;
-
-  /*display: flex;*/
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.navigator::after {
-  content: "";
-  background-color: var(--primary);
-  position: absolute;
-  display: block;
-  z-index: 0;
-
-  top: 1rem;
-  bottom: 1rem;
-  left: calc(50% - 2px);
-  width: 3px;
-}
-.navigator .day {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-
-  font-weight: bold;
-  font-size: 28px;
-  font-family: var(--font-display);
-
-  background-color: var(--bg);
-  border: 3px solid var(--primary);
-  color: var(--primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  z-index: 1;
-  transition: background-color 200ms, color 200ms;
-}
-.navigator .day:hover {
-  background-color: var(--primary);
-  color: var(--bg);
-}
-
 /* ========== TIMELINE ========== */
 .event-day h2 {
   font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 44px;
-  margin-block: 3rem;
+  font-weight: 600;
+  font-size: 26px;
+  width: fit-content;
+  margin-block: 1rem 2rem;
+  position: relative;
+  z-index: 10;
 }
 .event-day h3 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-style: normal;
+  font-weight: 600;
+  font-style: italic;
   font-family: var(--font-display);
   margin-block: 0;
   line-height: 1.5rem;
 }
 
 /* DAY HEADER BACKGROUND */
-.event-day h2 {
-  width: fit-content;
-}
 .event-day h2::after {
-  content: "";
+  content: '';
   z-index: -1;
   position: absolute;
   right: -15vw;
   left: -100vw;
-  top: -1.5rem;
-  bottom: -1rem;
+  top: -1rem;
+  bottom: -0.75rem;
 
-  border: 1px solid var(--gray-900);
+  border: 1px solid var(--gray-500);
   backdrop-filter: blur(5px);
   border-radius: 16px;
+  background-color: var(--primary);
+  color: var(--gray-900);
 }
 .event-day:nth-of-type(even) h2::after {
   background-color: hsla(var(--primary-200-hsla), 0.125);
@@ -170,65 +112,70 @@ ul {
 
 @media screen and (min-width: 900px) {
   .event-day h2 {
-    margin-block: 3rem;
+    margin-block: 2rem;
   }
   .event-day h2::after {
     top: -1rem;
-    bottom: -0.5rem;
+    bottom: -0.75rem;
   }
 }
 
 .event-day {
   margin: 0 calc(50% - 50vw);
-  padding: 2rem calc(50vw - 50%);
+  padding: 1rem calc(50vw - 50%);
   color: var(--fg);
   --cl: var(--primary);
+  --fg-2: var(--gray-700);
 }
 .event-day:nth-of-type(even) {
   background-color: var(--gray-900);
-  --fg: var(--bg);
+  --fg: var(--gray-100);
+  --fg-2: var(--gray-300);
+  --bg: var(--gray-900);
   --cl: var(--primary-400);
 }
 
 .event-details {
-  margin-top: 1rem;
-  margin-bottom: 5rem;
+  margin-block: 1rem 2rem;
 }
 .event-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  z-index: 30;
 
-  gap: 0.5rem;
-  margin-block: 4rem 1.5rem;
+  gap: 0.25rem;
+  margin-block: 2rem 0.5rem;
 }
 
 .time {
   display: block;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   white-space: nowrap;
   font-family: var(--font);
   padding-right: 1rem;
+  color: var(--gray-400);
 
   flex-shrink: 0;
 }
-@media screen and (min-width: 900px) {
-  .event-title {
-    flex-direction: row;
-  }
+.event-details p {
+  font-size: 16px;
+  margin-block: 0.375rem;
+  color: var(--fg-2);
+  line-height: 1.375em;
 }
 
 /* TIMELINE EFFECT */
 .event-day {
   --tm-radius: 2rem;
   margin-left: calc(-100vw - 3.25rem + 5vw);
-  padding-left: calc(100vw + var(--tm-radius) * 2 + 1px);
+  padding-left: calc(100vw + var(--tm-radius) * 2 + 1px - 0.5rem);
   position: relative;
 }
 .event-day:first-of-type::before {
-  top: 6rem;
+  top: 4rem;
 }
 .event-day:last-of-type::before {
   bottom: 14rem;
@@ -244,38 +191,43 @@ ul {
   }
 }
 .event-day::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   left: calc(100vw + var(--tm-radius));
   width: 2px;
-  z-index: 4;
+  z-index: 20;
 
   background-color: var(--cl);
 }
 .event-day h2,
 .event-day .event-title {
   position: relative;
-  z-index: 3;
 }
 .event-day h2::before,
 .event-day h3::before {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
-
   border-radius: 50%;
-  background-color: var(--cl);
+  z-index: 10;
 }
 .event-day h2::before {
-  left: calc(-3rem - 1px);
-  top: calc(50% - 1.25rem);
+  background-color: var(--cl);
+  left: calc(-3rem - 1px + 0.5rem);
+  top: calc(50% - 1rem);
   width: 2rem;
   height: 2rem;
 }
+.event-day h3 {
+  position: relative;
+}
 .event-day h3::before {
-  left: -2.625rem;
+  box-sizing: border-box;
+  border: 2px solid var(--cl);
+  background-color: var(--bg);
+  left: -2.125rem;
   top: 0.125rem;
   width: 1.25rem;
   height: 1.25rem;
@@ -290,189 +242,209 @@ ul {
 </style>
 
 <script setup>
-import Timeline from "../components/timeline.vue";
-import { onMounted } from "vue";
+import Timeline from '../components/timeline.vue';
+import {onMounted} from 'vue';
+
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
+  
+  const sections = gsap.utils.toArray(".event-details");
+
+  sections.forEach((section) => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 10,
+      duration: 0.5,
+      stagger: 0.15,
+      ease: "power2.inOut",
+      scrollTrigger: section,
+    });
+  });
+})
 
 const days = [
-  "Day 0 (7 Jan)",
-  "Day 1 (8 Jan)",
-  "Day 2 (9 Jan)",
-  "Day 3 (10 Jan)",
-  "Day 4 (11 Jan)",
-  "Day 5 (12 Jan)",
+  'Day 0 (7 Jan)',
+  'Day 1 (8 Jan)',
+  'Day 2 (9 Jan)',
+  'Day 3 (10 Jan)',
+  'Day 4 (11 Jan)',
+  'Day 5 (12 Jan)',
 ];
 
 const events = [
   [
     {
-      name: "Arrival of Delegates",
-      time: "~",
-      description: "Welcome to Singapore!",
+      name: 'Arrival of Delegates',
+      time: '~',
+      description: 'Welcome to Singapore!',
     },
   ],
   [
     {
-      name: "Assembly Announcements",
-      time: "7:30AM",
+      name: 'Assembly Announcements',
+      time: '7:30 AM',
     },
     {
-      name: "Programme Briefing & Team Bonding Activities",
-      time: "8:00AM",
+      name: 'Programme Briefing & Team Bonding Activities',
+      time: '8:00 AM',
     },
     {
-      name: "Singapore Discovery Trail",
-      time: "TBC:AM",
+      name: 'Singapore Discovery Trail',
+      time: 'TBC: AM',
       description:
-        "From the phenomenal urban landscape to the lush nature in Singapore’s parks, adventure awaits! On the Singapore Discovery Trail, delegates will be able to explore key attractions in Singapore while completing challenges and tasks throughout their journey. The trail will also allow delegates to gain a deeper understanding of Singapore’s traditions and cultures while immersing in the wonders of this garden city.",
+        'From the phenomenal urban landscape to the lush nature in Singapore’s parks, adventure awaits! On the Singapore Discovery Trail, delegates will be able to explore key attractions in Singapore while completing challenges and tasks throughout their journey. The trail will also allow delegates to gain a deeper understanding of Singapore’s traditions and cultures while immersing in the wonders of this garden city.',
     },
   ],
   [
     {
-      name: "Departure for National University of Singapore (NUS)",
-      time: "9:15AM",
+      name: 'Departure for National University of Singapore (NUS)',
+      time: '9:15 AM',
     },
     {
       name: "Professor's Sow's Lecture: Introduction to Nanoworld",
-      time: "10:00AM - 12:00PM",
+      time: '10:00 AM - 12:00 PM',
       description:
         "Wonder what happens when you zoom in, in and in? Want to discover intriguing properties of matter at the nanoscale? Look no further! QnA, demonstrations and interactive activities… Get ready to be wowed the friendly and brilliant Professor Sow from the National University of Singapore! You'll be kept at the edge of your seat as you delve into the nanoworld together with your friends, exploring current and future applications of nanotechnology with this fun-filled lecture. ",
     },
     {
-      name: "Lunch at NUS",
-      time: "12:15PM - 1:15PM",
+      name: 'Lunch at NUS',
+      time: '12:15 PM - 1:15 PM',
     },
     {
-      name: "Departure for Science Centre Singapore",
-      time: "1:30PM",
+      name: 'Departure for Science Centre Singapore',
+      time: '1:30 PM',
     },
     {
-      name: "Science Quest @ Science Centre Singapore",
-      time: "2:00PM - 5:00PM",
+      name: 'Science Quest @ Science Centre Singapore',
+      time: '2:00 PM - 5:00 PM',
       description:
-        "Is it a bird? Is it a plane? No, it’s the inaugural Science Quest! Through Science Quest, delegates will have the opportunity to head out to various attractions around Singapore, unlocking the wonders of Science and learning firsthand how it is applied in daily life. Get ready to be captivated by interactive displays on various scientific topics and an engaging experience!",
+        'Is it a bird? Is it a plane? No, it’s the inaugural Science Quest! Through Science Quest, delegates will have the opportunity to head out to various attractions around Singapore, unlocking the wonders of Science and learning firsthand how it is applied in daily life. Get ready to be captivated by interactive displays on various scientific topics and an engaging experience!',
     },
     {
-      name: "Return to HCIBS",
-      time: "5:00PM",
+      name: 'Return to HCIBS',
+      time: '5:00 PM',
     },
     {
-      name: "Dinner",
-      time: "6:00PM - 7:00PM",
+      name: 'Dinner',
+      time: '6:00 PM - 7:00 PM',
     },
     {
-      name: "Cultural Hour I",
-      time: "7:00PM - 8:00PM",
+      name: 'Cultural Hour I',
+      time: '7:00 PM - 8:00 PM',
       description:
-        "As the night unfolds, witness mesmerising performances, from dances to stories, each a window into a different country. The Cultural Hour and Exhibition provides the opportunity for delegates to showcase their unique history, culture and customs! Through this, delegates will be able to traverse the global village, better understand each others’ cultures, and view the world from a global perspective.",
+        'As the night unfolds, witness mesmerising performances, from dances to stories, each a window into a different country. The Cultural Hour and Exhibition provides the opportunity for delegates to showcase their unique history, culture and customs! Through this, delegates will be able to traverse the global village, better understand each others’ cultures, and view the world from a global perspective.',
     },
     {
-      name: "Preparation for Science Quest Product",
-      time: "8:00PM - 9:00PM",
+      name: 'Preparation for Science Quest Product',
+      time: '8:00 PM - 9:00 PM',
       description:
-        "Take this time to prepare your final product for presentation!",
+        'Take this time to prepare your final product for presentation!',
     },
   ],
   [
     {
-      name: "Preparation for Masterclass",
-      time: "8:30AM -9:30AM",
+      name: 'Preparation for Masterclass',
+      time: '8:30AM -9:30 AM',
     },
     {
-      name: "Masterclass — Dialogues by Scientists and Experts I",
-      time: "9:30AM - 11:00AM",
+      name: 'Masterclass — Dialogues by Scientists and Experts I',
+      time: '9:30 AM - 11:00 AM',
       description:
-        "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.",
+        'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.',
     },
     {
-      name: "Setup and Cultural Exhibition",
-      time: "11:00AM - 12:00PM",
+      name: 'Setup and Cultural Exhibition',
+      time: '11:00 AM - 12:00 PM',
     },
     {
-      name: "Lunch",
-      time: "12:30PM - 1:30PM",
+      name: 'Lunch',
+      time: '12:30 PM - 1:30 PM',
     },
     {
-      name: "Departure for Unlocking the Wonders Excursion",
-      time: "1:30PM",
+      name: 'Departure for Unlocking the Wonders Excursion',
+      time: '1:30 PM',
     },
     {
-      name: "Unlocking the Wonders Excursion",
-      time: "2:00PM - 5:30PM",
-      description: "MISSING"
+      name: 'Unlocking the Wonders Excursion',
+      time: '2:00 PM - 5:30 PM',
+      description: 'MISSING',
     },
     {
-      name: "Return to HCIBS",
-      time: "5:30PM"
+      name: 'Return to HCIBS',
+      time: '5:30 PM',
     },
     {
-      name: "Dinner",
-      time: "6:00PM - 6:00PM",
+      name: 'Dinner',
+      time: '6:00 PM - 6:00 PM',
     },
     {
-      name: "Cultural Hour II",
-      time: "7:00PM - 8:00PM"
+      name: 'Cultural Hour II',
+      time: '7:00 PM - 8:00 PM',
     },
     {
-      name: "Science Quest Product",
-      time: "8:00PM - 9:00PM",
-      description: "MISSING"
-    }
+      name: 'Science Quest Product',
+      time: '8:00 PM - 9:00 PM',
+      description: 'MISSING',
+    },
   ],
   [
     {
-      name: "Preparation for Masterclass",
-      time: "8:30AM -9:30AM",
+      name: 'Preparation for Masterclass',
+      time: '8:30AM -9:30 AM',
     },
     {
-      name: "Masterclass — Dialogues by Scientists and Experts II",
-      time: "9:30AM - 11:00AM",
+      name: 'Masterclass — Dialogues by Scientists and Experts II',
+      time: '9:30 AM - 11:00 AM',
       description:
-        "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.",
+        'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.',
     },
     {
-      name: "Lunch",
-      time: "11:30AM - 12:30PM",
+      name: 'Lunch',
+      time: '11:30 AM - 12:30 PM',
     },
     {
-      name: "ISYF Keynote Lecture",
-      time: "2:00PM - 3:30PM",
+      name: 'ISYF Keynote Lecture',
+      time: '2:00 PM - 3:30 PM',
       description:
-        "Hear from the insights of Nobel Laureates during the Keynote Lecture, which will also be the flagship event of ISYF 2024. After which, take a tour around the Poster Exhibition, where student delegates will share their scientific research with eminent scientists, educators, and other fellow delegates! ",
+        'Hear from the insights of Nobel Laureates during the Keynote Lecture, which will also be the flagship event of ISYF 2024. After which, take a tour around the Poster Exhibition, where student delegates will share their scientific research with eminent scientists, educators, and other fellow delegates! ',
     },
     {
-      name: "Poster Exhibition",
-      time: "3:30PM - 4:30PM",
+      name: 'Poster Exhibition',
+      time: '3:30 PM - 4:30 PM',
     },
     {
-      name: "Team Bonding Activity",
-      time: "5:00PM - 9:00PM"
-    }
+      name: 'Team Bonding Activity',
+      time: '5:00 PM - 9:00 PM',
+    },
   ],
   [
     {
-      name: "Preparation for Science Activity",
-      time: "8:30AM - 9:00AM",
+      name: 'Preparation for Science Activity',
+      time: '8:30 AM - 9:00 AM',
     },
     {
-      name: "Collaborative Science Activity",
-      time: "9:00AM - 10:30AM",
+      name: 'Collaborative Science Activity',
+      time: '9:00 AM - 10:30 AM',
       description:
-        "Prepare for an intriguing activity that brings together the art of geometry and principles of physics! Take a plunge into the world of geometrical figures and physical laws, and work with your group to see these concepts come to life. The thrill of discovery awaits!",
+        'Prepare for an intriguing activity that brings together the art of geometry and principles of physics! Take a plunge into the world of geometrical figures and physical laws, and work with your group to see these concepts come to life. The thrill of discovery awaits!',
     },
     {
-      name: "Bus Departure for Hotel",
-      time: "11:00AM",
+      name: 'Bus Departure for Hotel',
+      time: '11:00 AM',
     },
     {
-      name: "Closing Lunch & Farewell",
-      time: "12:00AM - 3:00PM",
+      name: 'Closing Lunch & Farewell',
+      time: '12:00 AM - 3:00 PM',
       description:
-        "Includes student research presentation, cultural performance and return to HCIBS and final Departure",
+        'Includes student research presentation, cultural performance and return to HCIBS and final Departure',
     },
     {
-      name: "Final Departure",
-      time: "3:00PM",
-      description: "Thanks for coming for ISYF 2024!",
+      name: 'Final Departure',
+      time: '3:00 PM',
+      description: 'Thanks for coming for ISYF 2024!',
     },
   ],
 ];
