@@ -17,7 +17,7 @@
             {{ dayTitle }}
           </h2>
           <ul>
-            <li class="event-details" v-for="event in events[dayIndex]">
+            <li class="event-details" v-for="event in events[dayIndex]" :class="{ highlight: event.highlight }">
               <div class="event-title">
                 <span class="time">{{ event.time }}</span>
                 <h3 class="name">{{ event.name }}</h3>
@@ -141,7 +141,7 @@ ul {
 }
 
 .event-details {
-  margin-block: 1rem 2rem;
+  margin-block: 2.5rem 2rem;
 }
 .event-title {
   display: flex;
@@ -151,7 +151,7 @@ ul {
   z-index: 30;
 
   gap: 0.25rem;
-  margin-block: 2rem 0.5rem;
+  margin-block: 0.5rem 0.5rem;
 }
 
 .time {
@@ -171,6 +171,14 @@ ul {
   color: var(--fg-2);
   line-height: 1.375em;
 }
+
+.highlight {
+  outline: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  margin-left: -0.375rem;
+}
+
 
 /* TIMELINE EFFECT */
 .event-day {
@@ -228,13 +236,19 @@ ul {
 }
 .event-day h3::before {
   box-sizing: border-box;
-  border: 2px solid var(--cl);
-  background-color: var(--bg);
+  border: 1px solid var(--fg);
+  background-color: var(--bg); 
   left: -2.125rem;
   top: 0.125rem;
   width: 1.25rem;
   height: 1.25rem;
 }
+.highlight h3::before {
+  border: 2px solid var(--cl);
+  background-color: var(--cl);
+  left: -2.5rem;
+}
+
 
 @media screen and (min-width: 900px) {
   .event-day h2 {
@@ -279,35 +293,54 @@ const days = [
 
 const events = [
   [
+    // Day 0
     {
       name: 'Arrival of Delegates',
       description: 'Welcome to Singapore!',
     },
   ],
   [
+    // Day 1
     {
-      name: 'Assembly Announcements',
+      name: 'Introduction of Delegates at Combined Assembly',
       time: '7:30 AM',
     },
     {
-      name: 'Programme Briefing & Team Bonding Activities',
-      time: '8:00 AM',
+      name: 'Programme Briefing',
+      time: '9 AM',
+    },
+    {
+      name: "Team Bonding Activities",
+      time: '10 AM'
     },
     {
       name: 'Singapore Discovery Trail',
-      time: 'TBC: AM',
+      time: 'TB AM - TB AM',
+      highlight: true,
       description:
         'From the phenomenal urban landscape to the lush nature in Singapore’s parks, adventure awaits! On the Singapore Discovery Trail, delegates will be able to explore key attractions in Singapore while completing challenges and tasks throughout their journey. The trail will also allow delegates to gain a deeper understanding of Singapore’s traditions and cultures while immersing in the wonders of this garden city.',
     },
+    {
+      name: 'Dinner',
+      time: '6 PM - 7 PM',
+    },
+    {
+      name: "Science Activity",
+      time: "7 PM - 8:30 PM",
+      highlight: true,
+      description: "MISSING"
+    }
   ],
   [
+    // Day 2
     {
       name: 'Departure for National University of Singapore (NUS)',
       time: '9:15 AM',
     },
     {
       name: "Professor's Sow's Lecture: Introduction to Nanoworld",
-      time: '10:00 AM - 12:00 PM',
+      time: '10 AM - 12 PM',
+      highlight: true,
       description:
         "Wonder what happens when you zoom in, in and in? Want to discover intriguing properties of matter at the nanoscale? Look no further! QnA, demonstrations and interactive activities… Get ready to be wowed the friendly and brilliant Professor Sow from the National University of Singapore! You'll be kept at the edge of your seat as you delve into the nanoworld together with your friends, exploring current and future applications of nanotechnology with this fun-filled lecture. ",
     },
@@ -316,90 +349,75 @@ const events = [
       time: '12:15 PM - 1:15 PM',
     },
     {
-      name: 'Departure for Science Centre Singapore',
-      time: '1:30 PM',
-    },
-    {
       name: 'Science Quest @ Science Centre Singapore',
-      time: '2:00 PM - 5:00 PM',
+      time: '2 PM - 5 PM',
+      highlight: true,
       description:
         'Is it a bird? Is it a plane? No, it’s the inaugural Science Quest! Through Science Quest, delegates will have the opportunity to head out to various attractions around Singapore, unlocking the wonders of Science and learning firsthand how it is applied in daily life. Get ready to be captivated by interactive displays on various scientific topics and an engaging experience!',
     },
     {
-      name: 'Return to HCIBS',
-      time: '5:00 PM',
-    },
-    {
       name: 'Dinner',
-      time: '6:00 PM - 7:00 PM',
+      time: '6 PM - 7 PM',
     },
     {
       name: 'Cultural Hour I',
-      time: '7:00 PM - 8:00 PM',
+      time: '7 PM - 8 PM',
       description:
         'As the night unfolds, witness mesmerising performances, from dances to stories, each a window into a different country. The Cultural Hour and Exhibition provides the opportunity for delegates to showcase their unique history, culture and customs! Through this, delegates will be able to traverse the global village, better understand each others’ cultures, and view the world from a global perspective.',
     },
-    {
-      name: 'Preparation for Science Quest Product',
-      time: '8:00 PM - 9:00 PM',
-      description:
-        'Take this time to prepare your final product for presentation!',
-    },
   ],
   [
+    // Day 3
     {
       name: 'Preparation for Masterclass',
-      time: '8:30AM -9:30 AM',
+      time: '8:30 AM - 9:30 AM',
     },
     {
       name: 'Masterclass — Dialogues by Scientists and Experts I',
-      time: '9:30 AM - 11:00 AM',
+      time: '9:30 AM - 11 AM',
+      highlight: true,
       description:
         'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.',
     },
     {
       name: 'Setup and Cultural Exhibition',
-      time: '11:00 AM - 12:00 PM',
+      time: '11 AM - 12 PM',
     },
     {
       name: 'Lunch',
       time: '12:30 PM - 1:30 PM',
     },
     {
-      name: 'Departure for Unlocking the Wonders Excursion',
-      time: '1:30 PM',
-    },
-    {
       name: 'Unlocking the Wonders Excursion',
-      time: '2:00 PM - 5:30 PM',
+      time: '2 PM - 5:30 PM',
+      highlight: true,
       description: 'MISSING',
     },
     {
-      name: 'Return to HCIBS',
-      time: '5:30 PM',
-    },
-    {
       name: 'Dinner',
-      time: '6:00 PM - 6:00 PM',
+      time: '6 PM - 6 PM',
     },
     {
       name: 'Cultural Hour II',
-      time: '7:00 PM - 8:00 PM',
+      time: '7 PM - 8 PM',
+      highlight: true,
     },
     {
       name: 'Science Quest Product',
-      time: '8:00 PM - 9:00 PM',
+      time: '8 PM - 9 PM',
       description: 'MISSING',
     },
   ],
   [
+    // Day 4
     {
       name: 'Preparation for Masterclass',
       time: '8:30AM -9:30 AM',
     },
     {
       name: 'Masterclass — Dialogues by Scientists and Experts II',
-      time: '9:30 AM - 11:00 AM',
+      time: '9:30 AM - 11 AM',
+      highlight: true,
       description:
         'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.',
     },
@@ -409,43 +427,48 @@ const events = [
     },
     {
       name: 'ISYF Keynote Lecture',
-      time: '2:00 PM - 3:30 PM',
+      time: '2 PM - 3:30 PM',
+      highlight: true,
       description:
         'Hear from the insights of Nobel Laureates during the Keynote Lecture, which will also be the flagship event of ISYF 2024. After which, take a tour around the Poster Exhibition, where student delegates will share their scientific research with eminent scientists, educators, and other fellow delegates! ',
     },
     {
       name: 'Poster Exhibition',
       time: '3:30 PM - 4:30 PM',
+      highlight: true,
     },
     {
       name: 'Team Bonding Activity',
-      time: '5:00 PM - 9:00 PM',
+      time: '5 PM - 9 PM',
     },
   ],
   [
+    // Day 5
     {
       name: 'Preparation for Science Activity',
-      time: '8:30 AM - 9:00 AM',
+      time: '8:30 AM - 9 AM',
     },
     {
       name: 'Collaborative Science Activity',
-      time: '9:00 AM - 10:30 AM',
+      time: '9 AM - 10:30 AM',
+      highlight: true,
       description:
         'Prepare for an intriguing activity that brings together the art of geometry and principles of physics! Take a plunge into the world of geometrical figures and physical laws, and work with your group to see these concepts come to life. The thrill of discovery awaits!',
     },
     {
       name: 'Bus Departure for Hotel',
-      time: '11:00 AM',
+      time: '11 AM',
     },
     {
       name: 'Closing Lunch & Farewell',
-      time: '12:00 AM - 3:00 PM',
+      time: '12 AM - 3 PM',
+      highlight: true,
       description:
         'Includes student research presentation, cultural performance and return to HCIBS and final Departure',
     },
     {
       name: 'Final Departure',
-      time: '3:00 PM',
+      time: '3 PM',
       description: 'Thanks for coming for ISYF 2024!',
     },
   ],
