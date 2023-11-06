@@ -76,8 +76,6 @@ ul {
   font-size: 26px;
   width: fit-content;
   margin-block: 1rem 2rem;
-  position: relative;
-  z-index: 10;
 }
 .event-day h3 {
   font-weight: 600;
@@ -90,7 +88,7 @@ ul {
 /* DAY HEADER BACKGROUND */
 .event-day h2::after {
   content: '';
-  z-index: -1;
+  z-index: -10;
   position: absolute;
   right: -15vw;
   left: -100vw;
@@ -126,13 +124,20 @@ ul {
   color: var(--fg);
   --cl: var(--primary);
   --fg-2: var(--gray-700);
+  position: relative;
 }
 .event-day:nth-of-type(even) {
-  background-color: var(--gray-900);
   --fg: var(--gray-100);
   --fg-2: var(--gray-300);
   --bg: var(--gray-900);
   --cl: var(--primary-400);
+}
+.event-day:nth-of-type(even)::after {
+  content: '';
+  z-index: -50;
+  position: absolute;
+  inset: 0;
+  background-color: var(--gray-900);
 }
 
 .event-details {
@@ -197,7 +202,6 @@ ul {
   bottom: 0;
   left: calc(100vw + var(--tm-radius));
   width: 2px;
-  z-index: 20;
 
   background-color: var(--cl);
 }
@@ -211,7 +215,6 @@ ul {
   position: absolute;
   display: block;
   border-radius: 50%;
-  z-index: 10;
 }
 .event-day h2::before {
   background-color: var(--cl);
@@ -278,7 +281,6 @@ const events = [
   [
     {
       name: 'Arrival of Delegates',
-      time: '~',
       description: 'Welcome to Singapore!',
     },
   ],
