@@ -1,21 +1,32 @@
 <template>
   <div>
-    <Masthead>
-      <!-- .masthead is declared in component -->
-      <img class="logo" src="/icon_light.png" alt="ISYF Logo" />
+    <div class="banner" :class="{normal: bannerNormal}">
       <div class="info">
-        <div class="detail-list">
-          <span class="detail"> 8-12 January 2024 </span>
-          <span class="detail"> Hwa Chong Institution (Singapore) </span>
+        <img class="logo" src="/icon_light.png" alt="ISYF Logo" />
+        <div class="title-wrapper">
+          <h1 class="title">International Science Youth Forum 2024</h1>
+          <div class="title2-wrapper">
+          <h1 class="title title2" aria-hidden>International Science Youth Forum 2024</h1>
+          </div>
         </div>
-        <h1 class="title">International Science Youth Forum 2024</h1>
-        <div class="scroll-prompt">
-          <span class="material-icons-outlined arrow-down">
-            keyboard_double_arrow_down </span
-          >Scroll down to learn more!
+
+        <div class="detail-list"> 
+          <div class="detail">
+            <span class="material-icons-outlined small-icon">
+              calendar_month </span
+            >8-12 January 2024
+          </div>
+          <div class="seperator"></div>
+          <div class="detail">
+            <span class="material-icons-outlined small-icon">
+              location_on
+            </span>
+            Hwa Chong Institution (SG)
+          </div>
         </div>
       </div>
-    </Masthead>
+      <div class="background"></div>
+    </div>
 
     <div>
       <section>
@@ -161,10 +172,105 @@
 </template>
 
 <style>
-@import url("~/assets/css/cards.css");
+.content {
+  margin-top: 3.5rem !important;
+}
+</style>
 
-/* ========== MASTHEAD ========== */
-.masthead {
+<style scoped>
+@import url('~/assets/css/cards.css');
+
+.banner {
+  display: block;
+  margin-inline: calc(50% - 50vw);
+  margin-bottom: 8rem;
+  height: calc(95vh - 3.5rem);
+
+  --fg: var(--gray-950);
+
+  --info-width: 30rem;
+  --bg-info-width: 80vw;
+  --info-padding: 3rem;
+
+  --trn-time: 1s;
+  --trn-func: cubic-bezier(.75,0,.175,1);
+
+  display: grid;
+  transition: grid-template-columns var(--trn-time) var(--trn-func);
+  grid-template-columns: calc(var(--bg-info-width) + 2 * var(--info-padding)) 1fr;
+  border-bottom: 5px solid var(--primary);
+}
+.banner.normal {
+  --bg-info-width: var(--info-width);
+}
+.background {
+  background-image: url('/images/clocktower-6.jpeg');
+  filter: brightness(.7);
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner .info {
+  padding: var(--info-padding);
+  margin-top: var(--info-padding);
+}
+.banner .logo {
+  height: 200px;
+  width: 200px;
+}
+.banner .title-wrapper {
+  position: relative;
+  margin-right: calc(100% - 100vw + 2rem);
+}
+.banner .title {
+  padding-right: 2rem;
+  font-size: 96px;
+  max-width: 90rem;
+}
+.banner .title2 {
+  color: var(--gray-100);
+  margin-block: 0;
+  margin-left: calc((var(--bg-info-width) + var(--info-padding)) * -1);
+  transition: margin-left var(--trn-time) var(--trn-func);
+  filter: drop-shadow(2px 2px 7px hsla(var(--gray-900-hsla), 0.25));
+}
+.banner .title2-wrapper {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  left: calc(var(--bg-info-width) + var(--info-padding));
+  transition: left var(--trn-time) var(--trn-func);
+}
+
+.banner .detail-list {
+  width: var(--info-width);
+  display: inline-flex;
+  justify-content: space-evenly;
+  border: 1px solid var(--fg);
+  border-radius: 4px;
+}
+.banner .detail-list .detail {
+  font-weight: 500;
+  padding: 0.75rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.banner .detail-list .seperator {
+  width: 1px;
+  background-color: var(--fg);
+}
+.small-icon {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+/*
+/* ========== banner ========== 
+.banner {
   --fg: var(--gray-100);
   overflow: hidden;
 
@@ -173,12 +279,13 @@
 
   justify-content: center;
 }
-.masthead * {
+.banner * {
   margin: 0;
+  border: 1px dotted red;
 }
 
 @media screen and (min-width: 900px) {
-  .masthead {
+  .banner {
     display: grid;
     grid-template-columns: 1fr 3fr 0.25fr;
     justify-content: center;
@@ -188,12 +295,12 @@
     padding: 1rem 3rem;
     text-align: left;
   }
-  .masthead .logo {
+  .banner .logo {
     margin-inline: auto;
   }
 }
 
-.masthead::before {
+.banner::before {
   background-image: url("/images/clocktower.jpg");
   filter: brightness(55%) blur(2px) saturate(1.2);
   background-size: cover;
@@ -201,7 +308,7 @@
   background-position: 43% 50%;
 }
 
-.masthead .logo {
+.banner .logo {
   height: min(20vh, 50vw);
   width: min(20vh, 50vw);
   filter: opacity(0.875);
@@ -211,63 +318,60 @@
   padding: clamp(0.75rem, 1.5vh, 1.5rem);
 }
 
-.masthead .info {
+.banner .info {
   display: flex;
   flex-direction: column;
   gap: 3vh;
 }
 
-.masthead .title {
-  font-size: min(10vw, 10vh);
+.banner .title {
+  font-size: 48px;
   line-height: 1.125em;
 }
 
-.masthead .detail-list {
+.banner .detail-list {
   width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 @media screen and (max-width: 900px) {
-  .masthead .detail-list {
+  .banner .detail-list {
     margin-inline: auto;
   }
 }
 
-.masthead .detail {
+.banner .detail {
   display: block;
   padding-block: 0.5rem 0.25rem;
 
   font-weight: 600;
-  font-size: min(5vw, 22px);
+  font-size: 22px;
   text-transform: uppercase;
-}
-.masthead .detail + .detail {
-  border-top: 1px solid var(--gray-100);
 }
 
 @media screen and (min-width: 900px) {
-  .masthead .detail-list {
+  .banner .detail-list {
     flex-direction: row;
     justify-content: flex-start;
     gap: 2rem;
   }
-  .masthead .detail {
+  .banner .detail {
     padding-inline: 0.5rem;
     width: fit-content;
   }
-  .masthead .detail + .detail {
+  .banner .detail + .detail {
     border-top: none;
   }
 }
 
-.masthead .detail,
+.banner .detail,
 .scroll-prompt {
   text-shadow: 0 0 20px var(--gray-900);
 }
 
 .scroll-prompt {
-  font-size: min(2.5vh, 22px);
+  font-size: 22px;
   font-weight: bold;
   display: flex;
   margin-inline: auto;
@@ -302,7 +406,7 @@
   animation-name: arrow-bob;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-}
+}/*
 
 /* ========== CONTENT ========== */
 .sign {
@@ -310,8 +414,8 @@
 }
 
 .people {
-  margin-inline: -100vw;
-  padding-inline: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: calc(50vw - 50%);
   background-color: var(--primary-50);
 }
 
@@ -347,11 +451,11 @@
   padding: 0;
 }
 .supporters > *::before {
-  content: "open_in_new";
+  content: 'open_in_new';
   position: absolute;
   top: 0.5rem;
   right: 0.75rem;
-  font-family: "Material Icons Outlined";
+  font-family: 'Material Icons Outlined';
   color: var(--bg);
   background-color: var(--primary);
   padding: 0.25rem;
@@ -361,7 +465,7 @@
   transition: 200ms transform;
 }
 .supporters > *::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -398,35 +502,43 @@
 </style>
 
 <script setup>
-import { onMounted } from "vue";
-import Masthead from "../components/masthead.vue";
-import Button from "../components/button/button.vue";
-import PrimaryHighlight from "../components/primaryHighlight.vue";
-import Letter from "../components/letter.vue";
+import {onMounted} from 'vue';
+import banner from '../components/masthead.vue';
+import Button from '../components/button/button.vue';
+import PrimaryHighlight from '../components/primaryHighlight.vue';
+import Letter from '../components/letter.vue';
 
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import {gsap} from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+import { ref } from "vue";
+
+const bannerNormal = ref(false)
 
 onMounted(() => {
-  gsap.from(".masthead .logo", {
+  setTimeout(() => {
+    window.banner = false;
+  }, 1);
+
+  bannerNormal.value = true;
+
+  /*gsap.from('.banner .logo', {
     opacity: 0,
     y: -100,
     duration: 0.75,
     delay: 0,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
   });
 
-  gsap.from(".masthead .info *", {
+  gsap.from('.banner .info > *', {
     opacity: 0,
     y: 15,
     duration: 0.5,
-    ease: "power2.inOut",
+    ease: 'power2.inOut',
     stagger: 0.15,
     delay: 0.5,
-  });
+  });*/
 });
 
-definePageMeta({
-  layout: "masthead",
-});
+definePageMeta({});
 </script>

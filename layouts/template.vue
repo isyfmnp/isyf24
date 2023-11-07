@@ -41,8 +41,8 @@ onMounted(() => {
   sections.forEach((section) => {
     gsap.from(section, {
       opacity: 0,
-      y: 10,
-      duration: 0.5,
+      y: 15,
+      duration: 0.375,
       ease: "power2.inOut",
       scrollTrigger: section,
     });

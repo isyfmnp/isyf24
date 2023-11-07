@@ -497,10 +497,11 @@ const checkScroll = () => {
 onMounted(() => {
   setTimeout(() => {
     if (window.masthead) {
+      console.log("MAASTHEAD YES")
       navTransparent.value = true;
       document.addEventListener("scroll", checkScroll);
     }
-  }, 1);
+  }, 2);
 });
 onUnmounted(() => {
   document.removeEventListener("scroll", checkScroll);

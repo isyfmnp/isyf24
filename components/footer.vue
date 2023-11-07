@@ -92,7 +92,7 @@
 <style scoped>
 /* ========== WRAPPER ========== */
 .footer-wrapper {
-  background-color: var(--fg);
+  background-color: var(--gray-900);
   margin-bottom: -10vh;
   padding-bottom: 10vh;
   overflow-x: hidden;
