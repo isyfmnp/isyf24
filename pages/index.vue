@@ -259,7 +259,7 @@
     width: calc(var(--info-width) + 1 * var(--neg-margin));
   }
 }
-@media screen and (max-height: 850px) {
+@media screen and (max-height: 850px) and (max-width: 39rem) {
   .banner .info.info {
     justify-content: flex-end;
     padding-bottom: 2rem;
