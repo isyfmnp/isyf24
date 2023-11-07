@@ -20,14 +20,16 @@ a {
 
   background-color: var(--primary);
   --fg: var(--gray-100);
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
+  font-size: 18px;
+  text-shadow: 1px 1px #00000044;
 
   transition: background-color 200ms, box-shadow 200ms;
 }
 a:hover {
-  background-color: var(--gray-900);
-  box-shadow: 0px 0px 20px 2px #272f4066;
+  background-color: var(--primary-600);
+  box-shadow: 0px 0px 10px 3px #272f4011;
 }
 </style>
 
