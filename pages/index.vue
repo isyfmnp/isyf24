@@ -6,11 +6,13 @@
         <div class="title-wrapper">
           <h1 class="title">International Science Youth Forum 2024</h1>
           <div class="title2-wrapper">
-          <h1 class="title title2" aria-hidden>International Science Youth Forum 2024</h1>
+            <h1 class="title title2" aria-hidden>
+              International Science Youth Forum 2024
+            </h1>
           </div>
         </div>
 
-        <div class="detail-list"> 
+        <div class="detail-list">
           <div class="detail">
             <span class="material-icons-outlined small-icon">
               calendar_month </span
@@ -185,58 +187,117 @@
   margin-inline: calc(50% - 50vw);
   margin-bottom: 8rem;
   height: calc(95vh - 3.5rem);
+  height: calc(98svh - 3.5rem);
 
   --fg: var(--gray-950);
 
-  --info-width: 30rem;
+  --info-width: clamp(
+    30rem,
+    60vw - 240px,
+    40rem
+  ); /* (1300, 30rem), (1600, 40rem) */
   --bg-info-width: 80vw;
   --info-padding: 3rem;
+  --info-padding: clamp(
+    1.5rem,
+    0.0675vw - 20.25px,
+    3rem
+  ); /* (700, 1.5rem), (1100, 3rem) */
 
   --trn-time: 1s;
-  --trn-func: cubic-bezier(.75,0,.175,1);
+  --trn-func: cubic-bezier(0.75, 0, 0.175, 1);
 
   display: grid;
   transition: grid-template-columns var(--trn-time) var(--trn-func);
   grid-template-columns: calc(var(--bg-info-width) + 2 * var(--info-padding)) 1fr;
   border-bottom: 5px solid var(--primary);
 }
+@media screen and (max-width: 39rem) {
+  .banner {
+    --info-width: calc(100vw - 2 * var(--info-padding));
+    --bg-info-width: 60vw;
+  }
+}
 .banner.normal {
   --bg-info-width: var(--info-width);
 }
 .background {
   background-image: url('/images/clocktower-6.jpeg');
-  filter: brightness(.7);
+  filter: brightness(0.7);
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (max-width: 39rem) {
+  .banner {
+    position: relative;
+    --fg: var(--bg);
+    filter: drop-shadow(2px 2px 7px hsla(var(--gray-900-hsla), 0.25));
+  }
+  .background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    filter: brightness(0.5);
+  }
+  .banner .info.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .banner .logo.logo {
+    height: 140px;
+    width: 140px;
+  }
+  .banner .title {
+    margin-block: 0.5rem 1rem;
+  }
+  .banner .detail-list {
+    --fg: var(--gray-950);
+    --bg: var(--gray-100);
+    background-color: var(--bg);
+    filter: drop-shadow(2px 2px 10px hsla(var(--gray-900-hsla), 0.25));
+    margin-block: 0.75rem;
+    --neg-margin: 0.5rem;
+    margin-inline: calc(-1 * var(--neg-margin));
+    width: calc(var(--info-width) + 1 * var(--neg-margin));
+  }
+}
 
 .banner .info {
   padding: var(--info-padding);
-  margin-top: var(--info-padding);
+  margin-top: calc(4 * var(--info-padding));
 }
 .banner .logo {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
+  margin: -0.5rem -1rem;
 }
-.banner .title-wrapper {
+.title-wrapper {
   position: relative;
   margin-right: calc(100% - 100vw + 2rem);
 }
-.banner .title {
+.title {
   padding-right: 2rem;
-  font-size: 96px;
+  font-size: 42px;
+  font-size: clamp(
+    42px,
+    calc(9vw - 14px),
+    96px
+  ); /* 42px, (700, 52px), (900, 72px), (1200, 96px) */
   max-width: 90rem;
+  margin-block: 1rem;
 }
-.banner .title2 {
+
+.title2 {
   color: var(--gray-100);
   margin-block: 0;
   margin-left: calc((var(--bg-info-width) + var(--info-padding)) * -1);
   transition: margin-left var(--trn-time) var(--trn-func);
   filter: drop-shadow(2px 2px 7px hsla(var(--gray-900-hsla), 0.25));
 }
-.banner .title2-wrapper {
+.title2-wrapper {
   position: absolute;
   top: 0;
   overflow: hidden;
@@ -244,14 +305,14 @@
   transition: left var(--trn-time) var(--trn-func);
 }
 
-.banner .detail-list {
+.detail-list {
   width: var(--info-width);
   display: inline-flex;
   justify-content: space-evenly;
   border: 1px solid var(--fg);
   border-radius: 4px;
 }
-.banner .detail-list .detail {
+.detail-list .detail {
   font-weight: 500;
   padding: 0.75rem;
 
@@ -259,9 +320,18 @@
   align-items: center;
   gap: 0.375rem;
 }
-.banner .detail-list .seperator {
+.detail-list .seperator {
   width: 1px;
   background-color: var(--fg);
+}
+@media screen and (max-width: 39rem) {
+  .detail-list {
+    flex-direction: column;
+  }
+  .detail-list .seperator {
+    width: 100%;
+    height: 1px;
+  }
 }
 .small-icon {
   color: var(--primary);
@@ -511,9 +581,9 @@ import Letter from '../components/letter.vue';
 import {gsap} from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import { ref } from "vue";
+import {ref} from 'vue';
 
-const bannerNormal = ref(false)
+const bannerNormal = ref(false);
 
 onMounted(() => {
   setTimeout(() => {

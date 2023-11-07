@@ -96,7 +96,6 @@ ul {
   bottom: -0.75rem;
 
   border: 1px solid var(--gray-500);
-  backdrop-filter: blur(5px);
   border-radius: 16px;
   background-color: var(--primary);
   color: var(--gray-900);
