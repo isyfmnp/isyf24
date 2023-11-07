@@ -97,6 +97,24 @@
   margin-block: 2rem;
 }
 
+.intros .scroll-banner-wrapper {
+  margin-inline: calc(50% - 50vw);
+  overflow: hidden;
+}
+.intros .scroll-banner {
+  display: block;
+  width: fit-content;
+  animation: text-scroll 108s linear infinite;
+}
+@keyframes text-scroll {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
 .intros h2 {
   position: relative;
   margin-block: 4rem 3rem;
@@ -109,30 +127,17 @@
 
   white-space: nowrap;
 }
-@keyframes text-scroll {
-  0% {
-    transform: translateX(-20%);
-  }
-  100% {
-    transform: translateX(-80%);
-  }
-}
-.intros .scroll-banner {
-  display: block;
-  width: fit-content;
-  animation: text-scroll 108s linear infinite;
-}
+
 .intros h2::after {
   content: "";
   z-index: -1;
   position: absolute;
-  right: -100vw;
-  left: -100vw;
+  right: calc(50% - 50vw);
+  left: calc(50% - 50vw);
   top: -1.125rem;
   bottom: -0.75rem;
 
-  border: 1px solid var(--fg);
-  border-radius: 16px;
+  border-block: 1px solid var(--fg);
 }
 
 .intros h3 {
@@ -167,8 +172,7 @@
   }
 
   .intros img {
-    width: 16rem;
-    aspect-ratio: auto;
+    width: 18rem;
     height: fit-content;
   }
 

@@ -30,9 +30,12 @@
   <div class="intros">
     <div class="event" v-for="event in profiles">
       <h2>
+        <div class="scroll-banner-wrapper">
+
         <span class="scroll-banner">{{
           event.event.concat("&nbsp;&nbsp;•&nbsp;&nbsp;").repeat(30)
         }}</span>
+        </div>
       </h2>
 
       <section class="profile" v-for="profile in event.profiles">
@@ -95,7 +98,7 @@ const profiles = [
     ],
   },
   {
-    event: "Meet-The-Scientist Sessions",
+    event: "Masterclasses",
     profiles: [
       {
         name: "Professor Takaaki Kajita",

@@ -204,6 +204,8 @@
     3rem
   ); /* (700, 1.5rem), (1100, 3rem) */
 
+  --deco-size: 180px;
+
   --trn-time: 1s;
   --trn-func: cubic-bezier(0.75, 0, 0.175, 1);
 
@@ -211,6 +213,7 @@
   transition: grid-template-columns var(--trn-time) var(--trn-func);
   grid-template-columns: calc(var(--bg-info-width) + 2 * var(--info-padding)) 1fr;
   border-bottom: 5px solid var(--primary);
+  border-top: 1px solid var(--fg);
 }
 @media screen and (max-width: 39rem) {
   .banner {
@@ -232,6 +235,7 @@
 @media screen and (max-width: 39rem) {
   .banner {
     position: relative;
+    --deco-size: 140px;
     --fg: var(--bg);
     filter: drop-shadow(2px 2px 7px hsla(var(--gray-900-hsla), 0.25));
   }
@@ -240,15 +244,6 @@
     inset: 0;
     z-index: -1;
     filter: brightness(0.5);
-  }
-  .banner .info.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .banner .logo.logo {
-    height: 140px;
-    width: 140px;
   }
   .banner .title {
     margin-block: 0.5rem 1rem;
@@ -264,14 +259,23 @@
     width: calc(var(--info-width) + 1 * var(--neg-margin));
   }
 }
+@media screen and (max-height: 850px) {
+  .banner .info.info {
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+  }
+}
 
 .banner .info {
   padding: var(--info-padding);
-  margin-top: calc(4 * var(--info-padding));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 13%;
 }
 .banner .logo {
-  height: 180px;
-  width: 180px;
+  height: var(--deco-size);
+  width: var(--deco-size);
   margin: -0.5rem -1rem;
 }
 .title-wrapper {
@@ -292,7 +296,6 @@
 
 .title2 {
   color: var(--gray-100);
-  margin-block: 0;
   margin-left: calc((var(--bg-info-width) + var(--info-padding)) * -1);
   transition: margin-left var(--trn-time) var(--trn-func);
   filter: drop-shadow(2px 2px 7px hsla(var(--gray-900-hsla), 0.25));
@@ -327,6 +330,10 @@
 @media screen and (max-width: 39rem) {
   .detail-list {
     flex-direction: column;
+    border: none;
+  }
+  .detail-list .detail {
+    gap: 0.5rem;
   }
   .detail-list .seperator {
     width: 100%;
