@@ -32,7 +32,7 @@
         <div class="subitems-wrapper">
           <ul class="subitems">
             <li>
-              <a class="blocked" href="/profiles/speakers">
+              <a href="/profiles/speakers">
                 <span class="material-icons-outlined icon">person</span>
                 <span class="item-text">Speakers</span>
               </a>
