@@ -74,12 +74,13 @@ ul {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 26px;
+  font-style: italic;
   width: fit-content;
   margin-block: 1rem 2rem;
 }
 .event-day h3 {
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
   font-family: var(--font-display);
   margin-block: 0;
   line-height: 1.5rem;
@@ -123,12 +124,14 @@ ul {
   color: var(--fg);
   --cl: var(--primary);
   --fg-2: var(--gray-700);
+  --bg-2: var(--gray-200);
   position: relative;
 }
 .event-day:nth-of-type(even) {
   --fg: var(--gray-100);
   --fg-2: var(--gray-300);
   --bg: var(--gray-900);
+  --bg-2: var(--gray-800);
   --cl: var(--primary-400);
 }
 .event-day:nth-of-type(even)::after {
@@ -140,7 +143,7 @@ ul {
 }
 
 .event-details {
-  margin-block: 2.5rem 2rem;
+  margin-block: 1.5rem 1.5rem;
 }
 .event-title {
   display: flex;
@@ -149,7 +152,7 @@ ul {
   justify-content: flex-start;
   z-index: 30;
 
-  gap: 0.25rem;
+  gap: 0.125rem;
   margin-block: 0.5rem 0.5rem;
 }
 
@@ -165,14 +168,14 @@ ul {
   flex-shrink: 0;
 }
 .event-details p {
-  font-size: 16px;
+  font-size: 15px;
   margin-block: 0.375rem;
   color: var(--fg-2);
   line-height: 1.375em;
 }
 
 .highlight {
-  outline: 1px solid var(--primary);
+  background-color: var(--bg-2);
   border-radius: 8px;
   padding: 0.5rem 0.75rem;
   margin-left: -0.375rem;
@@ -361,6 +364,7 @@ const events = [
     {
       name: 'Cultural Hour I',
       time: '7 PM - 8 PM',
+      highlight: true,
       description:
         'As the night unfolds, witness mesmerising performances, from dances to stories, each a window into a different country. The Cultural Hour and Exhibition provides the opportunity for delegates to showcase their unique history, culture and customs! Through this, delegates will be able to traverse the global village, better understand each others’ cultures, and view the world from a global perspective.',
     },
@@ -404,6 +408,7 @@ const events = [
     {
       name: 'Science Quest Product',
       time: '8 PM - 9 PM',
+      highlight: true,
       description: 'MISSING',
     },
   ],
@@ -411,7 +416,7 @@ const events = [
     // Day 4
     {
       name: 'Preparation for Masterclass',
-      time: '8:30AM -9:30 AM',
+      time: '8:30AM - 9:30 AM',
     },
     {
       name: 'Masterclass — Dialogues by Scientists and Experts II',

@@ -13,14 +13,15 @@
   --primary-hue: 179;
 
   --gray-950: hsl(var(--primary-hue), 10%, 5%);
-  --gray-900-hsla: var(--primary-hue), 14%, 17%;
+  --gray-900-hsla: var(--primary-hue), 14%, 20%;
   --gray-900: hsl(var(--gray-900-hsla));
+  --gray-800: hsl(var(--primary-hue), 15%, 25%);
   --gray-700: hsl(var(--primary-hue), 10%, 35%);
   --gray-500: hsl(var(--primary-hue), 10%, 40%);
   --gray-400: hsl(var(--primary-hue), 11%, 55%);
   --gray-300: hsla(var(--primary-hue), 8%, 65%);
-  --gray-200: hsl(var(--primary-hue), 12%, 80%);
-  --gray-100-hsla: var(--primary-hue), 10%, 92%;
+  --gray-200: hsl(var(--primary-hue), 12%, 87%);
+  --gray-100-hsla: var(--primary-hue), 10%, 95%;
   --gray-100: hsl(var(--gray-100-hsla));
 
   --fg: var(--gray-950);

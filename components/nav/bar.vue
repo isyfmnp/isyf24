@@ -112,7 +112,7 @@ nav.transparent {
   background-color: transparent;
   box-shadow: none;
   backdrop-filter: blur(50px);
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-300);
 
   --fg: var(--gray-100);
   --bg: var(--gray-900);
@@ -323,7 +323,7 @@ nav.transparent {
 
   box-sizing: content-box;
   border-radius: 8px;
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--gray-300);
 }
 .transparent .socials {
   border: 1px solid var(--gray-400);
@@ -459,7 +459,7 @@ nav.transparent {
   }
   nav.transparent .menu .subitems {
     background-color: transparent;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-300);
     border-top: none;
     backdrop-filter: blur(3px);
     box-shadow: none;
