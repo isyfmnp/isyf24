@@ -305,11 +305,13 @@ watch(currentPhotoId, setTimeout(resizePhoto, 10));
 function keyWatcher(e) {
   if (!viewerShown.value)
     return
-  
-  if (e.code == "ArrowLeft")
+
+  if (e.code == "ArrowLeft" || e.code == "ArrowUp"|| e.code == "Backspace")
     adjustPhotoIndex(-1)
-  else if (e.code == "ArrowRight")
+  else if (e.code == "ArrowRight" || e.code == "ArrowDown"|| e.code == "Enter")
     adjustPhotoIndex(1)
+  else if (e.code == "Escape")
+    viewerShown.value = false
 }
 
 function resizePhoto() {
