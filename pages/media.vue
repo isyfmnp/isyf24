@@ -308,7 +308,7 @@ function keyWatcher(e) {
 
   if (e.code == "ArrowLeft" || e.code == "ArrowUp"|| e.code == "Backspace")
     adjustPhotoIndex(-1)
-  else if (e.code == "ArrowRight" || e.code == "ArrowDown"|| e.code == "Enter")
+  else if (e.code == "ArrowRight" || e.code == "ArrowDown"|| e.code == "Enter" || e.code == "Space")
     adjustPhotoIndex(1)
   else if (e.code == "Escape")
     viewerShown.value = false
