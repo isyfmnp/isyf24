@@ -287,15 +287,31 @@ function getPhotoOffsetAvailable(offset) {
 }
 function adjustPhotoIndex(offset) {
   //Should only be 1 or -1
-  if (!getPhotoOffsetAvailable(offset))
-    return
-  currentPhotoId.value = currentPhotoId.value + offset
+  if (!getPhotoOffsetAvailable(offset)) return;
+  currentPhotoId.value = currentPhotoId.value + offset;
   setTimeout(resizePhoto, 1);
 }
 
-onMounted(() => window.addEventListener('resize', resizePhoto));
-onUnmounted(() => window.removeEventListener('resize', resizePhoto));
+onMounted(() => {
+  window.addEventListener('resize', resizePhoto);
+  document.addEventListener('keydown', keyWatcher);
+});
+onUnmounted(() => {
+  window.removeEventListener('resize', resizePhoto);
+  document.removeEventListener('keydown', keyWatcher);
+});
 watch(currentPhotoId, setTimeout(resizePhoto, 10));
+
+function keyWatcher(e) {
+  if (!viewerShown.value)
+    return
+  
+  if (e.code == "ArrowLeft")
+    adjustPhotoIndex(-1)
+  else if (e.code == "ArrowRight")
+    adjustPhotoIndex(1)
+}
+
 function resizePhoto() {
   const img = document.querySelector('#picture');
   const height = img.naturalHeight;
