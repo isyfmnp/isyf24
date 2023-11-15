@@ -25,6 +25,8 @@
 .collage .event-title {
   grid-column: span 1;
   background-color: white;
+  font-size: 32px;
+  font-style: normal;
 }
 .collage .profile {
   --bg: var(--gray-900);
@@ -53,7 +55,8 @@
   text-decoration-color: var(--bg);
   background-color: var(--bg);
   /* Theres a thin black underline for some reason, this is just to cancel it out */
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 500;
 }
 </style>
 
