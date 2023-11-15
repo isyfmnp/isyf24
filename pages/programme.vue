@@ -76,7 +76,7 @@ ul {
   font-size: 26px;
   font-style: italic;
   width: fit-content;
-  margin-block: 1rem 2rem;
+  margin-block: 2rem 3rem;
 }
 .event-day h3 {
   font-weight: 600;
@@ -143,7 +143,7 @@ ul {
 }
 
 .event-details {
-  margin-block: 1.5rem 1.5rem;
+  margin-block: 1rem 1rem;
 }
 .event-title {
   display: flex;
@@ -304,7 +304,7 @@ const events = [
   [
     // Day 1
     {
-      name: 'Introduction of Delegates at Combined Assembly',
+      name: 'School Assembly',
       time: '7:30 AM',
     },
     {
@@ -336,11 +336,7 @@ const events = [
   [
     // Day 2
     {
-      name: 'Departure for National University of Singapore (NUS)',
-      time: '9:15 AM',
-    },
-    {
-      name: "Professor's Sow's Lecture: Introduction to Nanoworld",
+      name: "Introduction to Nanoworld @ NUS Singapore",
       time: '10 AM - 12 PM',
       highlight: true,
       description:
@@ -372,19 +368,15 @@ const events = [
   [
     // Day 3
     {
-      name: 'Preparation for Masterclass',
+      name: 'Preparation for Masterclasses',
       time: '8:30 AM - 9:30 AM',
     },
     {
-      name: 'Masterclass — Dialogues by Scientists and Experts I',
+      name: 'Masterclasses I',
       time: '9:30 AM - 11 AM',
       highlight: true,
       description:
         'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.',
-    },
-    {
-      name: 'Setup and Cultural Exhibition',
-      time: '11 AM - 12 PM',
     },
     {
       name: 'Lunch',
@@ -415,11 +407,11 @@ const events = [
   [
     // Day 4
     {
-      name: 'Preparation for Masterclass',
+      name: 'Preparation for Masterclasses',
       time: '8:30AM - 9:30 AM',
     },
     {
-      name: 'Masterclass — Dialogues by Scientists and Experts II',
+      name: 'Masterclasses II',
       time: '9:30 AM - 11 AM',
       highlight: true,
       description:
@@ -442,7 +434,7 @@ const events = [
       highlight: true,
     },
     {
-      name: 'Team Bonding Activity',
+      name: 'Night Out',
       time: '5 PM - 9 PM',
     },
   ],
@@ -458,10 +450,6 @@ const events = [
       highlight: true,
       description:
         'Prepare for an intriguing activity that brings together the art of geometry and principles of physics! Take a plunge into the world of geometrical figures and physical laws, and work with your group to see these concepts come to life. The thrill of discovery awaits!',
-    },
-    {
-      name: 'Bus Departure for Hotel',
-      time: '11 AM',
     },
     {
       name: 'Closing Lunch & Farewell',
