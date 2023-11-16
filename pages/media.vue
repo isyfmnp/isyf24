@@ -45,6 +45,15 @@
               >
                 Day {{ day }}
               </button>
+
+              <button
+                class="day"
+                :class="{selected: 6 == currentDay}"
+                :style="{'--day': currentDay}"
+                @click="currentDay = 6"
+              >
+              Reflection {{currentDay}}
+              </button>
             </div>
           </div>
         </div>
