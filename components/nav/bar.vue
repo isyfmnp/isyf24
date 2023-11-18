@@ -52,10 +52,27 @@
           </ul>
         </div>
       </div>
-      <a class="item blocked" href="/media">
-        <span class="item-text">Media</span>
-      </a>
 
+      <div class="closed" :class="{ open: profilesOpen }">
+        <a class="item" @click="profilesOpen = !profilesOpen"> <!-- remember to add class = "item blocked"--> 
+          <span class="item-text"> Media </span>
+          <span class="material-icons-outlined indicator">chevron_right</span>
+        </a>
+        <div class="subitems-wrapper">
+          <ul class="subitems">
+            <li>
+              <a href="/media_photo">
+                <span class="item-text">Photos</span>
+              </a>
+            </li>
+            <li>
+              <a href="/reflection">
+                <span class="item-text">Reflection</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <a class="item" href="/faq">
         <span class="item-text"> FAQ</span>
       </a>
