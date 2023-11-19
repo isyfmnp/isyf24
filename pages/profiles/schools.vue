@@ -25,17 +25,17 @@
 .collage .event-title {
   grid-column: span 1;
   background-color: white;
-  font-size: 32px;
+  font-size: 36px;
   font-style: normal;
 }
 .collage .profile {
-  --bg: var(--gray-900);
   grid-column: span 1;
   aspect-ratio: 1.9;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: white;
   background-image: none;
+  border: 1px solid var(--fg);
 }
 .collage .profile-img {
   padding: 18.75%;
@@ -45,18 +45,23 @@
 .collage .name {
   position: static;
   height: 100%;
-  padding-left: 0.75rem;
-  text-align: left;
+  padding-inline: 0.75rem;
   display: grid;
   place-items: center start;
-  box-shadow: 0px 0px 20px 0px #272f4077;
-  text-decoration: underline;
-  --bg: inherit;
-  text-decoration-color: var(--bg);
+  
+  background-image: none;
+  --bg: var(--gray-100);
+  --fg: var(--gray-900);
   background-color: var(--bg);
+  box-shadow: 0px 0px 20px 0px #272f4077;
+  
   /* Theres a thin black underline for some reason, this is just to cancel it out */
-  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-color: var(--bg);
+  text-align: left;
+  font-size: 18px;
   font-weight: 500;
+  line-height: 1.375rem;
 }
 </style>
 
