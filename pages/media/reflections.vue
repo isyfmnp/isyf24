@@ -1,7 +1,7 @@
 <template>
     <div>
         <Masthead>
-            <h1>Reflection</h1>
+            <h1>Reflections</h1>
         </Masthead>
         <div style="position:relative; width:100%; min-height:300px; display: block">
             <div class="title-left">

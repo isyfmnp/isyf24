@@ -61,13 +61,13 @@
         <div class="subitems-wrapper">
           <ul class="subitems">
             <li>
-              <a href="/media_photo">
+              <a href="/media/photos">
                 <span class="item-text">Photos</span>
               </a>
             </li>
             <li>
-              <a href="/reflection">
-                <span class="item-text">Reflection</span>
+              <a href="/media/reflections">
+                <span class="item-text">Reflections</span>
               </a>
             </li>
           </ul>
