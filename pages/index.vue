@@ -91,13 +91,22 @@
             adventure pulsating with connection, discovery, and exhilaration!
           </p>
 
-          <div style="display: flex; flex-direction: row; gap: 1rem;">
-            <Button href="/programme" icon="event_note"
-              >See Our Full Programme!</Button
-            >
-            <Button href="/profiles/speakers" icon="person"
-              >Our Invited Speakers</Button
-            >
+          <div class="button-row">
+            <a class="btn" href="/programme">
+              <span class="icon material-icons-outlined">event_note</span>
+              What's the rest of the programme?
+              <span class="icon material-icons-outlined">chevron_right</span>
+            </a>
+            <a class="btn" href="/profiles/speakers">
+              <span class="icon material-icons-outlined">person</span>
+              Who will be speaking at ISYF?
+              <span class="icon material-icons-outlined">chevron_right</span>
+            </a>
+            <a class="btn" href="/faq">
+              <span class="icon material-icons-outlined">question_mark</span>
+              I have a question!
+              <span class="icon material-icons-outlined">chevron_right</span>
+            </a>
           </div>
         </div>
       </section>
@@ -507,6 +516,27 @@
   margin-inline: calc(50% - 50vw);
   padding-inline: calc(50vw - 50%);
   background-color: var(--primary-50);
+}
+
+/* ========== BUTTON ROW ========== */
+.button-row {
+  width: 100%;
+  --fg: var(--primary);
+  margin-block: 3.5rem;
+}
+.button-row .btn {
+  margin-block: -1px;
+  padding-block: 0.5rem;
+  padding-inline: 0.25rem;
+  border-block: 1px solid var(--gray-300);
+
+  text-decoration: none;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
 }
 
 /* ========== SUPPORTING ORGANISATIONS ========== */
