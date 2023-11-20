@@ -71,21 +71,34 @@
         <div>
           <h2>What will you get to do?</h2>
           <p>
-            At ISYF 2024, you can look forward to Amazing Race, Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat
+            Prepare to embark on an electrifying journey at ISYF, a spectacular
+            convergence of science, culture, and boundless discovery! Traverse
+            the dynamic Singapore Discovery Trail, an expedition weaving through
+            urban marvels and verdant oases. Engage with Professor Sow for an
+            exhilarating dive into the Nanoworld, unlocking mind-bending
+            nano-scale wonders and futuristic applications.
+          </p>
+          <p>
+            Immerse yourself in Science Centre Singapore's 850+ exhibits and
+            unite with global cultures during the immersive Cultural Hour.
+            Connect deeply with Nobel Laureates at Masterclasses, unraveling the
+            mysteries of cutting-edge knowledge. Explore the vibrant hues and
+            ingenious technologies at Bird Paradise Singapore.
+          </p>
+          <p>
+            Dive into an intellectual frenzy at Keynote Lectures, Poster
+            Exhibitions, and collaborative science activities. ISYF beckons—an
+            adventure pulsating with connection, discovery, and exhilaration!
           </p>
 
-          <p>[Brief synposis of Programme]</p>
-
-          <Button href="/programme" icon="event_note"
-            >See Our Full Programme!</Button
-          >
-          <Button href="/profiles/speakers" icon="person"
-            >Our Invited Speakers</Button
-          >
+          <div style="display: flex; flex-direction: row; gap: 1rem;">
+            <Button href="/programme" icon="event_note"
+              >See Our Full Programme!</Button
+            >
+            <Button href="/profiles/speakers" icon="person"
+              >Our Invited Speakers</Button
+            >
+          </div>
         </div>
       </section>
 

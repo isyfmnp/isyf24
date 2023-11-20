@@ -123,13 +123,13 @@ ul {
   padding: 1rem calc(50vw - 50%);
   color: var(--fg);
   --cl: var(--primary);
-  --fg-2: var(--gray-700);
+  --fg-2: var(--gray-500);
   --bg-2: var(--gray-200);
   position: relative;
 }
 .event-day:nth-of-type(even) {
   --fg: var(--gray-100);
-  --fg-2: var(--gray-300);
+  --fg-2: var(--gray-400);
   --bg: var(--gray-900);
   --bg-2: var(--gray-800);
   --cl: var(--primary-400);
