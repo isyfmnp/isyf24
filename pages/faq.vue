@@ -77,7 +77,7 @@ const questions = {
   Programme: {
     "Who are we?":
       "The ISYF student organizing committee is made up of 40 friendly, fun and caring facilitators from the Science Student's Research Club, SMTP-GATE Council and other affiliates from Hwa Chong Institution, Singapore. We are guided by a team of dedicated teachers from Hwa Chong Institution and we're excited to have you here for the first physical ISYF since the pandemic! ",
-    "Will I have fun?":
+    "What can I look forward to?":
       "As your facilitators, we have planned an exciting array of activities including an Amazing Race and a cultural exhibition. In fact, what you have seen in the Programme Overview is just a slight preview of what you can experience here. It is our greatest hope that you'll not just take away valuable scientific insights from the forum, but also long-lasting friendships with people all over the world. ",
     "What is a typical day like?":
       "We believe the 5 days of ISYF will be an exciting and enriching experience for you. You can look forward to the cultural exhibition, learning and experiencing the vibrant and unique cultures of each and every participant from various countries. In a typical day, you can expect engaging dialogue sessions or lessons with eminent scientists in our Dialogue sessions and Masterclasses, and an opportunity to visit Singapore's own industries and universities for further insight into the research culture in Singapore. Most importantly, a typical day is best described as the memories and joy you had with all your friends you have made during ISYF!",
