@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner" :class="{normal: bannerNormal}">
+    <div class="banner" :class="{ normal: bannerNormal }">
       <div class="info">
         <img class="logo" src="/icon_light.png" alt="ISYF Logo" />
         <div class="title-wrapper">
@@ -71,14 +71,17 @@
         <div>
           <h2>What will you get to do?</h2>
           <p>
-            At ISYF 2024, you can look forward to Amazing Race, Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat
+            The International Science Youth Forum (ISYF) is a prestigious
+            science enrichment programme for top research students from all over
+            the world, hosted by Hwa Chong Institution. The delegates of ISYF
+            will have the opportunity to participate in a multitude of exciting
+            and meaningful activities, which include intellectual discourse with
+            Nobel laureates and eminent scientists who utilise technology and
+            data to make decisions. Delegates will also be able to network with
+            peers through collaborative projects and cultural exchanges.
           </p>
 
-          <p>[Brief synposis of Programme]</p>
+          <p>Find out more below!</p>
 
           <Button href="/programme" icon="event_note"
             >See Our Full Programme!</Button
@@ -180,7 +183,7 @@
 </style>
 
 <style scoped>
-@import url('~/assets/css/cards.css');
+@import url("~/assets/css/cards.css");
 
 .banner {
   display: block;
@@ -225,7 +228,7 @@
   --bg-info-width: var(--info-width);
 }
 .background {
-  background-image: url('/images/clocktower-6.jpeg');
+  background-image: url("/images/clocktower-6.jpeg");
   filter: brightness(0.7);
   z-index: -1;
   background-size: cover;
@@ -528,11 +531,11 @@
   padding: 0;
 }
 .supporters > *::before {
-  content: 'open_in_new';
+  content: "open_in_new";
   position: absolute;
   top: 0.5rem;
   right: 0.75rem;
-  font-family: 'Material Icons Outlined';
+  font-family: "Material Icons Outlined";
   color: var(--bg);
   background-color: var(--primary);
   padding: 0.25rem;
@@ -542,7 +545,7 @@
   transition: 200ms transform;
 }
 .supporters > *::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -567,9 +570,9 @@
   background-color: var(--primary-200);
 }
 
-. supporters span {
+.supporters span {
   text-align: center;
-  text-style: italic;
+  font-style: italic;
   font-size: 14px;
   opacity: 0.75;
 }
@@ -579,16 +582,16 @@
 </style>
 
 <script setup>
-import {onMounted} from 'vue';
-import banner from '../components/masthead.vue';
-import Button from '../components/button/button.vue';
-import PrimaryHighlight from '../components/primaryHighlight.vue';
-import Letter from '../components/letter.vue';
+import { onMounted } from "vue";
+import banner from "../components/masthead.vue";
+import Button from "../components/button/button.vue";
+import PrimaryHighlight from "../components/primaryHighlight.vue";
+import Letter from "../components/letter.vue";
 
-import {gsap} from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-import {ref} from 'vue';
+import { ref } from "vue";
 
 const bannerNormal = ref(false);
 

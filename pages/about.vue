@@ -17,14 +17,14 @@
 
       <p>
         The theme “Science and Technology for Humanity: Building a Sustainable
-        Future” highlights the important role of science and technology in
+        Future” highlights the important role of science and technology in
         driving sustainable and inclusive development. It reflects the need for
-        a holistic approach to science and technology, considering
-        their benefits for humanity and their accompanying ethical
-        considerations in addressing societal challenges.
+        a holistic approach to science and technology, considering their
+        benefits for humanity and their accompanying ethical considerations in
+        addressing societal challenges.
       </p>
       <p>
-        Responsible and ethical use of science and technology is essential to
+        Responsible and ethical use of science and technology are essential to
         resolve pressing global challenges such as climate change, inequality
         and health disparities. At the same time, science and technology have
         the role of enhancing productivity in order to induce a dynamic
@@ -32,17 +32,20 @@
         important to consider the social, cultural, and ethical implications of
         scientific and technological advancements, and encourage discussions on
         how to mitigate potential negative impact and foster positive change
-        through responsible innovation. The possibility of moving towards the
-        free provision of technologies that contribute to meeting human
-        challenges, making them accessible to all can be explored. In schools,
-        the acquisition and dissemination of scientific knowledge, the building
-        of innovation capabilities, and the push towards the collective goal of
-        building a better world for future generations can be promoted. There is
-        a pressing need for more conversations on the reform of policies and
-        existing measures which can promote public interests in our pursuit of
-        sustainability.  If we are able to move forward and each adopt a more
-        sustainable lifestyle, we definitely can make the change and create an
-        impact in not just our own country, but the world. 
+        through responsible innovation.
+      </p>
+      <p>
+        The possibility of moving towards the free provision of technologies
+        that contribute to meeting human challenges, making them accessible to
+        all can be explored. In schools, the acquisition and dissemination of
+        scientific knowledge, the building of innovation capabilities, and the
+        push towards the collective goal of building a better world for future
+        generations can be promoted. There is a pressing need for more
+        conversations on the reform of policies and existing measures which can
+        promote public interests in our pursuit of sustainability. If we are
+        able to move forward, with each of us adopting a more sustainable
+        lifestyle, we definitely can make the change and create an impact in not
+        just our own country, but the world too.
       </p>
     </section>
 
@@ -51,18 +54,20 @@
 
       <div class="goal red">
         <div>
-          <h3>To Inspire Passion for Science Among Youth</h3>
+          <h3>Inspire Passion for Science Among Youth</h3>
           <p>
-            ISYF aims to provide high-ability students with ample opportunities
-            to share and discuss their interest in science, technology and
-            science research. They will be exposed to many fields of science
-            which will broaden their outlook and understanding of the scientific
-            world. Invited Nobel laureates and eminent scientists will inspire
-            them through stories of their own life experiences and scientific
+            ISYF aims to provide students who are highly inquisitive and
+            passionate about the sciences with ample opportunities to share and
+            discuss their interest in Science, technology and scientific
+            research. They will be exposed to many fields of science which will
+            broaden their outlook and understanding of the scientific world.
+            Invited Nobel laureates and eminent scientists will inspire them
+            through stories of their own life experiences and scientific
             discoveries. These interactions will help create greater awareness
-            among the youth about the importance of broad-based knowledge, keen
-            curiosity, relentless tenacity and a global outlook when considering
-            the pursuit of science as a meaningful and fulfilling endeavour.
+            among the youth about the importance of broad-based knowledge, fuel
+            their curiosity, engender relentless tenacity and a global outlook
+            when considering the pursuit of science as a meaningful and
+            fulfilling endeavour.
           </p>
         </div>
       </div>
@@ -77,7 +82,7 @@
             Students will have many opportunities to interact in different
             cross-cultural groups and forge strong bonds with each other
             throughout the Forum. Activities are designed to promote mutual
-            cooperation, understanding and appreciation of each other's diverse
+            cooperation, understanding and appreciation of each other’s diverse
             cultures while sharing a common passion in science, technology and
             research.
           </p>
@@ -88,9 +93,9 @@
         <div>
           <h3>Build Capacities of Science Educators</h3>
           <p>
-            Through professional sharing and discussions among science
+            Through professional sharing and discussions among Science
             educators, ISYF helps build the competencies of teachers who are
-            navigating an evolving education landscape.
+            navigating an evolving educational landscape.
           </p>
         </div>
       </div>
@@ -99,10 +104,75 @@
     <section>
       <h2>About Singapore</h2>
 
-      <p>
-        [Collaborate with handbook, locale, city skyline, garden city, food &
-        culture]
-      </p>
+      <div>
+        <h3 class="collapsible">Where is Singapore?</h3> <!--fix styling from here (chevron,...)-->
+        <div class="content">
+          <p>
+            Singapore is a tropical island located in Southeast Asia. It
+            encompasses 1 main island and 64 offshore islands.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="collapsible">What is Singapore?</h3>
+        <div class="content">
+          <p>
+            Singapore is a multicultural society, comprising of 4 main races:
+            Chinese, Malay, Indian and Eurasian. It celebrates diverse festivals
+            from all groups of people.
+          </p>
+          <p>
+            Beside various mother tongue, Singapore is famous for its own unique
+            language, called 'Singlish'. For example, it will be common to hear
+            words such as 'la' and 'lor'.
+          </p>
+          <p>
+            Singapore is also a food heaven. You can find almost any dish to
+            satisfy your cravings. Chili Crab is a famous local dish exclusive
+            to Singapore!
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="collapsible">Places of interest to visit in Singapore</h3>
+        <div class="content">
+          <div class="">
+            <h4 class="collapsible">Science Centre Singapore</h4>
+            <div class="content">
+              <p>
+                Science Centre Singapore organises interactive exhibits,
+                covering a wide spectrum of topics related to Science,
+                Technology and Mathematics.
+              </p>
+            </div>
+          </div>
+
+          <div class="">
+            <h4 class="collapsible">Bird Paradise</h4>
+            <div class="content">
+              <p>
+                Bird Paradise is home to over 3500 birds from over 400 avian
+                species from loris to pelicans, flamingos, emus and cassowaries.
+                There are 8 walk-through aviaries.
+              </p>
+            </div>
+          </div>
+
+          <div class="">
+            <h4 class="collapsible">Gardens by the Bay</h4>
+            <div class="content">
+              <p>
+                Gardens by the Bay is filled with plant species from every
+                continent except Antarctica. This award winning horticultural
+                attraction houses over 500,000 plants! It is also proud to be
+                one of the top 10 Indoor Gardens of the World.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </template>
@@ -110,7 +180,7 @@
 <style>
 .masthead::before {
   color: var(--bg);
-  background-image: url('/images/aboutbg2.webp');
+  background-image: url("/images/aboutbg2.webp");
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -159,10 +229,54 @@ section.goals {
 }
 </style>
 
-<script setup>
-import PrimaryHighlight from '../components/primaryHighlight.vue';
+<style scoped>
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+
+<script setup>
+import PrimaryHighlight from "../components/primaryHighlight.vue";
+import {ref, watch, onMounted, onUnmounted} from 'vue';
 definePageMeta({
-  layout: 'masthead',
+  layout: "masthead",
 });
+
+
+onMounted(() => {
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+});
+
 </script>
