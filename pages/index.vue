@@ -71,24 +71,43 @@
         <div>
           <h2>What will you get to do?</h2>
           <p>
-            The International Science Youth Forum (ISYF) is a prestigious
-            science enrichment programme for top research students from all over
-            the world, hosted by Hwa Chong Institution. The delegates of ISYF
-            will have the opportunity to participate in a multitude of exciting
-            and meaningful activities, which include intellectual discourse with
-            Nobel laureates and eminent scientists who utilise technology and
-            data to make decisions. Delegates will also be able to network with
-            peers through collaborative projects and cultural exchanges.
+            Prepare to embark on an electrifying journey at ISYF, a spectacular
+            convergence of science, culture, and boundless discovery! Traverse
+            the dynamic Singapore Discovery Trail, an expedition weaving through
+            urban marvels and verdant oases. Engage with Professor Sow for an
+            exhilarating dive into the Nanoworld, unlocking mind-bending
+            nano-scale wonders and futuristic applications.
+          </p>
+          <p>
+            Immerse yourself in Science Centre Singapore's 850+ exhibits and
+            unite with global cultures during the immersive Cultural Hour.
+            Connect deeply with Nobel Laureates at Masterclasses, unraveling the
+            mysteries of cutting-edge knowledge. Explore the vibrant hues and
+            ingenious technologies at Bird Paradise Singapore.
+          </p>
+          <p>
+            Dive into an intellectual frenzy at Keynote Lectures, Poster
+            Exhibitions, and collaborative science activities. ISYF beckons—an
+            adventure pulsating with connection, discovery, and exhilaration!
           </p>
 
-          <p>Find out more below!</p>
-
-          <Button href="/programme" icon="event_note"
-            >See Our Full Programme!</Button
-          >
-          <Button href="/profiles/speakers" icon="person"
-            >Our Invited Speakers</Button
-          >
+          <div class="button-row">
+            <a class="btn" href="/programme">
+              <span class="icon material-icons-outlined">event_note</span>
+              What's the rest of the programme?
+              <span class="icon material-icons-outlined">chevron_right</span>
+            </a>
+            <a class="btn" href="/profiles/speakers">
+              <span class="icon material-icons-outlined">person</span>
+              Who will be speaking at ISYF?
+              <span class="icon material-icons-outlined">chevron_right</span>
+            </a>
+            <a class="btn" href="/faq">
+              <span class="icon material-icons-outlined">question_mark</span>
+              I have a question!
+              <span class="icon material-icons-outlined">chevron_right</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -497,6 +516,27 @@
   margin-inline: calc(50% - 50vw);
   padding-inline: calc(50vw - 50%);
   background-color: var(--primary-50);
+}
+
+/* ========== BUTTON ROW ========== */
+.button-row {
+  width: 100%;
+  --fg: var(--primary);
+  margin-block: 3.5rem;
+}
+.button-row .btn {
+  margin-block: -1px;
+  padding-block: 0.5rem;
+  padding-inline: 0.25rem;
+  border-block: 1px solid var(--gray-300);
+
+  text-decoration: none;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.375rem;
 }
 
 /* ========== SUPPORTING ORGANISATIONS ========== */
