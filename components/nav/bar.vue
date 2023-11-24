@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <div class="closed" :class="{ open: profilesOpen }">
+      <div class="closed blocked" :class="{ open: profilesOpen }">
         <a class="item" @click="profilesOpen = !profilesOpen"> <!-- remember to add class = "item blocked"--> 
           <span class="item-text"> Media </span>
           <span class="material-icons-outlined indicator">chevron_right</span>
