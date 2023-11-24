@@ -31,10 +31,9 @@
     <div class="event" v-for="event in profiles">
       <h2>
         <div class="scroll-banner-wrapper">
-
-        <span class="scroll-banner">{{
-          event.event.concat("&nbsp;&nbsp;•&nbsp;&nbsp;").repeat(30)
-        }}</span>
+          <span class="scroll-banner">{{
+            event.event.concat("&nbsp;&nbsp;•&nbsp;&nbsp;").repeat(30)
+          }}</span>
         </div>
       </h2>
 
@@ -77,7 +76,7 @@ function resetLink() {
 
 const profiles = [
   {
-    event: "Opening Ceremony Keynote",
+    event: "Keynote Lecture",
     profiles: [
       {
         name: "Ms Guest of Honour",
@@ -113,14 +112,6 @@ const profiles = [
           "“I don’t have a job, I have a hobby,” says Aaron Ciechanover, Distinguished Research Professor in the Faculty of Medicine at Technion – Israel Institute of Technology. Professor Ciechanover places strong emphasis on doing what one loves in a career and believes that it is never too late to pursue one’s passions. \n\nThis line of thinking was certainly shaped by Prof Ciechanover’s own experience. He is a physician by training, but his first love has always been biology and understanding the natural world. During his medical degree, he started to wonder about the mechanisms underlying diseases and realised that a physician’s role is limited to examining diseases after they have developed. Seeing science as the answer to his questions, he pivoted to research and has never looked back. \n\nIn many ways, Prof Ciechanover is grateful for his medical training because he felt that the field has enriched his scientific knowledge and contributed to his ability to understand and develop drugs to treat diseases. He joined Professor Avram Hershko’s laboratory as part of his internship requirement to obtain his medical license, and the two have collaborated closely ever since. \n\nProf Ciechanover, Prof Hershko and the late Professor Irwin Rose worked together to understand protein degradation. Proteins are in all living things and are constantly removed or replaced. Although researchers had figured out how cells produce various proteins, the mechanism to remove and recycle them was unknown at that time. \n\nFor their discovery of a small protein called ubiquitin that marks old proteins for destruction, Prof Ciechanover and his colleagues were awarded the Nobel Prize in Chemistry in 2004. Their seminal work advanced our understanding of cellular processes and disease formation as well as contributed to drug development. \n\nProf Ciechanover sees collaborations as fundamental in research, particularly when scientific fields like biology and physics have expanded tremendously since his days as a student. “You need to collaborate. The multiple hands that make the world these days are not an option anymore, they are essential,” he explains. \n\nHowever, Prof Ciechanover believes that successful collaborations rely on the individual expertise of each collaborator. He advises young scientists to focus on building their niche, knowledge and skills—in other words, to create demand for themselves and offer expertise that others will seek. \n\nHe also equates establishing a career in science to running a long marathon or climbing a mountain, both of which require resilience and patience. He advises budding scientists to see their struggles as progress, their mistakes as learning points and their successes as possibilities. “What I tell young people is this: what you see in front of you when you look at me is not a dream, it's reality. So materialise your own reality,” says Prof Ciechanover. \n\nProf Ciechanover is a member of many scientific academies, including the Israel National Academy of Sciences and Humanities, European Molecular Biology Organisation, American Academy of Arts and Sciences (as a Foreign Fellow), Chinese Academy of Sciences (as a Foreign Member) and Pontifical Academy of Sciences at the Vatican. Apart from the Nobel Prize, his awards include the 2000 Albert Lasker Award, the 2002 EMET Prize, the 2003 Israel Prize for Biology and the 2006 Sir Hans Krebs Medal.",
       },
       {
-        name: "A/Professor Huang Shao Ying",
-        title:
-          "Associate Professor in Engineering Product Development, Singapore University of Technology and Design",
-        image: "/images/profiles/speakers/huang-shao-ying.jpg",
-        description:
-          "Shao Ying Huang is an associate professor in the pillar of Engineering Product Development, Singapore University of Technology and Design. She received her B.Eng., M. Eng., and Ph.D. degree from Nanyang Technological University, Singapore in 2003, 2006, and 2011, respectively. Her research interests include low-field portable MRI (magnets and coils), non-linear MRI image reconstructions, RF aspects of MRI, MR electrical property tomography, radiofrequency(RF)/microwave noninvasive/contactless sensing, wireless power transfer, and wideband RF/microwave components. She owns 10 patents and 6 technology disclosures. She has authored and coauthored more than 60 papers in refereed journals, 1 book chapter, and more than 200 international conference papers. ",
-      },
-      {
         name: "Professor Dame Sue Black",
         image: "/images/profiles/speakers/baroness-susan-black.jpg",
         description:
@@ -139,6 +130,14 @@ const profiles = [
           "Dr. Richard J. Roberts is the Chief Scientific Officer at New England Biolabs, Ipswich, Massachusetts.  He received a Ph.D. in Organic Chemistry in 1968 from Sheffield University and then moved as a postdoctoral fellow to Harvard.  From 1972 to 1992, he worked at Cold Spring Harbor Laboratory, eventually becoming Assistant Director for Research under Dr. J.D. Watson.  He began work on the newly discovered Type II restriction enzymes in 1972 and his laboratory discovered more than 70% of the first 100 enzymes described. In 1975 he became the fourth employee of New England Biolabs first as their chief consultant and later moved to the company permanently in 1992.  Studies of transcription in Adenovirus-2 led to the discovery of split genes and mRNA splicing in 1977, for which he received the Nobel Prize in Medicine in 1993. During the sequencing of the Adenovirus-2 genome, computational tools became essential and his laboratory pioneered the application of computers in this area.  DNA methyltransferases, as components of restriction-modification systems are also of active interest and the first crystal structures for the HhaI methyltransferase led to the discovery of base flipping. Bioinformatic studies of microbial genomes to find new restriction systems are a major research focus as is the elucidation of DNA methyltransferase recognition sequences using SMRT sequencing and a new approach to elucidating m5C-containing recognition sequences. It is now clear that these enzymes do much more than simply protect host DNA from the action of their restriction enzymes. Since winning the Nobel Prize, Dr. Roberts has been involved in organizing a number of Nobel initiatives to correct scientific misunderstandings and promote humanitarian causes. His most recent campaign has been on the issue of GMOs, where 160 Nobel Laureates have supported the use of GMO techniques to improve plant breeding practices that could greatly help the developing world.",
       },
       {
+        name: "A/Professor Huang Shao Ying",
+        title:
+          "Associate Professor in Engineering Product Development, Singapore University of Technology and Design",
+        image: "/images/profiles/speakers/huang-shao-ying.jpg",
+        description:
+          "Shao Ying Huang is an associate professor in the pillar of Engineering Product Development, Singapore University of Technology and Design. She received her B.Eng., M. Eng., and Ph.D. degree from Nanyang Technological University, Singapore in 2003, 2006, and 2011, respectively. Her research interests include low-field portable MRI (magnets and coils), non-linear MRI image reconstructions, RF aspects of MRI, MR electrical property tomography, radiofrequency(RF)/microwave noninvasive/contactless sensing, wireless power transfer, and wideband RF/microwave components. She owns 10 patents and 6 technology disclosures. She has authored and coauthored more than 60 papers in refereed journals, 1 book chapter, and more than 200 international conference papers. ",
+      },
+      {
         name: "Dr Gregory Goh",
         image: "/images/profiles/speakers/gregory-goh.jpg",
         description:
@@ -146,8 +145,8 @@ const profiles = [
       },
       {
         name: "Dr Tang Kok Zuea",
-        image: "/images/profiles/speakers/",
-        description: "",
+        image: "/images/profiles/speakers/KZ Tang.jpg",
+        description: "KZ Tang is presently a senior lecturer in the Innovation and Design Programme (iDP), College of Design and Engineering, National University of Singapore since 2010. He received his Bachelor of Electrical Engineering (1998), Masters in Electrical and Computer Engineering (2000) and Doctor of Philosophy in Electrical and Computer Engineering (2005) from the National University of Singapore. \n\nPrior to joining the iDP, he was an active academic research member in the Department of Electrical and Computer Engineering (NUS). He has published over 40 books, book chapters, international-refereed journals and conference papers. He is also a certified Autodesk Instructor since Apr 2011 and a certified LabVIEW associate developer since 2008. He was awarded the ‘Top 100 Engineers (2011)’ from the International Biographical Centre. One of this works is awarded the ‘Top 10 articles in Biomed Library and another is invited to be included in SciTopics. He is also invited as speaker to various IEEE sponsored international and regional conferences. One of Dr. Tang’s patented inventions is also successfully licensed to a biomedical apparatus company, Biofactory. He has conducted several well-received professional training classes, workshops and seminars for professional engineers, undergraduates and high school students. \n\nHe is a recipient of various international design and innovative awards (Highlight: Best Innovation in Robotics 2010, ASEAN Virtual Instrumentation Applications Contest, First Prize 2009 International Digital Signal Processing Creative Design Contest and Best Paper (Mechatronics) Award, IEEE ICMA 2009, IEEE International Conference on Mechatronics Automation). \n\nLeveraging on his research activities, experiences and interests, he hopes to contribute effectively as a mentor and supervisor to the multi-disciplinary students’ teams in the CDE. Particularly, with his contacts with experts and knowhow of state-of-the-art technology in his related research fields, he hopes to bring in new dimensions to the students’ teams. His teaching objective is to create effective student teams,  inject new learning dimensions to the students, with new leads to tackle the Grand Challenges in their undergraduate study and beyond. Particularly, he is motivated to develop and implement new teaching techniques, with focus on a design approach. He is also interested to introduce smart classroom and learning concepts to enhance the learning process. \n\nRelated to developing new AI methods, Dr. Tang’s research interests includes new and improved control and diagnostic methodologies for intelligent mechatronics, servo and precision motion systems and servomechanisms, and improvements on current methods for adaptive neural control for the above mentioned systems, new control methods for biomedical and other related systems, and new and improved optimization methods for different platforms.",
       },
       {
         name: "Dr Lee Hwee Kuan",
@@ -169,9 +168,15 @@ const profiles = [
       },
       {
         name: "A/Professor Sierin Lim",
-        image: "images/profiles/speakers/sierin-lim.jpg",
+        image: "/images/profiles/speakers/sierin-lim.jpeg",
         description:
           "Sierin Lim is an Associate Professor of Bioengineering at the School of Chemistry, Chemical Engineering and Biotechnology at Nanyang Technological University, Singapore (NTU). Her research group focuses on the design and engineering of hybrid nano/microscale biodevices using proteins for applications in health and the environment. Specifically, her Bioengineered and Applied Nanomaterials Lab (BeANs Lab) uses protein cages as the building blocks and a platform for formulation and delivery of active molecules to the skin. Her lab also explores the utility of protein cages to enhance contrast in imaging atherosclerotic plaques. In her Molecular & ﻿Cellular Bioengineering Lab (MCBe Lab), she leads a program in engineering enzymes and microbes to up-cycle plastic wastes to oil, cellulose, and cannabinoids using cyanobacteria, cellulose bacteria, and yeast. \n\nShe is currently serving as the Associate Dean of Global Partnerships at the NTU Graduate College. ﻿She earned ﻿﻿﻿her B.S. in Chemical Engineering and Ph.D. in Biomedical Engineering from University of California Los Angeles (UCLA). ",
+      },
+      {
+        name: "Professor Wu Wei",
+        image: "/images/profiles/speakers/ww.jpg",
+        description:
+          "Prof Wu Wei received his PhD degree at Swiss Federal Institute of Technology in Lausanne (EPFL), Switzerland. Prior to joining NTU, he was a Postdoctoral Scholar at Stanford University, USA. He is currently an Associate Professor at Nanyang Technological University (NTU), Singapore, and serves as the Honorary Secretary of Society for Rock Mechanics & Engineering Geology (SRMEG), the Associate Editor for International Journal of Rock Mechanics and Mining Sciences, and the Assistant Chair for Research in School of Civil and Environmental Engineering (CEE) at NTU. \n\nProf Wu’s research focuses on experimental geophysics and energy geomechanics, with emphasis on underground space development, geo-energy extraction and storage, as well as induced geohazards due to climate change and energy extraction. He currently leads several research projects on geothermal energy exploration, underground energy storage, and urban geophysical survey in Singapore. He has received numerous awards, such as NTU CEE Research Award in 2023, SRMEG Outstanding Paper Award in 2017, and Swiss Perspective Researcher Fellowship in 2013.",
       },
     ],
   },

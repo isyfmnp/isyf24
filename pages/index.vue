@@ -111,43 +111,6 @@
         </div>
       </section>
 
-      <section class="colored people">
-        <h2>How can you join?</h2>
-
-        <h3>For Students</h3>
-        <p>
-          This forum invites top science students from schools around the world.
-          They should:
-        </p>
-        <ul>
-          <li>Be between 16 and 17 years of age in 2024,</li>
-          <li>Be within the top tier of their respective Science cohorts,</li>
-          <li>
-            Have substantial experience in science research or competitions,
-          </li>
-          <li>Possess good oral proficiency in English, and</li>
-          <li>
-            Possess enthusiasm and strong interest in forging ties with fellow
-            students from all over the world.
-          </li>
-        </ul>
-
-        <h3>For Educators</h3>
-        <p>
-          In addition to the students' activities, the educators' programme
-          provides opportunities for the educators to share, interact with and
-          learn from one another. To ensure that the educator benefits fully
-          from the experience, the educator should:
-        </p>
-        <ul>
-          <li>Possess good oral proficiency in English, and</li>
-          <li>
-            Possess enthusiasm and strong interest in forging ties with fellow
-            educators.
-          </li>
-        </ul>
-      </section>
-
       <section>
         <h2>Who are the organisers?</h2>
         <p>
