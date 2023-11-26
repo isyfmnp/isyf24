@@ -61,19 +61,19 @@ const profiles = [
     profiles: [
       {
         name: "Admin & Operations",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/Admin_and_Operations.JPG",
         description:
           "The Admin & Operations team are dedicated individuals who work tirelessly to ensure your ISYF experience is smooth and seamless. They orchestrate and tie events together behind the scenes to bring you a truly fulfilling experience!",
       },
       {
         name: "Ceremonies",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/Ceremony.JPG",
         description:
           "The Ceremonies team have planned two major events for ISYF: \n\nThe Nobel Grand Ceremony is a great chance for you hear more from Nobel laureates and eminent scientists on issues surrounding the theme of the forum. You also get a chance to pose your very own questions to the experts in a forum styled question-and-answer session. \n\nThe Closing Ceremony on the other hand is our way of ending off ISYF on a high note, so be ready with your cameras to take some memorable photos!",
       },
       {
         name: "Dialogues & Masterclasses",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/Dialogues_and_Masterclasses.JPG",
         description:
           "The Dialogues & Masterclasses team seek to connect you to knowledgable and prominent scientists, allowing you to explore new perspectives and gain new insights on notable scientific research. We hope you stay curious and embrace this valuable oportunity with eminent scientists and Nobel laureates!",
       },
@@ -85,13 +85,13 @@ const profiles = [
       },
       {
         name: "Recreational Activities",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/ReActs.JPG",
         description:
           "The Recreational Activities team are in charge of ensuring you enjoy yourself thoroughly, through fun activities like the Amazing Tour, Cultural Hour and Exhibitions. ISYF is the perfect avenue to meet new friends who are passinate in science, and we hope that these activities provide a great time for you to bond with them!",
       },
       {
         name: "Science Activities",
-        image: "/images/profiles/speakers/yeo-kiat-seng.jpg",
+        image: "/images/profiles/SciActs.JPG",
         description:
           "The Science Activities team will enrich your learning with various activities to dive deeper into the world of Science. Do look forward to excursions and the Team Project Challenge, which will be sure to provide something new for everyone!",
       },
