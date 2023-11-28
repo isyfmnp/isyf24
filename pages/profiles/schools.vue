@@ -36,6 +36,7 @@
   background-color: white;
   background-image: none;
   border: 1px solid var(--fg);
+  overflow: hidden;
 }
 .collage .profile-img {
   padding: 18.75%;
