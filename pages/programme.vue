@@ -235,8 +235,6 @@ ul {
   height: 1.25rem;
 }
 .highlight h3::before {
-  border: 2px solid var(--cl);
-  background-color: var(--cl);
   left: -2.5rem;
 }
 
