@@ -99,7 +99,7 @@ ul {
   border: 1px solid var(--gray-500);
   border-radius: 16px;
   background-color: var(--primary);
-  color: var(--gray-900);
+  color: var(--primary-900);
 }
 .event-day:nth-of-type(even) h2::after {
   background-color: hsla(var(--primary-200-hsla), 0.125);
@@ -130,8 +130,8 @@ ul {
 .event-day:nth-of-type(even) {
   --fg: var(--gray-100);
   --fg-2: var(--gray-400);
-  --bg: var(--gray-900);
-  --bg-2: var(--gray-800);
+  --bg: var(--primary-900);
+  --bg-2: var(--primary-800);
   --cl: var(--primary-400);
 }
 .event-day:nth-of-type(even)::after {
@@ -139,7 +139,7 @@ ul {
   z-index: -50;
   position: absolute;
   inset: 0;
-  background-color: var(--gray-900);
+  background-color: var(--primary-900);
 }
 
 .event-details {

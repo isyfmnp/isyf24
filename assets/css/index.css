@@ -40,6 +40,7 @@
   --primary: var(--primary-500);
   --primary-600: hsl(var(--primary-hue), 60%, 34%);
   --primary-700: hsl(var(--primary-hue), 62%, 30%);
+  --primary-800: hsl(var(--primary-hue), 14%, 20%);
   --primary-900: hsl(var(--primary-hue), 14%, 15%);
   --primary-950: hsl(var(--primary-hue), 10%, 5%);
 
