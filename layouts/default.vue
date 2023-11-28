@@ -8,7 +8,7 @@
 
 <style scoped>
 .content {
-  margin-top: 8rem;
+  margin-top: 7rem;
 }
 </style>
 
