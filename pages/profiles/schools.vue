@@ -196,7 +196,7 @@ const schoolsUnordered = [
   {
     country: "Chinese Taipei 🇹🇼",
     name: "Taipei First Girls' High School",
-    image: "/images/profiles/schools/.webp",
+    image: "/images/profiles/schools/49.webp",
   },
   {
     country: "Chinese Taipei 🇹🇼",
@@ -246,12 +246,12 @@ const schoolsUnordered = [
   {
     country: "Thailand 🇹🇭",
     name: "Kamnoetvidya Science Academy",
-    image: "/images/profiles/schools/.webp",
+    image: "/images/profiles/schools/48.webp",
   },
   {
     country: "Cambodia 🇰🇭",
     name: "The Angkor Intellectual Academy",
-    image: "/images/profiles/schools/.webp",
+    image: "/images/profiles/schools/50.webp",
   },
   {
     country: "Cambodia 🇰🇭",

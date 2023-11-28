@@ -67,8 +67,9 @@
 
 .collage .profile-img {
   max-height: 100%;
-  max-width: 105%;
+  width: 80%;
   border-radius: 8px;
+  margin-inline: auto;
 }
 
 .collage .name {
