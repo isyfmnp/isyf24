@@ -235,7 +235,7 @@ nav.transparent {
   left: 0;
   right: 0;
   height: 100vh;
-  padding: 1.125rem 4rem 1.875rem 1.5rem;
+  padding: 1.375rem 4rem 1.875rem 1.5rem;
   margin: 0;
 
   display: flex;
@@ -248,7 +248,7 @@ nav.transparent {
   font-weight: 400;
 
   --fg: var(--gray-100);
-  --bg: var(--gray-900);
+  --bg: var(--primary-900);
 
   background-color: var(--bg);
   box-shadow: 0px 0px 20px 2px #272f3d44;
