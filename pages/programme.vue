@@ -153,7 +153,7 @@ ul {
   z-index: 30;
 
   gap: 0.125rem;
-  margin-block: 0.5rem 0.5rem;
+  margin-block: 0.5rem 1rem;
 }
 
 .time {
@@ -177,7 +177,7 @@ ul {
 .highlight {
   background-color: var(--bg-2);
   border-radius: 8px;
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem 0.75rem;
   margin-left: -0.375rem;
 }
 
@@ -193,17 +193,7 @@ ul {
   top: 4rem;
 }
 .event-day:last-of-type::before {
-  bottom: 14rem;
-}
-@media screen and (min-width: 370px) {
-  .event-day:last-of-type::before {
-    bottom: 13rem;
-  }
-}
-@media screen and (min-width: 900px) {
-  .event-day:last-of-type::before {
-    bottom: 11rem;
-  }
+  bottom: 5rem;
 }
 .event-day::before {
   content: '';
@@ -330,17 +320,17 @@ const events = [
       name: "Science Activity",
       time: "7 PM - 8:30 PM",
       highlight: true,
-      description: "MISSING"
+      description: ""
     }
   ],
   [
     // Day 2
     {
-      name: "Introduction to Nanoworld @ NUS Singapore",
+      name: "Professor Sow’s Lecture: Introduction to the Nanoworld @ National University Singapore",
       time: '10 AM - 12 PM',
       highlight: true,
       description:
-        "Wonder what happens when you zoom in, in and in? Want to discover intriguing properties of matter at the nanoscale? Look no further! QnA, demonstrations and interactive activities… Get ready to be wowed the friendly and brilliant Professor Sow from the National University of Singapore! You'll be kept at the edge of your seat as you delve into the nanoworld together with your friends, exploring current and future applications of nanotechnology with this fun-filled lecture. ",
+        "Wonder what happens when you zoom in, in and in? Want to discover intriguing properties of matter at the nanoscale? Look no further! Delegates will delve into the nanoworld with the friendly and brilliant Professor Sow from the National University of Singapore! Through demonstrations and interactive activities, delegates may look forward to exploring current and future applications of nanotechnology with this fun-filled lecture. ",
     },
     {
       name: 'Lunch at NUS',
@@ -351,7 +341,7 @@ const events = [
       time: '2 PM - 5 PM',
       highlight: true,
       description:
-        'Is it a bird? Is it a plane? No, it’s the inaugural Science Quest! Through Science Quest, delegates will have the opportunity to head out to various attractions around Singapore, unlocking the wonders of Science and learning firsthand how it is applied in daily life. Get ready to be captivated by interactive displays on various scientific topics and an engaging experience!',
+        'Through Science Quest, delegates will head out on an excursion to Science Centre Singapore, which features over 850 exhibits across eight galleries, including an OMNIMAX theater and unique Observatory. Look forward to interactive displays on various scientific topics and an engaging experience! ',
     },
     {
       name: 'Dinner',
@@ -362,7 +352,7 @@ const events = [
       time: '7 PM - 8 PM',
       highlight: true,
       description:
-        'As the night unfolds, witness mesmerising performances, from dances to stories, each a window into a different country. The Cultural Hour and Exhibition provides the opportunity for delegates to showcase their unique history, culture and customs! Through this, delegates will be able to traverse the global village, better understand each others’ cultures, and view the world from a global perspective.',
+        'The Cultural Hour and Exhibition provides the opportunity for delegates from all over the world to showcase their unique history, culture and tradition! Through this, delegates will be able to traverse the global village, better understand each other’s cultures, and view the world from a global perspective. ',
     },
   ],
   [
@@ -376,7 +366,7 @@ const events = [
       time: '9:30 AM - 11 AM',
       highlight: true,
       description:
-        'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.',
+        'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and eminent scientistswill share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about the scientific world',
     },
     {
       name: 'Lunch',
@@ -386,7 +376,7 @@ const events = [
       name: 'Unlocking the Wonders Excursion',
       time: '2 PM - 5:30 PM',
       highlight: true,
-      description: 'MISSING',
+      description: 'Is it a bird? Is it a plane? Nope, its the inaugural Unlocking the Wonders: Excursion! Head over to the newly opened Bird Paradise Singapore and,immerse yourself in the symphony of colours at Asia’s largest bird park, gaining a better understanding of our feathered friends whilst learning about the technologies that keep them healthy.',
     },
     {
       name: 'Dinner',
@@ -401,7 +391,7 @@ const events = [
       name: 'Science Quest Product',
       time: '8 PM - 9 PM',
       highlight: true,
-      description: 'MISSING',
+      description: 'After two fun-filled days, it’s time to take a breather. Through the Science Quest Product, delegates will pause, recollect, and reflect on the various excursions, and share their learnings with one another. ',
     },
   ],
   [
@@ -449,7 +439,7 @@ const events = [
       time: '9 AM - 10:30 AM',
       highlight: true,
       description:
-        'Prepare for an intriguing activity that brings together the art of geometry and principles of physics! Take a plunge into the world of geometrical figures and physical laws, and work with your group to see these concepts come to life. The thrill of discovery awaits!',
+        'The collaborative science activity promises to tickle delegates’ thinking caps as they explore the art of geometry and principles of physics. This will culminate into a group presentation, where delegates will share their ideas with their peers. The thrill of discovery awaits! ',
     },
     {
       name: 'Closing Lunch & Farewell',
