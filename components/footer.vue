@@ -24,7 +24,7 @@
         <h1>ORGANIZERS</h1>
         <div class="organizers">
           <img
-            src="/images/logos/moe_logo.jpg"
+            src="/images/logos/moe_logo.png"
             alt="Ministry of Education"
           />
           <img
