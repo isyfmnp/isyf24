@@ -33,6 +33,7 @@
     <div>
       <section>
         <Letter>
+          <img src="/images/profiles/organising-team/co-chairpersons.jpg" alt="Nguyen Chi Mai and Ling Jun Quan" style="width: max(20vw, 16rem); margin: 0.5rem; border-radius: 4px; float: right;"/>
           <p class="sign">Dear Student Delegates and Educators,</p>
           <p>
             Welcome to the 16th International Science Youth Forum (ISYF) @
