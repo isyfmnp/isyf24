@@ -10,8 +10,7 @@
       />
       <div class="comm-description">
         <p>{{ comm.description }}</p>
-        <p>
-          <b>FROM LEFT TO RIGHT: </b>{{ comm.imgCaption }}
+        <p v-html="comm.imgCaption">
         </p>
       </div>
     </div>
@@ -49,8 +48,8 @@
 }
 
 
-@media screen and (max-width: 900px){
   .comm-title {
+@media screen and (max-width: 900px){
     font-size: 48px;
   }
   
@@ -82,19 +81,21 @@ const profiles = [
     image: 'ano',
     description:
       'The Admin & Operations team are dedicated individuals who work tirelessly to ensure your ISYF experience is smooth and seamless. They orchestrate and tie events together behind the scenes to bring you a truly fulfilling experience!',
-    imgCaption: ""
+    imgCaption: "<b>1ST ROW:</b> Stephanie Teo, Natania Chai, Lum Jian Chong Asher <br/><b>2ND ROW:</b> Aidan Ong, Cheng Zuting, Wan Runhao, Zhang Songyang"
   },
   {
     name: 'Ceremonies',
     image: 'ceremonies',
     description:
-      'The Ceremonies team have planned two major events for ISYF: \n\nThe Nobel Grand Ceremony is a great chance for you hear more from Nobel laureates and eminent scientists on issues surrounding the theme of the forum. You also get a chance to pose your very own questions to the experts in a forum styled question-and-answer session. \n\nThe Closing Ceremony on the other hand is our way of ending off ISYF on a high note, so be ready with your cameras to take some memorable photos!',
+      'The Ceremonies team have planned two major events for ISYF: <br/>The Nobel Grand Ceremony is a great chance for you hear more from Nobel laureates and eminent scientists on issues surrounding the theme of the forum. You also get a chance to pose your very own questions to the experts in a forum styled question-and-answer session. \n\nThe Closing Ceremony on the other hand is our way of ending off ISYF on a high note, so be ready with your cameras to take some memorable photos!',
+    imgCaption: "<b>1ST ROW:</b> Li Houze, Ling Jun Quan, Tay Zi Heng, Goh Jun Yu Royce <br/><b>2ND ROW:</b> Ma Anqi, Nguyen Chi Mai"
   },
   {
-    name: 'Dialogues & Masterclasses',
+    name: 'Masterclasses',
     image: 'dnm',
     description:
       'The Dialogues & Masterclasses team seek to connect you to knowledgable and prominent scientists, allowing you to explore new perspectives and gain new insights on notable scientific research. We hope you stay curious and embrace this valuable oportunity with eminent scientists and Nobel laureates!',
+    imgCaption: "<b>LEFT TO RIGHT:</b> Yaw Chur Zhe, Yang Lifan, Wang Zihe, Ho Si Jia, Phoebe Lee, Cheo Chloe, Lim Zhi Fei, Zong Huiwen "
   },
   {
     name: 'Media & Publications',
@@ -107,12 +108,14 @@ const profiles = [
     image: 'reacts',
     description:
       'The Recreational Activities team are in charge of ensuring you enjoy yourself thoroughly, through fun activities like the Amazing Tour, Cultural Hour and Exhibitions. ISYF is the perfect avenue to meet new friends who are passinate in science, and we hope that these activities provide a great time for you to bond with them!',
+    imgCaption: "<b>1ST ROW:</b> Ho Ken Jock, Sean <br/> <b>2ND ROW:</b> Daniel Adam, Shrinithi Ramanathan, Lin Xin Yue Joyce, Darrell Ng, Toh Pin Heng, Ng Yu Han Dominic "
   },
   {
     name: 'Science Activities',
     image: 'sciacts',
     description:
       'The Science Activities team will enrich your learning with various activities to dive deeper into the world of Science. Do look forward to excursions and the Team Project Challenge, which will be sure to provide something new for everyone!',
+    imgCaption: "<b>1ST ROW:</b> Jack Low Ee Jin, Zou Jiaxin, Brian Lee <br/> <b>2ND ROW:</b> Yu Wenqi, Dillon Wong, Li Lingbo, Koh Zhi Hong Jonathan, Fan Yixiang"
   },
 ];
 </script>
