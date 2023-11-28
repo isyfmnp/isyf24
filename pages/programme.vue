@@ -74,7 +74,6 @@ ul {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 26px;
-  font-style: italic;
   width: fit-content;
   margin-block: 2rem 3rem;
 }
@@ -123,7 +122,7 @@ ul {
   padding: 1rem calc(50vw - 50%);
   color: var(--fg);
   --cl: var(--primary);
-  --fg-2: var(--gray-500);
+  --fg-2: var(--gray-400);
   --bg-2: var(--gray-200);
   position: relative;
 }
