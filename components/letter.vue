@@ -27,6 +27,7 @@
   bottom: -3rem;
   left: -0.75rem;
   right: -0.75rem;
+  border-radius: 2px;
 
   --clr-1: var(--bg);
   --clr-2: var(--primary);
