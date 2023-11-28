@@ -87,11 +87,11 @@ const profiles = [
     event: "Keynote Lecture",
     profiles: [
       {
-        name: "Ng Huck Hui",
+        name: "Professor Ng Huck Hui",
         status: "Guest of Honour",
         title: "",
         image: "ng-huck-hui",
-        description: "",
+        description: "Professor Huck-Hui Ng is the Assistant Chief Executive of Research and Talent Development (R&TD), under the Agency for Science, Technology and Research. Professor Ng helped to setup and implement several national funding initiatives such as the Singapore Food Story, Prenatal and Early Childhood for Human Potential and Nucleic Acids Therapeutics.\n\nProfessor Ng is active in research and sits on several boards such as Science Center Singapore and NUS High School, and R&D funding steering committees. In recognition of his scientific contributions, Professor Ng has received numerous local and international honours and awards.",
       },
       {
         name: "Professor Duncan M. Haldane",
