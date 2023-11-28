@@ -24,11 +24,11 @@
         <h1>ORGANIZERS</h1>
         <div class="organizers">
           <img
-            src="/images/logos/moe-logo_white.webp"
+            src="/images/logos/moe_logo.jpg"
             alt="Ministry of Education"
           />
           <img
-            src="/images/logos/hc_logo_white.png"
+            src="/images/logos/hc_logo.png"
             alt="Hwa Chong Institution"
           />
         </div>
@@ -193,7 +193,9 @@ p {
   }
 }
 .organizers img {
-  width: min(calc(100% - 4rem), 10rem);
+  width: min(calc(100% - 2rem), 11rem);
+  background-color: white;
+  border-radius: 8px;
 }
 
 /* ========== SOCIALS & CONTACTS ========== */
