@@ -24,7 +24,7 @@
 }
 
 .comm-title {
-  font-size: 72px;
+  font-size: 56px;
   font-weight: bold;
   margin-block: 0 -0.175rem;
   margin-left: 0.5rem;
@@ -45,7 +45,7 @@
 }
 
 .comm-description {
-  margin-top: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 
