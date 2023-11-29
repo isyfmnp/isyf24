@@ -49,13 +49,13 @@
   padding-inline: 0.75rem;
   display: grid;
   place-items: center start;
-  
+
   background-image: none;
   --bg: var(--gray-100);
   --fg: var(--gray-900);
   background-color: var(--bg);
   box-shadow: 0px 0px 20px 0px #272f4077;
-  
+
   /* Theres a thin black underline for some reason, this is just to cancel it out */
   text-decoration: underline;
   text-decoration-color: var(--bg);

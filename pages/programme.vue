@@ -17,7 +17,11 @@
             {{ dayTitle }}
           </h2>
           <ul>
-            <li class="event-details" v-for="event in events[dayIndex]" :class="{ highlight: event.highlight }">
+            <li
+              class="event-details"
+              v-for="event in events[dayIndex]"
+              :class="{ highlight: event.highlight }"
+            >
               <div class="event-title">
                 <span class="time">{{ event.time }}</span>
                 <h3 class="name">{{ event.name }}</h3>
@@ -41,7 +45,7 @@
 <style scoped>
 :global(.masthead::before) {
   color: var(--bg);
-  background-image: url('/images/progbg.webp');
+  background-image: url("/images/progbg.webp");
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -87,7 +91,7 @@ ul {
 
 /* DAY HEADER BACKGROUND */
 .event-day h2::after {
-  content: '';
+  content: "";
   z-index: -10;
   position: absolute;
   right: -15vw;
@@ -134,7 +138,7 @@ ul {
   --cl: var(--primary-400);
 }
 .event-day:nth-of-type(even)::after {
-  content: '';
+  content: "";
   z-index: -50;
   position: absolute;
   inset: 0;
@@ -180,7 +184,6 @@ ul {
   margin-left: -0.375rem;
 }
 
-
 /* TIMELINE EFFECT */
 .event-day {
   --tm-radius: 2rem;
@@ -195,7 +198,7 @@ ul {
   bottom: 5rem;
 }
 .event-day::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -210,7 +213,7 @@ ul {
 }
 .event-day h2::before,
 .event-day h3::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   border-radius: 50%;
@@ -228,7 +231,7 @@ ul {
 .event-day h3::before {
   box-sizing: border-box;
   border: 1px solid var(--fg);
-  background-color: var(--bg); 
+  background-color: var(--bg);
   left: -2.125rem;
   top: 0.125rem;
   width: 1.25rem;
@@ -237,7 +240,6 @@ ul {
 .highlight h3::before {
   left: -2.5rem;
 }
-
 
 @media screen and (min-width: 900px) {
   .event-day h2 {
@@ -248,15 +250,15 @@ ul {
 </style>
 
 <script setup>
-import Timeline from '../components/timeline.vue';
-import {onMounted} from 'vue';
+import Timeline from "../components/timeline.vue";
+import { onMounted } from "vue";
 
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
-  
+
   const sections = gsap.utils.toArray(".event-details");
 
   sections.forEach((section) => {
@@ -269,186 +271,188 @@ onMounted(() => {
       scrollTrigger: section,
     });
   });
-})
+});
 
 const days = [
-  'Day 0 (7 Jan)',
-  'Day 1 (8 Jan)',
-  'Day 2 (9 Jan)',
-  'Day 3 (10 Jan)',
-  'Day 4 (11 Jan)',
-  'Day 5 (12 Jan)',
+  "Day 0 (7 Jan)",
+  "Day 1 (8 Jan)",
+  "Day 2 (9 Jan)",
+  "Day 3 (10 Jan)",
+  "Day 4 (11 Jan)",
+  "Day 5 (12 Jan)",
 ];
 
 const events = [
   [
     // Day 0
     {
-      name: 'Arrival of Delegates',
-      description: 'Welcome to Singapore!',
+      name: "Arrival of Delegates",
+      description: "Welcome to Singapore!",
     },
   ],
   [
     // Day 1
     {
-      name: 'School Assembly',
-      time: '7:30 AM',
+      name: "School Assembly",
+      time: "7:30 AM",
     },
     {
-      name: 'Programme Briefing',
-      time: '9 AM',
+      name: "Programme Briefing",
+      time: "9 AM",
     },
     {
       name: "Team Bonding Activities",
-      time: '10 AM'
+      time: "10 AM",
     },
     {
-      name: 'Singapore Discovery Trail',
-      time: 'TB AM - TB AM',
+      name: "Singapore Discovery Trail",
+      time: "TB AM - TB AM",
       highlight: true,
       description:
-        'From the phenomenal urban landscape to the lush nature in Singapore’s parks, adventure awaits! On the Singapore Discovery Trail, delegates will be able to explore key attractions in Singapore while completing challenges and tasks throughout their journey. The trail will also allow delegates to gain a deeper understanding of Singapore’s traditions and cultures while immersing in the wonders of this garden city.',
+        "From the phenomenal urban landscape to the lush nature in Singapore’s parks, adventure awaits! On the Singapore Discovery Trail, delegates will be able to explore key attractions in Singapore while completing challenges and tasks throughout their journey. The trail will also allow delegates to gain a deeper understanding of Singapore’s traditions and cultures while immersing in the wonders of this garden city.",
     },
     {
-      name: 'Dinner',
-      time: '6 PM - 7 PM',
+      name: "Dinner",
+      time: "6 PM - 7 PM",
     },
     {
       name: "Science Activity",
       time: "7 PM - 8:30 PM",
       highlight: true,
-      description: ""
-    }
+      description: "",
+    },
   ],
   [
     // Day 2
     {
       name: "Professor Sow’s Lecture: Introduction to the Nanoworld @ National University Singapore",
-      time: '10 AM - 12 PM',
+      time: "10 AM - 12 PM",
       highlight: true,
       description:
         "Wonder what happens when you zoom in, in and in? Want to discover intriguing properties of matter at the nanoscale? Look no further! Delegates will delve into the nanoworld with the friendly and brilliant Professor Sow from the National University of Singapore! Through demonstrations and interactive activities, delegates may look forward to exploring current and future applications of nanotechnology with this fun-filled lecture. ",
     },
     {
-      name: 'Lunch at NUS',
-      time: '12:15 PM - 1:15 PM',
+      name: "Lunch at NUS",
+      time: "12:15 PM - 1:15 PM",
     },
     {
-      name: 'Science Quest @ Science Centre Singapore',
-      time: '2 PM - 5 PM',
+      name: "Science Quest @ Science Centre Singapore",
+      time: "2 PM - 5 PM",
       highlight: true,
       description:
-        'Through Science Quest, delegates will head out on an excursion to Science Centre Singapore, which features over 850 exhibits across eight galleries, including an OMNIMAX theater and unique Observatory. Look forward to interactive displays on various scientific topics and an engaging experience! ',
+        "Through Science Quest, delegates will head out on an excursion to Science Centre Singapore, which features over 850 exhibits across eight galleries, including an OMNIMAX theater and unique Observatory. Look forward to interactive displays on various scientific topics and an engaging experience! ",
     },
     {
-      name: 'Dinner',
-      time: '6 PM - 7 PM',
+      name: "Dinner",
+      time: "6 PM - 7 PM",
     },
     {
-      name: 'Cultural Hour I',
-      time: '7 PM - 8 PM',
+      name: "Cultural Hour I",
+      time: "7 PM - 8 PM",
       highlight: true,
       description:
-        'The Cultural Hour and Exhibition provides the opportunity for delegates from all over the world to showcase their unique history, culture and tradition! Through this, delegates will be able to traverse the global village, better understand each other’s cultures, and view the world from a global perspective. ',
+        "The Cultural Hour and Exhibition provides the opportunity for delegates from all over the world to showcase their unique history, culture and tradition! Through this, delegates will be able to traverse the global village, better understand each other’s cultures, and view the world from a global perspective. ",
     },
   ],
   [
     // Day 3
     {
-      name: 'Preparation for Masterclasses',
-      time: '8:30 AM - 9:30 AM',
+      name: "Preparation for Masterclasses",
+      time: "8:30 AM - 9:30 AM",
     },
     {
-      name: 'Masterclasses I',
-      time: '9:30 AM - 11 AM',
+      name: "Masterclasses I",
+      time: "9:30 AM - 11 AM",
       highlight: true,
       description:
-        'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and eminent scientistswill share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about the scientific world',
+        "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and eminent scientistswill share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about the scientific world",
     },
     {
-      name: 'Lunch',
-      time: '12:30 PM - 1:30 PM',
+      name: "Lunch",
+      time: "12:30 PM - 1:30 PM",
     },
     {
-      name: 'Unlocking the Wonders Excursion',
-      time: '2 PM - 5:30 PM',
+      name: "Unlocking the Wonders Excursion",
+      time: "2 PM - 5:30 PM",
       highlight: true,
-      description: 'Is it a bird? Is it a plane? Nope, its the inaugural Unlocking the Wonders: Excursion! Head over to the newly opened Bird Paradise Singapore and,immerse yourself in the symphony of colours at Asia’s largest bird park, gaining a better understanding of our feathered friends whilst learning about the technologies that keep them healthy.',
+      description:
+        "Is it a bird? Is it a plane? Nope, its the inaugural Unlocking the Wonders: Excursion! Head over to the newly opened Bird Paradise Singapore and,immerse yourself in the symphony of colours at Asia’s largest bird park, gaining a better understanding of our feathered friends whilst learning about the technologies that keep them healthy.",
     },
     {
-      name: 'Dinner',
-      time: '6 PM - 6 PM',
+      name: "Dinner",
+      time: "6 PM - 6 PM",
     },
     {
-      name: 'Cultural Hour II',
-      time: '7 PM - 8 PM',
+      name: "Cultural Hour II",
+      time: "7 PM - 8 PM",
       highlight: true,
     },
     {
-      name: 'Science Quest Product',
-      time: '8 PM - 9 PM',
+      name: "Science Quest Product",
+      time: "8 PM - 9 PM",
       highlight: true,
-      description: 'After two fun-filled days, it’s time to take a breather. Through the Science Quest Product, delegates will pause, recollect, and reflect on the various excursions, and share their learnings with one another. ',
+      description:
+        "After two fun-filled days, it’s time to take a breather. Through the Science Quest Product, delegates will pause, recollect, and reflect on the various excursions, and share their learnings with one another. ",
     },
   ],
   [
     // Day 4
     {
-      name: 'Preparation for Masterclasses',
-      time: '8:30AM - 9:30 AM',
+      name: "Preparation for Masterclasses",
+      time: "8:30AM - 9:30 AM",
     },
     {
-      name: 'Masterclasses II',
-      time: '9:30 AM - 11 AM',
+      name: "Masterclasses II",
+      time: "9:30 AM - 11 AM",
       highlight: true,
       description:
-        'Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.',
+        "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and renowned professors will share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about careers in science.",
     },
     {
-      name: 'Lunch',
-      time: '11:30 AM - 12:30 PM',
+      name: "Lunch",
+      time: "11:30 AM - 12:30 PM",
     },
     {
-      name: 'ISYF Keynote Lecture',
-      time: '2 PM - 3:30 PM',
+      name: "ISYF Keynote Lecture",
+      time: "2 PM - 3:30 PM",
       highlight: true,
       description:
-        'Hear from the insights of Nobel Laureates during the Keynote Lecture, which will also be the flagship event of ISYF 2024. After which, take a tour around the Poster Exhibition, where student delegates will share their scientific research with eminent scientists, educators, and other fellow delegates! ',
+        "Hear from the insights of Nobel Laureates during the Keynote Lecture, which will also be the flagship event of ISYF 2024. After which, take a tour around the Poster Exhibition, where student delegates will share their scientific research with eminent scientists, educators, and other fellow delegates! ",
     },
     {
-      name: 'Poster Exhibition',
-      time: '3:30 PM - 4:30 PM',
+      name: "Poster Exhibition",
+      time: "3:30 PM - 4:30 PM",
       highlight: true,
     },
     {
-      name: 'Night Out',
-      time: '5 PM - 9 PM',
+      name: "Night Out",
+      time: "5 PM - 9 PM",
     },
   ],
   [
     // Day 5
     {
-      name: 'Preparation for Science Activity',
-      time: '8:30 AM - 9 AM',
+      name: "Preparation for Science Activity",
+      time: "8:30 AM - 9 AM",
     },
     {
-      name: 'Collaborative Science Activity',
-      time: '9 AM - 10:30 AM',
+      name: "Collaborative Science Activity",
+      time: "9 AM - 10:30 AM",
       highlight: true,
       description:
-        'The collaborative science activity promises to tickle delegates’ thinking caps as they explore the art of geometry and principles of physics. This will culminate into a group presentation, where delegates will share their ideas with their peers. The thrill of discovery awaits! ',
+        "The collaborative science activity promises to tickle delegates’ thinking caps as they explore the art of geometry and principles of physics. This will culminate into a group presentation, where delegates will share their ideas with their peers. The thrill of discovery awaits! ",
     },
     {
-      name: 'Closing Lunch & Farewell',
-      time: '12 AM - 3 PM',
+      name: "Closing Lunch & Farewell",
+      time: "12 AM - 3 PM",
       highlight: true,
       description:
-        'Includes student research presentation, cultural performance and return to HCIBS and final Departure',
+        "Includes student research presentation, cultural performance and return to HCIBS and final Departure",
     },
     {
-      name: 'Final Departure',
-      time: '3 PM',
-      description: 'Thanks for coming for ISYF 2024!',
+      name: "Final Departure",
+      time: "3 PM",
+      description: "Thanks for coming for ISYF 2024!",
     },
   ],
 ];

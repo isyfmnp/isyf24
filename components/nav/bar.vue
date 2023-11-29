@@ -54,7 +54,8 @@
       </div>
 
       <div class="closed blocked" :class="{ open: profilesOpen }">
-        <a class="item" @click="profilesOpen = !profilesOpen"> <!-- remember to add class = "item blocked"--> 
+        <a class="item" @click="profilesOpen = !profilesOpen">
+          <!-- remember to add class = "item blocked"-->
           <span class="item-text"> Media </span>
           <span class="material-icons-outlined indicator">chevron_right</span>
         </a>
@@ -514,7 +515,7 @@ const checkScroll = () => {
 onMounted(() => {
   setTimeout(() => {
     if (window.masthead) {
-      console.log("MAASTHEAD YES")
+      console.log("MAASTHEAD YES");
       navTransparent.value = true;
       document.addEventListener("scroll", checkScroll);
     }

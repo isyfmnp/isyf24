@@ -64,7 +64,7 @@
           </div>
           <div class="slideshow-container">
             <template v-for="item in photos_1">
-              <div class="mySlides fade" style="display:block;">
+              <div class="mySlides fade" style="display: block">
                 <img :src="item" style="" />
                 <div class="text">Caption Text</div>
               </div>

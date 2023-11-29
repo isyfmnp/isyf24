@@ -19,7 +19,11 @@
         :href="'#' + profile.name.replaceAll(' ', '')"
         @click="resetLink"
       >
-        <img class="profile-img" :src="'/images/profiles/speakers/' + profile.image + '_square.jpg'" alt="" />
+        <img
+          class="profile-img"
+          :src="'/images/profiles/speakers/' + profile.image + '_square.jpg'"
+          alt=""
+        />
         <div class="name">
           {{ profile.name }}
         </div>
@@ -39,7 +43,10 @@
 
       <section class="profile" v-for="profile in event.profiles">
         <div class="scroll-anchor" :id="profile.name.replaceAll(' ', '')"></div>
-        <img :src="'/images/profiles/speakers/' + profile.image + '.jpg'" :alt="profile.name" />
+        <img
+          :src="'/images/profiles/speakers/' + profile.image + '.jpg'"
+          :alt="profile.name"
+        />
         <div class="info">
           <h3>{{ profile.name }}</h3>
           <h4 v-if="profile.status">{{ profile.status }}</h4>
@@ -91,7 +98,8 @@ const profiles = [
         status: "Guest of Honour",
         title: "",
         image: "ng-huck-hui",
-        description: "Professor Huck-Hui Ng is the Assistant Chief Executive of Research and Talent Development (R&TD), under the Agency for Science, Technology and Research. Professor Ng helped to setup and implement several national funding initiatives such as the Singapore Food Story, Prenatal and Early Childhood for Human Potential and Nucleic Acids Therapeutics.\n\nProfessor Ng is active in research and sits on several boards such as Science Center Singapore and NUS High School, and R&D funding steering committees. In recognition of his scientific contributions, Professor Ng has received numerous local and international honours and awards.",
+        description:
+          "Professor Huck-Hui Ng is the Assistant Chief Executive of Research and Talent Development (R&TD), under the Agency for Science, Technology and Research. Professor Ng helped to setup and implement several national funding initiatives such as the Singapore Food Story, Prenatal and Early Childhood for Human Potential and Nucleic Acids Therapeutics.\n\nProfessor Ng is active in research and sits on several boards such as Science Center Singapore and NUS High School, and R&D funding steering committees. In recognition of his scientific contributions, Professor Ng has received numerous local and international honours and awards.",
       },
       {
         name: "Professor Duncan M. Haldane",
@@ -157,7 +165,7 @@ const profiles = [
       },
       {
         name: "A/Professor Huang Shao Ying",
-        image: "huang-shao-ying", 
+        image: "huang-shao-ying",
         description:
           "Shao Ying Huang is an associate professor in the pillar of Engineering Product Development, Singapore University of Technology and Design. She received her B.Eng., M. Eng., and Ph.D. degree from Nanyang Technological University, Singapore in 2003, 2006, and 2011, respectively. Her research interests include low-field portable MRI (magnets and coils), non-linear MRI image reconstructions, RF aspects of MRI, MR electrical property tomography, radiofrequency(RF)/microwave noninvasive/contactless sensing, wireless power transfer, and wideband RF/microwave components. She owns 10 patents and 6 technology disclosures. She has authored and coauthored more than 60 papers in refereed journals, 1 book chapter, and more than 200 international conference papers. ",
       },
@@ -176,7 +184,8 @@ const profiles = [
       {
         name: "Dr Tang Kok Zuea",
         image: "tang-kok-zuea",
-        description: "KZ Tang is presently a senior lecturer in the Innovation and Design Programme (iDP), College of Design and Engineering, National University of Singapore since 2010. He received his Bachelor of Electrical Engineering (1998), Masters in Electrical and Computer Engineering (2000) and Doctor of Philosophy in Electrical and Computer Engineering (2005) from the National University of Singapore. \n\nPrior to joining the iDP, he was an active academic research member in the Department of Electrical and Computer Engineering (NUS). He has published over 40 books, book chapters, international-refereed journals and conference papers. He is also a certified Autodesk Instructor since Apr 2011 and a certified LabVIEW associate developer since 2008. He was awarded the ‘Top 100 Engineers (2011)’ from the International Biographical Centre. One of this works is awarded the ‘Top 10 articles in Biomed Library and another is invited to be included in SciTopics. He is also invited as speaker to various IEEE sponsored international and regional conferences. One of Dr. Tang’s patented inventions is also successfully licensed to a biomedical apparatus company, Biofactory. He has conducted several well-received professional training classes, workshops and seminars for professional engineers, undergraduates and high school students. \n\nHe is a recipient of various international design and innovative awards (Highlight: Best Innovation in Robotics 2010, ASEAN Virtual Instrumentation Applications Contest, First Prize 2009 International Digital Signal Processing Creative Design Contest and Best Paper (Mechatronics) Award, IEEE ICMA 2009, IEEE International Conference on Mechatronics Automation). \n\nLeveraging on his research activities, experiences and interests, he hopes to contribute effectively as a mentor and supervisor to the multi-disciplinary students’ teams in the CDE. Particularly, with his contacts with experts and knowhow of state-of-the-art technology in his related research fields, he hopes to bring in new dimensions to the students’ teams. His teaching objective is to create effective student teams,  inject new learning dimensions to the students, with new leads to tackle the Grand Challenges in their undergraduate study and beyond. Particularly, he is motivated to develop and implement new teaching techniques, with focus on a design approach. He is also interested to introduce smart classroom and learning concepts to enhance the learning process. \n\nRelated to developing new AI methods, Dr. Tang’s research interests includes new and improved control and diagnostic methodologies for intelligent mechatronics, servo and precision motion systems and servomechanisms, and improvements on current methods for adaptive neural control for the above mentioned systems, new control methods for biomedical and other related systems, and new and improved optimization methods for different platforms.",
+        description:
+          "KZ Tang is presently a senior lecturer in the Innovation and Design Programme (iDP), College of Design and Engineering, National University of Singapore since 2010. He received his Bachelor of Electrical Engineering (1998), Masters in Electrical and Computer Engineering (2000) and Doctor of Philosophy in Electrical and Computer Engineering (2005) from the National University of Singapore. \n\nPrior to joining the iDP, he was an active academic research member in the Department of Electrical and Computer Engineering (NUS). He has published over 40 books, book chapters, international-refereed journals and conference papers. He is also a certified Autodesk Instructor since Apr 2011 and a certified LabVIEW associate developer since 2008. He was awarded the ‘Top 100 Engineers (2011)’ from the International Biographical Centre. One of this works is awarded the ‘Top 10 articles in Biomed Library and another is invited to be included in SciTopics. He is also invited as speaker to various IEEE sponsored international and regional conferences. One of Dr. Tang’s patented inventions is also successfully licensed to a biomedical apparatus company, Biofactory. He has conducted several well-received professional training classes, workshops and seminars for professional engineers, undergraduates and high school students. \n\nHe is a recipient of various international design and innovative awards (Highlight: Best Innovation in Robotics 2010, ASEAN Virtual Instrumentation Applications Contest, First Prize 2009 International Digital Signal Processing Creative Design Contest and Best Paper (Mechatronics) Award, IEEE ICMA 2009, IEEE International Conference on Mechatronics Automation). \n\nLeveraging on his research activities, experiences and interests, he hopes to contribute effectively as a mentor and supervisor to the multi-disciplinary students’ teams in the CDE. Particularly, with his contacts with experts and knowhow of state-of-the-art technology in his related research fields, he hopes to bring in new dimensions to the students’ teams. His teaching objective is to create effective student teams,  inject new learning dimensions to the students, with new leads to tackle the Grand Challenges in their undergraduate study and beyond. Particularly, he is motivated to develop and implement new teaching techniques, with focus on a design approach. He is also interested to introduce smart classroom and learning concepts to enhance the learning process. \n\nRelated to developing new AI methods, Dr. Tang’s research interests includes new and improved control and diagnostic methodologies for intelligent mechatronics, servo and precision motion systems and servomechanisms, and improvements on current methods for adaptive neural control for the above mentioned systems, new control methods for biomedical and other related systems, and new and improved optimization methods for different platforms.",
       },
       {
         name: "Dr Lee Hwee Kuan",

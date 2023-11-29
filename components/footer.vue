@@ -23,14 +23,8 @@
       <section>
         <h1>ORGANIZERS</h1>
         <div class="organizers">
-          <img
-            src="/images/logos/moe_logo.png"
-            alt="Ministry of Education"
-          />
-          <img
-            src="/images/logos/hc_logo.png"
-            alt="Hwa Chong Institution"
-          />
+          <img src="/images/logos/moe_logo.png" alt="Ministry of Education" />
+          <img src="/images/logos/hc_logo.png" alt="Hwa Chong Institution" />
         </div>
       </section>
 

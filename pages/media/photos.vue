@@ -7,26 +7,26 @@
     <main>
       <div
         class="picture-viewer-wrapper"
-        :class="{shown: viewerShown}"
+        :class="{ shown: viewerShown }"
         @click="viewerShown = false"
       >
         <button
           class="controls picture-back"
           @click.stop="adjustPhotoIndex(-1)"
-          :class="{enabled: getPhotoOffsetAvailable(-1)}"
+          :class="{ enabled: getPhotoOffsetAvailable(-1) }"
         >
           <span class="material-icons-outlined"> chevron_left </span>
         </button>
         <img
           id="picture"
-          :style="{height: photoHeight + 'px', width: photoWidth + 'px'}"
+          :style="{ height: photoHeight + 'px', width: photoWidth + 'px' }"
           :src="photos[currentDay - 1][currentPhotoId]"
           @click.stop=""
         />
         <button
           class="controls picture-forwards"
           @click.stop="adjustPhotoIndex(1)"
-          :class="{enabled: getPhotoOffsetAvailable(1)}"
+          :class="{ enabled: getPhotoOffsetAvailable(1) }"
         >
           <span class="material-icons-outlined"> chevron_right </span>
         </button>
@@ -38,8 +38,8 @@
             <div class="days">
               <button
                 class="day"
-                :class="{selected: day == currentDay}"
-                :style="{'--day': currentDay}"
+                :class="{ selected: day == currentDay }"
+                :style="{ '--day': currentDay }"
                 v-for="day in totalDays"
                 @click="currentDay = day"
               >
@@ -61,7 +61,7 @@
 <style>
 .masthead::before {
   color: var(--bg);
-  background-image: url('/images/mediabg.webp');
+  background-image: url("/images/mediabg.webp");
   filter: brightness(40%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -123,14 +123,14 @@
   color: var(--primary);
 }
 .day:first-of-type::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   background-color: var(--primary-100);
 }
 .day:first-of-type::after {
-  content: '';
+  content: "";
   z-index: 10;
   position: absolute;
   left: 0;
@@ -264,7 +264,7 @@
 </style>
 
 <script setup>
-import {ref, watch, onMounted, onUnmounted} from 'vue';
+import { ref, watch, onMounted, onUnmounted } from "vue";
 
 const totalDays = 5;
 const currentDay = ref(1);
@@ -293,34 +293,37 @@ function adjustPhotoIndex(offset) {
 }
 
 onMounted(() => {
-  window.addEventListener('resize', resizePhoto);
-  document.addEventListener('keydown', keyWatcher);
+  window.addEventListener("resize", resizePhoto);
+  document.addEventListener("keydown", keyWatcher);
 });
 onUnmounted(() => {
-  window.removeEventListener('resize', resizePhoto);
-  document.removeEventListener('keydown', keyWatcher);
+  window.removeEventListener("resize", resizePhoto);
+  document.removeEventListener("keydown", keyWatcher);
 });
 watch(currentPhotoId, setTimeout(resizePhoto, 10));
 
 function keyWatcher(e) {
-  if (!viewerShown.value)
-    return
+  if (!viewerShown.value) return;
 
-  if (e.code == "ArrowLeft" || e.code == "ArrowUp"|| e.code == "Backspace")
-    adjustPhotoIndex(-1)
-  else if (e.code == "ArrowRight" || e.code == "ArrowDown"|| e.code == "Enter" || e.code == "Space")
-    adjustPhotoIndex(1)
-  else if (e.code == "Escape")
-    viewerShown.value = false
+  if (e.code == "ArrowLeft" || e.code == "ArrowUp" || e.code == "Backspace")
+    adjustPhotoIndex(-1);
+  else if (
+    e.code == "ArrowRight" ||
+    e.code == "ArrowDown" ||
+    e.code == "Enter" ||
+    e.code == "Space"
+  )
+    adjustPhotoIndex(1);
+  else if (e.code == "Escape") viewerShown.value = false;
 }
 
 function resizePhoto() {
-  const img = document.querySelector('#picture');
+  const img = document.querySelector("#picture");
   const height = img.naturalHeight;
   const width = img.naturalWidth;
   const scale = Math.min(
     (window.innerHeight * 0.9) / height,
-    (window.innerWidth * 0.9) / width,
+    (window.innerWidth * 0.9) / width
   );
   photoHeight.value = height * scale;
   photoWidth.value = width * scale;
@@ -328,30 +331,30 @@ function resizePhoto() {
 
 const photos = [
   [
-    'https://picsum.photos/seed/301/2500/1500',
-    'https://picsum.photos/seed/302/2000/1500',
-    'https://picsum.photos/seed/303/2000/1500',
-    'https://picsum.photos/seed/304/2000/1500',
-    'https://picsum.photos/seed/305/2000/1500',
-    'https://picsum.photos/seed/306/2000/1500',
-    'https://picsum.photos/seed/307/2000/1500',
-    'https://picsum.photos/seed/308/2000/1500',
-    'https://picsum.photos/seed/309/2000/1500',
-    'https://picsum.photos/seed/310/2000/1500',
-    'https://picsum.photos/seed/311/2000/1500',
-    'https://picsum.photos/seed/312/2000/1500',
-    'https://picsum.photos/seed/313/2000/1500',
-    'https://picsum.photos/seed/314/2000/1500',
-    'https://picsum.photos/seed/315/2000/1500',
-    'https://picsum.photos/seed/316/2000/1500',
-    'https://picsum.photos/seed/317/2000/1500',
-    'https://picsum.photos/seed/318/2000/1500',
-    'https://picsum.photos/seed/319/2000/1500',
-    'https://picsum.photos/seed/320/2000/1500',
+    "https://picsum.photos/seed/301/2500/1500",
+    "https://picsum.photos/seed/302/2000/1500",
+    "https://picsum.photos/seed/303/2000/1500",
+    "https://picsum.photos/seed/304/2000/1500",
+    "https://picsum.photos/seed/305/2000/1500",
+    "https://picsum.photos/seed/306/2000/1500",
+    "https://picsum.photos/seed/307/2000/1500",
+    "https://picsum.photos/seed/308/2000/1500",
+    "https://picsum.photos/seed/309/2000/1500",
+    "https://picsum.photos/seed/310/2000/1500",
+    "https://picsum.photos/seed/311/2000/1500",
+    "https://picsum.photos/seed/312/2000/1500",
+    "https://picsum.photos/seed/313/2000/1500",
+    "https://picsum.photos/seed/314/2000/1500",
+    "https://picsum.photos/seed/315/2000/1500",
+    "https://picsum.photos/seed/316/2000/1500",
+    "https://picsum.photos/seed/317/2000/1500",
+    "https://picsum.photos/seed/318/2000/1500",
+    "https://picsum.photos/seed/319/2000/1500",
+    "https://picsum.photos/seed/320/2000/1500",
   ],
   [
-    'https://picsum.photos/seed/301/2500/1500',
-    'https://picsum.photos/seed/302/2500/1500',
+    "https://picsum.photos/seed/301/2500/1500",
+    "https://picsum.photos/seed/302/2500/1500",
   ],
   [],
   [],
@@ -359,6 +362,6 @@ const photos = [
 ];
 
 definePageMeta({
-  layout: 'masthead',
+  layout: "masthead",
 });
 </script>
