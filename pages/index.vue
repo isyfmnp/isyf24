@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner" :class="{normal: bannerNormal}">
+    <div class="banner" :class="{ normal: bannerNormal }">
       <div class="info">
         <img class="logo" src="/icon_light.png" alt="ISYF Logo" />
         <div class="title-wrapper">
@@ -170,7 +170,7 @@
 </style>
 
 <style scoped>
-@import url('~/assets/css/cards.css');
+@import url("~/assets/css/cards.css");
 
 .banner {
   display: block;
@@ -216,7 +216,7 @@
   --bg-info-width: var(--info-width);
 }
 .background {
-  background-image: url('/images/clocktower-6.jpeg');
+  background-image: url("/images/clocktower-6.jpeg");
   filter: brightness(0.7);
   z-index: -1;
   background-size: cover;
@@ -482,7 +482,7 @@
   border-radius: 4px;
   float: right;
 }
-@media screen and (min-width:900px) {
+@media screen and (min-width: 900px) {
   .cochairs-photo {
     width: max(20vw, 32rem);
     margin: 1rem;
@@ -553,11 +553,11 @@
   padding: 0;
 }
 .supporters > *::before {
-  content: 'open_in_new';
+  content: "open_in_new";
   position: absolute;
   top: 0.5rem;
   right: 0.75rem;
-  font-family: 'Material Icons Outlined';
+  font-family: "Material Icons Outlined";
   color: var(--bg);
   background-color: var(--primary);
   padding: 0.25rem;
@@ -567,7 +567,7 @@
   transition: 200ms transform;
 }
 .supporters > *::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -604,16 +604,16 @@
 </style>
 
 <script setup>
-import {onMounted} from 'vue';
-import banner from '../components/masthead.vue';
-import Button from '../components/button/button.vue';
-import PrimaryHighlight from '../components/primaryHighlight.vue';
-import Letter from '../components/letter.vue';
+import { onMounted } from "vue";
+import banner from "../components/masthead.vue";
+import Button from "../components/button/button.vue";
+import PrimaryHighlight from "../components/primaryHighlight.vue";
+import Letter from "../components/letter.vue";
 
-import {gsap} from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-import {ref} from 'vue';
+import { ref } from "vue";
 
 const bannerNormal = ref(false);
 
