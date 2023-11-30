@@ -97,6 +97,8 @@ const profiles = [
     image: "mnp",
     description:
       "The Media & Publications team constantly strive to deliver to you the best publicity efforts and media projects. Stay informed with the ISYF website, Instagram pages and the student handbook. Also enjoy the unique designs on the ISYF merchandise made by our very own designers. We hope that the content we create will be able to add to your ISYF experience!",
+    imgCaption:
+      "<b>1ST ROW:</b> Javion Koh Yijie, Zhang Bo, Nguyen Thien Minh Tuan <br/><b>2ND ROW:</b> Boo Jin Xian, Isabel Choo Faith, Evelyn Nadia Adlim, Lau Yi Xuan <br/> <b>NOT IN PICTURE:</b> Tang Xuyuan",
   },
   {
     name: "Recreational Activities",
