@@ -447,7 +447,7 @@ const events = [
       time: "12 AM - 3 PM",
       highlight: true,
       description:
-        "Includes student research presentation, cultural performance and return to HCIBS and final Departure",
+        "During the Closing Lunch, delegates may look forward to exciting performances and activities under the grand ballroom lights. While it's sad to say goodbye, we hope that you'll bring along the lasting memories and newfound friendships made during ISYF 2024!",
     },
     {
       name: "Final Departure",
