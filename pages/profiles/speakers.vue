@@ -181,11 +181,12 @@ const profiles = [
         description:
           "Dr. Soo is an Associate Professor at the School of Chemistry, Chemical Engineering and Biotechnology in Nanyang Technological University (NTU) Singapore. He graduated from MIT with Bachelor’s and Master’s degrees and completed his Ph.D. work at U.C. Berkeley. Subsequently, he joined the Lawrence Berkeley National Laboratory as a postdoctoral fellow, working on materials and nanotechnology for artificial photosynthesis. \n\nDr. Soo started his independent career at NTU in 2012. The overarching theme of his research programme is the development of artificial photosynthesis systems by using solar and other forms of renewable energy to catalyse the production of fuels and chemical feedstocks from “waste” materials. One of the latest breakthroughs from his group is the demonstration of a way to use light to upcycle non-biodegradable plastics into platform chemical feedstocks under ambient temperatures and pressures, which can dramatically reduce the energy intensity and greenhouse gas emissions of the process.",
       },
+      /*
       {
         name: "Professor Sow Chorng Haur",
         image: "sow-chorng-haur",
         description: ""
-      },
+      },*/
       {
         name: "Dr Tang Kok Zuea",
         image: "tang-kok-zuea",
