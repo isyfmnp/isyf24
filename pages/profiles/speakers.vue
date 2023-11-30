@@ -10,7 +10,7 @@
     <section
       class="event"
       v-for="(event, eventIndex) in profiles"
-      :class="{ 'event-open': eventsOpen[eventIndex] }"
+      :class="{'event-open': eventsOpen[eventIndex]}"
     >
       <h3 class="event-title">{{ event.event }}</h3>
       <a
@@ -36,7 +36,7 @@
       <h2>
         <div class="scroll-banner-wrapper">
           <span class="scroll-banner">{{
-            event.event.concat("&nbsp;&nbsp;•&nbsp;&nbsp;").repeat(30)
+            event.event.concat('&nbsp;&nbsp;•&nbsp;&nbsp;').repeat(30)
           }}</span>
         </div>
       </h2>
@@ -60,10 +60,10 @@
 </template>
 
 <style scoped>
-@import url("~/assets/css/profiles.css");
+@import url('~/assets/css/profiles.css');
 
 .collage .event {
-  grid-template-columns: repeat(auto-fill, minmax(min(40%, 11rem), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(40%, 10.8rem), 1fr));
 }
 
 .collage .name {
@@ -156,6 +156,11 @@ const profiles = [
         image: "gregory-goh",
         description:
           "Prof. Goh is the Executive Director of the National Metrology Centre at A*STAR. Before this appointment, he was Deputy Executive Director of the Institute of Materials Research and Engineering at A*STAR and had held appointments such as Director of the Strategic Research Office and also Head of the Ceramics Materials department. Prof. Goh is the Covering Focal Point for the Sub Committee on Materials Science and Technology that is part of the ASEAN Committee on Science, Technology and Innovation. He has also held an adjunct position in the Materials Science and Engineering department at the Nanyang Technological University since 2005. \n\nIn 2017 to 2019, Prof. Goh held a concurrent appointment as Director of Special Projects in the Science and Engineering Research Council, A*STAR, where he scoped future R&D programmes and also oversaw electrification of transport and related matters in the Urban and GreenTech Office. He also represented A*STAR on various working committees such as Land and Liveability, Smart Urban Habitat and the biennial MND Urban Sustainability R&D Congress. In addition, Prof. Goh is the founding chair of the Singapore Battery Consortium. \n\nIn the years before taking up management responsibilities, Prof. Goh led R&D projects under the 1st and 2nd Joint A*STAR-MND Green Building Thematic Strategic Research Programmes and also served as the Programme Manager for the 2nd programme. He also initiated and led research collaborations with overseas institutions such as Tohoku University, University College London and the University of California, Santa Barbara. His research focused on the deposition of functional and electroceramic films and nanostructures which can be utilised in self-cleaning, heat reflection and also electrochemical applications. He has delivered over 30 invited lectures and has served on the Scientific Advisory Committees of international conferences in Asia and Europe. He is an inventor of several Singapore, PCT, Japan and US patent applications. \n\nProf. Goh graduated with a Bachelor of Engineering (1st Class Honours) and Master of Engineering from the Department of Mechanical Engineering at the National University of Singapore and obtained his Doctor of Philosophy from the Department of Materials Science and Engineering at the University of California at Santa Barbara on an IMRE Fellowship. Prof. Goh’s doctoral studies focused on developing a new, low temperature method for forming films of electronic ceramics while his master degree research investigated the fabrication of ceramic cutting tools.",
+      },
+      {
+        name: "Professor Sow Chorng Haur",
+        image: "sow-chorng-haur",
+        description: ""
       },
       {
         name: "A/Professor Huang Shao Ying",
