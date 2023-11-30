@@ -27,6 +27,7 @@ h1 {
   font-size: min(40vh, 40vw);
   font-weight: 500;
   margin: 1rem 0 2rem;
+  color: var(--primary-900);
 }
 h3 {
   font-size: 22px;
