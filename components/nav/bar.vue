@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{transparent: navTransparent}">
+  <nav :class="{ transparent: navTransparent }">
     <a class="stamp" href="/">
       <img class="logo light" src="/icon_light.png" alt="ISYF Logo" />
       <img class="logo dark" src="/icon_dark.png" alt="ISYF Logo" />
@@ -7,11 +7,98 @@
         <div class="title">ISYF 2024</div>
       </div>
     </a>
+
+    <a class="hamburger" @click="menuOpen = !menuOpen">
+      <span class="material-icons">menu</span>
+    </a>
+    <div class="menu" :class="{ open: menuOpen }">
+      <a class="item close-button" @click="menuOpen = !menuOpen">
+        <span class="material-icons-outlined">close</span>
+      </a>
+      <a class="item" href="/">
+        <span class="item-text">Home</span>
+      </a>
+      <a class="item" href="/about">
+        <span class="item-text">About</span>
+      </a>
+      <a class="item" href="/programme">
+        <span class="item-text">Programme</span>
+      </a>
+      <div class="closed" :class="{ open: profilesOpen }">
+        <a class="item" @click="profilesOpen = !profilesOpen">
+          <span class="item-text"> Profiles </span>
+          <span class="material-icons-outlined indicator">chevron_right</span>
+        </a>
+        <div class="subitems-wrapper">
+          <ul class="subitems">
+            <li>
+              <a href="/profiles/speakers">
+                <span class="material-icons-outlined icon">person</span>
+                <span class="item-text">Speakers</span>
+              </a>
+            </li>
+            <li>
+              <a href="/profiles/schools">
+                <span class="material-icons-outlined icon">school</span>
+                <span class="item-text">Schools</span>
+              </a>
+            </li>
+            <li>
+              <a href="/profiles/organising-team">
+                <span class="material-icons-outlined icon">group</span>
+                <span class="item-text">Organising Team</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="closed blocked" :class="{ open: profilesOpen }">
+        <a class="item" @click="profilesOpen = !profilesOpen">
+          <!-- remember to add class = "item blocked"-->
+          <span class="item-text"> Media </span>
+          <span class="material-icons-outlined indicator">chevron_right</span>
+        </a>
+        <div class="subitems-wrapper">
+          <ul class="subitems">
+            <li>
+              <a href="/media/photos">
+                <span class="item-text">Photos</span>
+              </a>
+            </li>
+            <li>
+              <a href="/media/reflections">
+                <span class="item-text">Reflections</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a class="item" href="/faq">
+        <span class="item-text"> FAQ</span>
+      </a>
+      <div class="socials">
+        <a
+          class="item"
+          href="https://www.instagram.com/isyf.2024/"
+          target="_blank"
+        >
+          <InstagramIcon />
+        </a>
+        <a
+          class="item"
+          href="https://www.youtube.com/channel/UCs9CbJcxC2x8OPYiNx5QDTg"
+          target="_blank"
+        >
+          <YoutubeIcon />
+        </a>
+      </div>
+    </div>
   </nav>
 </template>
 
 <style scoped>
-@import url('~/assets/css/blocked.css');
+@import url("~/assets/css/blocked.css");
 .material-icons-outlined {
   scale: 0.8;
   transform: translateY(1px);
@@ -405,10 +492,10 @@ nav.transparent {
 </style>
 
 <script setup>
-import {ref, onMounted, onUnmounted} from 'vue';
-import {gsap} from 'gsap';
-import InstagramIcon from '../icons/instagram.vue';
-import YoutubeIcon from '../icons/youtube.vue';
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import InstagramIcon from "../icons/instagram.vue";
+import YoutubeIcon from "../icons/youtube.vue";
 
 const profilesOpen = ref(false);
 const menuOpen = ref(false);
@@ -428,26 +515,26 @@ const checkScroll = () => {
 onMounted(() => {
   setTimeout(() => {
     if (window.masthead) {
-      console.log('MAASTHEAD YES');
+      console.log("MAASTHEAD YES");
       navTransparent.value = true;
-      document.addEventListener('scroll', checkScroll);
+      document.addEventListener("scroll", checkScroll);
     }
   }, 2);
 });
 onUnmounted(() => {
-  document.removeEventListener('scroll', checkScroll);
+  document.removeEventListener("scroll", checkScroll);
 });
 
 onMounted(() => {
   if (window.innerWidth < 900) {
     return;
   }
-  gsap.from('.stamp, .menu .item, .menu .socials', {
+  gsap.from(".stamp, .menu .item, .menu .socials", {
     opacity: 0,
 
     x: -7,
     duration: 0.5,
-    ease: 'power2.inOut',
+    ease: "power2.inOut",
     stagger: 0.025,
   });
 });

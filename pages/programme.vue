@@ -298,15 +298,15 @@ const events = [
     },
     {
       name: "Programme Briefing",
-      time: "9 AM",
+      time: "8 AM",
     },
     {
       name: "Team Bonding Activities",
-      time: "10 AM",
+      time: "9 AM",
     },
     {
       name: "Singapore Discovery Trail",
-      time: "TB AM - TB AM",
+      time: "10 AM - 5 PM",
       highlight: true,
       description:
         "From the phenomenal urban landscape to the lush nature in Singapore’s parks, adventure awaits! On the Singapore Discovery Trail, delegates will be able to explore key attractions in Singapore while completing challenges and tasks throughout their journey. The trail will also allow delegates to gain a deeper understanding of Singapore’s traditions and cultures while immersing in the wonders of this garden city.",
@@ -324,6 +324,13 @@ const events = [
   ],
   [
     // Day 2
+    {
+      name: "Cultural Hour I",
+      time: "8:30 AM - 9:30 AM",
+      highlight: true,
+      description:
+        "The Cultural Hour and Exhibition provides the opportunity for delegates from all over the world to showcase their unique history, culture and tradition! Through this, delegates will be able to traverse the global village, better understand each other’s cultures, and view the world from a global perspective. ",
+    },
     {
       name: "Professor Sow’s Lecture: Introduction to the Nanoworld @ National University Singapore",
       time: "10 AM - 12 PM",
@@ -347,11 +354,9 @@ const events = [
       time: "6 PM - 7 PM",
     },
     {
-      name: "Cultural Hour I",
+      name: "Cultural Hour II",
       time: "7 PM - 8 PM",
-      highlight: true,
-      description:
-        "The Cultural Hour and Exhibition provides the opportunity for delegates from all over the world to showcase their unique history, culture and tradition! Through this, delegates will be able to traverse the global village, better understand each other’s cultures, and view the world from a global perspective. ",
+      highlight: true
     },
   ],
   [
@@ -368,11 +373,17 @@ const events = [
         "Ever wanted to interact with eminent scientists from around the world? Through our various Masterclasses,  Nobel Laureates and eminent scientistswill share about their cutting-edge research, and their passion for science. After which, delegates will have the opportunity to pose questions to the scientists and learn more about the scientific world",
     },
     {
+      name: "Cultural Exhibition",
+      time: "11 AM - 12:30 PM",
+      highlight: true,
+      description: ""
+    },
+    {
       name: "Lunch",
       time: "12:30 PM - 1:30 PM",
     },
     {
-      name: "Unlocking the Wonders Excursion",
+      name: "Unlocking the Wonders Excursion @ Bird Paradise",
       time: "2 PM - 5:30 PM",
       highlight: true,
       description:
@@ -383,16 +394,13 @@ const events = [
       time: "6 PM - 6 PM",
     },
     {
-      name: "Cultural Hour II",
+      name: "Cultural Hour III",
       time: "7 PM - 8 PM",
       highlight: true,
     },
     {
-      name: "Science Quest Product",
+      name: "Science Quest Reflections",
       time: "8 PM - 9 PM",
-      highlight: true,
-      description:
-        "After two fun-filled days, it’s time to take a breather. Through the Science Quest Product, delegates will pause, recollect, and reflect on the various excursions, and share their learnings with one another. ",
     },
   ],
   [
@@ -410,18 +418,18 @@ const events = [
     },
     {
       name: "Lunch",
-      time: "11:30 AM - 12:30 PM",
+      time: "11:15 AM - 12:15 PM",
     },
     {
       name: "ISYF Keynote Lecture",
-      time: "2 PM - 3:30 PM",
+      time: "1 PM - 2:30 PM",
       highlight: true,
       description:
         "Hear from the insights of Nobel Laureates during the Keynote Lecture, which will also be the flagship event of ISYF 2024. After which, take a tour around the Poster Exhibition, where student delegates will share their scientific research with eminent scientists, educators, and other fellow delegates! ",
     },
     {
       name: "Poster Exhibition",
-      time: "3:30 PM - 4:30 PM",
+      time: "1:30 PM - 3:30 PM",
       highlight: true,
     },
     {
@@ -432,11 +440,7 @@ const events = [
   [
     // Day 5
     {
-      name: "Preparation for Science Activity",
-      time: "8:30 AM - 9 AM",
-    },
-    {
-      name: "Collaborative Science Activity",
+      name: "Science Activity Solutions",
       time: "9 AM - 10:30 AM",
       highlight: true,
       description:
@@ -447,7 +451,7 @@ const events = [
       time: "12 AM - 3 PM",
       highlight: true,
       description:
-        "Includes student research presentation, cultural performance and return to HCIBS and final Departure",
+        "During the Closing Lunch, delegates may look forward to exciting performances and activities under the grand ballroom lights. While it's sad to say goodbye, we hope that you'll bring along the lasting memories and newfound friendships made during ISYF 2024!",
     },
     {
       name: "Final Departure",
