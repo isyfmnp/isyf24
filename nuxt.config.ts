@@ -16,6 +16,9 @@ export default defineNuxtConfig({
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [
+      { hid: 'vercel-analytics', src: '/_vercel/insights/script.js', defer: true }
+    ]
   },
 
   app: {

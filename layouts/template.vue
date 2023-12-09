@@ -32,6 +32,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 const height = ref(0);
 onMounted(() => {
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   window.error = false;
 
   gsap.registerPlugin(ScrollTrigger);
