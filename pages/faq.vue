@@ -76,7 +76,7 @@ import { ref } from "vue";
 const questions = {
   Programme: {
     "Who are we?":
-      "The ISYF student organizing committee is made up of 43 friendly, fun and caring facilitators from the Science Student's Research Club and other affiliates from Hwa Chong Institution, Singapore. We are guided by a team of dedicated teachers from Hwa Chong Institution and we're excited to have you here for the 16th iteration of ISYF! ",
+      "The ISYF student organizing committee is made up of 43 friendly, fun and caring facilitators from the Student's Science Research Club and other affiliates from Hwa Chong Institution, Singapore. We are guided by a team of dedicated teachers from Hwa Chong Institution and we're excited to have you here for the 16th iteration of ISYF! ",
     "What can I look forward to?":
       "As your facilitators, we have planned an exciting array of activities, including a Science Quest and a cultural exhibition. In fact, what you have seen in the Programme Overview is just a slight preview of what you can experience here. It is our greatest hope that you'll not just take away valuable scientific insights from the forum, but also long-lasting friendships with people all over the world. ",
     "What is a typical day like?":
