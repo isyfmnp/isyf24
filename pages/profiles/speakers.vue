@@ -113,6 +113,16 @@ const profiles = [
     ],
   },
   {
+    event: "Guest Lectures",
+    profiles: [
+      {
+        name: "Professor Sow Chorng Haur",
+        image: "sow-chorng-haur",
+        description: "Professor Sow Chorng Haur received his Bachelor of Science Degree (1st Class) in Physics from the National University of Singapore (NUS) in 1991. He received his Master of Science degree in Physics after spending two more years in NUS for research. Prof Sow then completed his PhD degree in the University of Chicago in 1998. For the next two years, he worked as a postdoctoral fellow at Bell Laboratory, Lucent Technologies. He then returned and joined the Department of Physics, NUS in 2001. He is now the Vice Dean (Outreach and Admissions) of the Faculty of Science and the Vice President of the Singapore National Academy of Science. \n\nProf Sow’s research interests include carbon nanotubes, nanomaterials and the fundamental studies of 2D materials (e.g. graphene, dichalcogenide and phosphorene) and their applications. He has worked on developing a laser pruning method to create unique 2D and 3D structures made of carbon nanotubes, the synthesis of a wide variety of nanoscale metallic oxide materials and the assembly of nanowires and nanowalls. Prof Sow, with over 270 publications, has authored and co-authored many papers in the field of nanoscience and nanomaterials. \n\nProf Sow is also known for being an inspiring educator, having been awarded various teaching awards such as the University Award: Outstanding Educator Award from NUS in 2008, and the Faculty Teaching Excellence Award from 2002 to 2013."
+      },
+    ]
+  },
+  {
     event: "Masterclasses",
     profiles: [
       {
@@ -180,11 +190,6 @@ const profiles = [
         image: "soo-han-sen",
         description:
           "Dr. Soo is an Associate Professor at the School of Chemistry, Chemical Engineering and Biotechnology in Nanyang Technological University (NTU) Singapore. He graduated from MIT with Bachelor’s and Master’s degrees and completed his Ph.D. work at U.C. Berkeley. Subsequently, he joined the Lawrence Berkeley National Laboratory as a postdoctoral fellow, working on materials and nanotechnology for artificial photosynthesis. \n\nDr. Soo started his independent career at NTU in 2012. The overarching theme of his research programme is the development of artificial photosynthesis systems by using solar and other forms of renewable energy to catalyse the production of fuels and chemical feedstocks from “waste” materials. One of the latest breakthroughs from his group is the demonstration of a way to use light to upcycle non-biodegradable plastics into platform chemical feedstocks under ambient temperatures and pressures, which can dramatically reduce the energy intensity and greenhouse gas emissions of the process.",
-      },
-      {
-        name: "Professor Sow Chorng Haur",
-        image: "sow-chorng-haur",
-        description: "Professor Sow Chorng Haur received his Bachelor of Science Degree (1st Class) in Physics from the National University of Singapore (NUS) in 1991. He received his Master of Science degree in Physics after spending two more years in NUS for research. Prof Sow then completed his PhD degree in the University of Chicago in 1998. For the next two years, he worked as a postdoctoral fellow at Bell Laboratory, Lucent Technologies. He then returned and joined the Department of Physics, NUS in 2001. He is now the Vice Dean (Outreach and Admissions) of the Faculty of Science and the Vice President of the Singapore National Academy of Science. \n\nProf Sow’s research interests include carbon nanotubes, nanomaterials and the fundamental studies of 2D materials (e.g. graphene, dichalcogenide and phosphorene) and their applications. He has worked on developing a laser pruning method to create unique 2D and 3D structures made of carbon nanotubes, the synthesis of a wide variety of nanoscale metallic oxide materials and the assembly of nanowires and nanowalls. Prof Sow, with over 270 publications, has authored and co-authored many papers in the field of nanoscience and nanomaterials. \n\nProf Sow is also known for being an inspiring educator, having been awarded various teaching awards such as the University Award: Outstanding Educator Award from NUS in 2008, and the Faculty Teaching Excellence Award from 2002 to 2013."
       },
       {
         name: "Dr Tang Kok Zuea",
