@@ -73,12 +73,12 @@ const schoolsUnordered = [
     country: 'Cambodia 🇰🇭',
     name: 'New Generation School Preah Sisowath High School',
   },
-  {country: 'Chinese Taipei 🇹🇼', name: 'Taipei First Girls High School'},
+  {country: 'Taiwan 🇹🇼', name: 'Taipei First Girls High School'},
   {
-    country: 'Chinese Taipei 🇹🇼',
+    country: 'Taiwan 🇹🇼',
     name: 'Taipei Municipal Chien Kuo High School',
   },
-  {country: 'Hong Kong SAR 🇭🇰', name: "Diocesan Girls' School"},
+  {country: 'Hong Kong 🇭🇰', name: "Diocesan Girls' School"},
   {country: 'Indonesia 🇮🇩', name: 'SMA Negeri 4 Denpasar High School'},
   {country: 'Indonesia 🇮🇩', name: 'SMA Santa Laurensia Alam Sutera'},
   {
@@ -125,7 +125,7 @@ const schoolsUnordered = [
   {country: 'United States of America 🇺🇸', name: 'Staples High School'},
   {country: 'Vietnam 🇻🇳', name: 'Reigate Grammar School Vietnam'},
   {
-    country: 'China 🇨🇳',
+    country: 'Mainland China 🇨🇳',
     name: 'The High School Affiliated to the Southern University of Science and Technology (SUSTech)',
   },
 ];
