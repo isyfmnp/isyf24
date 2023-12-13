@@ -326,7 +326,7 @@ const events = [
     // Day 2
     {
       name: "Cultural Hour I",
-      time: "8:30 AM - 9:30 AM",
+      time: "8 AM - 9 AM",
       highlight: true,
       description:
         "The Cultural Hour and Exhibition provides the opportunity for delegates from all over the world to showcase their unique history, culture and tradition! Through this, delegates will be able to traverse the global village, better understand each other’s cultures, and view the world from a global perspective. ",
