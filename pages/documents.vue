@@ -1,26 +1,44 @@
+[warn] --jsx-bracket-same-line is deprecated.
+[warn] Ignored unknown option --loglevel=error. Did you mean --log-level?
+[warn] Ignored unknown option --stdin.
 <template>
   <div>
     <h1>Documents</h1>
 
     <form
-      @submit.prevent="passwordSubmit"
       v-if="!authenticated"
+      @submit.prevent="passwordSubmit"
+      @input="incorrect = false"
+      :class="{incorrect: incorrect}"
       class="dir-password"
     >
-      <label for="password">Please enter password:</label>
-      <input
-        type="text"
-        id="password"
-        name="password"
-        placeholder="Password..."
-      />
+      <label class="password-label" for="password"
+        >Please enter password:</label
+      >
+      <div class="password-wrapper">
+        <input
+          :type="shown ? 'text' : 'password'"
+          id="password"
+          name="password"
+          placeholder="Password..."
+        />
+        <span
+          class="eye material-icons-outlined"
+          @mousedown="shown = true"
+          @mouseup="shown = false"
+          @touchstart="shown = true"
+          @touchend="shown = false"
+          ><span v-if="!shown">visibility</span
+          ><span v-else>visibility_off</span></span
+        >
+      </div>
       <input class="submit-btn" type="submit" value="Go" />
     </form>
 
     <div class="directory button-row" v-else>
       <a v-for="file in files" class="btn" :href="file.url" target="_blank">
         <span class="icon material-icons-outlined">description</span>
-        {{file.name}}
+        {{ file.name }}
       </a>
     </div>
   </div>
@@ -31,22 +49,46 @@
   display: block;
   margin-block: 2rem;
 }
-#password {
+.password-label {
   display: block;
+  margin-block: 0.25rem;
+  font-weight: 500;
+}
+.password-wrapper {
+  display: flex;
+  align-items: center;
+}
+#password {
+  display: inline-block;
   width: calc(100% - var(--page-margin) - 0.5rem);
+  height: 1.25rem;
   margin-block: 0.5rem;
   padding: 1rem 0.75rem;
   border: 1px solid var(--gray-900);
   border-radius: 6px;
   outline: none;
 
-  box-shadow: 0px 0px 0px 0px black;
-  transition: box-shadow 75ms;
-
   font-size: 16px;
+
+  box-shadow: 0px 0px 0px 0px black;
+  transition:
+    box-shadow 125ms,
+    color 125ms;
+}
+.eye {
+  margin-left: -2.5rem;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  user-select: none;
 }
 #password:focus {
-  box-shadow: 0px 0px 0px 2px var(--primary);
+  box-shadow: 0px 0px 0px 3px hsla(var(--primary-500-hsla), 75%);
+  color: var(--primary);
+}
+.incorrect #password {
+  box-shadow: 0px 0px 0px 2px var(--red);
+  color: var(--red);
 }
 .submit-btn {
   background-color: var(--primary);
@@ -58,7 +100,6 @@
 
 .link {
   display: block;
-
 }
 .button-row {
   width: 100%;
@@ -86,7 +127,9 @@ import {ref} from 'vue';
 import crypto from 'crypto-js';
 
 const authenticated = ref(false);
+const incorrect = ref(false);
 const files = ref([]);
+const shown = ref(false);
 
 const passwordHash =
   '166ab54695c086af25f70ff86ea0d2b26ea4c2096f593e16ecc403de3098b707';
@@ -99,6 +142,8 @@ function passwordSubmit(event) {
     console.log('AUTHENTICATED!');
     authenticated.value = true;
     decryptFiles(password);
+  } else {
+    incorrect.value = true;
   }
 }
 
