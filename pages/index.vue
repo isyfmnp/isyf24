@@ -30,6 +30,12 @@
       <div class="background"></div>
     </div>
 
+    <div class="documents">
+      <h2 class="docs-title">Event Documents</h2> 
+      <span class="docs-prompt">Click here to find all the in-event documents!</span>
+      <Button href="/documents" icon="description">Documents</Button>
+    </div>
+
     <div>
       <section>
         <Letter>
@@ -179,7 +185,7 @@
 .banner {
   display: block;
   margin-inline: calc(50% - 50vw);
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   height: calc(95vh - 3.5rem);
   height: calc(98svh - 3.5rem);
 
@@ -502,6 +508,25 @@
   margin-inline: calc(50% - 50vw);
   padding-inline: calc(50vw - 50%);
   background-color: var(--primary-50);
+}
+
+/* ========== DOCUMENTS SHORTCUT ========== */
+:deep(.documents a){
+  --fg: var(--primary);
+  --bg: var(--gray-100);
+  --bg-hover: var(--gray-300);
+}
+.documents {
+  margin-block: 5rem 7rem;
+  --fg: var(--gray-100);
+  --bg: var(--primary);
+  background-color: var(--bg);
+  padding: 0.125rem 1.5rem 0.75rem;
+  border-radius: 8px;
+}
+.docs-title {
+  line-height: 0.95em;
+  margin-block: 2rem 0.75rem;
 }
 
 /* ========== BUTTON ROW ========== */
