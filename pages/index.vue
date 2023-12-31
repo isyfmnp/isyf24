@@ -32,6 +32,7 @@
 
     <div class="documents">
       <h2 class="docs-title">Event Documents</h2> 
+      <subtitle class="docs-subtitle">[FOR DELEGATES]</subtitle>
       <span class="docs-prompt">Click here to find all the in-event documents!</span>
       <Button href="/documents" icon="description">Documents</Button>
     </div>
@@ -526,7 +527,17 @@
 }
 .docs-title {
   line-height: 0.95em;
-  margin-block: 2rem 0.75rem;
+  margin-block: 2rem 0.25rem;
+}
+.docs-subtitle {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin-bottom: 0.75rem;
+}
+.docs-prompt {
+  display: block;
+  margin-block: 1rem;
 }
 
 /* ========== BUTTON ROW ========== */
