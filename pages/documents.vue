@@ -1,6 +1,3 @@
-[warn] --jsx-bracket-same-line is deprecated.
-[warn] Ignored unknown option --loglevel=error. Did you mean --log-level?
-[warn] Ignored unknown option --stdin.
 <template>
   <div>
     <h1>Documents</h1>
@@ -131,7 +128,7 @@ const shown = ref(false);
 const passwordHash =
   '166ab54695c086af25f70ff86ea0d2b26ea4c2096f593e16ecc403de3098b707';
 const filesDigest =
-  'U2FsdGVkX18Z992Ka2/9OPkhcfwTfPEECItpmK5cLUkwDI/MnF8ik83Spub30c79Qds1ScgJwdxJqhq7NSttOICOdt37qqX5lenRAz84yAFJBh9GnL9+8U01P9xDPyRv0nVtKXxNIC27V0zoeBrPS3KbOyCLDMxER0N7Nf5Bt3cYhJJVEAZcpqDqrX2uVBeO41grFHpw1g6s2PNGX8XbzQ+UwY7mu8wXF5yftQV9EPYtrbb+vdUKFdRPGbsssTN83sEqRcN/LLpYNzzAOaiecBAmM0EsklW2kcAP7ygR5UA=';
+  'U2FsdGVkX1+SnUb9fsMlEx/tmOrE4kWLJ5TCz/B7QjZUnOhdRC5pSjeYLxxHkILNmsPr39aETnqPheRwIZj5YzG6qEpz+38ovgj5JzKR8/I=';
 
 function passwordSubmit(event) {
   const password = event.target.elements.password.value;
