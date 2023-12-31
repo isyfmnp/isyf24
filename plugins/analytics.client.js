@@ -1,5 +1,8 @@
-import { inject } from '@vercel/analytics';
- 
 export default defineNuxtPlugin(() => {
-  inject();
+  (async () => {
+    if (process.env.NODE_ENV === 'production') {
+      const analytics = await import('@vercel/analytics')
+      analytics.inject()
+    }
+  })();
 });
