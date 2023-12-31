@@ -24,10 +24,7 @@
         />
         <span
           class="eye material-icons-outlined"
-          @mousedown="shown = true"
-          @mouseup="shown = false"
-          @touchstart="shown = true"
-          @touchend="shown = false"
+          @click="shown = !shown"
           ><span v-if="!shown">visibility</span
           ><span v-else>visibility_off</span></span
         >
