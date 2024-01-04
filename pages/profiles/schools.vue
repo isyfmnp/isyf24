@@ -68,7 +68,6 @@
 
 <script setup>
 const schoolsUnordered = [
-  {country: 'Brunei 🇧🇳', name: 'Centre for the Development of Gifted and Talented Education (EDGE), Ministry of Education, Brunei Darussalam'},
   {country: 'Cambodia 🇰🇭', name: 'The Angkor Intellectual Academy'},
   {
     country: 'Cambodia 🇰🇭',
