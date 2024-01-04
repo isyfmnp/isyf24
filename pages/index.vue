@@ -137,9 +137,6 @@
           <a href="https://www.moe.gov.sg" target="_blank">
             <img src="/images/logos/moe_logo.png" alt="" />
           </a>
-          <div class="null"></div>
-          <div class="null"></div>
-          <div class="null"></div>
         </ul>
 
         <br />
@@ -155,9 +152,6 @@
           <a href="https://gyss.nrf.gov.sg" target="_blank">
             <img src="/images/logos/gyss_logo.png" alt="Global Young Scientists Summit" />
           </a>
-          <div class="null"></div>
-          <div class="null"></div>
-          <div class="null"></div>
         </ul>
         <ul class="supporters">
           <a href="https://www.ntu.edu.sg/ias" target="_blank">
@@ -574,18 +568,13 @@
   list-style: none;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 13rem));
+  justify-content: center;
 
   padding: 0;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid var(--fg);
-}
-@media screen and (min-width: 950px) {
-  .supporters {
-    justify-content: flex-start;
-  }
+  border: 1px solid var(--gray-200);
 }
 .supporters > * {
   display: grid;
@@ -595,10 +584,6 @@
   position: relative;
   overflow: hidden;
   height: 100%;
-}
-.supporters .null {
-  height: 0;
-  padding: 0;
 }
 .supporters > *::before {
   content: "open_in_new";
