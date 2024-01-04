@@ -142,6 +142,17 @@
           organisations:
         </p>
         <ul class="supporters">
+          <a href="https://www.nrf.gov.sg" target="_blank">
+            <img src="/images/logos/nrf_logo.png" alt="National Research Foundation" style="scale: 1.15" />
+          </a>
+          <a href="https://gyss.nrf.gov.sg" target="_blank">
+            <img src="/images/logos/gyss_logo.png" alt="Global Young Scientists Summit" />
+          </a>
+          <div class="null"></div>
+          <div class="null"></div>
+          <div class="null"></div>
+        </ul>
+        <ul class="supporters">
           <a href="https://www.ntu.edu.sg/ias" target="_blank">
             <img src="/images/logos/ntuias_logo.png" alt="NTU" />
           </a>
@@ -153,9 +164,6 @@
           </a>
           <a href="https://a-star.edu.sg" target="_blank">
             <img src="/images/logos/astar_logo.png" alt="ASTAR Research" />
-          </a>
-          <a href="https://www.nrf.gov.sg" target="_blank">
-            <img src="/images/logos/nrf_logo.png" alt="National Research Foundation" style="scale: 0.8" />
           </a>
           <a href="https://www.science.edu.sg" target="_blank">
             <img src="/images/logos/scs_logo.png" alt="Science Centre Sngapore" />
