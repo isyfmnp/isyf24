@@ -30,6 +30,13 @@
       <div class="background"></div>
     </div>
 
+    <div class="documents">
+      <h2 class="docs-title">Event Documents</h2> 
+      <subtitle class="docs-subtitle">[FOR DELEGATES]</subtitle>
+      <span class="docs-prompt">Click here to find all the in-event documents!</span>
+      <Button href="/documents" icon="description">Documents</Button>
+    </div>
+
     <div>
       <section>
         <Letter>
@@ -130,9 +137,6 @@
           <a href="https://www.moe.gov.sg" target="_blank">
             <img src="/images/logos/moe_logo.png" alt="" />
           </a>
-          <div class="null"></div>
-          <div class="null"></div>
-          <div class="null"></div>
         </ul>
 
         <br />
@@ -141,6 +145,14 @@
           We are also deeply honoured to have the support and help of these
           organisations:
         </p>
+        <ul class="supporters">
+          <a href="https://www.nrf.gov.sg" target="_blank">
+            <img src="/images/logos/nrf_logo.png" alt="National Research Foundation" style="scale: 1.15" />
+          </a>
+          <a href="https://gyss.nrf.gov.sg" target="_blank">
+            <img src="/images/logos/gyss_logo.png" alt="Global Young Scientists Summit" />
+          </a>
+        </ul>
         <ul class="supporters">
           <a href="https://www.ntu.edu.sg/ias" target="_blank">
             <img src="/images/logos/ntuias_logo.png" alt="NTU" />
@@ -153,9 +165,6 @@
           </a>
           <a href="https://a-star.edu.sg" target="_blank">
             <img src="/images/logos/astar_logo.png" alt="ASTAR Research" />
-          </a>
-          <a href="https://www.nrf.gov.sg" target="_blank">
-            <img src="/images/logos/nrf_logo.png" alt="National Research Foundation" style="scale: 0.8" />
           </a>
           <a href="https://www.science.edu.sg" target="_blank">
             <img src="/images/logos/scs_logo.png" alt="Science Centre Sngapore" />
@@ -179,7 +188,7 @@
 .banner {
   display: block;
   margin-inline: calc(50% - 50vw);
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   height: calc(95vh - 3.5rem);
   height: calc(98svh - 3.5rem);
 
@@ -504,6 +513,35 @@
   background-color: var(--primary-50);
 }
 
+/* ========== DOCUMENTS SHORTCUT ========== */
+:deep(.documents a){
+  --fg: var(--primary);
+  --bg: var(--gray-100);
+  --bg-hover: var(--gray-300);
+}
+.documents {
+  margin-block: 5rem 7rem;
+  --fg: var(--gray-100);
+  --bg: var(--primary);
+  background-color: var(--bg);
+  padding: 0.125rem 1.5rem 0.75rem;
+  border-radius: 8px;
+}
+.docs-title {
+  line-height: 0.95em;
+  margin-block: 2rem 0.25rem;
+}
+.docs-subtitle {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin-bottom: 0.75rem;
+}
+.docs-prompt {
+  display: block;
+  margin-block: 1rem;
+}
+
 /* ========== BUTTON ROW ========== */
 .button-row {
   width: 100%;
@@ -530,18 +568,13 @@
   list-style: none;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 13rem));
+  justify-content: center;
 
   padding: 0;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid var(--fg);
-}
-@media screen and (min-width: 950px) {
-  .supporters {
-    justify-content: flex-start;
-  }
+  border: 1px solid var(--gray-200);
 }
 .supporters > * {
   display: grid;
@@ -551,10 +584,6 @@
   position: relative;
   overflow: hidden;
   height: 100%;
-}
-.supporters .null {
-  height: 0;
-  padding: 0;
 }
 .supporters > *::before {
   content: "open_in_new";

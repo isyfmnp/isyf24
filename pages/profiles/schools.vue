@@ -68,12 +68,8 @@
 
 <script setup>
 const schoolsUnordered = [
-<<<<<<< Updated upstream
-  {country: 'Cambodia 🇰🇭', name: 'The Angkor Intellectual Academy'},
-=======
   {country: 'Brunei', name: 'Centre for the Development of Gifted and Talented Education (EDGE), Ministry of Education, Brunei Darussalam'},
   {country: 'Cambodia', name: 'The Angkor Intellectual Academy'},
->>>>>>> Stashed changes
   {
     country: 'Cambodia',
     name: 'New Generation School Preah Sisowath High School',
