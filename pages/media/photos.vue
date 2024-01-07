@@ -49,8 +49,12 @@
           </div>
         </div>
         <div class="slider">
-          <div class="slide" v-for="(link, photoId) in photos[currentDay - 1]">
-            <img :src="link" @click="showImage(photoId)" />
+          <div class="slide" v-for="(link, photoId) in photos[currentDay - 1]" @click="showImage(photoId)" v-if="photos[currentDay - 1].length > 0">
+            <img :src="link" />
+          </div>
+          <div class="slider-empty" v-else>
+            <img src="~/assets/images/shrug.webp">
+            <span>Sorry, nothing available yet!</span>
           </div>
         </div>
       </section>
@@ -172,6 +176,18 @@
   background-color: white;
 }
 
+.slider-empty {
+  margin-block: 3rem;
+}
+.slider-empty img {
+  max-width: 16rem;
+}
+.slider-empty span {
+  display: block;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .slide {
   width: 100%;
   transition: transform 1s;
@@ -183,6 +199,7 @@
   max-height: 16rem;
   margin-bottom: -4px;
   transition: filter 200ms;
+  border: 1px solid #ddd;
 }
 .slide img:hover {
   filter: brightness(0.8);
