@@ -8,7 +8,7 @@ update () {
 
   DAY=-1
   case $(date "+%Y-%m-%d:%H") in 
-    "2024-01-07:11") # D0, arbitrary time convenient to me at the time 
+    "2024-01-07:12") # D0, arbitrary time convenient to me at the time 
       DAY=0
       ;;
     "2024-01-08:18") #D1 6PM
