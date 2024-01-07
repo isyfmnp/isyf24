@@ -515,7 +515,6 @@ const checkScroll = () => {
 onMounted(() => {
   setTimeout(() => {
     if (window.masthead) {
-      console.log("MAASTHEAD YES");
       navTransparent.value = true;
       document.addEventListener("scroll", checkScroll);
     }
