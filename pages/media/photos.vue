@@ -159,21 +159,17 @@
   overflow: hidden;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(clamp(13vw, 12rem, 40vw), 1fr)
+    minmax(clamp(18vw, 14rem, 44vw), 1fr)
   );
+  padding: 1rem;  
+  gap: 1rem;
 
   border-radius: 0 0 8px 8px;
   border-top: 1px solid var(--fg);
   --clr-1: var(--primary-900);
   --clr-2: var(--primary-950);
   --stripe-width: 8px;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    var(--clr-1),
-    var(--clr-1) var(--stripe-width),
-    var(--clr-2) var(--stripe-width),
-    var(--clr-2) calc(var(--stripe-width) * 2)
-  );
+  background-color: white;
 }
 
 .slide {
@@ -329,37 +325,20 @@ function resizePhoto() {
   photoWidth.value = width * scale;
 }
 
-const photos = [
-  [
-    "https://picsum.photos/seed/301/2500/1500",
-    "https://picsum.photos/seed/302/2000/1500",
-    "https://picsum.photos/seed/303/2000/1500",
-    "https://picsum.photos/seed/304/2000/1500",
-    "https://picsum.photos/seed/305/2000/1500",
-    "https://picsum.photos/seed/306/2000/1500",
-    "https://picsum.photos/seed/307/2000/1500",
-    "https://picsum.photos/seed/308/2000/1500",
-    "https://picsum.photos/seed/309/2000/1500",
-    "https://picsum.photos/seed/310/2000/1500",
-    "https://picsum.photos/seed/311/2000/1500",
-    "https://picsum.photos/seed/312/2000/1500",
-    "https://picsum.photos/seed/313/2000/1500",
-    "https://picsum.photos/seed/314/2000/1500",
-    "https://picsum.photos/seed/315/2000/1500",
-    "https://picsum.photos/seed/316/2000/1500",
-    "https://picsum.photos/seed/317/2000/1500",
-    "https://picsum.photos/seed/318/2000/1500",
-    "https://picsum.photos/seed/319/2000/1500",
-    "https://picsum.photos/seed/320/2000/1500",
-  ],
-  [
-    "https://picsum.photos/seed/301/2500/1500",
-    "https://picsum.photos/seed/302/2500/1500",
-  ],
-  [],
-  [],
-  [],
-];
+function fetchPhotos() {
+  // Fetch photos from assets folder
+  // Glob imports have to be static :eyeroll: so i have to statically import each one 
+  let gallery = []
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day1/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day2/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day3/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day4/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day5/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
+
+  return gallery
+}
+const photos = fetchPhotos()
+
 
 definePageMeta({
   layout: "masthead",
