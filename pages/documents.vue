@@ -127,13 +127,10 @@ const shown = ref(false);
 
 const passwordHash =
   '166ab54695c086af25f70ff86ea0d2b26ea4c2096f593e16ecc403de3098b707';
-const filesDigest =
-  'U2FsdGVkX1+SnUb9fsMlEx/tmOrE4kWLJ5TCz/B7QjZUnOhdRC5pSjeYLxxHkILNmsPr39aETnqPheRwIZj5YzG6qEpz+38ovgj5JzKR8/I=';
 
-function passwordSubmit(event) {
+async function passwordSubmit(event) {
   const password = event.target.elements.password.value;
   if (checkPassword(password)) {
-    console.log('AUTHENTICATED!');
     authenticated.value = true;
     decryptFiles(password);
   } else {
@@ -141,15 +138,20 @@ function passwordSubmit(event) {
   }
 }
 
-function checkPassword(password) {
+async function checkPassword(password) {
   const hash = String(crypto.SHA256(password + 'isyf2024'));
   return passwordHash === hash;
 }
-function decryptFiles(password) {
+async function decryptFiles(password) {
+  const filesDigest = await fetchFilesDigest()
   const filesJson = crypto.AES.decrypt(filesDigest, password).toString(
     crypto.enc.Utf8,
   );
   files.value = JSON.parse(filesJson);
-  console.log(files.value);
+}
+async function fetchFilesDigest() {
+  const response = await fetch("/documents.txt") 
+  const digest = await response.text()
+  return digest
 }
 </script>
