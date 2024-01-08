@@ -346,12 +346,12 @@ function fetchPhotos() {
   // Fetch photos from assets folder
   // Glob imports have to be static :eyeroll: so i have to statically import each one 
   let gallery = []
-  gallery.push(Object.values(import.meta.glob(`/assets/images/day0/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
-  gallery.push(Object.values(import.meta.glob(`/assets/images/day1/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
-  gallery.push(Object.values(import.meta.glob(`/assets/images/day2/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
-  gallery.push(Object.values(import.meta.glob(`/assets/images/day3/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
-  gallery.push(Object.values(import.meta.glob(`/assets/images/day4/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
-  gallery.push(Object.values(import.meta.glob(`/assets/images/day5/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day0/*.{png,jpg,jpeg,webp,PNG,JPEG,WEBP}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day1/*.{png,jpg,jpeg,webp,PNG,JPEG,WEBP}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day2/*.{png,jpg,jpeg,webp,PNG,JPEG,WEBP}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day3/*.{png,jpg,jpeg,webp,PNG,JPEG,WEBP}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day4/*.{png,jpg,jpeg,webp,PNG,JPEG,WEBP}`, { eager: true, as: 'url' })))
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day5/*.{png,jpg,jpeg,webp,PNG,JPEG,WEBP}`, { eager: true, as: 'url' })))
 
   return gallery
 }
