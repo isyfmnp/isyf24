@@ -40,7 +40,7 @@ update () {
 
   cat $ROOTDIR/documentUpdate/digests/"$DAY".txt | tee $DIGESTFILE
  
-  g add .
+  git add .
   git commit -a -m "schedule(documents): updated - $(date)" 
   git push origin main
 }
