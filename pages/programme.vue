@@ -448,7 +448,7 @@ const events = [
     },
     {
       name: "Closing Lunch & Farewell",
-      time: "12 AM - 3 PM",
+      time: "12 PM - 3 PM",
       highlight: true,
       description:
         "During the Closing Lunch, delegates may look forward to exciting performances and activities under the grand ballroom lights. While it's sad to say goodbye, we hope that you'll bring along the lasting memories and newfound friendships made during ISYF 2024!",
