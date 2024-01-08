@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <div class="closed blocked" :class="{ open: profilesOpen }">
+      <div class="closed" :class="{ open: profilesOpen }">
         <a class="item" @click="profilesOpen = !profilesOpen">
           <!-- remember to add class = "item blocked"-->
           <span class="item-text"> Media </span>
@@ -66,7 +66,7 @@
                 <span class="item-text">Photos</span>
               </a>
             </li>
-            <li>
+            <li class="blocked">
               <a href="/media/reflections">
                 <span class="item-text">Reflections</span>
               </a>

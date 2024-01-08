@@ -43,7 +43,7 @@
                 v-for="day in totalDays"
                 @click="currentDay = day"
               >
-                Day {{ day }}
+                Day {{ day - 1 }}
               </button>
             </div>
           </div>
@@ -279,7 +279,7 @@
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from "vue";
 
-const totalDays = 5;
+const totalDays = 6;
 const currentDay = ref(1);
 
 const viewerShown = ref(false);
@@ -346,6 +346,7 @@ function fetchPhotos() {
   // Fetch photos from assets folder
   // Glob imports have to be static :eyeroll: so i have to statically import each one 
   let gallery = []
+  gallery.push(Object.values(import.meta.glob(`/assets/images/day0/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
   gallery.push(Object.values(import.meta.glob(`/assets/images/day1/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
   gallery.push(Object.values(import.meta.glob(`/assets/images/day2/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
   gallery.push(Object.values(import.meta.glob(`/assets/images/day3/*.{png,jpg,jpeg,PNG,JPEG}`, { eager: true, as: 'url' })))
