@@ -7,6 +7,7 @@ update () {
   echo "========== ISYF24 Website Update Script - $(date) =========="
 
   DAY=-1
+  date "+%Y-%m-%d:%H"
   case $(date "+%Y-%m-%d:%H") in 
     "2024-01-07:12") # D0, arbitrary time convenient to me at the time 
       DAY=0
@@ -23,6 +24,9 @@ update () {
     "2024-01-12:06") #D5 6AM
       DAY=5
       ;;
+    "2024-01-08:09")
+      DAY=1
+      ;;
     "*")
       echo "Unrecognised Day"
       return
@@ -35,7 +39,7 @@ update () {
   git checkout main
 
   cat $ROOTDIR/documentUpdate/digests/"$DAY".txt | tee $DIGESTFILE
-  
+ 
   g add .
   git commit -a -m "schedule(documents): updated - $(date)" 
   git push origin main
