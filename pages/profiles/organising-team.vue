@@ -86,7 +86,7 @@ const profiles = [
     name: 'Ceremonies',
     image: 'ceremonies',
     description:
-      'The Ceremonies team have planned two major events for ISYF: The ISYF Keynote Lecture and Closing Lunch. <br/><br/> The Keynote Lecture is a great chance for you hear more from Nobel laureates and eminent scientists on issues surrounding the theme of the forum. You also get a chance to pose your very own questions to the experts in a forum styled question-and-answer session. <br/><br/> The Closing Ceremony on the other hand is our way of ending off ISYF on a high note, so be ready with your cameras to take some memorable photos!',
+      'The Ceremonies team have planned two major events for ISYF: The ISYF Keynote Lecture and Closing Lunch. <br/><br/> The Keynote Lecture is a great chance for you to hear more from Nobel laureates and eminent scientists on issues surrounding the theme of the forum. You also get a chance to pose your very own questions to the experts in a forum styled question-and-answer session. <br/><br/> The Closing Ceremony on the other hand is our way of ending off ISYF on a high note, so be ready with your cameras to take some memorable photos!',
     imgCaption:
       '<b>1ST ROW:</b> Li Houze, Ling Jun Quan, Tay Zi Heng, Goh Jun Yu Royce <br/><b>2ND ROW:</b> Ma Anqi, Nguyen Chi Mai',
   },
@@ -94,7 +94,7 @@ const profiles = [
     name: 'Masterclasses',
     image: 'dnm',
     description:
-      'The Masterclasses team seek to connect you to knowledgable and prominent scientists, allowing you to explore new perspectives and gain new insights on notable scientific research. We hope you stay curious and embrace this valuable oportunity with eminent scientists and Nobel laureates!',
+      'The Masterclasses team seek to connect you to knowledgeable and prominent scientists, allowing you to explore new perspectives and gain new insights on notable scientific research. We hope you stay curious and embrace this valuable oportunity with eminent scientists and Nobel laureates!',
     imgCaption:
       '<b>LEFT TO RIGHT:</b> Yaw Chur Zhe, Yang Lifan, Wang Zihe, Ho Si Jia, Phoebe Lee, Cheo Chloe, Lim Zhi Fei, Zong Huiwen ',
   },
