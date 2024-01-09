@@ -165,8 +165,8 @@
     auto-fit,
     minmax(clamp(18vw, 14rem, 44vw), 1fr)
   );
-  padding: 1rem;  
-  gap: 1rem;
+  padding-top: 1rem;  
+  gap: 0.5rem;
 
   border-radius: 0 0 8px 8px;
   border-top: 1px solid var(--fg);
