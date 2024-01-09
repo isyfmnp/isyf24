@@ -27,13 +27,12 @@ update () {
     "2024-01-08:09")
       DAY=1
       ;;
-    "*")
+    *)
       echo "Unrecognised Day"
       return
       ;;
   esac
   echo "Day $DAY"
-  
 
   cd $ROOTDIR 
   git checkout main
