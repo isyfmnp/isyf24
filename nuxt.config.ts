@@ -40,7 +40,12 @@ export default defineNuxtConfig({
   buildModules: ["@nuxtjs/eslint-module"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxt/image'
+  ],
+  image: {
+    dir: 'assets/images' 
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
