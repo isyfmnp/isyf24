@@ -41,14 +41,14 @@
                 :class="{ selected: day == currentDay }"
                 :style="{ '--day': currentDay }"
                 v-for="day in totalDays"
-                @click="currentDay = day"
+                @click="changeDay(day)"
               >
                 Day {{ day - 1 }}
               </button>
             </div>
           </div>
         </div>
-        <div class="slider">
+        <div class="slider" :class="{ loading: sliderLoading}">
           <div class="slide" v-for="(link, photoId) in photos[currentDay - 1]" @click="showImage(photoId)" v-if="photos[currentDay - 1].length > 0">
             <img :src="link" />
           </div>
@@ -188,6 +188,20 @@
   text-align: center;
 }
 
+.slider::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  background-color: transparent;
+  visibility: hidden;
+  transition: background-color 200ms, visibility 200ms;
+}
+.slider.loading::before {
+  background-color: hsla(var(--bg-hsla), 0.9);
+  visibility: visible;
+}
+
 .slide {
   width: 100%;
   transition: transform 1s;
@@ -199,7 +213,6 @@
   max-height: 16rem;
   margin-bottom: -4px;
   transition: filter 200ms;
-  border: 1px solid #ddd;
 }
 .slide img:hover {
   filter: brightness(0.8);
@@ -277,10 +290,11 @@
 </style>
 
 <script setup>
-import { ref, watch, onMounted, onUnmounted } from "vue";
+import { ref, nextTick, watch, onMounted, onUnmounted } from "vue";
 
 const totalDays = 6;
 const currentDay = ref(1);
+const sliderLoading = ref(false)
 
 const viewerShown = ref(false);
 const currentPhotoId = ref(0);
@@ -328,6 +342,14 @@ function keyWatcher(e) {
   )
     adjustPhotoIndex(1);
   else if (e.code == "Escape") viewerShown.value = false;
+}
+
+function changeDay(newDay){
+  sliderLoading.value = true
+  currentDay.value = newDay
+  setTimeout(() => {
+    sliderLoading.value = false
+  }, 750)
 }
 
 function resizePhoto() {
