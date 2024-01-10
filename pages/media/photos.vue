@@ -17,7 +17,7 @@
         >
           <span class="material-icons-outlined"> chevron_left </span>
         </button>
-        <NuxtImg
+        <img
           id="picture"
           :style="{ height: photoHeight + 'px', width: photoWidth + 'px' }"
           :src="photos[currentDay - 1][currentPhotoId]"
@@ -50,7 +50,7 @@
         </div>
         <div class="slider" :class="{ loading: sliderLoading}">
           <div class="slide" v-for="(link, photoId) in photos[currentDay - 1]" @click="showImage(photoId)" v-if="photos[currentDay - 1].length > 0">
-            <NuxtImg :src="link" />
+            <img :src="link" />
           </div>
           <div class="slider-empty" v-else>
             <img src="~/assets/images/shrug.webp">
@@ -210,7 +210,7 @@
 .slide img {
   object-fit: contain;
   width: 100%;
-  max-height: 16rem;
+  max-height: 18rem;
   margin-bottom: -4px;
   transition: filter 200ms;
 }
