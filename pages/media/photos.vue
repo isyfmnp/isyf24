@@ -210,7 +210,7 @@
 .slide img {
   object-fit: contain;
   width: 100%;
-  max-height: 16rem;
+  max-height: 18rem;
   margin-bottom: -4px;
   transition: filter 200ms;
 }
