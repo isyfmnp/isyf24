@@ -30,12 +30,17 @@
       <div class="background"></div>
     </div>
 
+    <!--
+    !!!! THIS IS A DISABLED SECTION !!!!
+    Read '/pages/documents_README.md'
+
     <div class="documents">
       <h2 class="docs-title">Event Documents</h2> 
       <subtitle class="docs-subtitle">[FOR DELEGATES]</subtitle>
       <span class="docs-prompt">Click here to find all the in-event documents!</span>
       <Button href="/documents" icon="description">Documents</Button>
     </div>
+    -->
 
     <div>
       <section>
