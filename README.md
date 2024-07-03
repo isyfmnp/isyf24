@@ -23,14 +23,24 @@ other style settings—These can be re-used or altered as needed!
 
 ## Document Update
 
-This section pertains to the `/documents` route, accessible only through 
-the index page, and which is created to be a easy way to share documents for 
-ISYF delegates through the course of the event. 
+Ok, so this was an attempt to serve documents to the delegates
+in a non-google-drive method. Honestly (this is Xuyuan speaking),
+its not worth the effort, just share your documents over Google Drive 
+instead. 
 
-For accessibility, it is linked from the main event. For privacy, it is 
-password-protected. The files themselves are accessible with 'unlisted'
-URLs, which are purposely created with UUID filenames (see `/public/documents`).
-If required, ISYF facilitators can share these links for direct and easy access. 
+This method is highly manual, and its use of security-through-obscurity
+was always problematic. Similiarly, the janky scripts I wrote 
+ended up causing much chaos because they were not reliable,
+nearly as much as Google Drive is. 
+
+~Tang Xuyuan 3rd July 2024
+
+### How it works
+
+For those who are still curious, this page effectively achieves 
+encryption through security-through-obscurity. The files are 
+placed under a hash filename, and the links ('LONG-UUID.pdf' etc)
+are then encrypted through basic SHA256
 
 The encryption is done by encoding the JSON-string with each of the document's 
 links, using the password as a key. This is done on the server-side (see 
@@ -43,5 +53,7 @@ script being `/documentUpdate/update.sh`. On my personal computer, a cron job
 triggers this script at 6AM and 6PM, at which point the script checks the current 
 time and reads the corresponding prepared file for that day & time. 
 
-The outputis piped into the `/public/documents.txt`, which contains the 
+The output is piped into the `/public/documents.txt`, which contains the 
 encrypted digest and is referenced by `/pages/documents.vue`. 
+
+

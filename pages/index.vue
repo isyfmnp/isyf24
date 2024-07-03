@@ -32,7 +32,7 @@
 
     <!--
     !!!! THIS IS A DISABLED SECTION !!!!
-    Read '/pages/documents_README.md'
+    Read 'README.md#Document Update'
 
     <div class="documents">
       <h2 class="docs-title">Event Documents</h2> 
