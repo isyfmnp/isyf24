@@ -292,7 +292,7 @@
 <script setup>
 import { ref, nextTick, watch, onMounted, onUnmounted } from "vue";
 
-const totalDays = 6;
+const totalDays = 5;
 const currentDay = ref(1);
 const sliderLoading = ref(false)
 
